@@ -1390,6 +1390,9 @@ svg .llms-animated-circle {
   max-width: 100%;
   position: relative;
 }
+.llms-lesson-preview.current-lesson .llms-lesson-title {
+  font-weight: 400;
+}
 .llms-lesson-preview .llms-lesson-link {
   background: #fefefe;
   color: #010101;
@@ -2645,6 +2648,9 @@ ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
   color: #010101;
   padding: 20px 0 0;
 }
+.llms-access-plan-content .llms-form-fields {
+  padding: 10px;
+}
 
 .llms-access-plan-title {
   background: #466dd8;
@@ -3220,7 +3226,7 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
 }
 .llms-student-dashboard .llms-sd-items {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0;
 }
 .llms-student-dashboard .llms-sd-item {
@@ -3236,6 +3242,9 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
   color: #666;
   margin: 0 5px;
 }
+.llms-student-dashboard .llms-sd-section {
+  margin-bottom: 40px;
+}
 .llms-student-dashboard .llms-sd-section h2 {
   margin: 0 0 15px 0;
 }
@@ -3243,11 +3252,20 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
   margin: 0;
   padding: 0;
 }
+.llms-student-dashboard .llms-sd-section .llms-sd-section-title:first-child {
+  margin: 0 0 10px 0;
+}
 .llms-student-dashboard .llms-sd-section .llms-sd-section-footer {
   margin-top: 10px;
 }
-.llms-student-dashboard .llms-sd-section .llms-sd-section-footer .llms-button-secondary {
+.llms-student-dashboard .llms-sd-section .llms-sd-section-footer a.llms-button-secondary {
   display: inline-block;
+}
+.llms-student-dashboard .llms-sd-section .llms-certificates-loop {
+  margin: 0 -10px 0 0;
+}
+.llms-student-dashboard .llms-sd-section .llms-certificate {
+  padding: 20px 0;
 }
 .llms-student-dashboard .orders-table {
   border: 1px solid #dedede;
@@ -3404,6 +3422,43 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
 }
 .llms-student-dashboard .llms-loop-list {
   margin: 0 -10px;
+}
+
+.logged-in .llms-sd-layout-columns {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+@media all and (min-width: 600px) {
+  .logged-in .llms-sd-layout-columns {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas: "nav header" "nav tab";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+.logged-in .llms-sd-layout-columns .llms-sd-nav {
+  grid-area: nav;
+}
+@media all and (min-width: 600px) {
+  .logged-in .llms-sd-layout-columns .llms-sd-nav .llms-sd-items .llms-sd-item {
+    display: block;
+    float: none;
+  }
+  .logged-in .llms-sd-layout-columns .llms-sd-nav .llms-sd-items .llms-sd-item a {
+    display: block;
+    padding: 10px 0;
+  }
+  .logged-in .llms-sd-layout-columns .llms-sd-nav .llms-sd-items .llms-sd-item .llms-sep {
+    display: none;
+  }
+}
+.logged-in .llms-sd-layout-columns .llms-sd-header {
+  grid-area: header;
+}
+.logged-in .llms-sd-layout-columns .llms-sd-tab {
+  grid-area: tab;
 }
 
 .llms-sd-grades .llms-table .llms-progress {

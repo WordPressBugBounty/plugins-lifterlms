@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 7.7.7
+Stable tag: 7.7.8
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,66 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v7.8.1 - 2024-10-29 =
+
+##### Bug Fixes
+
++ Fixing migration to allow SKUs to be entered in access plans if one already exists.
+
+
+= v7.8.0 - 2024-10-29 =
+
+##### New Features
+
++ Added attribute 'layout' to My Account block and shortcode to display content as columns or stacked.
++ Changes styling in the Course Syllabus block for the current lesson, when used on a single lesson page. [#2777](https://github.com/gocodebox/lifterlms/issues/2777)
++ Added new feature: Quiz Resume. [#2783](https://github.com/gocodebox/lifterlms/issues/2783)
+
+##### Updates and Enhancements
+
++ Improved UI of the Access Plans UI for better usability.
++ Improved accessibility of the Access Plans metaboxes to use proper labels and screen reader text where needed.
++ Added Launch Course Builder to the WP Admin Bar when viewing a course.
++ Added Launch Course Builder button when using the Classic Editor, beside “Add Course” button.
++ Added “Clear Reporting Cache” button on admin reporting page.
++ Improved help messaging on the Course Builder, and the Account and Checkout tabs of the LifterLMS settings.
++ Added support for image upload in Result Clarifications box for quizzes.
++ Removes spacing before or after answers for conditional quiz questions.
+
+##### Bug Fixes
+
++ Fixed reference in `LLMS_Ajax_Handler::quiz_start()` to `LLMS_Quiz_Attempt::get_status()` method removed since LifterLMS 4.0.0.
++ Fix for notifications no longer auto-dismissing. [#2772](https://github.com/gocodebox/lifterlms/issues/2772)
++ Fix for the lifterlms_registration shortcode not working on certain themes on a separate page. [#2779](https://github.com/gocodebox/lifterlms/issues/2779)
++ Using a more reliable method of keeping LifterLMS notices dismissed. [#2767](https://github.com/gocodebox/lifterlms/issues/2767)
+
+##### Breaking Changes
+
++ Hiding the Plan SKU field for access plans if not in use. Set the `llms_access_plans_allow_skus` option to get this field back.
+
+##### Developer Notes
+
++ Adds current-lesson CSS class for the current Lesson in the Course Syllabus block. [#2777](https://github.com/gocodebox/lifterlms/issues/2777)
++ Adds new llms_before_registration_validation filter for 3rd party open registration validation.
++ Added filter `llms_quiz_attempt_resume_time_period` for updating quiz resume allowed time period.
+
+##### Updated Templates
+
++ [templates/admin/reporting/tabs/quizzes/attempt.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/admin/reporting/tabs/quizzes/attempt.php)
++ [templates/checkout/form-checkout.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/checkout/form-checkout.php)
++ [templates/checkout/form-summary.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/checkout/form-summary.php)
++ [templates/content-single-question.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/content-single-question.php)
++ [templates/myaccount/form-redeem-voucher.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/myaccount/form-redeem-voucher.php)
++ [templates/myaccount/header.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/myaccount/header.php)
++ [templates/notifications/basic.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/notifications/basic.php)
++ [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/quiz/questions/content-choice.php)
++ [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/quiz/questions/content-picture_choice.php)
++ [templates/quiz/results-attempt-questions-list.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/quiz/results-attempt-questions-list.php)
++ [templates/quiz/results-attempt.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/quiz/results-attempt.php)
++ [templates/quiz/results.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/quiz/results.php)
++ [templates/quiz/start-button.php](https://github.com/gocodebox/lifterlms/blob/7.8.0/templates/quiz/start-button.php)
+
+
 = v7.7.8 - 2024-09-17 =
 
 ##### Bug Fixes
@@ -586,167 +646,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Updated Templates
 
 + [templates/myaccount/my-notifications.php](https://github.com/gocodebox/lifterlms/blob/7.7.1/templates/myaccount/my-notifications.php)
-
-
-= v7.7.0 - 2024-07-19 =
-
-##### New Features
-
-+ Adding read-only input for easier sharing of a certificate. Thanks [@imknight](https://github.com/imknight)! [#1379](https://github.com/gocodebox/lifterlms/issues/1379)
-+ Adds additional protection for media files uploaded to quiz questions in the Course Builder.
-+ Adds native Elementor support for Courses, with a default Course template and several basic widgets.
-
-##### Updates and Enhancements
-
-+ Removes the Visibility setting for Vouchers and Coupons. [#2640](https://github.com/gocodebox/lifterlms/issues/2640)
-+ Updating internal libraries to their latest versions.
-+ Added support for mutliple membership restriction warning. [#2523](https://github.com/gocodebox/lifterlms/issues/2523)
-
-##### Bug Fixes
-
-+ Prevent backslashes from being removed from Result Clarifications. [#2675](https://github.com/gocodebox/lifterlms/issues/2675)
-+ Avoids JS error on the front-end. [#2678](https://github.com/gocodebox/lifterlms/issues/2678)
-+ Exclude hidden courses when toggled off in the Courses block. [#2690](https://github.com/gocodebox/lifterlms/issues/2690)
-+ Avoids saving review meta information for non-courses. Thanks [@bsetiawan88](https://github.com/bsetiawan88)! [#887](https://github.com/gocodebox/lifterlms/issues/887)
-+ Improvements to the frontend styling of LifterLMS screens for design, accessibility, and better compatibility with dark mode themes.
-+ Allow private VideoPress videos to play when the URL is pasted on Video Embed URL. [#2533](https://github.com/gocodebox/lifterlms/issues/2533)
-+ Fixes the Certificate Title block when creating a new certificate template. [#2696] (https://github.com/gocodebox/lifterlms/issues/2696)
-
-##### Security Fixes
-
-+ Adds various security improvements, e.g. better escaping of output, as suggested by the Plugin Checker Plugin.
-
-##### Performance Improvements
-
-+ Caching get_transaction_total queries to improve performance of the
-  orders table in the admin dashboard.
-
-##### Updated Templates
-
-+ [templates/achievements/loop.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/achievements/loop.php)
-+ [templates/achievements/template.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/achievements/template.php)
-+ [templates/admin/analytics/analytics.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/analytics/analytics.php)
-+ [templates/admin/notices/staging.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/notices/staging.php)
-+ [templates/admin/post-types/order-transactions.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/post-types/order-transactions.php)
-+ [templates/admin/post-types/students.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/post-types/students.php)
-+ [templates/admin/reporting/nav-filters.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/nav-filters.php)
-+ [templates/admin/reporting/reporting.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/reporting.php)
-+ [templates/admin/reporting/tabs/courses/course.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/courses/course.php)
-+ [templates/admin/reporting/tabs/courses/overview.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/courses/overview.php)
-+ [templates/admin/reporting/tabs/courses/students.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/courses/students.php)
-+ [templates/admin/reporting/tabs/memberships/membership.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/memberships/membership.php)
-+ [templates/admin/reporting/tabs/memberships/overview.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/memberships/overview.php)
-+ [templates/admin/reporting/tabs/memberships/students.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/memberships/students.php)
-+ [templates/admin/reporting/tabs/quizzes/attempt.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/quizzes/attempt.php)
-+ [templates/admin/reporting/tabs/quizzes/attempts.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/quizzes/attempts.php)
-+ [templates/admin/reporting/tabs/quizzes/overview.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/quizzes/overview.php)
-+ [templates/admin/reporting/tabs/quizzes/quiz.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/quizzes/quiz.php)
-+ [templates/admin/reporting/tabs/students/achievements.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/achievements.php)
-+ [templates/admin/reporting/tabs/students/certificates.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/certificates.php)
-+ [templates/admin/reporting/tabs/students/courses-course.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/courses-course.php)
-+ [templates/admin/reporting/tabs/students/courses.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/courses.php)
-+ [templates/admin/reporting/tabs/students/information.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/information.php)
-+ [templates/admin/reporting/tabs/students/memberships.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/memberships.php)
-+ [templates/admin/reporting/tabs/students/student.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/student.php)
-+ [templates/admin/reporting/tabs/students/students.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/reporting/tabs/students/students.php)
-+ [templates/admin/user-edit.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/admin/user-edit.php)
-+ [templates/certificates/actions.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/actions.php)
-+ [templates/certificates/content-legacy.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/content-legacy.php)
-+ [templates/certificates/content.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/content.php)
-+ [templates/certificates/dynamic-styles.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/dynamic-styles.php)
-+ [templates/certificates/header.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/header.php)
-+ [templates/certificates/loop.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/loop.php)
-+ [templates/certificates/preview.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/preview.php)
-+ [templates/certificates/template.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/certificates/template.php)
-+ [templates/checkout/form-checkout.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/checkout/form-checkout.php)
-+ [templates/checkout/form-confirm-payment.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/checkout/form-confirm-payment.php)
-+ [templates/checkout/form-coupon.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/checkout/form-coupon.php)
-+ [templates/checkout/form-gateways.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/checkout/form-gateways.php)
-+ [templates/checkout/form-summary.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/checkout/form-summary.php)
-+ [templates/checkout/form-switch-source.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/checkout/form-switch-source.php)
-+ [templates/content-single-question.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/content-single-question.php)
-+ [templates/course/audio.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/audio.php)
-+ [templates/course/categories.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/categories.php)
-+ [templates/course/complete-lesson-link.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/complete-lesson-link.php)
-+ [templates/course/difficulty.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/difficulty.php)
-+ [templates/course/favorite.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/favorite.php)
-+ [templates/course/full-description.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/full-description.php)
-+ [templates/course/length.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/length.php)
-+ [templates/course/lesson-count.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/lesson-count.php)
-+ [templates/course/lesson-navigation.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/lesson-navigation.php)
-+ [templates/course/lesson-preview.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/lesson-preview.php)
-+ [templates/course/meta-wrapper-start.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/meta-wrapper-start.php)
-+ [templates/course/outline-list-small.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/outline-list-small.php)
-+ [templates/course/parent-course.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/parent-course.php)
-+ [templates/course/short-description.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/short-description.php)
-+ [templates/course/syllabus.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/syllabus.php)
-+ [templates/course/tags.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/tags.php)
-+ [templates/course/tracks.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/tracks.php)
-+ [templates/course/video.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/course/video.php)
-+ [templates/emails/footer.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/emails/footer.php)
-+ [templates/emails/header.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/emails/header.php)
-+ [templates/emails/reset-password.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/emails/reset-password.php)
-+ [templates/global/form-login.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/global/form-login.php)
-+ [templates/global/form-registration.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/global/form-registration.php)
-+ [templates/lesson/audio.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/lesson/audio.php)
-+ [templates/lesson/video.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/lesson/video.php)
-+ [templates/loop/author.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/author.php)
-+ [templates/loop/enroll-date.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/enroll-date.php)
-+ [templates/loop/enroll-status.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/enroll-status.php)
-+ [templates/loop/featured-image.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/featured-image.php)
-+ [templates/loop/loop-start.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/loop-start.php)
-+ [templates/loop/none-found.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/none-found.php)
-+ [templates/loop/pagination.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/loop/pagination.php)
-+ [templates/membership/full-description.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/membership/full-description.php)
-+ [templates/membership/price.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/membership/price.php)
-+ [templates/myaccount/dashboard-section.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/dashboard-section.php)
-+ [templates/myaccount/form-edit-account.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/form-edit-account.php)
-+ [templates/myaccount/form-redeem-voucher.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/form-redeem-voucher.php)
-+ [templates/myaccount/my-favorites.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/my-favorites.php)
-+ [templates/myaccount/my-grades-single-table.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/my-grades-single-table.php)
-+ [templates/myaccount/my-grades-single.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/my-grades-single.php)
-+ [templates/myaccount/my-grades.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/my-grades.php)
-+ [templates/myaccount/my-notifications.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/my-notifications.php)
-+ [templates/myaccount/my-orders.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/my-orders.php)
-+ [templates/myaccount/navigation.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/navigation.php)
-+ [templates/myaccount/view-order-actions.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/view-order-actions.php)
-+ [templates/myaccount/view-order-information.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/view-order-information.php)
-+ [templates/myaccount/view-order-transactions.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/view-order-transactions.php)
-+ [templates/myaccount/view-order.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/myaccount/view-order.php)
-+ [templates/notifications/basic.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/notifications/basic.php)
-+ [templates/product/access-plan-button.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-button.php)
-+ [templates/product/access-plan-description.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-description.php)
-+ [templates/product/access-plan-feature.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-feature.php)
-+ [templates/product/access-plan-pricing.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-pricing.php)
-+ [templates/product/access-plan-restrictions.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-restrictions.php)
-+ [templates/product/access-plan-title.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-title.php)
-+ [templates/product/access-plan-trial.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan-trial.php)
-+ [templates/product/access-plan.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/access-plan.php)
-+ [templates/product/free-enroll-form.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/free-enroll-form.php)
-+ [templates/product/pricing-table.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/product/pricing-table.php)
-+ [templates/quiz/meta-information.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/meta-information.php)
-+ [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/questions/content-choice.php)
-+ [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/questions/content-picture_choice.php)
-+ [templates/quiz/questions/description.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/questions/description.php)
-+ [templates/quiz/questions/video.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/questions/video.php)
-+ [templates/quiz/questions/wrapper-start.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/questions/wrapper-start.php)
-+ [templates/quiz/results-attempt-questions-list.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/results-attempt-questions-list.php)
-+ [templates/quiz/results-attempt.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/results-attempt.php)
-+ [templates/quiz/results.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/results.php)
-+ [templates/quiz/return-to-lesson.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/return-to-lesson.php)
-+ [templates/quiz/start-button.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/quiz/start-button.php)
-+ [templates/shared/instructors.php](https://github.com/gocodebox/lifterlms/blob/7.7.0/templates/shared/instructors.php)
-
-
-= v7.6.3 - 2024-05-31 =
-
-##### Bug Fixes
-
-+ Adds additional filtering when using the lifterlms_favorites shortcode. Thanks, Peter Thaleikis.
-
-##### Updated Templates
-
-+ [templates/admin/reporting/nav-filters.php](https://github.com/gocodebox/lifterlms/blob/7.6.3/templates/admin/reporting/nav-filters.php)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)

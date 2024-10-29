@@ -29,6 +29,9 @@ body.admin_page_llms-course-builder .webui-popover .select2-container--default .
   padding: 0;
   position: relative;
 }
+.wrap.lifterlms.llms-builder.editor-active .llms-video-explainer {
+  display: none;
+}
 .wrap.lifterlms.llms-builder.editor-active .llms-builder-sidebar {
   padding: 10px;
   width: calc(100% - 200px);
@@ -1539,6 +1542,46 @@ body.admin_page_llms-course-builder .webui-popover .select2-container--default .
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   top: 2px;
   width: 12px;
+}
+.wrap.lifterlms.llms-builder .llms-video-explainer-trigger {
+  display: block;
+  margin: 40px 0 0;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  color: initial;
+}
+.wrap.lifterlms.llms-builder .llms-video-explainer-trigger:hover {
+  color: currentColor;
+}
+.wrap.lifterlms.llms-builder .llms-video-explainer-trigger:after {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  pointer-events: none;
+  content: "▶";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  clear: both;
+  height: 2em;
+  width: 2em;
+  border-radius: 4em;
+  border: 4px solid currentColor;
+  font-size: 2.5em;
+}
+.wrap.lifterlms.llms-builder .llms-video-explainer-trigger img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .llms-multi-input .llms-input-wrapper {

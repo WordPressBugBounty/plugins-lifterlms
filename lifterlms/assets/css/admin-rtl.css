@@ -2421,6 +2421,9 @@ a.llms-view-as {
   vertical-align: middle;
   width: 100px;
 }
+.llms-table tfoot th .llms-clear-resumable-attempts {
+  float: right;
+}
 .llms-table tfoot th .llms-table-pagination {
   float: left;
 }
@@ -2543,7 +2546,7 @@ a.llms-view-as {
   width: 100%;
 }
 
-#poststuff .llms-metabox h2, #poststuff .llms-metabox h3, #poststuff .llms-metabox h6 {
+#poststuff .llms-metabox h2, #poststuff .llms-metabox h3, #poststuff .llms-metabox h4, #poststuff .llms-metabox h6 {
   margin: 0;
   padding: 0;
 }
@@ -2552,13 +2555,18 @@ a.llms-view-as {
   font-weight: 700;
 }
 #poststuff .llms-metabox h3 {
-  color: #777;
+  color: #1e1e1e;
   font-size: 16px;
 }
 #poststuff .llms-metabox h4 {
-  border-bottom: 1px solid #e5e5e5;
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
+}
+#poststuff .llms-metabox h4:not(.llms-collapsible-body h4:first-of-type) {
+  margin-top: 20px;
 }
 #poststuff .llms-metabox .llms-transaction-test-mode {
   background: #ffffd7;
@@ -2594,25 +2602,32 @@ a.llms-view-as {
 #poststuff .llms-metabox .llms-table {
   margin-top: 10px;
 }
+#poststuff .llms-metabox button.llms-button-primary {
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  height: auto;
+}
 
 .llms-metabox-section {
   background: #fff;
   margin-top: 25px;
   position: relative;
+  /* Fixes to tighten the space between tinymce editor and label */
 }
 .llms-metabox-section.no-top-margin {
   margin-top: 0;
 }
 .llms-metabox-section .llms-metabox-field {
-  margin: 15px 0;
+  margin: 5px 0;
   position: relative;
 }
 .llms-metabox-section .llms-metabox-field label {
-  color: #777;
+  color: #1e1e1e;
   display: block;
   margin-bottom: 5px;
-  font-weight: 500;
-  vertical-align: baseline;
+  font-size: 14px;
+  font-weight: 400;
 }
 .llms-metabox-section .llms-metabox-field select,
 .llms-metabox-section .llms-metabox-field textarea,
@@ -2636,12 +2651,32 @@ a.llms-view-as {
   font-style: normal;
   padding: 0 3px;
 }
+.llms-metabox-section .llms-metabox-field .select2-container--default .select2-search--inline .select2-search__field {
+  min-height: auto;
+}
+.llms-metabox-section .llms-metabox-field .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+  margin-bottom: 0;
+}
+.llms-metabox-section .llms-metabox-field:has(.wp-editor-wrap) label {
+  position: relative;
+  z-index: 5;
+}
+.llms-metabox-section .llms-metabox-field .wp-editor-wrap {
+  margin-top: -30px;
+}
 
 .llms-collapsible {
-  border: 1px solid #e5e5e5;
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 6px;
+  -webkit-box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.08);
+  display: block;
+  margin: 0;
+  padding: 0;
   position: relative;
+  text-align: center;
   margin-top: 0;
-  margin-bottom: -1px;
 }
 .llms-collapsible:last-child {
   margin-bottom: 0;
@@ -2653,12 +2688,32 @@ a.llms-view-as {
   display: inline;
 }
 .llms-collapsible .llms-collapsible-header {
-  padding: 10px;
+  padding: 15px;
+}
+.llms-collapsible .llms-collapsible-header [class^=d-] {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.llms-collapsible .llms-collapsible-header .d-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 0;
 }
 .llms-collapsible .llms-collapsible-header h3 {
-  color: #777;
+  color: #1e1e1e;
+  display: inline;
   margin: 0;
   font-size: 16px;
+  font-weight: 700;
+}
+.llms-collapsible .llms-collapsible-header h3 small {
+  font-weight: 400;
 }
 .llms-collapsible .llms-collapsible-header .dashicons-arrow-up {
   display: inline;
@@ -2670,7 +2725,7 @@ a.llms-view-as {
   text-decoration: none;
 }
 .llms-collapsible .llms-collapsible-header .dashicons {
-  color: #777;
+  color: #1e1e1e;
   cursor: pointer;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
@@ -2686,7 +2741,7 @@ a.llms-view-as {
 }
 .llms-collapsible .llms-collapsible-body {
   display: none;
-  padding: 10px;
+  padding: 15px;
 }
 
 ._llms_instructors_data.repeater .llms-repeater-rows .llms-repeater-row:first-child .llms-repeater-remove {
@@ -2803,21 +2858,24 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   width: auto;
 }
 
+.llms-metabox > p:first-child {
+  margin-top: 0;
+}
 .llms-metabox #llms-new-access-plan-model {
   display: none;
 }
 .llms-metabox .llms-access-plans {
-  margin-top: 10px;
+  color: #1e1e1e;
 }
 .llms-metabox .llms-access-plans > .llms-no-plans-msg {
   display: none;
 }
+.llms-metabox .llms-access-plans > .llms-no-plans-msg .notice {
+  margin-left: 0;
+  margin-right: 0;
+}
 .llms-metabox .llms-access-plans > .llms-no-plans-msg:last-child {
-  -webkit-box-shadow: inset 0 0 0 1px #e5e5e5;
-          box-shadow: inset 0 0 0 1px #e5e5e5;
   display: block;
-  text-align: center;
-  padding: 10px;
 }
 .llms-metabox .llms-access-plans.dragging {
   background: #efefef;
@@ -2840,6 +2898,7 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   display: none;
 }
 .llms-metabox .llms-access-plan {
+  margin-bottom: 20px;
   text-align: right;
 }
 .llms-metabox .llms-access-plan [data-tip]:before {
@@ -2853,7 +2912,7 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   display: inline-block;
 }
 .llms-metabox .llms-access-plan .llms-metabox-field {
-  margin: 5px 0;
+  margin: 15px 0;
 }
 .llms-metabox .llms-access-plan .llms-required {
   color: #bb231c;
@@ -3267,6 +3326,12 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 .llms-reporting.wrap .llms-reporting-tab.llms-reporting-quiz .llms-table-filter-wrap {
   width: 160px;
+}
+.llms-reporting.wrap .llms-table-header form {
+  display: inline;
+}
+.llms-reporting.wrap .llms-table-header .button {
+  margin-right: 5px;
 }
 
 .llms-charts-wrapper {

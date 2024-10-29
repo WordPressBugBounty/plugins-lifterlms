@@ -3313,7 +3313,9 @@ define( 'Collections/Questions',[ 'Models/Question' ], function( model ) {
  * @since 3.17.6
  * @since 7.4.0 Added upsell for Question Bank and condition in `random_questions` schema.
  * @since 7.6.2 Added `disable_retake` schema.
- * @version 7.6.2
+ * @since 7.8.0 Added `can_be_resumed` option.
+ * @version 7.8.0
+
  */
 define( 'Schemas/Quiz',[], function() {
 
@@ -3365,6 +3367,17 @@ define( 'Schemas/Quiz',[], function() {
 						type: 'switch-number',
 			},
 				], [
+
+					{
+						attribute: 'can_be_resumed',
+						id: 'resume',
+						label: LLMS.l10n.translate( 'Can be resumed' ),
+						tip: LLMS.l10n.translate( 'Allow a new attempt on this quiz to be resumed' ),
+						type: 'switch',
+						condition: function() {
+							return 'yes' === this.get( 'limit_time' ) ? false : true;
+						}
+			},
 					{
 						attribute: 'show_correct_answer',
 						id: 'show-correct-answer',
@@ -3461,6 +3474,7 @@ define( 'Models/Quiz',[
 		 * @since 3.16.0
 		 * @since 7.4.0 Added filter for filtering defaults.
 		 * @since 7.5.0 Replaced unused `random_answers` property with `random_questions`.
+		 * @since 7.8.0 Added filter for filtering defaults and `can_be_resumed` property.
 		 *
 		 * @return {Object}
 		 */
@@ -3484,6 +3498,7 @@ define( 'Models/Quiz',[
 				random_questions: 'no',
 				time_limit: 30,
 				show_correct_answer: 'no',
+				can_be_resumed: 'no',
 				disable_retake: 'no',
 
 				questions: [],
@@ -9407,9 +9422,10 @@ define( 'Views/QuestionChoiceList',[ 'Views/QuestionChoice' ], function( ChoiceV
 } );
 
 /**
- * Single Question View
- * @since    3.16.0
- * @version  3.27.0
+ * Single Question View.
+ *
+ * @since 3.16.0
+ * @version 7.8.0
  */
 define( 'Views/Question',[
 		'Views/_Detachable',
@@ -9490,10 +9506,12 @@ define( 'Views/Question',[
 		},
 
 		/**
-		 * Compiles the template and renders the view
-		 * @return   self (for chaining)
-		 * @since    3.16.0
-		 * @version  3.16.0
+		 * Compiles the template and renders the view.
+		 *
+		 * @since 3.16.0
+		 * @since 7.8.0 Added support for image upload in tinyMCE editor.
+		 *
+		 * @return self (for chaining)
 		 */
 		render: function() {
 
@@ -9532,7 +9550,7 @@ define( 'Views/Question',[
 
 			if ( this.model.get( 'clarifications_enabled' ) ) {
 				this.init_editor( 'question-clarifications--' + this.model.get( 'id' ), {
-					mediaButtons: false,
+					mediaButtons: true,
 					tinymce: {
 						toolbar1: 'bold,italic,strikethrough,bullist,numlist,alignleft,aligncenter,alignright',
 						toolbar2: '',

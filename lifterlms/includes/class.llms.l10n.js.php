@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  7.6.2
+ * @version  7.8.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  7.6.2
+	 * @version  7.8.0
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -164,7 +164,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/builder/Schemas/Quiz.js.
 			 *
 			 * @since    3.17.6
-			 * @version  7.6.2
+			 * @version  7.8.0
 			 */
 			'General Settings' => esc_html__( 'General Settings', 'lifterlms' ),
 			'Description' => esc_html__( 'Description', 'lifterlms' ),
@@ -174,6 +174,8 @@ class LLMS_L10n_JS {
 			'Limit the maximum number of times a student can take this quiz' => esc_html__( 'Limit the maximum number of times a student can take this quiz', 'lifterlms' ),
 			'Time Limit' => esc_html__( 'Time Limit', 'lifterlms' ),
 			'Enforce a maximum number of minutes a student can spend on each attempt' => esc_html__( 'Enforce a maximum number of minutes a student can spend on each attempt', 'lifterlms' ),
+			'Can be resumed' => esc_html__( 'Can be resumed', 'lifterlms' ),
+			'Allow a new attempt on this quiz to be resumed' => esc_html__( 'Allow a new attempt on this quiz to be resumed', 'lifterlms' ),
 			'Show Correct Answers' => esc_html__( 'Show Correct Answers', 'lifterlms' ),
 			'When enabled, students will be shown the correct answer to any question they answered incorrectly.' => esc_html__( 'When enabled, students will be shown the correct answer to any question they answered incorrectly.', 'lifterlms' ),
 			'Randomize Question Order' => esc_html__( 'Randomize Question Order', 'lifterlms' ),
@@ -247,7 +249,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/builder/Views/Question.js.
 			 *
 			 * @since    3.16.0
-			 * @version  3.27.0
+			 * @version  7.8.0
 			 */
 			'Are you sure you want to delete this question?' => esc_html__( 'Are you sure you want to delete this question?', 'lifterlms' ),
 
@@ -336,6 +338,8 @@ class LLMS_L10n_JS {
 			'Limit the maximum number of times a student can take this quiz' => esc_html__( 'Limit the maximum number of times a student can take this quiz', 'lifterlms' ),
 			'Time Limit' => esc_html__( 'Time Limit', 'lifterlms' ),
 			'Enforce a maximum number of minutes a student can spend on each attempt' => esc_html__( 'Enforce a maximum number of minutes a student can spend on each attempt', 'lifterlms' ),
+			'Can be resumed' => esc_html__( 'Can be resumed', 'lifterlms' ),
+			'Allow a new attempt on this quiz to be resumed' => esc_html__( 'Allow a new attempt on this quiz to be resumed', 'lifterlms' ),
 			'Show Correct Answers' => esc_html__( 'Show Correct Answers', 'lifterlms' ),
 			'When enabled, students will be shown the correct answer to any question they answered incorrectly.' => esc_html__( 'When enabled, students will be shown the correct answer to any question they answered incorrectly.', 'lifterlms' ),
 			'Randomize Question Order' => esc_html__( 'Randomize Question Order', 'lifterlms' ),
@@ -411,6 +415,14 @@ class LLMS_L10n_JS {
 			'Search for existing lessons...' => esc_html__( 'Search for existing lessons...', 'lifterlms' ),
 
 			/**
+			 * File: assets/js/llms-launch-course-button.js.
+			 *
+			 * @since    Unknown
+			 * @version  3.35.0
+			 */
+			'Launch Course Builder' => esc_html__( 'Launch Course Builder', 'lifterlms' ),
+
+			/**
 			 * File: assets/js/llms-metabox-product.js.
 			 *
 			 * @since    3.0.0
@@ -458,13 +470,14 @@ class LLMS_L10n_JS {
 			 * File: assets/js/llms-quiz.js.
 			 *
 			 * @since    1.0.0
-			 * @version  3.24.3
+			 * @version  7.8.0
 			 */
 			'Are you sure you wish to quit this quiz attempt?' => esc_html__( 'Are you sure you wish to quit this quiz attempt?', 'lifterlms' ),
 			'Grading Quiz...' => esc_html__( 'Grading Quiz...', 'lifterlms' ),
 			'Loading Question...' => esc_html__( 'Loading Question...', 'lifterlms' ),
 			'An unknown error occurred. Please try again.' => esc_html__( 'An unknown error occurred. Please try again.', 'lifterlms' ),
 			'Loading Quiz...' => esc_html__( 'Loading Quiz...', 'lifterlms' ),
+			'Exit Quiz' => esc_html__( 'Exit Quiz', 'lifterlms' ),
 			'Time Remaining' => esc_html__( 'Time Remaining', 'lifterlms' ),
 			'Next Question' => esc_html__( 'Next Question', 'lifterlms' ),
 			'Complete Quiz' => esc_html__( 'Complete Quiz', 'lifterlms' ),
