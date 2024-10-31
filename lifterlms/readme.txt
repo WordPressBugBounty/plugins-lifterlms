@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 7.7.8
+Stable tag: 7.8.1
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,17 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v7.8.2 - 2024-10-31 =
+
+##### Updates and Enhancements
+
++ Additional styling of the new Access Plan UI.
+
+##### Bug Fixes
+
++ Renaming front-end javascript translation file not required, as some security scans appear to be deleting it incorrectly. [#2787](https://github.com/gocodebox/lifterlms/issues/2787)
+
+
 = v7.8.1 - 2024-10-29 =
 
 ##### Bug Fixes
@@ -630,22 +641,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 + Fixes fatal error when updating from an old version. Thanks [@verygoodplugins](https://github.com/verygoodplugins)! [#2716](https://github.com/gocodebox/lifterlms/issues/2716)
 + Avoid errors on pages restricted by one or more memberships. [#2714](https://github.com/gocodebox/lifterlms/issues/2714)
-
-
-= v7.7.1 - 2024-08-09 =
-
-##### Updates and Enhancements
-
-+ Removes placeholder image functionality with protected media files. Modify cache value for wordpress.com hosting.
-
-##### Bug Fixes
-
-+ Fixing the Award Certificate button appearing at the top of the Reporting > Students, Certificate tab. [#2709](https://github.com/gocodebox/lifterlms/issues/2709)
-+ Fixed warnings from running `wp_kses_post()` on empty `paginate_links()` calls.
-
-##### Updated Templates
-
-+ [templates/myaccount/my-notifications.php](https://github.com/gocodebox/lifterlms/blob/7.7.1/templates/myaccount/my-notifications.php)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
