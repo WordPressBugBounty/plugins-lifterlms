@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 7.8.1
+Stable tag: 7.8.2
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v7.8.3 - 2024-11-04 =
+
+##### Updates and Enhancements
+
++ Switches new access plans to Paid by default in the new access plan UI. [#2794](https://github.com/gocodebox/lifterlms/issues/2794)
+
+
 = v7.8.2 - 2024-10-31 =
 
 ##### Updates and Enhancements
@@ -633,14 +640,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Bug Fixes
 
 + Fixes revenue display in the Orders table. [#2719](https://github.com/gocodebox/lifterlms/issues/2719)
-
-
-= v7.7.2 - 2024-08-12 =
-
-##### Bug Fixes
-
-+ Fixes fatal error when updating from an old version. Thanks [@verygoodplugins](https://github.com/verygoodplugins)! [#2716](https://github.com/gocodebox/lifterlms/issues/2716)
-+ Avoid errors on pages restricted by one or more memberships. [#2714](https://github.com/gocodebox/lifterlms/issues/2714)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
