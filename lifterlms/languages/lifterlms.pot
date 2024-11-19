@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 7.8.3\n"
+"Project-Id-Version: LifterLMS 7.8.4\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-04T14:52:05+00:00\n"
+"POT-Creation-Date: 2024-11-18T19:11:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
@@ -3046,7 +3046,7 @@ msgid "Access Status"
 msgstr ""
 
 #: includes/admin/post-types/post-tables/class.llms.admin.post.table.orders.php:54
-#: includes/privacy/class-llms-privacy.php:99
+#: includes/privacy/class-llms-privacy.php:98
 #: templates/myaccount/view-order-information.php:33
 msgid "Product"
 msgstr ""
@@ -3500,26 +3500,26 @@ msgid "Achievements"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.students.php:675
-#: includes/privacy/class-llms-privacy.php:114
-#: includes/privacy/class-llms-privacy.php:235
+#: includes/privacy/class-llms-privacy.php:113
+#: includes/privacy/class-llms-privacy.php:232
 msgid "Billing Address 1"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.students.php:680
-#: includes/privacy/class-llms-privacy.php:115
-#: includes/privacy/class-llms-privacy.php:236
+#: includes/privacy/class-llms-privacy.php:114
+#: includes/privacy/class-llms-privacy.php:233
 msgid "Billing Address 2"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.students.php:685
-#: includes/privacy/class-llms-privacy.php:116
-#: includes/privacy/class-llms-privacy.php:237
+#: includes/privacy/class-llms-privacy.php:115
+#: includes/privacy/class-llms-privacy.php:234
 msgid "Billing City"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.students.php:690
-#: includes/privacy/class-llms-privacy.php:117
-#: includes/privacy/class-llms-privacy.php:238
+#: includes/privacy/class-llms-privacy.php:116
+#: includes/privacy/class-llms-privacy.php:235
 msgid "Billing State"
 msgstr ""
 
@@ -3528,14 +3528,14 @@ msgid "Billing Zip"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.students.php:700
-#: includes/privacy/class-llms-privacy.php:119
-#: includes/privacy/class-llms-privacy.php:240
+#: includes/privacy/class-llms-privacy.php:118
+#: includes/privacy/class-llms-privacy.php:237
 msgid "Billing Country"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.students.php:705
-#: includes/privacy/class-llms-privacy.php:120
-#: includes/privacy/class-llms-privacy.php:241
+#: includes/privacy/class-llms-privacy.php:119
+#: includes/privacy/class-llms-privacy.php:238
 msgid "Phone"
 msgstr ""
 
@@ -5780,7 +5780,7 @@ msgid "Update Order Status:"
 msgstr ""
 
 #: includes/admin/views/metaboxes/view-order-submit.php:34
-#: includes/privacy/class-llms-privacy.php:98
+#: includes/privacy/class-llms-privacy.php:97
 msgid "Order Date"
 msgstr ""
 
@@ -9755,62 +9755,62 @@ msgstr ""
 msgid "Welcome to LifterLMS 3.16.0! This update adds significant improvements to the quiz-building experience. Notice quizzes and questions are no longer found under \"Courses\" on the sidebar? Your quizzes have not been deleted but they have been moved! Read more about the all new %1$squiz builder%2$s."
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:50
-#: includes/integrations/class.llms.integration.bbpress.php:126
+#: includes/integrations/class.llms.integration.bbpress.php:83
+#: includes/integrations/class.llms.integration.bbpress.php:129
 msgid "bbPress"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:51
+#: includes/integrations/class.llms.integration.bbpress.php:84
 msgid "Restrict forums and topics to memberships, add forums to courses, and %1$smore%2$s."
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:133
+#: includes/integrations/class.llms.integration.bbpress.php:136
 msgid "Select forums"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:135
+#: includes/integrations/class.llms.integration.bbpress.php:138
 msgid "Add forums which will only be available to students currently enrolled in this course."
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:139
+#: includes/integrations/class.llms.integration.bbpress.php:142
 msgid "Private Course Forums"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:204
+#: includes/integrations/class.llms.integration.bbpress.php:206
 msgid "You must be enrolled in this course to access the course forum."
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:404
+#: includes/integrations/class.llms.integration.bbpress.php:401
 msgid "Student creates a new forum topic"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.bbpress.php:405
+#: includes/integrations/class.llms.integration.bbpress.php:402
 msgid "Student creates a new forum reply"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.buddypress.php:67
+#: includes/integrations/class.llms.integration.buddypress.php:83
 msgid "BuddyPress"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.buddypress.php:68
+#: includes/integrations/class.llms.integration.buddypress.php:84
 msgid "Add LifterLMS information to user profiles and enable membership restrictions for activity, group, and member directories. %1$sLearn More%2$s."
 msgstr ""
 
-#: includes/integrations/class.llms.integration.buddypress.php:101
+#: includes/integrations/class.llms.integration.buddypress.php:104
 msgid "The following LifterLMS Student Dashboard areas will be added to the BuddyPress user profiles"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.buddypress.php:106
+#: includes/integrations/class.llms.integration.buddypress.php:109
 msgid "User Profile Endpoints"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.buddypress.php:144
-#: includes/integrations/class.llms.integration.buddypress.php:433
+#: includes/integrations/class.llms.integration.buddypress.php:146
+#: includes/integrations/class.llms.integration.buddypress.php:430
 msgctxt "BuddyPress profile main nav item slug"
 msgid "courses"
 msgstr ""
 
-#: includes/integrations/class.llms.integration.buddypress.php:157
+#: includes/integrations/class.llms.integration.buddypress.php:159
 msgctxt "BuddyPress profile main nav item label"
 msgid "Courses"
 msgstr ""
@@ -10498,7 +10498,7 @@ msgstr ""
 #: includes/notifications/views/class.llms.notification.view.payment.retry.php:84
 #: includes/notifications/views/class.llms.notification.view.purchase.receipt.php:43
 #: includes/notifications/views/class.llms.notification.view.upcoming.payment.reminder.php:85
-#: includes/privacy/class-llms-privacy.php:100
+#: includes/privacy/class-llms-privacy.php:99
 msgid "Plan"
 msgstr ""
 
@@ -10963,149 +10963,149 @@ msgstr ""
 msgid "Postmeta Data"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:97
+#: includes/privacy/class-llms-privacy.php:96
 msgid "Order Number"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:104
+#: includes/privacy/class-llms-privacy.php:103
 msgid "User ID"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:111
+#: includes/privacy/class-llms-privacy.php:110
 msgid "Billing First Name"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:112
+#: includes/privacy/class-llms-privacy.php:111
 msgid "Billing Last Name"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:113
+#: includes/privacy/class-llms-privacy.php:112
 msgid "Billing Email"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:118
-#: includes/privacy/class-llms-privacy.php:239
+#: includes/privacy/class-llms-privacy.php:117
+#: includes/privacy/class-llms-privacy.php:236
 msgid "Billing Zip Code"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:121
-#: includes/privacy/class-llms-privacy.php:242
+#: includes/privacy/class-llms-privacy.php:120
+#: includes/privacy/class-llms-privacy.php:239
 msgid "IP Address"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:143
+#: includes/privacy/class-llms-privacy.php:141
 msgid "This sample language includes the basics around what personal data your learning platform may be collecting, storing and sharing, as well as who may have access to that data. Depending on what settings are enabled and which additional add-ons are used, the specific information shared by your site will vary. We recommend consulting with a lawyer when deciding what information to disclose on your privacy policy."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:145
+#: includes/privacy/class-llms-privacy.php:143
 msgid "We collect information about you during the registration, enrollment, and checkout processes on our site."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:146
+#: includes/privacy/class-llms-privacy.php:144
 msgid "What we collect and store"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:147
+#: includes/privacy/class-llms-privacy.php:145
 msgid "When you register an account with us, we’ll ask you to provide information including your name, billing address, email address, phone number, credit card/payment details and optional account information like username and password. We’ll use this information for purposes, such as, to:"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:149
+#: includes/privacy/class-llms-privacy.php:147
 msgid "Send you information about your account, orders, courses, and memberships"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:150
+#: includes/privacy/class-llms-privacy.php:148
 msgid "Communicate with you about courses and memberships that you’re enrolled in"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:151
+#: includes/privacy/class-llms-privacy.php:149
 msgid "Respond to your requests, including refunds and complaints"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:152
+#: includes/privacy/class-llms-privacy.php:150
 msgid "Process payments and prevent fraud"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:153
+#: includes/privacy/class-llms-privacy.php:151
 msgid "Set up your account for our site"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:154
+#: includes/privacy/class-llms-privacy.php:152
 msgid "Comply with any legal obligations we have"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:155
+#: includes/privacy/class-llms-privacy.php:153
 msgid "Improve our site’s offerings"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:156
+#: includes/privacy/class-llms-privacy.php:154
 msgid "Send you marketing messages, if you choose to receive them"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:158
+#: includes/privacy/class-llms-privacy.php:156
 msgid "When you create an account, we will store your name, address, email and phone number, which will be used to populate the enrollment and checkout for future purchases and enrollments."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:159
+#: includes/privacy/class-llms-privacy.php:157
 msgid "We generally store information about you for as long as we need the information for the purposes for which we collect and use it, and we are not legally required to continue to keep it. For example, we will store order information for XXX years for tax and accounting purposes. This includes your name, email address and billing address."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:160
+#: includes/privacy/class-llms-privacy.php:158
 msgid "We will also store comments or reviews, if you chose to leave them."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:161
+#: includes/privacy/class-llms-privacy.php:159
 msgid "Who on our team has access"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:162
+#: includes/privacy/class-llms-privacy.php:160
 msgid "Members of our team have access to the information you provide us. For example, both Administrators and Site Managers can access:"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:164
+#: includes/privacy/class-llms-privacy.php:162
 msgid "Order information like what was purchased, when it was purchased and where it should be sent, and"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:165
+#: includes/privacy/class-llms-privacy.php:163
 msgid "Customer information like your name, email address, and billing information."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:167
+#: includes/privacy/class-llms-privacy.php:165
 msgid "Course and membership instructors can access your course progress and activities including:"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:169
+#: includes/privacy/class-llms-privacy.php:167
 msgid "Enrollment dates for their courses and memberships"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:170
+#: includes/privacy/class-llms-privacy.php:168
 msgid "Course progress and status information for their courses"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:171
+#: includes/privacy/class-llms-privacy.php:169
 msgid "Quiz and assignments answers and grades for their courses"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:172
+#: includes/privacy/class-llms-privacy.php:170
 msgid "Comments and reviews made on their memberships and courses"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:174
+#: includes/privacy/class-llms-privacy.php:172
 msgid "Our team members have access to this information to help fulfill orders, process refunds, and support you."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:175
+#: includes/privacy/class-llms-privacy.php:173
 msgid "What we share with others"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:176
+#: includes/privacy/class-llms-privacy.php:174
 msgid "In this section you should list who you’re sharing data with, and for what purpose. This could include, but may not be limited to, analytics, marketing, payment gateways, and third party embeds."
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:177
+#: includes/privacy/class-llms-privacy.php:175
 msgid "We share information with third parties who help us provide our orders and store services to you; for example --"
 msgstr ""
 
-#: includes/privacy/class-llms-privacy.php:243
+#: includes/privacy/class-llms-privacy.php:240
 msgid "Last Login Date"
 msgstr ""
 
