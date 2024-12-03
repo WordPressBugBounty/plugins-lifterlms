@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 7.8.4\n"
+"Project-Id-Version: LifterLMS 7.8.5\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-18T19:11:31+00:00\n"
+"POT-Creation-Date: 2024-12-03T15:54:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System."
 msgstr ""
 
-#: class-lifterlms.php:563
+#: class-lifterlms.php:564
 #: includes/admin/class-llms-admin-plugins.php:38
 #: includes/admin/class.llms.admin.menus.php:203
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.certificate.php:33
@@ -695,7 +695,7 @@ msgstr ""
 msgid "%1$sError%2$s: %3$s"
 msgstr ""
 
-#: includes/admin/class-llms-admin-profile.php:260
+#: includes/admin/class-llms-admin-profile.php:261
 msgid "Address line 2"
 msgstr ""
 
@@ -3095,19 +3095,19 @@ msgstr ""
 msgid "One-time"
 msgstr ""
 
-#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:35
+#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:43
 msgid "LifterLMS Checkout"
 msgstr ""
 
-#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:36
+#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:44
 msgid "LifterLMS Course Catalog"
 msgstr ""
 
-#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:37
+#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:45
 msgid "LifterLMS Memberships Catalog"
 msgstr ""
 
-#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:38
+#: includes/admin/post-types/post-tables/class.llms.admin.post.table.pages.php:46
 msgid "LifterLMS Student Dashboard"
 msgstr ""
 
@@ -6634,7 +6634,7 @@ msgstr ""
 msgid "minute"
 msgstr ""
 
-#: includes/class.llms.frontend.assets.php:105
+#: includes/class.llms.frontend.assets.php:111
 msgid "Copying is not allowed."
 msgstr ""
 
@@ -9039,11 +9039,11 @@ msgid "Reset Your Password"
 msgstr ""
 
 #. Translators: %s = form location ID.
-#: includes/forms/class-llms-form-handler.php:66
+#: includes/forms/class-llms-form-handler.php:65
 msgid "The form location \"%s\" is invalid."
 msgstr ""
 
-#: includes/forms/class-llms-form-handler.php:70
+#: includes/forms/class-llms-form-handler.php:69
 msgid "You must be logged in to perform this action."
 msgstr ""
 
@@ -9418,7 +9418,7 @@ msgstr ""
 msgid "Invalid Order."
 msgstr ""
 
-#: includes/functions/llms-functions-user-information-fields.php:126
+#: includes/functions/llms-functions-user-information-fields.php:124
 msgid "Address Line 2"
 msgstr ""
 
@@ -9736,6 +9736,7 @@ msgstr ""
 #. Translators: %1$s = Opening anchor tag to the welcome blog post on lifterlms.com; %2$s = Closing anchor tag.
 #: includes/functions/updates/llms-functions-updates-500.php:76
 #: includes/functions/updates/llms-functions-updates-600.php:132
+#: includes/functions/updates/llms-functions-updates-785.php:80
 msgid "%1$sRead More%2$s"
 msgstr ""
 
@@ -9745,6 +9746,15 @@ msgstr ""
 
 #: includes/functions/updates/llms-functions-updates-600.php:123
 msgid "This new version brings you the power to build and customize certificates using the WordPress block editor! Start building beautiful certificates using all the blocks you're already familiar, the new Certificate Title block, and new certificate settings like page size (Letter or A4, for example), orientation, background color, and more. In addition to design features, this version also adds the ability to modify already-awarded certificates and achievements and to sync template updates with the click of a button."
+msgstr ""
+
+#: includes/functions/updates/llms-functions-updates-785.php:71
+msgid "Security Notice"
+msgstr ""
+
+#. Translators: %1$s = Opening anchor tag to the welcome blog post on lifterlms.com; %2$s = Closing anchor tag.
+#: includes/functions/updates/llms-functions-updates-785.php:74
+msgid "We've detected that your site has been affected by a security issue fixed in the v7.8.5 update to LifterLMS. Further action is required. Your site may have been saving user passwords to the user meta table in plaintext. %1$sClick here to learn more%2$s."
 msgstr ""
 
 #: includes/functions/updates/llms-functions-updates-3130.php:52

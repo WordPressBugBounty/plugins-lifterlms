@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 7.8.3
+Stable tag: 7.8.4
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,17 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v7.8.5 - 2024-12-03 =
+
+##### Updates and Enhancements
+
++ Now allows copying of text in input and textarea elements, even if copy protection is enabled.
+
+##### Security Fixes
+
++ Fix to avoid saving password confirmation in user meta if Password block has been edited. [#2821](https://github.com/gocodebox/lifterlms/issues/2821)
+
+
 = v7.8.4 - 2024-11-18 =
 
 ##### Bug Fixes
@@ -633,13 +644,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Updated Templates
 
 + [templates/myaccount/dashboard-section.php](https://github.com/gocodebox/lifterlms/blob/7.7.5/templates/myaccount/dashboard-section.php)
-
-
-= v7.7.4 - 2024-08-13 =
-
-##### Bug Fixes
-
-+ Reverts changes to restricting pages by membership functionality to avoid conflicts with certain themes and plugins. [#2714](https://github.com/gocodebox/lifterlms/issues/2714)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
