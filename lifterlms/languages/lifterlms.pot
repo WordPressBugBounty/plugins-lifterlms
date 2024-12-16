@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 7.8.5\n"
+"Project-Id-Version: LifterLMS 7.8.6\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-03T15:54:29+00:00\n"
+"POT-Creation-Date: 2024-12-16T15:41:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
@@ -244,17 +244,17 @@ msgstr ""
 msgid "There was an error saving your data, please try again."
 msgstr ""
 
-#: includes/abstracts/llms-abstract-controller-user-engagements.php:118
+#: includes/abstracts/llms-abstract-controller-user-engagements.php:124
 #: includes/abstracts/llms-abstract-meta-box-user-engagement-sync.php:241
 #: includes/abstracts/llms-abstract-processor-user-engagement-sync.php:155
 msgid "Invalid text type."
 msgstr ""
 
-#: includes/abstracts/llms-abstract-controller-user-engagements.php:145
+#: includes/abstracts/llms-abstract-controller-user-engagements.php:151
 msgid "Sorry, you have not provided any actions."
 msgstr ""
 
-#: includes/abstracts/llms-abstract-controller-user-engagements.php:150
+#: includes/abstracts/llms-abstract-controller-user-engagements.php:156
 msgid "You're trying to perform an invalid action."
 msgstr ""
 
@@ -1845,7 +1845,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:64
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:70
-#: includes/class.llms.ajax.handler.php:1118
+#: includes/class.llms.ajax.handler.php:1122
 #: includes/llms.functions.core.php:1076
 msgid "ID#"
 msgstr ""
@@ -6384,7 +6384,7 @@ msgstr ""
 #. Translators: %s = The user-submitted coupon code.
 #. Translators: %s = coupon code.
 #: includes/class-llms-order-generator.php:582
-#: includes/class.llms.ajax.handler.php:1231
+#: includes/class.llms.ajax.handler.php:1235
 #: includes/functions/llms.functions.order.php:364
 msgid "Coupon code \"%s\" not found."
 msgstr ""
@@ -6472,7 +6472,7 @@ msgstr ""
 #: includes/class.llms.ajax.handler.php:75
 #: includes/class.llms.ajax.handler.php:98
 #: includes/class.llms.ajax.handler.php:250
-#: includes/class.llms.ajax.handler.php:1165
+#: includes/class.llms.ajax.handler.php:1169
 msgid "Missing required parameters"
 msgstr ""
 
@@ -6523,6 +6523,7 @@ msgid "Attempt key is required."
 msgstr ""
 
 #: includes/class.llms.ajax.handler.php:707
+#: includes/class.llms.ajax.handler.php:951
 msgid "The requested attempt could not be found."
 msgstr ""
 
@@ -6556,28 +6557,28 @@ msgstr ""
 msgid "There was an error recording your answer. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1169
+#: includes/class.llms.ajax.handler.php:1173
 msgid "Invalid status"
 msgstr ""
 
 #. Translators: %s = action add|remove|delete.
-#: includes/class.llms.ajax.handler.php:1191
+#: includes/class.llms.ajax.handler.php:1195
 msgid "Action \"%1$s\" failed. Please try again"
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1218
+#: includes/class.llms.ajax.handler.php:1222
 msgid "Please enter a coupon code."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1222
+#: includes/class.llms.ajax.handler.php:1226
 msgid "Please enter a plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1600
+#: includes/class.llms.ajax.handler.php:1604
 msgid "Missing Required Parameters."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1653
+#: includes/class.llms.ajax.handler.php:1657
 msgid "Missing tracking data."
 msgstr ""
 
@@ -35733,7 +35734,7 @@ msgstr ""
 msgid "Next Lesson"
 msgstr ""
 
-#: templates/course/lesson-preview.php:45
+#: templates/course/lesson-preview.php:44
 msgctxt "lesson order within section"
 msgid "%1$d of %2$d"
 msgstr ""
@@ -36172,7 +36173,7 @@ msgstr ""
 #: assets/js/llms-admin-certificate-editor.js:22
 #: assets/js/llms-components.js:17
 #: assets/js/llms-spinner.js:1
-#: assets/js/llms.js:2468
+#: assets/js/llms.js:2473
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
 msgid "Loading…"
 msgstr ""

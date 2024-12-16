@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 7.8.4
+Stable tag: 7.8.5
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,25 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v7.8.6 - 2024-12-16 =
+
+##### Bug Fixes
+
++ Adds additional check for valid quiz attempt key when ending or exiting a quiz. [#2824](https://github.com/gocodebox/lifterlms/issues/2824)
++ Fix for daylight savings and leap years when scheduling engagements. [#2799](https://github.com/gocodebox/lifterlms/issues/2799)
++ Avoid showing course opens message if no Course Start Date has been set. [#2810](https://github.com/gocodebox/lifterlms/issues/2810)
++ Improved accessibility of the lessons listing on a course page, when a lesson is restricted. [#2827](https://github.com/gocodebox/lifterlms/issues/2827)
+
+##### Security Fixes
+
++ Adding additional checks before the deletion of a certificate.
+
+##### Updated Templates
+
++ [templates/content-single-course-before.php](https://github.com/gocodebox/lifterlms/blob/7.8.6/templates/content-single-course-before.php)
++ [templates/course/lesson-preview.php](https://github.com/gocodebox/lifterlms/blob/7.8.6/templates/course/lesson-preview.php)
+
+
 = v7.8.5 - 2024-12-03 =
 
 ##### Updates and Enhancements
@@ -633,17 +652,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Updated Templates
 
 + [templates/quiz/results-attempt-questions-list.php](https://github.com/gocodebox/lifterlms/blob/7.7.6/templates/quiz/results-attempt-questions-list.php)
-
-
-= v7.7.5 - 2024-08-15 =
-
-##### Bug Fixes
-
-+ Show video tiles for courses on the Dashboard and My Courses pages when enabled. [#2728](https://github.com/gocodebox/lifterlms/issues/2728)
-
-##### Updated Templates
-
-+ [templates/myaccount/dashboard-section.php](https://github.com/gocodebox/lifterlms/blob/7.7.5/templates/myaccount/dashboard-section.php)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
