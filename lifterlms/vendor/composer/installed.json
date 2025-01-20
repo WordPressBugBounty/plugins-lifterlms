@@ -192,17 +192,17 @@
         },
         {
             "name": "lifterlms/lifterlms-blocks",
-            "version": "2.5.8",
-            "version_normalized": "2.5.8.0",
+            "version": "2.5.9",
+            "version_normalized": "2.5.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/lifterlms-blocks.git",
-                "reference": "b00de24c8ce76b9b4a197789bd7731d5e8a4a642"
+                "reference": "607efd6e9a8f5b02de3afa7f65a39fe1a4000da1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/lifterlms-blocks/zipball/b00de24c8ce76b9b4a197789bd7731d5e8a4a642",
-                "reference": "b00de24c8ce76b9b4a197789bd7731d5e8a4a642",
+                "url": "https://api.github.com/repos/gocodebox/lifterlms-blocks/zipball/607efd6e9a8f5b02de3afa7f65a39fe1a4000da1",
+                "reference": "607efd6e9a8f5b02de3afa7f65a39fe1a4000da1",
                 "shasum": ""
             },
             "require": {
@@ -212,7 +212,7 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.3"
             },
-            "time": "2024-09-13T17:13:03+00:00",
+            "time": "2025-01-17T14:33:58+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
@@ -228,7 +228,7 @@
             "description": "WordPress Editor (Gutenberg) blocks for LifterLMS.",
             "support": {
                 "issues": "https://github.com/gocodebox/lifterlms-blocks/issues",
-                "source": "https://github.com/gocodebox/lifterlms-blocks/tree/2.5.8"
+                "source": "https://github.com/gocodebox/lifterlms-blocks/tree/2.5.9"
             },
             "install-path": "../../libraries/lifterlms-blocks"
         },

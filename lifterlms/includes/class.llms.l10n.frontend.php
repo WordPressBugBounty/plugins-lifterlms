@@ -429,6 +429,17 @@ class LLMS_L10n_JS {
 			 * @version  7.3.0
 			 */
 			'There was an error loading the necessary resources. Please try again.' => esc_html__( 'There was an error loading the necessary resources. Please try again.', 'lifterlms' ),
+			'Restrictions' => esc_html__( 'Restrictions', 'lifterlms' ),
+			'Free' => esc_html__( 'Free', 'lifterlms' ),
+			'Monthly' => esc_html__( 'Monthly', 'lifterlms' ),
+			'Annual' => esc_html__( 'Annual', 'lifterlms' ),
+			'One Time' => esc_html__( 'One Time', 'lifterlms' ),
+			'Lifetime' => esc_html__( 'Lifetime', 'lifterlms' ),
+			'Paid Trial' => esc_html__( 'Paid Trial', 'lifterlms' ),
+			'Free Trial' => esc_html__( 'Free Trial', 'lifterlms' ),
+			'Hidden Access' => esc_html__( 'Hidden Access', 'lifterlms' ),
+			'Sale' => esc_html__( 'Sale', 'lifterlms' ),
+			'Pre-sale' => esc_html__( 'Pre-sale', 'lifterlms' ),
 			'After deleting this access plan, any students subscribed to this plan will still have access and will continue to make recurring payments according to the access plan\'s settings. If you wish to terminate their plans you must do so manually. This action cannot be reversed.' => esc_html__( 'After deleting this access plan, any students subscribed to this plan will still have access and will continue to make recurring payments according to the access plan\'s settings. If you wish to terminate their plans you must do so manually. This action cannot be reversed.', 'lifterlms' ),
 			'An error was encountered during the save attempt. Please try again.' => esc_html__( 'An error was encountered during the save attempt. Please try again.', 'lifterlms' ),
 

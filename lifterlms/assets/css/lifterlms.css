@@ -105,6 +105,7 @@
   position: relative;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  white-space: nowrap;
 }
 .llms-button-action:disabled,
 .llms-button-danger:disabled,
@@ -274,6 +275,29 @@ a.llms-button-secondary {
 }
 .llms-button-outline.square {
   padding: 12px;
+}
+
+.llms-button-plain {
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  color: #1D2327;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: none;
+  line-height: 1;
+  margin: 0;
+  max-width: 100%;
+  padding: 1px 3px;
+  position: relative;
+}
+.llms-button-plain:hover, .llms-button-plain:active {
+  color: #1D2327;
+}
+.llms-button-plain:focus {
+  color: #1D2327;
 }
 
 .llms-course-continue-button {
@@ -1229,6 +1253,16 @@ svg .llms-animated-circle {
 .llms-favorite-wrapper .fa-heart {
   color: #EF476F;
 }
+.llms-favorite-wrapper button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.llms-favorite-wrapper button:focus {
+  outline: 2px dashed #333;
+  outline-offset: 2px;
+}
 
 .llms-has-favorite .llms-parent-course-link {
   display: inline-block;
@@ -1309,18 +1343,21 @@ svg .llms-animated-circle {
 }
 .llms-loop-item-content .llms-meta,
 .llms-loop-item-content .llms-author,
-.llms-loop-item-content .llms-loop-title {
+.llms-loop-item-content .llms-loop-title,
+.llms-loop-item-content .llms-featured-pricing {
   padding: 0 15px;
 }
 .llms-loop-item-content .llms-meta,
-.llms-loop-item-content .llms-author {
+.llms-loop-item-content .llms-author,
+.llms-loop-item-content .llms-featured-pricing {
   color: #444;
   display: block;
   font-size: 14px;
   margin-bottom: 10px;
 }
 .llms-loop-item-content .llms-meta:last-child,
-.llms-loop-item-content .llms-author:last-child {
+.llms-loop-item-content .llms-author:last-child,
+.llms-loop-item-content .llms-featured-pricing:last-child {
   margin-bottom: 0;
 }
 .llms-loop-item-content .llms-author {
@@ -1390,30 +1427,25 @@ svg .llms-animated-circle {
   max-width: 100%;
   position: relative;
 }
+.llms-lesson-preview section {
+  background: #fefefe;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.llms-lesson-preview section:hover {
+  background: #eaeaea;
+}
 .llms-lesson-preview.current-lesson .llms-lesson-title {
   font-weight: 400;
 }
 .llms-lesson-preview .llms-lesson-link {
-  background: #fefefe;
   color: #010101;
   display: block;
   padding: 15px;
   text-decoration: none;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-.llms-lesson-preview .llms-lesson-link:hover {
-  background: #eaeaea;
 }
 .llms-lesson-preview .llms-lesson-link:visited {
   color: #212121;
-}
-.llms-lesson-preview .llms-lesson-link.llms-lesson-link-locked {
-  background: #EFEFEF;
-  color: #666;
-}
-.llms-lesson-preview .llms-lesson-link.llms-lesson-link-locked:hover {
-  background: #dedede;
 }
 .llms-lesson-preview .llms-lesson-link .llms-lesson-preview-row {
   display: -webkit-box;
@@ -1423,6 +1455,16 @@ svg .llms-animated-circle {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+.llms-lesson-preview .llms-lesson-locked {
+  background: #EFEFEF;
+  color: #666;
+}
+.llms-lesson-preview .llms-lesson-locked .llms-lesson-link {
+  color: #666;
+}
+.llms-lesson-preview .llms-lesson-locked:hover {
+  background: #dedede;
 }
 .llms-lesson-preview .llms-lesson-thumbnail {
   margin-bottom: 15px;
@@ -1448,6 +1490,22 @@ svg .llms-animated-circle {
 }
 .llms-lesson-preview .llms-lesson-excerpt p:last-of-type {
   margin: 0;
+}
+.llms-lesson-preview .llms-lesson-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+.llms-lesson-preview .llms-lesson-meta div.llms-favorite-wrapper + span.llms-lesson-has-quiz {
+  margin-left: 10px;
+}
+.llms-lesson-preview .llms-lesson-meta div.llms-favorite-wrapper + span.llms-lesson-has-assignment {
+  margin-left: 10px;
+}
+.llms-lesson-preview .llms-lesson-meta span.llms-lesson-has-quiz + span.llms-lesson-has-assignment {
+  margin-left: 10px;
 }
 .llms-lesson-preview .llms-main {
   -webkit-box-flex: 1;
@@ -1632,7 +1690,7 @@ svg .llms-animated-circle {
 .review_box [type=text] {
   margin: 10px 0px;
 }
-.review_box h5 {
+.review_box .review_error {
   color: red;
   display: none;
 }
@@ -3133,6 +3191,24 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
 .llms-form-field .select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 100%;
 }
+.llms-form-field:has(.llms-visibility-toggle) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: grid;
+  grid-template-areas: "label toggle" "input input";
+  grid-template-columns: 1fr auto;
+}
+.llms-form-field:has(.llms-visibility-toggle) label {
+  grid-area: label;
+}
+.llms-form-field:has(.llms-visibility-toggle) input {
+  grid-area: input;
+}
+.llms-form-field:has(.llms-visibility-toggle) .llms-visibility-toggle {
+  grid-area: toggle;
+  justify-self: end;
+}
 
 .llms-password-strength-meter {
   border: 1px solid #dadada;
@@ -3413,6 +3489,9 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
 .llms-student-dashboard .llms-switch-payment-source-main .llms-payment-method li,
 .llms-student-dashboard .llms-switch-payment-source-main ul.llms-order-summary li {
   list-style-type: none;
+}
+.llms-student-dashboard .llms-featured-pricing {
+  display: none;
 }
 .llms-student-dashboard.dashboard .llms-sd-section {
   border: 1px solid #dedede;
