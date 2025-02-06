@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 8.0.0\n"
+"Project-Id-Version: LifterLMS 8.0.1\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-17T15:58:05+00:00\n"
+"POT-Creation-Date: 2025-02-06T09:23:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
@@ -467,7 +467,7 @@ msgstr ""
 #: includes/privacy/class-llms-privacy-exporters.php:320
 #: templates/admin/reporting/tabs/quizzes/attempt.php:50
 #: templates/admin/reporting/tabs/students/courses-course.php:154
-#: templates/myaccount/my-grades-single.php:27
+#: templates/myaccount/my-grades-single.php:29
 #: templates/myaccount/my-grades.php:22
 msgid "Grade"
 msgstr ""
@@ -3236,7 +3236,7 @@ msgstr ""
 #: includes/admin/reporting/tables/llms.table.students.php:645
 #: includes/privacy/class-llms-privacy-exporters.php:219
 #: templates/admin/reporting/tabs/students/courses-course.php:142
-#: templates/myaccount/my-grades-single.php:22
+#: templates/myaccount/my-grades-single.php:24
 #: templates/myaccount/my-grades.php:21
 msgid "Progress"
 msgstr ""
@@ -3759,7 +3759,7 @@ msgid "Prevent concurrent logins for users with the selected user roles."
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.accounts.php:125
-#: includes/admin/settings/class.llms.settings.general.php:94
+#: includes/admin/settings/class.llms.settings.general.php:93
 msgid "Select user roles"
 msgstr ""
 
@@ -3969,7 +3969,7 @@ msgstr ""
 #: includes/admin/settings/class.llms.settings.checkout.php:71
 #: includes/admin/settings/class.llms.settings.checkout.php:85
 #: includes/admin/settings/class.llms.settings.checkout.php:86
-#: includes/admin/settings/class.llms.settings.general.php:71
+#: includes/admin/settings/class.llms.settings.general.php:70
 #: includes/admin/settings/class.llms.settings.integrations.php:139
 #: includes/admin/settings/class.llms.settings.integrations.php:164
 #: includes/admin/settings/class.llms.settings.integrations.php:165
@@ -4303,44 +4303,60 @@ msgstr ""
 msgid "A default image used for any %1$s template or award which does not specify an image. Changing this setting will affect all existing templates and awards which do not specify their own image."
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:63
+#: includes/admin/settings/class.llms.settings.general.php:62
 msgid "Features"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:70
+#: includes/admin/settings/class.llms.settings.general.php:69
 msgid "Automatic Recurring Payments: <strong>%s</strong>"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:71
+#: includes/admin/settings/class.llms.settings.general.php:70
 #: libraries/lifterlms-rest/includes/class-llms-rest-webhooks.php:175
 msgid "Disabled"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:87
+#: includes/admin/settings/class.llms.settings.general.php:86
 #: includes/class.llms.l10n.frontend.php:136
 #: includes/class.llms.l10n.frontend.php:169
 #: includes/class.llms.l10n.frontend.php:333
 msgid "General Settings"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:97
+#: includes/admin/settings/class.llms.settings.general.php:96
 msgid "Users with the selected roles will bypass enrollment, drip, and prerequisite restrictions for courses and memberships."
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:106
+#: includes/admin/settings/class.llms.settings.general.php:105
 msgid "Unrestricted Preview Access"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:111
+#: includes/admin/settings/class.llms.settings.general.php:110
 msgid "Content Protection"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:112
+#: includes/admin/settings/class.llms.settings.general.php:111
 msgid "Prevent users from copying website content and downloading images."
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.general.php:112
+#: includes/admin/settings/class.llms.settings.general.php:111
 msgid "Users with Unrestricted Preview Access will not be affected by this setting."
+msgstr ""
+
+#: includes/admin/settings/class.llms.settings.general.php:118
+msgid "Frequency of Saving Tracked Events"
+msgstr ""
+
+#: includes/admin/settings/class.llms.settings.general.php:120
+msgid "Specifies how often tracked events are sent to the server. \"Minimum\" sends only when local storage is almost full (fewer network calls). \"Always\" sends each event immediately (higher accuracy, more server load)."
+msgstr ""
+
+#: includes/admin/settings/class.llms.settings.general.php:124
+msgid "Minimum"
+msgstr ""
+
+#: includes/admin/settings/class.llms.settings.general.php:125
+msgid "Always"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.integrations.php:33
@@ -6664,34 +6680,34 @@ msgid "not sent due to email sending issues."
 msgstr ""
 
 #. Translators: %s = Event field key.
-#: includes/class-llms-events.php:122
+#: includes/class-llms-events.php:120
 msgid "The event is missing the \"%s\" field."
 msgstr ""
 
 #. Translators: %s = URL.
-#: includes/class-llms-events.php:142
+#: includes/class-llms-events.php:140
 msgid "The URL \"%s\" cannot be mapped to a valid post object."
 msgstr ""
 
 #. Translators: %s = key name of the missing field.
-#: includes/class-llms-events.php:179
+#: includes/class-llms-events.php:176
 msgid "Missing required field: \"%s\"."
 msgstr ""
 
 #. Translators: %s = Submitted event string.
-#: includes/class-llms-events.php:191
+#: includes/class-llms-events.php:188
 msgid "The event \"%s\" is invalid."
 msgstr ""
 
-#: includes/class-llms-events.php:211
+#: includes/class-llms-events.php:208
 msgid "An unknown error occurred during event creation."
 msgstr ""
 
-#: includes/class-llms-events.php:257
+#: includes/class-llms-events.php:253
 msgid "There was one or more errors encountered while recording the events."
 msgstr ""
 
-#: includes/class-llms-events.php:451
+#: includes/class-llms-events.php:442
 msgid "You're not allowed to store tracking events"
 msgstr ""
 
@@ -11204,13 +11220,13 @@ msgstr ""
 
 #: includes/privacy/class-llms-privacy-exporters.php:203
 #: templates/admin/reporting/tabs/students/courses-course.php:107
-#: templates/myaccount/my-grades-single.php:32
+#: templates/myaccount/my-grades-single.php:34
 #: templates/myaccount/my-grades.php:20
 msgid "Enrollment Date"
 msgstr ""
 
 #: includes/privacy/class-llms-privacy-exporters.php:210
-#: templates/myaccount/my-grades-single.php:41
+#: templates/myaccount/my-grades-single.php:43
 msgid "Last Activity"
 msgstr ""
 
@@ -35870,7 +35886,7 @@ msgid "Overall Progress"
 msgstr ""
 
 #: templates/admin/reporting/tabs/students/information.php:61
-#: templates/myaccount/my-grades-single.php:29
+#: templates/myaccount/my-grades-single.php:31
 msgid "Overall Grade"
 msgstr ""
 
@@ -36137,23 +36153,23 @@ msgctxt "Voucher Code"
 msgid "Submit"
 msgstr ""
 
-#: templates/myaccount/my-grades-single.php:24
+#: templates/myaccount/my-grades-single.php:26
 msgid "Complete"
 msgstr ""
 
-#: templates/myaccount/my-grades-single.php:36
+#: templates/myaccount/my-grades-single.php:38
 msgid "Latest Achievement"
 msgstr ""
 
-#: templates/myaccount/my-grades-single.php:38
+#: templates/myaccount/my-grades-single.php:40
 msgid "No achievements"
 msgstr ""
 
-#: templates/myaccount/my-grades-single.php:43
+#: templates/myaccount/my-grades-single.php:45
 msgid "No activity"
 msgstr ""
 
-#: templates/myaccount/my-grades-single.php:62
+#: templates/myaccount/my-grades-single.php:66
 msgid "Invalid course."
 msgstr ""
 

@@ -234,17 +234,17 @@
         },
         {
             "name": "lifterlms/lifterlms-cli",
-            "version": "0.0.4",
-            "version_normalized": "0.0.4.0",
+            "version": "0.0.5",
+            "version_normalized": "0.0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/lifterlms-cli.git",
-                "reference": "54fc9e4c82c81d5e693c1d170bc8de16355be83c"
+                "reference": "5f89b0a89c3137c2de6433327120e5392cded8c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/lifterlms-cli/zipball/54fc9e4c82c81d5e693c1d170bc8de16355be83c",
-                "reference": "54fc9e4c82c81d5e693c1d170bc8de16355be83c",
+                "url": "https://api.github.com/repos/gocodebox/lifterlms-cli/zipball/5f89b0a89c3137c2de6433327120e5392cded8c8",
+                "reference": "5f89b0a89c3137c2de6433327120e5392cded8c8",
                 "shasum": ""
             },
             "require": {
@@ -254,7 +254,7 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.3"
             },
-            "time": "2024-07-09T15:33:40+00:00",
+            "time": "2025-01-21T20:55:57+00:00",
             "bin": [
                 "bin/run-behat-tests"
             ],
@@ -278,7 +278,7 @@
             "description": "WP CLI commands for LifterLMS",
             "support": {
                 "issues": "https://github.com/gocodebox/lifterlms-cli/issues",
-                "source": "https://github.com/gocodebox/lifterlms-cli/tree/0.0.4"
+                "source": "https://github.com/gocodebox/lifterlms-cli/tree/0.0.5"
             },
             "install-path": "../../libraries/lifterlms-cli"
         },
