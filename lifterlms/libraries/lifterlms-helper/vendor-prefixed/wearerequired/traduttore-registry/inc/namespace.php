@@ -74,7 +74,7 @@ function add_project( $type, $slug, $api_url ) {
 			}
 
 			if ( ! isset( $value->translations ) ) {
-				$value->translations = [];
+				$value->translations = array();
 			}
 
 			$translations = get_translations( $type, $slug, $api_url );
@@ -121,10 +121,10 @@ function add_project( $type, $slug, $api_url ) {
  * @since 1.1.0
  */
 function register_clean_translations_cache() {
-	$clear_plugin_translations = static function() {
+	$clear_plugin_translations = static function () {
 		clean_translations_cache( 'plugin' );
 	};
-	$clear_theme_translations  = static function() {
+	$clear_theme_translations  = static function () {
 		clean_translations_cache( 'theme' );
 	};
 
@@ -186,11 +186,11 @@ function get_translations( $type, $slug, $url ) {
 		return $translations->{$slug};
 	}
 
-	$result = json_decode( wp_remote_retrieve_body( wp_remote_get( $url, [ 'timeout' => 2 ] ) ), true );
+	$result = json_decode( wp_remote_retrieve_body( wp_remote_get( $url, array( 'timeout' => 2 ) ) ), true );
 	if ( ! \is_array( $result ) ) {
 		// Cache an empty result in case of a failure
 		// and retry on next update check.
-		$result = [];
+		$result = array();
 	}
 
 	$translations->{$slug}       = $result;
@@ -240,7 +240,7 @@ function sanitize_date( $date_string ) {
  * @return array Translation data.
  */
 function get_installed_translations( $type ) {
-	static $cache = [];
+	static $cache = array();
 
 	if ( ! isset( $cache[ $type ] ) ) {
 		$cache[ $type ] = wp_get_installed_translations( $type . 's' );

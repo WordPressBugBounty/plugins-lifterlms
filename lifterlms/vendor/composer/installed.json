@@ -284,17 +284,17 @@
         },
         {
             "name": "lifterlms/lifterlms-helper",
-            "version": "3.5.4",
-            "version_normalized": "3.5.4.0",
+            "version": "3.5.5",
+            "version_normalized": "3.5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/lifterlms-helper.git",
-                "reference": "97804551645cd2f7d0773435902e0b892e6af1a1"
+                "reference": "e33928430b4a2080ed53533c90a0bd085e68df00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/lifterlms-helper/zipball/97804551645cd2f7d0773435902e0b892e6af1a1",
-                "reference": "97804551645cd2f7d0773435902e0b892e6af1a1",
+                "url": "https://api.github.com/repos/gocodebox/lifterlms-helper/zipball/e33928430b4a2080ed53533c90a0bd085e68df00",
+                "reference": "e33928430b4a2080ed53533c90a0bd085e68df00",
                 "shasum": ""
             },
             "require": {
@@ -305,29 +305,29 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.3"
             },
-            "time": "2024-07-30T19:25:09+00:00",
+            "time": "2025-02-14T11:37:03+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "strauss": {
-                    "target_directory": "vendor-prefixed",
                     "packages": [
                         "wearerequired/traduttore-registry"
                     ],
-                    "update_call_sites": false,
-                    "override_autoload": [],
+                    "target_directory": "vendor-prefixed",
                     "exclude_from_copy": {
                         "packages": [],
                         "namespaces": [],
                         "file_patterns": []
                     },
+                    "override_autoload": [],
+                    "update_call_sites": false,
+                    "delete_vendor_files": false,
                     "exclude_from_prefix": {
                         "packages": [],
                         "namespaces": [],
                         "file_patterns": []
                     },
-                    "namespace_replacement_patterns": [],
                     "delete_vendor_packages": false,
-                    "delete_vendor_files": false
+                    "namespace_replacement_patterns": []
                 }
             },
             "installation-source": "dist",
@@ -344,7 +344,7 @@
             "description": "Update, install, and beta test LifterLMS and LifterLMS add-ons",
             "support": {
                 "issues": "https://github.com/gocodebox/lifterlms-helper/issues",
-                "source": "https://github.com/gocodebox/lifterlms-helper/tree/3.5.4"
+                "source": "https://github.com/gocodebox/lifterlms-helper/tree/3.5.5"
             },
             "install-path": "../../libraries/lifterlms-helper"
         },
