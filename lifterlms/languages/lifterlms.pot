@@ -2,20 +2,22 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 8.0.2\n"
+"Project-Id-Version: LifterLMS 8.0.3\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-17T14:17:26+00:00\n"
+"POT-Creation-Date: 2025-04-07T16:45:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
 
 #. Plugin Name of the plugin
 #. Author of the plugin
+#: lifterlms.php
+#: includes/class-llms-bricks.php:46
 #: includes/class.llms.nav.menus.php:72
 #: includes/privacy/class-llms-privacy.php:33
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
@@ -25,14 +27,16 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #. Author URI of the plugin
+#: lifterlms.php
 msgid "https://lifterlms.com/"
 msgstr ""
 
 #. Description of the plugin
+#: lifterlms.php
 msgid "Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System."
 msgstr ""
 
-#: class-lifterlms.php:533
+#: class-lifterlms.php:534
 #: includes/admin/class-llms-admin-plugins.php:38
 #: includes/admin/class.llms.admin.menus.php:203
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.certificate.php:33
@@ -148,6 +152,7 @@ msgstr ""
 #: includes/admin/reporting/tables/llms.table.quizzes.php:433
 #: includes/admin/views/builder/lesson-settings.php:14
 #: includes/admin/views/builder/quiz.php:36
+#: includes/bricks/class-llms-bricks-element-course-information.php:30
 #: includes/notifications/views/class.llms.notification.view.enrollment.php:87
 #: includes/privacy/class-llms-privacy-exporters.php:117
 #: includes/privacy/class-llms-privacy-exporters.php:163
@@ -349,6 +354,7 @@ msgstr ""
 
 #: includes/abstracts/llms.abstract.notification.controller.php:345
 #: includes/beaver-builder/modules/course-author/class.llms.lab.course.author.module.php:31
+#: includes/bricks/class-llms-bricks-element-course-author.php:20
 msgid "Course Author"
 msgstr ""
 
@@ -441,6 +447,10 @@ msgstr ""
 #: includes/beaver-builder/modules/course-meta-info/class.llms.lab.course.meta.info.module.php:57
 #: includes/beaver-builder/modules/pricing-table/class.llms.lab.pricing.table.module.php:135
 #: includes/beaver-builder/modules/pricing-table/class.llms.lab.pricing.table.module.php:155
+#: includes/bricks/class-llms-bricks-element-course-author.php:67
+#: includes/bricks/class-llms-bricks-element-course-continue.php:43
+#: includes/bricks/class-llms-bricks-element-course-meta-info.php:43
+#: includes/bricks/class-llms-bricks-element-course-syllabus.php:43
 #: includes/class.llms.post-types.php:485
 #: includes/notifications/views/class.llms.notification.view.quiz.graded.php:77
 #: templates/myaccount/my-grades.php:19
@@ -1032,12 +1042,13 @@ msgstr ""
 #: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.enrollments.php:77
 #: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.enrollments.php:83
 #: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.enrollments.php:89
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:70
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:76
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:82
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:88
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:102
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:108
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:68
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:74
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:80
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:86
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:94
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:100
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:106
 msgid "loading..."
 msgstr ""
 
@@ -1057,13 +1068,11 @@ msgid "Number of total user registrations during the selected period"
 msgstr ""
 
 #: includes/admin/class.llms.admin.dashboard-widget.php:211
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:74
-#: includes/admin/reporting/widgets/class.llms.analytics.widget.sold.php:49
 msgid "Net Sales"
 msgstr ""
 
 #: includes/admin/class.llms.admin.dashboard-widget.php:214
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:77
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:75
 msgid "Total of all successful transactions during this period"
 msgstr ""
 
@@ -2418,6 +2427,7 @@ msgstr ""
 #: includes/admin/post-types/post-tables/class.llms.admin.post.table.instructors.php:56
 #: includes/admin/reporting/tables/llms.table.courses.php:311
 #: includes/admin/reporting/tables/llms.table.memberships.php:311
+#: includes/bricks/class-llms-bricks-element-instructors.php:20
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:28
 msgid "Instructors"
@@ -2915,7 +2925,6 @@ msgstr ""
 msgid "Template"
 msgstr ""
 
-#. Translators: %s: Post title.
 #: includes/admin/post-types/post-tables/class-llms-admin-post-table-awards.php:115
 #: includes/admin/post-types/post-tables/class-llms-admin-post-table-awards.php:320
 msgid "Delete Permanently"
@@ -3615,48 +3624,62 @@ msgstr ""
 msgid "Attempts"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:68
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:66
 #: includes/admin/reporting/widgets/class.llms.analytics.widget.sales.php:32
-msgid "# of Sales"
+msgid "# of New Sales"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:71
-msgid "Number of new active or completed orders placed within this period"
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:69
+msgid "Number of new non-refunded orders placed within this period"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:80
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:72
+#: includes/admin/reporting/widgets/class.llms.analytics.widget.sold.php:49
+msgid "Net Revenue"
+msgstr ""
+
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:78
 #: includes/admin/reporting/widgets/class.llms.analytics.widget.refunds.php:35
 msgid "# of Refunds"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:83
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:81
 msgid "Number of orders refunded during this period"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:86
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:84
 #: includes/admin/reporting/widgets/class.llms.analytics.widget.refunded.php:32
 msgid "Amount Refunded"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:89
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:87
 msgid "Total of all transactions refunded during this period"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:100
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:92
 #: includes/admin/reporting/widgets/class.llms.analytics.widget.coupons.php:38
 msgid "# of Coupons Used"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:103
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:95
 msgid "Number of orders completed using coupons during this period"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:106
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:98
 msgid "Amount of Coupons"
 msgstr ""
 
-#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:109
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:101
 msgid "Total amount of coupons used during this period"
+msgstr ""
+
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:104
+#: includes/admin/reporting/widgets/class.llms.analytics.widget.transactions.php:43
+msgid "# of Transactions"
+msgstr ""
+
+#: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.sales.php:107
+msgid "Number of transactions within this period"
 msgstr ""
 
 #: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.students.php:51
@@ -4452,7 +4475,6 @@ msgstr ""
 msgid "Deletes pending batches generated by LifterLMS background processors."
 msgstr ""
 
-#. Translators: %d = the number of pending batches.
 #: includes/admin/tools/class-llms-admin-tool-batch-eraser.php:44
 msgid "There is currently %d pending batch that will be deleted."
 msgid_plural "There are currently %d pending batches that will be deleted."
@@ -4496,7 +4518,6 @@ msgstr ""
 msgid "The method used to determine when a limited-billing recurring order has completed its payment plan changed during version 5.3.0. This tool provides a report of orders which may been affected by this change. %1$sRead more%2$s about this change."
 msgstr ""
 
-#. Translators: %d = the number of pending batches.
 #: includes/admin/tools/class-llms-admin-tool-limited-billing-order-locator.php:134
 msgid "There is %d order that should be reviewed."
 msgid_plural "There are %d orders that should be reviewed."
@@ -4515,7 +4536,6 @@ msgstr ""
 msgid "Check active recurring orders to ensure their recurring payment action is properly scheduled for the next payment. If a recurring payment is due and not scheduled it will be rescheduled."
 msgstr ""
 
-#. Translators: %d = the number of pending batches.
 #: includes/admin/tools/class-llms-admin-tool-recurring-payment-rescheduler.php:46
 msgid "There is %d order that will be checked."
 msgid_plural "There are %d orders that will be checked in batches of 50."
@@ -6416,6 +6436,10 @@ msgid "Displays instructors for the current course."
 msgstr ""
 
 #: includes/beaver-builder/modules/course-meta-info/class.llms.lab.course.meta.info.module.php:31
+#: includes/bricks/class-llms-bricks-element-course-information.php:20
+#: includes/bricks/class-llms-bricks-element-course-information.php:32
+#: includes/bricks/class-llms-bricks-element-course-information.php:60
+#: includes/bricks/class-llms-bricks-element-course-information.php:72
 #: includes/class-llms-elementor-migrate.php:50
 #: libraries/lifterlms-blocks/includes/blocks/class-llms-blocks-course-information-block.php:62
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
@@ -6431,6 +6455,7 @@ msgid "Select the course to display the course information from. Leave blank for
 msgstr ""
 
 #: includes/beaver-builder/modules/course-syllabus/class.llms.lab.course.syllabus.module.php:31
+#: includes/bricks/class-llms-bricks-element-course-syllabus.php:20
 #: includes/elementor/class-llms-elementor-widget-course-syllabus.php:10
 #: includes/elementor/class-llms-elementor-widget-course-syllabus.php:17
 #: includes/widgets/class.llms.widget.course.syllabus.php:29
@@ -6492,6 +6517,84 @@ msgstr ""
 
 #: includes/beaver-builder/modules/pricing-table/class.llms.lab.pricing.table.module.php:167
 msgid "Choose which membership to display a pricing table for."
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-author.php:29
+msgid "Avatar size"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-author.php:39
+#: blocks/course-author/index.js:5
+msgid "The size of the avatar in pixels."
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-author.php:44
+#: blocks/course-author/index.js:5
+msgid "Display Bio"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-author.php:59
+#: includes/bricks/class-llms-bricks-element-course-continue.php:35
+#: includes/bricks/class-llms-bricks-element-course-meta-info.php:35
+#: includes/bricks/class-llms-bricks-element-course-syllabus.php:35
+msgid "Inherit from current course"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-continue.php:20
+msgid "Course Progress with Continue Button"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:38
+#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
+msgid "Title Headline Size"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:41
+msgid "h1"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:42
+msgid "h2"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:43
+msgid "h3"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:44
+msgid "h4"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:45
+msgid "h5"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-information.php:46
+msgid "h6"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-meta-info.php:20
+#: includes/elementor/class-llms-elementor-widget-course-meta-info.php:10
+#: includes/elementor/class-llms-elementor-widget-course-meta-info.php:17
+msgid "Course Meta Information"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-course-progress.php:20
+#: includes/elementor/class-llms-elementor-widget-course-progress.php:10
+#: includes/elementor/class-llms-elementor-widget-course-progress.php:17
+#: includes/widgets/class.llms.widget.course.progress.php:36
+#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
+msgid "Course Progress"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-lesson-progression.php:20
+#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
+msgid "Lesson Progression (Mark Complete)"
+msgstr ""
+
+#: includes/bricks/class-llms-bricks-element-pricing-table.php:20
+#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
+msgid "LifterLMS Pricing Table"
 msgstr ""
 
 #: includes/class-llms-beaver-builder.php:120
@@ -9328,20 +9431,8 @@ msgstr ""
 msgid "Show current course instructors."
 msgstr ""
 
-#: includes/elementor/class-llms-elementor-widget-course-meta-info.php:10
-#: includes/elementor/class-llms-elementor-widget-course-meta-info.php:17
-msgid "Course Meta Information"
-msgstr ""
-
 #: includes/elementor/class-llms-elementor-widget-course-meta-info.php:25
 msgid "Show current course meta information."
-msgstr ""
-
-#: includes/elementor/class-llms-elementor-widget-course-progress.php:10
-#: includes/elementor/class-llms-elementor-widget-course-progress.php:17
-#: includes/widgets/class.llms.widget.course.progress.php:36
-#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
-msgid "Course Progress"
 msgstr ""
 
 #: includes/elementor/class-llms-elementor-widget-course-progress.php:25
@@ -9356,11 +9447,11 @@ msgstr ""
 msgid "Show pricing table for the current course."
 msgstr ""
 
-#: includes/emails/class.llms.email.reset.password.php:36
+#: includes/emails/class.llms.email.reset.password.php:42
 msgid "Password Reset for {site_title}"
 msgstr ""
 
-#: includes/emails/class.llms.email.reset.password.php:37
+#: includes/emails/class.llms.email.reset.password.php:43
 msgid "Reset Your Password"
 msgstr ""
 
@@ -12399,6 +12490,10 @@ msgstr ""
 
 #: languages/countries-address-info.php:540
 msgid "City / Regency"
+msgstr ""
+
+#: languages/countries-address-info.php:547
+msgid "Eircode"
 msgstr ""
 
 #: languages/countries-address-info.php:562
@@ -35874,7 +35969,7 @@ msgid "Completed Date"
 msgstr ""
 
 #: templates/admin/reporting/tabs/students/courses-course.php:131
-msgid "Last Activity Date"
+msgid "Enrollment Updated Date"
 msgstr ""
 
 #: templates/admin/reporting/tabs/students/information.php:39
@@ -36718,14 +36813,6 @@ msgid "Course Author Settings"
 msgstr ""
 
 #: blocks/course-author/index.js:5
-msgid "The size of the avatar in pixels."
-msgstr ""
-
-#: blocks/course-author/index.js:5
-msgid "Display Bio"
-msgstr ""
-
-#: blocks/course-author/index.js:5
 msgid "Author bio is displayed."
 msgstr ""
 
@@ -37115,10 +37202,6 @@ msgid "Course Information Options"
 msgstr ""
 
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
-msgid "Title Headline Size"
-msgstr ""
-
-#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
 msgid "Headline size for the information title element."
 msgstr ""
 
@@ -37215,15 +37298,7 @@ msgid "Lesson Navigation"
 msgstr ""
 
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
-msgid "Lesson Progression (Mark Complete)"
-msgstr ""
-
-#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
 msgid "Validation errors were encountered while attempting to save your access plans."
-msgstr ""
-
-#: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
-msgid "LifterLMS Pricing Table"
 msgstr ""
 
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:5
