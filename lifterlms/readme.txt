@@ -5,9 +5,9 @@ Tags: lms, course, elearning, learning management system, quiz
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 8.0.3
+Stable tag: 8.0.4
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v8.0.5 - 2025-04-17 =
+
+##### Updates and Enhancements
+
++ Modifies the allowed HTML for a form, in case the allowed post values in WP have been filtered. [#2922](https://github.com/gocodebox/lifterlms/issues/2922)
+
+
 = v8.0.4 - 2025-04-11 =
 
 ##### Bug Fixes
@@ -685,13 +692,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Bug Fixes
 
 + Fix translations not loading for LifterLMS in WordPress 6.7. [#2807](https://github.com/gocodebox/lifterlms/issues/2807)
-
-
-= v7.8.3 - 2024-11-04 =
-
-##### Updates and Enhancements
-
-+ Switches new access plans to Paid by default in the new access plan UI. [#2794](https://github.com/gocodebox/lifterlms/issues/2794)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
