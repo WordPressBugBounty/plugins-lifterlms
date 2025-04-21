@@ -1,5 +1,5 @@
 === LifterLMS - WP LMS for eLearning, Online Courses, & Quizzes ===
-Contributors: chrisbadgett, strangerstudios, kimannwall, d4z_c0nf, actuallyakash, codeboxllc, brianhogg
+Contributors: lifterlms, chrisbadgett, strangerstudios, kimannwall, d4z_c0nf, actuallyakash, codeboxllc, brianhogg
 Donate link: https://lifterlms.com/
 Tags: lms, course, elearning, learning management system, quiz
 License: GPLv3
@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 8.0.4
+Stable tag: 8.0.5
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v8.0.6 - 2025-04-21 =
+
+##### Bug Fixes
+
++ Fix error when editing a lesson with a drip setting of a specific date. [#2926](https://github.com/gocodebox/lifterlms/issues/2926)
+
+
 = v8.0.5 - 2025-04-17 =
 
 ##### Updates and Enhancements
@@ -685,13 +692,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Security Fixes
 
 + Fix to avoid saving password confirmation in user meta if Password block has been edited. [#2821](https://github.com/gocodebox/lifterlms/issues/2821)
-
-
-= v7.8.4 - 2024-11-18 =
-
-##### Bug Fixes
-
-+ Fix translations not loading for LifterLMS in WordPress 6.7. [#2807](https://github.com/gocodebox/lifterlms/issues/2807)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
