@@ -415,6 +415,14 @@ class LLMS_L10n_JS {
 			'Search for existing lessons...' => esc_html__( 'Search for existing lessons...', 'lifterlms' ),
 
 			/**
+			 * File: assets/js/llms-form-checkout.js.
+			 *
+			 * @since    3.0.0
+			 * @version  7.0.0
+			 */
+			'Unknown response' => esc_html__( 'Unknown response', 'lifterlms' ),
+
+			/**
 			 * File: assets/js/llms-launch-course-button.js.
 			 *
 			 * @since    Unknown
@@ -466,6 +474,7 @@ class LLMS_L10n_JS {
 			'Refund' => esc_html__( 'Refund', 'lifterlms' ),
 			'Record a Manual Payment' => esc_html__( 'Record a Manual Payment', 'lifterlms' ),
 			'Copy this code and paste it into the desired area' => esc_html__( 'Copy this code and paste it into the desired area', 'lifterlms' ),
+			'Edit' => esc_html__( 'Edit', 'lifterlms' ),
 			'View' => esc_html__( 'View', 'lifterlms' ),
 
 			/**
@@ -536,6 +545,7 @@ class LLMS_L10n_JS {
 			'Refund' => esc_html__( 'Refund', 'lifterlms' ),
 			'Record a Manual Payment' => esc_html__( 'Record a Manual Payment', 'lifterlms' ),
 			'Copy this code and paste it into the desired area' => esc_html__( 'Copy this code and paste it into the desired area', 'lifterlms' ),
+			'Edit' => esc_html__( 'Edit', 'lifterlms' ),
 			'View' => esc_html__( 'View', 'lifterlms' ),
 
 		) );

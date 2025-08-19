@@ -1,6 +1,27 @@
 LifterLMS Blocks Changelog
 ==========================
 
+v2.6.1 - 2025-08-18
+-------------------
+
+##### Bug Fixes
+
++ Avoid unsaved changes warning with the course instructors block.
+
+
+v2.6.0 - 2025-07-17
+-------------------
+
+##### Updates and Enhancements
+
++ Updates to Instructors and Course Information blocks to refresh blocks with new information when estimated time and instructors changed.
++ Removing Instructors from sidebar in favor of instructors as a tab.
+
+##### Bug Fixes
+
++ Hide gutenberg lifterlms blocks from rendering if the post or page was edited using Elementor.
+
+
 v2.5.9 - 2025-01-17
 -------------------
 

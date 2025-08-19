@@ -207,7 +207,8 @@ abstract class LLMS_REST_Webhook_Data extends LLMS_Abstract_Database_Store {
 		$resource = $this->get_resource();
 		$event    = $this->get_event();
 
-		$payload = array();
+
+		$payload = array('_embed' => true);
 		if ( 'deleted' === $event ) {
 
 			if ( in_array( $this->get_resource(), array( 'enrollment', 'progress' ), true ) ) {
@@ -231,7 +232,7 @@ abstract class LLMS_REST_Webhook_Data extends LLMS_Abstract_Database_Store {
 				$endpoint = sprintf( '/llms/v1/%1$ss/%2$d', $resource, $args[0] );
 			}
 
-			$payload = llms_rest_get_api_endpoint_data( $endpoint );
+			$payload = llms_rest_get_api_endpoint_data( $endpoint, array('_embed' => true) );
 
 		}
 

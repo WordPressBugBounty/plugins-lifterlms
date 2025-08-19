@@ -21,7 +21,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @license GPL-2.0-or-later
- * Modified by Team LifterLMS on 29-July-2024 using {@see https://github.com/BrianHenryIE/strauss}.
+ * Modified by Team LifterLMS on 19-August-2025 using {@see https://github.com/BrianHenryIE/strauss}.
  */
 
 namespace Lifterlms\Lifterlms_Helper\Required\Traduttore_Registry;
@@ -74,7 +74,7 @@ function add_project( $type, $slug, $api_url ) {
 			}
 
 			if ( ! isset( $value->translations ) ) {
-				$value->translations = array();
+				$value->translations = [];
 			}
 
 			$translations = get_translations( $type, $slug, $api_url );
@@ -121,10 +121,10 @@ function add_project( $type, $slug, $api_url ) {
  * @since 1.1.0
  */
 function register_clean_translations_cache() {
-	$clear_plugin_translations = static function () {
+	$clear_plugin_translations = static function() {
 		clean_translations_cache( 'plugin' );
 	};
-	$clear_theme_translations  = static function () {
+	$clear_theme_translations  = static function() {
 		clean_translations_cache( 'theme' );
 	};
 
@@ -186,11 +186,11 @@ function get_translations( $type, $slug, $url ) {
 		return $translations->{$slug};
 	}
 
-	$result = json_decode( wp_remote_retrieve_body( wp_remote_get( $url, array( 'timeout' => 2 ) ) ), true );
+	$result = json_decode( wp_remote_retrieve_body( wp_remote_get( $url, [ 'timeout' => 2 ] ) ), true );
 	if ( ! \is_array( $result ) ) {
 		// Cache an empty result in case of a failure
 		// and retry on next update check.
-		$result = array();
+		$result = [];
 	}
 
 	$translations->{$slug}       = $result;
@@ -240,7 +240,7 @@ function sanitize_date( $date_string ) {
  * @return array Translation data.
  */
 function get_installed_translations( $type ) {
-	static $cache = array();
+	static $cache = [];
 
 	if ( ! isset( $cache[ $type ] ) ) {
 		$cache[ $type ] = wp_get_installed_translations( $type . 's' );

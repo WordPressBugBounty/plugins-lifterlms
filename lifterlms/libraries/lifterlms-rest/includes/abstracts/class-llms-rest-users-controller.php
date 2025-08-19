@@ -486,7 +486,6 @@ abstract class LLMS_REST_Users_Controller extends LLMS_Rest_Controller {
 
 	}
 
-
 	/**
 	 * Retrieve an array of objects from the result of `$this->get_objects_query()`
 	 *

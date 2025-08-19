@@ -2146,7 +2146,11 @@ div[id^=lifterlms-] .inside {
   overflow: visible;
 }
 
-.notice.llms-admin-notice {
+.lifterlms_notification {
+  margin-bottom: 15px;
+}
+
+.notice.llms-admin-notice, #lifterlms-notifications .lifterlms_notification {
   background-color: #FFF;
   border: 1px solid #ccd0d4;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -2157,72 +2161,104 @@ div[id^=lifterlms-] .inside {
   padding: 0 !important;
   position: relative;
 }
-.notice.llms-admin-notice .notice-dismiss {
+.notice.llms-admin-notice .notice-dismiss, #lifterlms-notifications .lifterlms_notification .notice-dismiss {
   text-decoration: none;
 }
-.notice.llms-admin-notice.notice-warning {
+.notice.llms-admin-notice.notice-warning, .notice.llms-admin-notice.lifterlms_notification-warning, #lifterlms-notifications .lifterlms_notification.notice-warning, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-warning {
   border-left: 4px solid #F8954F;
 }
-.notice.llms-admin-notice.notice-warning .llms-admin-notice-icon {
+.notice.llms-admin-notice.notice-warning .llms-admin-notice-icon, .notice.llms-admin-notice.notice-warning .lifterlms_notification-icon, .notice.llms-admin-notice.lifterlms_notification-warning .llms-admin-notice-icon, .notice.llms-admin-notice.lifterlms_notification-warning .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.notice-warning .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.notice-warning .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-warning .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-warning .lifterlms_notification-icon {
   background-color: #FEF4ED;
 }
-.notice.llms-admin-notice.notice-info {
+.notice.llms-admin-notice.notice-info, .notice.llms-admin-notice.lifterlms_notification-info, #lifterlms-notifications .lifterlms_notification.notice-info, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-info {
   border-left: 4px solid #466DD8;
 }
-.notice.llms-admin-notice.notice-info h3 {
+.notice.llms-admin-notice.notice-info h3, .notice.llms-admin-notice.lifterlms_notification-info h3, #lifterlms-notifications .lifterlms_notification.notice-info h3, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-info h3 {
   color: #466DD8;
 }
-.notice.llms-admin-notice.notice-info .llms-admin-notice-icon {
+.notice.llms-admin-notice.notice-info .llms-admin-notice-icon, .notice.llms-admin-notice.notice-info .lifterlms_notification-icon, .notice.llms-admin-notice.lifterlms_notification-info .llms-admin-notice-icon, .notice.llms-admin-notice.lifterlms_notification-info .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.notice-info .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.notice-info .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-info .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-info .lifterlms_notification-icon {
   background-color: #EDF0FB;
 }
-.notice.llms-admin-notice.notice-success {
+.notice.llms-admin-notice.notice-success, .notice.llms-admin-notice.lifterlms_notification-success, #lifterlms-notifications .lifterlms_notification.notice-success, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-success {
   border-left: 4px solid #18A957;
 }
-.notice.llms-admin-notice.notice-success h3 {
+.notice.llms-admin-notice.notice-success h3, .notice.llms-admin-notice.lifterlms_notification-success h3, #lifterlms-notifications .lifterlms_notification.notice-success h3, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-success h3 {
   color: #18A957;
 }
-.notice.llms-admin-notice.notice-success .llms-admin-notice-icon {
+.notice.llms-admin-notice.notice-success .llms-admin-notice-icon, .notice.llms-admin-notice.notice-success .lifterlms_notification-icon, .notice.llms-admin-notice.lifterlms_notification-success .llms-admin-notice-icon, .notice.llms-admin-notice.lifterlms_notification-success .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.notice-success .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.notice-success .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-success .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-success .lifterlms_notification-icon {
   background-color: #E8F6EE;
 }
-.notice.llms-admin-notice.notice-error {
+.notice.llms-admin-notice.notice-error, .notice.llms-admin-notice.lifterlms_notification-error, #lifterlms-notifications .lifterlms_notification.notice-error, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-error {
   border-left: 4px solid #DF1642;
 }
-.notice.llms-admin-notice.notice-error h3 {
+.notice.llms-admin-notice.notice-error h3, .notice.llms-admin-notice.lifterlms_notification-error h3, #lifterlms-notifications .lifterlms_notification.notice-error h3, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-error h3 {
   color: #9C0F2E;
 }
-.notice.llms-admin-notice.notice-error .llms-admin-notice-icon {
+.notice.llms-admin-notice.notice-error .llms-admin-notice-icon, .notice.llms-admin-notice.notice-error .lifterlms_notification-icon, .notice.llms-admin-notice.lifterlms_notification-error .llms-admin-notice-icon, .notice.llms-admin-notice.lifterlms_notification-error .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.notice-error .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.notice-error .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-error .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification.lifterlms_notification-error .lifterlms_notification-icon {
   background-color: #FCE8EC;
 }
-.notice.llms-admin-notice .llms-admin-notice-icon {
+.notice.llms-admin-notice .llms-admin-notice-icon, #lifterlms-notifications .lifterlms_notification .llms-admin-notice-icon {
   background-image: url(../../assets/images/lifterlms-icon-color.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30px;
   min-width: 70px;
 }
-.notice.llms-admin-notice .llms-admin-notice-content {
+.notice.llms-admin-notice .lifterlms_notification-icon, #lifterlms-notifications .lifterlms_notification .lifterlms_notification-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 70px;
+}
+.notice.llms-admin-notice .lifterlms_notification-icon span.dashicons, #lifterlms-notifications .lifterlms_notification .lifterlms_notification-icon span.dashicons {
+  font-size: 30px; /* Set icon size */
+  line-height: 1; /* Remove excess line height */
+  color: #0073aa; /* Optional: icon color */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Ensures the icon is centered as content */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; /* Fill container horizontally */
+  height: 100%; /* Fill container vertically */
+}
+.notice.llms-admin-notice .llms-admin-notice-content, .notice.llms-admin-notice .lifterlms_notification-content, #lifterlms-notifications .lifterlms_notification .llms-admin-notice-content, #lifterlms-notifications .lifterlms_notification .lifterlms_notification-content {
   color: #111;
   padding: 20px;
 }
-.notice.llms-admin-notice h3 {
+.notice.llms-admin-notice h3, #lifterlms-notifications .lifterlms_notification h3 {
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;
   margin: 0 0 15px 0;
 }
 .notice.llms-admin-notice button,
-.notice.llms-admin-notice .llms-button-primary {
+.notice.llms-admin-notice .llms-button-primary, #lifterlms-notifications .lifterlms_notification button,
+#lifterlms-notifications .lifterlms_notification .llms-button-primary {
   display: inline-block;
 }
-.notice.llms-admin-notice p {
+.notice.llms-admin-notice p, #lifterlms-notifications .lifterlms_notification p {
   font-size: 14px;
   line-height: 22px;
   margin: 0 0 15px 0;
   max-width: 65em;
   padding: 0;
 }
-.notice.llms-admin-notice p:last-of-type {
+.notice.llms-admin-notice p:last-of-type, #lifterlms-notifications .lifterlms_notification p:last-of-type {
   margin-bottom: 0;
+}
+.notice.llms-admin-notice .lifterlms_notification-content p:last-of-type, #lifterlms-notifications .lifterlms_notification .lifterlms_notification-content p:last-of-type {
+  margin-bottom: 15px;
 }
 
 .llms-button-action.small .dashicons,
@@ -3097,6 +3133,13 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 .llms-builder-launcher .llms-button-primary {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.llms-media-protection-warning {
+  border-left: 4px solid #c05621;
+  padding-left: 10px;
+  max-width: 400px;
+  margin: 10px 0;
 }
 
 .wp-list-table .llms-status {
