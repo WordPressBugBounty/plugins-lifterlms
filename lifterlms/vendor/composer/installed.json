@@ -192,17 +192,17 @@
         },
         {
             "name": "gocodebox/banner-notifications",
-            "version": "1.1.0",
-            "version_normalized": "1.1.0.0",
+            "version": "1.1.1",
+            "version_normalized": "1.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/banner-notifications.git",
-                "reference": "3c83ff6cecb41f41787fc49d28a7c6aeab7f600b"
+                "reference": "b00da59cbeb3d446f9f54a0098e1ea6342bb2dcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/banner-notifications/zipball/3c83ff6cecb41f41787fc49d28a7c6aeab7f600b",
-                "reference": "3c83ff6cecb41f41787fc49d28a7c6aeab7f600b",
+                "url": "https://api.github.com/repos/gocodebox/banner-notifications/zipball/b00da59cbeb3d446f9f54a0098e1ea6342bb2dcf",
+                "reference": "b00da59cbeb3d446f9f54a0098e1ea6342bb2dcf",
                 "shasum": ""
             },
             "require": {
@@ -212,7 +212,7 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.3"
             },
-            "time": "2025-07-18T19:37:25+00:00",
+            "time": "2025-08-19T21:02:37+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
@@ -222,7 +222,7 @@
             "description": "Library for showing admin-area banner notices.",
             "support": {
                 "issues": "https://github.com/gocodebox/banner-notifications/issues",
-                "source": "https://github.com/gocodebox/banner-notifications/tree/1.1.0"
+                "source": "https://github.com/gocodebox/banner-notifications/tree/1.1.1"
             },
             "install-path": "../../libraries/banner-notifications"
         },

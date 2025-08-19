@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 8.0.7
+Stable tag: 9.0.3
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v9.0.4 - 2025-08-19 =
+
+##### Bug Fixes
+
++ Avoid fatal error if another plugin has loaded the Banner Notifications library.
+
+
 = v9.0.3 - 2025-08-19 =
 
 ##### Bug Fixes
@@ -637,35 +644,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 + [templates/admin/reporting/tabs/students/courses-course.php](https://github.com/gocodebox/lifterlms/blob/8.0.3/templates/admin/reporting/tabs/students/courses-course.php)
 + [templates/product/free-enroll-form.php](https://github.com/gocodebox/lifterlms/blob/8.0.3/templates/product/free-enroll-form.php)
-
-
-= v8.0.2 - 2025-03-17 =
-
-##### Bug Fixes
-
-+ Avoid escaping the selected attribute of a form field select dropdown incorrectly.
-+ Adds additional verifications on permission for bulk enrolls, and REST API access for instructors.
-+ Updates helper library to remove depreciated notice when adding a license key.
-
-##### Security Fixes
-
-+ Additional checks for managing LifterLMS data. Thanks [@mikemyers](https://github.com/mikemyers)!
-
-##### Updated Templates
-
-+ [templates/course/favorite.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/course/favorite.php)
-+ [templates/course/lesson-preview.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/course/lesson-preview.php)
-+ [templates/global/form-login.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/global/form-login.php)
-+ [templates/global/form-registration.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/global/form-registration.php)
-+ [templates/loop/featured-pricing.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/loop/featured-pricing.php)
-+ [templates/myaccount/form-edit-account.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/myaccount/form-edit-account.php)
-+ [templates/myaccount/form-redeem-voucher.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/myaccount/form-redeem-voucher.php)
-+ [templates/myaccount/my-grades-single.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/myaccount/my-grades-single.php)
-+ [templates/notifications/basic.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/notifications/basic.php)
-+ [templates/product/access-plan-button.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/product/access-plan-button.php)
-+ [templates/product/free-enroll-form.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/product/free-enroll-form.php)
-+ [templates/quiz/questions/description.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/quiz/questions/description.php)
-+ [templates/quiz/results-attempt-questions-list.php](https://github.com/gocodebox/lifterlms/blob/8.0.2/templates/quiz/results-attempt-questions-list.php)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
