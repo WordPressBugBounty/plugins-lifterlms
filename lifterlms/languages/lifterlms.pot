@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 9.0.4\n"
+"Project-Id-Version: LifterLMS 9.0.5\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-19T21:19:41+00:00\n"
+"POT-Creation-Date: 2025-08-25T20:18:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
@@ -12084,20 +12084,15 @@ msgstr ""
 
 #: includes/schemas/llms-user-information-fields.php:131
 #: languages/countries-address-info.php:41
-#: languages/countries-address-info.php:51
 #: languages/countries-address-info.php:56
 #: languages/countries-address-info.php:66
 #: languages/countries-address-info.php:76
-#: languages/countries-address-info.php:96
 #: languages/countries-address-info.php:116
 #: languages/countries-address-info.php:121
 #: languages/countries-address-info.php:126
 #: languages/countries-address-info.php:131
-#: languages/countries-address-info.php:136
 #: languages/countries-address-info.php:141
 #: languages/countries-address-info.php:146
-#: languages/countries-address-info.php:151
-#: languages/countries-address-info.php:156
 #: languages/countries-address-info.php:161
 #: languages/countries-address-info.php:171
 #: languages/countries-address-info.php:176
@@ -12115,18 +12110,12 @@ msgstr ""
 #: languages/countries-address-info.php:286
 #: languages/countries-address-info.php:291
 #: languages/countries-address-info.php:311
-#: languages/countries-address-info.php:316
 #: languages/countries-address-info.php:321
 #: languages/countries-address-info.php:326
-#: languages/countries-address-info.php:331
 #: languages/countries-address-info.php:336
 #: languages/countries-address-info.php:346
 #: languages/countries-address-info.php:351
-#: languages/countries-address-info.php:356
 #: languages/countries-address-info.php:371
-#: languages/countries-address-info.php:381
-#: languages/countries-address-info.php:386
-#: languages/countries-address-info.php:411
 #: languages/countries-address-info.php:416
 #: languages/countries-address-info.php:426
 #: languages/countries-address-info.php:431
@@ -12141,22 +12130,16 @@ msgstr ""
 #: languages/countries-address-info.php:526
 #: languages/countries-address-info.php:531
 #: languages/countries-address-info.php:536
-#: languages/countries-address-info.php:551
-#: languages/countries-address-info.php:581
 #: languages/countries-address-info.php:611
 #: languages/countries-address-info.php:616
 #: languages/countries-address-info.php:621
 #: languages/countries-address-info.php:631
 #: languages/countries-address-info.php:641
 #: languages/countries-address-info.php:666
-#: languages/countries-address-info.php:671
 #: languages/countries-address-info.php:676
-#: languages/countries-address-info.php:681
-#: languages/countries-address-info.php:686
 #: languages/countries-address-info.php:691
 #: languages/countries-address-info.php:696
 #: languages/countries-address-info.php:701
-#: languages/countries-address-info.php:706
 #: languages/countries-address-info.php:711
 #: languages/countries-address-info.php:716
 #: languages/countries-address-info.php:721
@@ -12174,24 +12157,15 @@ msgstr ""
 #: languages/countries-address-info.php:816
 #: languages/countries-address-info.php:836
 #: languages/countries-address-info.php:846
-#: languages/countries-address-info.php:866
-#: languages/countries-address-info.php:871
 #: languages/countries-address-info.php:876
 #: languages/countries-address-info.php:926
-#: languages/countries-address-info.php:931
-#: languages/countries-address-info.php:956
 #: languages/countries-address-info.php:966
 #: languages/countries-address-info.php:971
 #: languages/countries-address-info.php:981
 #: languages/countries-address-info.php:986
-#: languages/countries-address-info.php:996
 #: languages/countries-address-info.php:1001
 #: languages/countries-address-info.php:1006
 #: languages/countries-address-info.php:1016
-#: languages/countries-address-info.php:1021
-#: languages/countries-address-info.php:1026
-#: languages/countries-address-info.php:1036
-#: languages/countries-address-info.php:1046
 #: languages/countries-address-info.php:1051
 #: languages/countries-address-info.php:1056
 #: languages/countries-address-info.php:1061
@@ -12548,7 +12522,6 @@ msgstr ""
 #: languages/countries-address-info.php:571
 #: languages/countries-address-info.php:576
 #: languages/countries-address-info.php:586
-#: languages/countries-address-info.php:646
 #: languages/countries-address-info.php:661
 #: languages/countries-address-info.php:771
 #: languages/countries-address-info.php:831
@@ -12575,7 +12548,6 @@ msgstr ""
 #: languages/countries-address-info.php:401
 #: languages/countries-address-info.php:561
 #: languages/countries-address-info.php:601
-#: languages/countries-address-info.php:651
 #: languages/countries-address-info.php:751
 #: languages/countries-address-info.php:821
 #: languages/countries-address-info.php:826
@@ -12586,7 +12558,6 @@ msgstr ""
 #: languages/countries-address-info.php:1201
 #: languages/countries-address-info.php:1206
 #: languages/countries-address-info.php:1226
-#: languages/countries-address-info.php:1241
 msgid "State"
 msgstr ""
 
@@ -12638,11 +12609,6 @@ msgstr ""
 msgid "Town / City"
 msgstr ""
 
-#: languages/countries-address-info.php:421
-#: languages/countries-address-info.php:546
-msgid "County"
-msgstr ""
-
 #: languages/countries-address-info.php:510
 #: languages/countries-address-info.php:881
 #: languages/countries-address-info.php:905
@@ -12655,6 +12621,10 @@ msgstr ""
 
 #: languages/countries-address-info.php:540
 msgid "City / Regency"
+msgstr ""
+
+#: languages/countries-address-info.php:546
+msgid "County"
 msgstr ""
 
 #: languages/countries-address-info.php:547

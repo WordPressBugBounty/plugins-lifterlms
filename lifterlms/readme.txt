@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 9.0.3
+Stable tag: 9.0.4
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v9.0.5 - 2025-08-25 =
+
+##### Bug Fixes
+
++ Fix to allow checkout with UK and several other countries with no states/provinces/regions/areas. [#2997](https://github.com/gocodebox/lifterlms/issues/2997)
+
+
 = v9.0.4 - 2025-08-19 =
 
 ##### Bug Fixes
@@ -613,37 +620,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Bug Fixes
 
 + Avoid warning and possible error when serving protected files. [#2912](https://github.com/gocodebox/lifterlms/issues/2912)
-
-
-= v8.0.3 - 2025-04-07 =
-
-##### New Features
-
-+ Initial support for the Bricks theme.
-+ New "# of transactions" sales reporting widget.
-
-##### Updates and Enhancements
-
-+ Change default date display format of lifterlms_course_info used in settings like Enrollment Start and End Date to match the site date format. [#2903](https://github.com/gocodebox/lifterlms/issues/2903)
-+ Display date pickers in the site date format, but save the data in the previous format. [#2447](https://github.com/gocodebox/lifterlms/issues/2447)
-+ Update Last Activity Date label to accurately reflect the data value. [#2898](https://github.com/gocodebox/lifterlms/issues/2898)
-
-##### Bug Fixes
-
-+ Updating postal code (eircode) display for Ireland. [#2891](https://github.com/gocodebox/lifterlms/issues/2891)
-+ Net Sales reporting includes partially refunded transactions, and transactions from orders regardless of status. [#2860](https://github.com/gocodebox/lifterlms/issues/2860), [#2861](https://github.com/gocodebox/lifterlms/issues/2861)
-+ On-hold, pending cancellation, cancelled and expired orders now included in "# of Sales" widget. [#2860](https://github.com/gocodebox/lifterlms/issues/2860)
-+ Fixes sales reporting for transactions or orders that happened between 23:23:59 and midnight. [#2858](https://github.com/gocodebox/lifterlms/issues/2858)
-+ Password reset email is now in the user's language. [#2879](https://github.com/gocodebox/lifterlms/issues/2879)
-
-##### Developer Notes
-
-+ Adds a new action so Turnstile or other captchas can be added without editing the free-enroll-form.php template directly.
-
-##### Updated Templates
-
-+ [templates/admin/reporting/tabs/students/courses-course.php](https://github.com/gocodebox/lifterlms/blob/8.0.3/templates/admin/reporting/tabs/students/courses-course.php)
-+ [templates/product/free-enroll-form.php](https://github.com/gocodebox/lifterlms/blob/8.0.3/templates/product/free-enroll-form.php)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
