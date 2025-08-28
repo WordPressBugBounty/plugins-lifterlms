@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 9.0.4
+Stable tag: 9.0.5
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,18 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v9.0.6 - 2025-08-28 =
+
+##### Updates and Enhancements
+
++ Upgrades select2 library to latest release.
+
+##### Bug Fixes
+
++ Avoid loading the media protection attachment scripts when not needed. [#3004](https://github.com/gocodebox/lifterlms/issues/3004)
++ Fix for "only recurring access plan" coupons. [#3002](https://github.com/gocodebox/lifterlms/issues/3002)
+
+
 = v9.0.5 - 2025-08-25 =
 
 ##### Bug Fixes
@@ -613,13 +625,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Updates and Enhancements
 
 + Modifies the allowed HTML for a form, in case the allowed post values in WP have been filtered. [#2922](https://github.com/gocodebox/lifterlms/issues/2922)
-
-
-= v8.0.4 - 2025-04-11 =
-
-##### Bug Fixes
-
-+ Avoid warning and possible error when serving protected files. [#2912](https://github.com/gocodebox/lifterlms/issues/2912)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)

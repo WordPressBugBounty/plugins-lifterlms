@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 9.0.5\n"
+"Project-Id-Version: LifterLMS 9.0.6\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-25T20:18:56+00:00\n"
+"POT-Creation-Date: 2025-08-28T18:22:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.2.2\n"
 "X-Domain: lifterlms\n"
@@ -891,15 +891,15 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: includes/admin/class.llms.admin.assets.php:106
+#: includes/admin/class.llms.admin.assets.php:107
 msgid "White"
 msgstr ""
 
-#: includes/admin/class.llms.admin.assets.php:111
+#: includes/admin/class.llms.admin.assets.php:112
 msgid "White Smoke"
 msgstr ""
 
-#: includes/admin/class.llms.admin.assets.php:116
+#: includes/admin/class.llms.admin.assets.php:117
 msgid "Ivory"
 msgstr ""
 
@@ -1917,7 +1917,7 @@ msgid "Discount Type"
 msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:98
-#: includes/models/model.llms.coupon.php:123
+#: includes/models/model.llms.coupon.php:127
 msgid "Percentage Discount"
 msgstr ""
 
@@ -10630,26 +10630,26 @@ msgstr ""
 msgid "%s was successfully uninstalled."
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:126
+#: includes/models/model.llms.coupon.php:130
 msgctxt "flat rate coupon discount"
 msgid "%s Discount"
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:179
+#: includes/models/model.llms.coupon.php:183
 msgctxt "Remaining coupon uses"
 msgid "Unlimited"
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:284
+#: includes/models/model.llms.coupon.php:286
 msgid "This coupon has reached its usage limit and can no longer be used."
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:288
+#: includes/models/model.llms.coupon.php:290
 msgid "This coupon expired on %s and can no longer be used."
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:292
-#: includes/models/model.llms.coupon.php:296
+#: includes/models/model.llms.coupon.php:294
+#: includes/models/model.llms.coupon.php:298
 msgid "This coupon cannot be used to purchase \"%s\"."
 msgstr ""
 
@@ -23508,23 +23508,23 @@ msgstr ""
 msgid "Avatar URLs for the user."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:640
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:641
 msgid "Passwords cannot contain the \"\\\" character."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:664
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:665
 msgid "Username contains invalid characters."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:676
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:677
 msgid "Username is not allowed."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:751
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:752
 msgid "Invalid email address."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:756
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-users-controller.php:757
 msgid "Username is not editable."
 msgstr ""
 
