@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 9.0.5
+Stable tag: 9.0.6
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,14 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v9.0.7 - 2025-09-16 =
+
+##### Bug Fixes
+
++ Additional check to avoid conflict with certain plugins alongside the Classic Editor. [#3012](https://github.com/gocodebox/lifterlms/issues/3012)
++ Fixing checkout for countries that have no states/provinces/regions listed.
+
+
 = v9.0.6 - 2025-08-28 =
 
 ##### Updates and Enhancements
@@ -618,13 +626,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Bug Fixes
 
 + Fix error when editing a lesson with a drip setting of a specific date. [#2926](https://github.com/gocodebox/lifterlms/issues/2926)
-
-
-= v8.0.5 - 2025-04-17 =
-
-##### Updates and Enhancements
-
-+ Modifies the allowed HTML for a form, in case the allowed post values in WP have been filtered. [#2922](https://github.com/gocodebox/lifterlms/issues/2922)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
