@@ -497,12 +497,17 @@ class LLMS_L10n_JS {
 			'Loading Question...' => esc_html__( 'Loading Question...', 'lifterlms' ),
 			'An unknown error occurred. Please try again.' => esc_html__( 'An unknown error occurred. Please try again.', 'lifterlms' ),
 			'Loading Quiz...' => esc_html__( 'Loading Quiz...', 'lifterlms' ),
-			'Exit Quiz' => esc_html__( 'Exit Quiz', 'lifterlms' ),
+			'Save & Exit Quiz' => esc_html__( 'Save & Exit Quiz', 'lifterlms' ),
 			'Time Remaining' => esc_html__( 'Time Remaining', 'lifterlms' ),
 			'Next Question' => esc_html__( 'Next Question', 'lifterlms' ),
 			'Complete Quiz' => esc_html__( 'Complete Quiz', 'lifterlms' ),
 			'Previous Question' => esc_html__( 'Previous Question', 'lifterlms' ),
 			'Loading...' => esc_html__( 'Loading...', 'lifterlms' ),
+			'%1$s hours, %2$s minutes remaining' => esc_html__( '%1$s hours, %2$s minutes remaining', 'lifterlms' ),
+			'1 hour, %2$s minutes remaining' => esc_html__( '1 hour, %2$s minutes remaining', 'lifterlms' ),
+			'%1$s minutes remaining' => esc_html__( '%1$s minutes remaining', 'lifterlms' ),
+			'%1$s minute remaining' => esc_html__( '%1$s minute remaining', 'lifterlms' ),
+			'%1$s seconds remaining' => esc_html__( '%1$s seconds remaining', 'lifterlms' ),
 			'You must select an answer to continue.' => esc_html__( 'You must select an answer to continue.', 'lifterlms' ),
 
 			/**

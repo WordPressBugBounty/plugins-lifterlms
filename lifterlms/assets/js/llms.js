@@ -1386,7 +1386,10 @@ var LLMS = window.LLMS || {};
 				val = -1;
 			} else {
 				val = wp.passwordStrength.meter( pass, this.get_blocklist(), conf );
-				// 0 & 1 are both very-weak
+				// 0 is very weak (ie. using something on the block list), 1 is considered weak.
+				if ( 1 === val ) {
+					val = 2;
+				}
 				if ( 0 === val ) {
 					val = 1;
 				}
@@ -1424,7 +1427,7 @@ var LLMS = window.LLMS || {};
 		 * @return {string}
 		 */
 		get_minimum_strength: function() {
-			return this.get_setting( 'min_strength', 'strong' );
+			return this.get_setting( 'min_strength', 'weak' );
 		},
 	
 		/**
