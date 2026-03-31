@@ -7,27 +7,27 @@ namespace Composer\Autoload;
 class ComposerStaticInit4a597af877aae0a5a83e681ae3213e7a
 {
     public static $prefixLengthsPsr4 = array (
-        'L' => 
+        'L' =>
         array (
             'LifterLMS\\CLI\\' => 14,
             'LLMS\\' => 5,
         ),
-        'C' => 
+        'C' =>
         array (
             'Composer\\Installers\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'LifterLMS\\CLI\\' => 
+        'LifterLMS\\CLI\\' =>
         array (
             0 => __DIR__ . '/../..' . '/libraries/lifterlms-cli/src',
         ),
-        'LLMS\\' => 
+        'LLMS\\' =>
         array (
             0 => __DIR__ . '/../..' . '/includes',
         ),
-        'Composer\\Installers\\' => 
+        'Composer\\Installers\\' =>
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),

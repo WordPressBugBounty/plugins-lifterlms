@@ -320,17 +320,17 @@
         },
         {
             "name": "lifterlms/lifterlms-helper",
-            "version": "3.5.7",
-            "version_normalized": "3.5.7.0",
+            "version": "3.5.8",
+            "version_normalized": "3.5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/lifterlms-helper.git",
-                "reference": "0fd3c913e64b62659103bfb2b8a9b66bcd7e477b"
+                "reference": "8c6f7bb51eb5318c6c941a36aef79616da977a09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/lifterlms-helper/zipball/0fd3c913e64b62659103bfb2b8a9b66bcd7e477b",
-                "reference": "0fd3c913e64b62659103bfb2b8a9b66bcd7e477b",
+                "url": "https://api.github.com/repos/gocodebox/lifterlms-helper/zipball/8c6f7bb51eb5318c6c941a36aef79616da977a09",
+                "reference": "8c6f7bb51eb5318c6c941a36aef79616da977a09",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +341,7 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.3"
             },
-            "time": "2026-01-12T14:28:45+00:00",
+            "time": "2026-02-10T16:31:37+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "strauss": {
@@ -380,7 +380,7 @@
             "description": "Update, install, and beta test LifterLMS and LifterLMS add-ons",
             "support": {
                 "issues": "https://github.com/gocodebox/lifterlms-helper/issues",
-                "source": "https://github.com/gocodebox/lifterlms-helper/tree/3.5.7"
+                "source": "https://github.com/gocodebox/lifterlms-helper/tree/3.5.8"
             },
             "install-path": "../../libraries/lifterlms-helper"
         },

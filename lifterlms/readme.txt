@@ -7,15 +7,13 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 9.2.0
+Stable tag: 9.2.1
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
 
 == Description ==
 LifterLMS is a secure easy-to-use WordPress LMS plugin packed with features to easily create & sell courses online.
-
-**[Download the LifterLMS plugin for free here](https://lifterlms.com/free/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)** directly from our website so you get instant access to all our valuable resources to help you get started quickly and easily for free.
 
 Turn your WordPress website into a professional eLearning platform with every customizable feature you could possibly need from your LMS.
 
@@ -317,14 +315,15 @@ Connect LifterLMS to over 7,000 other apps like Facebook, Google Sheets, Zoom, S
 
 Save money and get more features.
 
-+ [Free LifterLMS plan](https://lifterlms.com/free/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) gives you everything you need to start with all the essential LMS features from unlimited courses, memberships, students, teachers, and more.
++ Free LifterLMS plan gives you everything you need to start with all the essential LMS features from unlimited courses, memberships, students, teachers, and more.
 + [Earth Bundle](https://lifterlms.com/product/earth-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) gives you all the essentials you need to get your online learning website up and running so it's collecting money today with the most powerful secure learning management system software.
 + Level up your online course LMS website with our ecommerce, design, marketing technology, and automation tools with the [Universe Bundle](https://lifterlms.com/product/universe-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
 + Add more engagement and student transformation potential to your immersive training programs with our entire suite of products including advanced features used by the best teachers, experts, and coaches with the [Infinity Bundle](https://lifterlms.com/product/infinity-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
 
 ### Try the Best LMS Plugin
 
-+ [Install the free core LifterLMS plugin right now](https://lifterlms.com/free/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale). See how extensive and customizable our free core plugin is.
++ Install the free core LifterLMS plugin right now. See how extensive and customizable our free core plugin is.
+
 + Get a temporary _30 Day_ website on our servers with the core LifterLMS plugin AND all the premium add-ons installed. This demo website allows you to test drive all the LMS add-ons before you invest. Practice creating courses, test out the learner experience, and see how easy it will be to manage your course with WordPress. Install your favorite plugins & themes to test compatibility. **[Try LifterLMS for $1](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)** now.
 + Test LifterLMS as a student. Take a **free** course on how to build a LifterLMS website in 20 minutes. [Take a Free Course](https://academy.lifterlms.com/course/how-to-build-a-learning-management-system-with-lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) now.
 
@@ -379,7 +378,7 @@ Want to add a new language to LifterLMS? Contribute language translations at [tr
 
 ### What Should You Do Next?
 
-**[Install the free LifterLMS plugin on your website](https://lifterlms.com/free/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)**,
+**Install the free LifterLMS plugin on your website**,
 
 then ...
 
@@ -507,6 +506,28 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 9. Setup Wizard to help you install and configure your new online course website with LifterLMS in 5 simple steps.
 
 == Changelog ==
+
+= v9.2.2 - 2026-03-31 =
+
+##### Updates and Enhancements
+
++ Various escaping and consistency changes.
+
+##### Bug Fixes
+
++ Removes use of deprecated mb_convert_encoding(). [#2672](https://github.com/gocodebox/lifterlms/issues/2672)
+
+##### Security Fixes
+
++ Validation of the order param for the quiz Students Without Attempts table.
+
+##### Updated Templates
+
++ [templates/course/lesson-preview.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/course/lesson-preview.php)
++ [templates/myaccount/my-grades-single-table.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/myaccount/my-grades-single-table.php)
++ [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/quiz/questions/content-choice.php)
++ [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/quiz/questions/content-picture_choice.php)
+
 
 = v9.2.1 - 2026-02-02 =
 
@@ -640,13 +661,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Bug Fixes
 
 + Avoid fatal error if another plugin has loaded the Banner Notifications library.
-
-
-= v9.0.3 - 2025-08-19 =
-
-##### Bug Fixes
-
-+ Additional checks for valid courses during the setup wizard. [#2992](https://github.com/gocodebox/lifterlms/issues/2992)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
