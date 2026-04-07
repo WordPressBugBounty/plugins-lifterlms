@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 9.2.1
+Stable tag: 9.2.3
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -315,7 +315,6 @@ Connect LifterLMS to over 7,000 other apps like Facebook, Google Sheets, Zoom, S
 
 Save money and get more features.
 
-+ Free LifterLMS plan gives you everything you need to start with all the essential LMS features from unlimited courses, memberships, students, teachers, and more.
 + [Earth Bundle](https://lifterlms.com/product/earth-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) gives you all the essentials you need to get your online learning website up and running so it's collecting money today with the most powerful secure learning management system software.
 + Level up your online course LMS website with our ecommerce, design, marketing technology, and automation tools with the [Universe Bundle](https://lifterlms.com/product/universe-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
 + Add more engagement and student transformation potential to your immersive training programs with our entire suite of products including advanced features used by the best teachers, experts, and coaches with the [Infinity Bundle](https://lifterlms.com/product/infinity-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
@@ -378,7 +377,7 @@ Want to add a new language to LifterLMS? Contribute language translations at [tr
 
 ### What Should You Do Next?
 
-**Install the free LifterLMS plugin on your website**,
+** Install the free LifterLMS plugin on your website **,
 
 then ...
 
@@ -506,6 +505,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 9. Setup Wizard to help you install and configure your new online course website with LifterLMS in 5 simple steps.
 
 == Changelog ==
+
+= v9.2.3 - 2026-04-07 =
+
+##### Security Fixes
+
++ Additional permission checks when performing certain admin actions. Thanks [@nobody090909](https://github.com/nobody090909)!
+
 
 = v9.2.2 - 2026-03-31 =
 
@@ -654,13 +660,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Bug Fixes
 
 + Fix to allow checkout with UK and several other countries with no states/provinces/regions/areas. [#2997](https://github.com/gocodebox/lifterlms/issues/2997)
-
-
-= v9.0.4 - 2025-08-19 =
-
-##### Bug Fixes
-
-+ Avoid fatal error if another plugin has loaded the Banner Notifications library.
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
