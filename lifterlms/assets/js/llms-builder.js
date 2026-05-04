@@ -3486,7 +3486,7 @@ define( 'Models/Quiz',[
 				type: 'llms_quiz',
 				lesson_id: '',
 
-				status: 'draft',
+				status: 'publish',
 
 				// editable fields.
 				content: '',
@@ -3673,15 +3673,34 @@ define( 'Schemas/Lesson',[], function() {
 			title: LLMS.l10n.translate( 'General Settings' ),
 			toggleable: true,
 			fields: [
-				[
-					{
-						attribute: 'permalink',
-						id: 'permalink',
-						type: 'permalink',
-			},
-				], [
-					{
-						attribute: 'video_embed',
+			[
+				{
+					attribute: 'permalink',
+					id: 'permalink',
+					type: 'permalink',
+		},
+			], [
+				{
+					attribute: 'content',
+					id: 'content',
+					label: LLMS.l10n.translate( 'Content' ),
+					type: 'editor',
+					condition: function() {
+						return '' === this.get( 'content' ) || 'yes' === this.get( 'content_added_in_builder' );
+					},
+		},
+			], [
+				{
+					id: 'content-page-builder-notice',
+					label: LLMS.l10n.translate( 'Content' ),
+					type: 'page_builder_notice',
+					condition: function() {
+						return '' !== this.get( 'content' ) && 'yes' !== this.get( 'content_added_in_builder' );
+					},
+		},
+			], [
+				{
+					attribute: 'video_embed',
 						id: 'video-embed',
 						label: LLMS.l10n.translate( 'Video Embed URL' ),
 						type: 'video_embed',
@@ -3855,13 +3874,23 @@ define( 'Schemas/Lesson',[], function() {
 						date_format: 'h:i A',
 						id: 'time-available',
 						label: LLMS.l10n.translate( 'Time' ),
-						type: 'datepicker',
-			},
-				],
-			],
+			type: 'datepicker',
 		},
+			], [
+				{
+					label: LLMS.l10n.translate( 'Associated Event(s)' ),
+					id: 'llms-events-promo',
+					type: 'heading',
+					detail: LLMS.l10n.translate( 'Schedule events for your lessons with the LifterLMS Events add-on.' ) + ' <a href="https://lifterlms.com/product/lifterlms-events/?utm_source=LifterLMS%20Plugin&utm_medium=Lesson%20Builder&utm_campaign=Events%20Addon%20Upsell" target="_blank">' + LLMS.l10n.translate( 'Learn More' ) + '</a>',
+					condition: function() {
+						return ! window.llms_builder.events;
+					},
+				},
+			],
+		],
+	},
 
-	} );
+} );
 
 } );
 
@@ -3942,6 +3971,8 @@ define( 'Models/Lesson',[ 'Models/Quiz', 'Models/_Relationships', 'Models/_Utili
 
 				quiz: {}, // Quiz model/data.
 				quiz_enabled: 'no',
+
+				content_added_in_builder: '',
 
 				_forceSync: false,
 
@@ -5101,7 +5132,8 @@ define( 'Views/_Detachable',[], function() {
  * @since 3.16.0
  * @since 3.25.4 Unknown
  * @since 3.37.11 Replace reference to `wp.editor` with `_.getEditor()` helper.
- * @version 3.37.11
+ * @since 10.0.0 Add paste event handler for plain contenteditable elements to strip formatting. Fixes #3057.
+ * @version 10.0.0
  */
 define( 'Views/_Editable',[], function() {
 
@@ -5128,6 +5160,7 @@ define( 'Views/_Editable',[], function() {
 			'keydown .llms-input': 'on_keydown',
 			'input .llms-input[type="number"]': 'on_blur',
 			'paste .llms-input[data-formatting]': 'on_paste',
+			'paste .llms-input[contenteditable]:not([data-formatting])': 'on_paste',
 		},
 
 		/**
@@ -5404,6 +5437,8 @@ define( 'Views/_Editable',[], function() {
 		 * @version  3.16.0
 		 */
 		on_select: function( event ) {
+
+			event.stopPropagation();
 
 			var $el       = $( event.target ),
 				multi     = ( $el.attr( 'multiple' ) ),
@@ -6142,6 +6177,11 @@ define( 'Views/_Trashable',[], function() {
 
 				// publish event
 				Backbone.pubSub.trigger( 'model-trashed', this.model );
+
+				// close the editor sidebar if the trashed model is the one currently being edited
+				if ( this.model.get( '_selected' ) ) {
+					Backbone.pubSub.trigger( 'sidebar-editor-close' );
+				}
 
 				// trigger local event so extending views can run other actions where necessary
 				this.trigger( 'model-trashed', this.model );
@@ -6907,6 +6947,18 @@ define( 'Controllers/Sync',[], function() {
 						model.set( 'id', info.id );
 						delete model._unsavedChanges.id;
 					}
+
+					if ( info.permalink ) {
+						model.set( 'permalink', info.permalink );
+					}
+					if ( info.name ) {
+						model.set( 'name', info.name );
+					}
+
+					if ( info.content_added_in_builder ) {
+						model.set( 'content_added_in_builder', info.content_added_in_builder );
+					}
+
 					maybe_restart_tracking( model, info );
 
 					// check children
@@ -6937,6 +6989,20 @@ define( 'Controllers/Sync',[], function() {
 							model.set( 'id', info.id );
 							delete model._unsavedChanges.id;
 						}
+
+						// Update permalink and name if provided by the server.
+						if ( info.permalink ) {
+							model.set( 'permalink', info.permalink );
+						}
+						if ( info.name ) {
+							model.set( 'name', info.name );
+						}
+
+						if ( info.content_added_in_builder ) {
+							model.set( 'content_added_in_builder', info.content_added_in_builder );
+						}
+
+
 						maybe_restart_tracking( model, info );
 
 						// check children
@@ -7646,7 +7712,6 @@ define( 'Views/Section',[
 		 */
 		events: _.defaults( {
 
-			'click': 'select',
 			'click .expand': 'expand',
 			'click .collapse': 'collapse',
 			'click .shift-up--section': 'shift_up',
@@ -7899,7 +7964,7 @@ define( 'Views/SectionList',[ 'Views/Section', 'Views/_Receivable' ], function( 
 		el: '#llms-sections',
 
 		events : {
-			'mousedown > li.llms-section > .llms-builder-header .llms-headline' : '_listItem_onMousedown',
+			'mousedown > li.llms-section' : '_listItem_onMousedown',
 			// 'dblclick > li, tbody > tr > td' : '_listItem_onDoubleClick',
 			'click' : '_listBackground_onClick',
 			'click ul.collection-view' : '_listBackground_onClick',
@@ -8045,6 +8110,12 @@ define( 'Views/Course',[
 
 			Backbone.pubSub.on( 'lesson-selected', this.active_lesson_change, this );
 
+			// Select the first section by default on load.
+			var firstSection = this.model.get( 'sections' ).first();
+			if ( firstSection ) {
+				this.sectionListView.setSelectedModel( firstSection );
+			}
+
 		},
 
 		/**
@@ -8089,11 +8160,11 @@ define( 'Views/Course',[
 		active_section_change: function( current, previous ) {
 
 			_.each( current, function( model ) {
-				model.set( '_selected', true );
+				model.set( '_selected', true, { silent: true } );
 			} );
 
 			_.each( previous, function( model ) {
-				model.set( '_selected', false );
+				model.set( '_selected', false, { silent: true } );
 			} );
 
 		},
@@ -8123,8 +8194,7 @@ define( 'Views/Course',[
 		 */
 		on_section_toggle: function( model ) {
 
-			var selected = model.get( '_expanded' ) ? [ model ] : [];
-			this.sectionListView.setSelectedModels( selected );
+			this.sectionListView.setSelectedModel( model );
 
 		},
 
@@ -8677,6 +8747,9 @@ define( 'Views/LessonEditor',[
 				var change_events = window.llms.hooks.applyFilters( 'llms_lesson_rerender_change_events', [
 					'change:date_available',
 					'change:drip_method',
+					'change:permalink',
+					'change:content_added_in_builder',
+					'change:name',
 					'change:time_available',
 				] );
 				_.each( change_events, function( event ) {
@@ -10028,6 +10101,8 @@ define( 'Views/Quiz',[
 				this.model.set_parent( this.lesson );
 
 				this.listenTo( this.model, 'change:_points', this.render_points );
+				this.listenTo( this.model, 'change:permalink', this.render_settings );
+				this.listenTo( this.model, 'change:name', this.render_settings );
 
 			}
 
@@ -10130,6 +10205,27 @@ define( 'Views/Quiz',[
 		},
 
 		/**
+		 * Re-render the settings subview.
+		 *
+		 * Used when the permalink is updated after saving so the settings
+		 * panel reflects the new permalink without a full re-render.
+		 *
+		 * @since 10.0.0
+		 *
+		 * @return {Void}
+		 */
+		render_settings: function() {
+
+			var view = this.get_subview( 'settings' );
+			if ( view && view.instance ) {
+				view.instance.render();
+				this.init_datepickers();
+				this.init_selects();
+			}
+
+		},
+
+		/**
 		 * Bulk expand / collapse question buttons.
 		 *
 		 * @since 3.16.0
@@ -10164,6 +10260,9 @@ define( 'Views/Quiz',[
 			}
 
 			this.model = quiz;
+			this.listenTo( this.model, 'change:_points', this.render_points );
+			this.listenTo( this.model, 'change:permalink', this.render_settings );
+			this.listenTo( this.model, 'change:name', this.render_settings );
 			this.render();
 
 		},
@@ -10201,6 +10300,9 @@ define( 'Views/Quiz',[
 
 			this.lesson.add_quiz( quiz );
 			this.model = this.lesson.get( 'quiz' );
+			this.listenTo( this.model, 'change:_points', this.render_points );
+			this.listenTo( this.model, 'change:permalink', this.render_settings );
+			this.listenTo( this.model, 'change:name', this.render_settings );
 			this.render();
 
 		},
@@ -10436,6 +10538,8 @@ define( 'Views/Assignment',[
 					 */
 					this.model.set_parent( this.lesson );
 
+					this.listenTo( this.model, 'change:permalink', this.render_settings );
+
 				}
 
 				this.on( 'model-trashed', this.on_trashed );
@@ -10477,6 +10581,23 @@ define( 'Views/Assignment',[
 			},
 
 			/**
+			 * Re-render the settings subview when permalink updates after saving.
+			 *
+			 * @since 10.0.0
+			 *
+			 * @return {Void}
+			 */
+			render_settings: function() {
+
+				var view = this.get_subview( 'settings' );
+				if ( view && view.instance ) {
+					view.instance.render();
+					this.init_selects();
+				}
+
+			},
+
+			/**
 			 * Adds a new assignment to a lesson which currently has no assignment associated with it.
 			 *
 			 * @since 3.17.0
@@ -10498,6 +10619,7 @@ define( 'Views/Assignment',[
 					this.lesson.set( 'assignment_enabled', 'yes' );
 					this.lesson.set( 'assignment', this.model );
 
+					this.listenTo( this.model, 'change:permalink', this.render_settings );
 					this.render();
 
 				} else {
@@ -10543,6 +10665,7 @@ define( 'Views/Assignment',[
 				this.lesson.set( 'assignment', assignment );
 				this.model = assignment;
 
+				this.listenTo( this.model, 'change:permalink', this.render_settings );
 				this.render();
 
 			},
@@ -10971,7 +11094,9 @@ define( 'Views/Elements',[ 'Models/Section', 'Views/Section', 'Models/Lesson', '
 
 			event.preventDefault();
 
-			var pop = new Popover( {
+			var pop, onLessonSelect;
+
+			pop = new Popover( {
 				el: '#llms-existing-lesson',
 				args: {
 					backdrop: true,
@@ -10985,13 +11110,22 @@ define( 'Views/Elements',[ 'Models/Section', 'Views/Section', 'Models/Lesson', '
 						post_type: 'lesson',
 						searching_message: LLMS.l10n.translate( 'Search for existing lessons...' ),
 					} ).render().$el,
+					onHide: function() {
+						Backbone.pubSub.off( 'lesson-search-select', onLessonSelect );
+					},
 				}
 			} );
 
+			onLessonSelect = function() {
+				pop.hide();
+
+				// Ref #3097 — pop.hide() doesn't always remove the DOM elements.
+				$( '.webui-popover' ).remove();
+				$( '.webui-popover-backdrop' ).remove();
+			};
+
 			pop.show();
-			Backbone.pubSub.on( 'lesson-search-select', function() {
-				pop.hide()
-			} );
+			Backbone.pubSub.once( 'lesson-search-select', onLessonSelect );
 
 		},
 

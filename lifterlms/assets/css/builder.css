@@ -189,6 +189,12 @@ body.admin_page_llms-course-builder .webui-popover .select2-container--default .
 .wrap.lifterlms.llms-builder .llms-builder-main li.llms-section.expanded .llms-lessons {
   overflow: visible;
 }
+.wrap.lifterlms.llms-builder .llms-builder-main li.llms-section.selected {
+  border-left: 3px solid #466dd8;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+  margin-left: -2px;
+}
 .wrap.lifterlms.llms-builder .llms-builder-main li.llms-section.selected .llms-drag-utility.drag-section {
   border-color: #466dd8;
 }

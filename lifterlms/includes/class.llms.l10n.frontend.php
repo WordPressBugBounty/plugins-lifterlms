@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  7.8.0
+ * @version  10.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  7.8.0
+	 * @version  10.0.0
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -134,6 +134,7 @@ class LLMS_L10n_JS {
 			 * @version  3.25.4
 			 */
 			'General Settings' => esc_html__( 'General Settings', 'lifterlms' ),
+			'Content' => esc_html__( 'Content', 'lifterlms' ),
 			'Video Embed URL' => esc_html__( 'Video Embed URL', 'lifterlms' ),
 			'Audio Embed URL' => esc_html__( 'Audio Embed URL', 'lifterlms' ),
 			'Free Lesson' => esc_html__( 'Free Lesson', 'lifterlms' ),
@@ -159,6 +160,9 @@ class LLMS_L10n_JS {
 			'# of days' => esc_html__( '# of days', 'lifterlms' ),
 			'Date' => esc_html__( 'Date', 'lifterlms' ),
 			'Time' => esc_html__( 'Time', 'lifterlms' ),
+			'Associated Event(s)' => esc_html__( 'Associated Event(s)', 'lifterlms' ),
+			'Schedule events for your lessons with the LifterLMS Events add-on.' => esc_html__( 'Schedule events for your lessons with the LifterLMS Events add-on.', 'lifterlms' ),
+			'Learn More' => esc_html__( 'Learn More', 'lifterlms' ),
 
 			/**
 			 * File: assets/js/builder/Schemas/Quiz.js.
@@ -198,7 +202,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/builder/Views/_Editable.js.
 			 *
 			 * @since    3.16.0
-			 * @version  3.37.11
+			 * @version  10.0.0
 			 */
 			'Select an image' => esc_html__( 'Select an image', 'lifterlms' ),
 			'Use this image' => esc_html__( 'Use this image', 'lifterlms' ),
@@ -352,6 +356,7 @@ class LLMS_L10n_JS {
 			'New Quiz' => esc_html__( 'New Quiz', 'lifterlms' ),
 			'quizzes' => esc_html__( 'quizzes', 'lifterlms' ),
 			'quiz' => esc_html__( 'quiz', 'lifterlms' ),
+			'Content' => esc_html__( 'Content', 'lifterlms' ),
 			'Video Embed URL' => esc_html__( 'Video Embed URL', 'lifterlms' ),
 			'Audio Embed URL' => esc_html__( 'Audio Embed URL', 'lifterlms' ),
 			'Free Lesson' => esc_html__( 'Free Lesson', 'lifterlms' ),
@@ -377,6 +382,9 @@ class LLMS_L10n_JS {
 			'# of days' => esc_html__( '# of days', 'lifterlms' ),
 			'Date' => esc_html__( 'Date', 'lifterlms' ),
 			'Time' => esc_html__( 'Time', 'lifterlms' ),
+			'Associated Event(s)' => esc_html__( 'Associated Event(s)', 'lifterlms' ),
+			'Schedule events for your lessons with the LifterLMS Events add-on.' => esc_html__( 'Schedule events for your lessons with the LifterLMS Events add-on.', 'lifterlms' ),
+			'Learn More' => esc_html__( 'Learn More', 'lifterlms' ),
 			'New Lesson' => esc_html__( 'New Lesson', 'lifterlms' ),
 			'lessons' => esc_html__( 'lessons', 'lifterlms' ),
 			'lesson' => esc_html__( 'lesson', 'lifterlms' ),

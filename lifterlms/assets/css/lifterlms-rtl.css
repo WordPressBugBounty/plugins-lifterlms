@@ -1296,22 +1296,22 @@ svg .llms-animated-circle {
   }
 }
 @media all and (min-width: 600px) {
-  .llms-loop-list.cols-1 .llms-loop-item {
+  .llms-loop-list.cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .llms-loop-list.cols-2 .llms-loop-item {
+  .llms-loop-list.cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .llms-loop-list.cols-3 .llms-loop-item {
+  .llms-loop-list.cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .llms-loop-list.cols-4 .llms-loop-item {
+  .llms-loop-list.cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .llms-loop-list.cols-5 .llms-loop-item {
+  .llms-loop-list.cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .llms-loop-list.cols-6 .llms-loop-item {
+  .llms-loop-list.cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }

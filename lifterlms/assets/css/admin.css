@@ -2673,7 +2673,7 @@ a.llms-view-as {
 #poststuff .llms-metabox .llms-table {
   margin-top: 10px;
 }
-#poststuff .llms-metabox button.llms-button-primary {
+#poststuff .llms-metabox .llms-button-primary {
   border-radius: 8px;
   font-size: 16px;
   font-weight: 700;
