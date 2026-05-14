@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 10.0.1
+Stable tag: 10.0.2
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.0.2 - 2026-05-14 =
+
+##### Security Fixes
+
++ Check access to the course a quiz is associated with.
+
+
 = v10.0.1 - 2026-05-12 =
 
 ##### Security Fixes
@@ -689,14 +696,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 + [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/9.1.0/templates/quiz/questions/content-choice.php)
 + [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/9.1.0/templates/quiz/questions/content-picture_choice.php)
 + [templates/quiz/results.php](https://github.com/gocodebox/lifterlms/blob/9.1.0/templates/quiz/results.php)
-
-
-= v9.0.7 - 2025-09-16 =
-
-##### Bug Fixes
-
-+ Additional check to avoid conflict with certain plugins alongside the Classic Editor. [#3012](https://github.com/gocodebox/lifterlms/issues/3012)
-+ Fixing checkout for countries that have no states/provinces/regions listed.
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
