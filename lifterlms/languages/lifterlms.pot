@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.0.3\n"
+"Project-Id-Version: LifterLMS 10.0.4\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-19T18:16:20+00:00\n"
+"POT-Creation-Date: 2026-06-04T14:52:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.0\n"
 "X-Domain: lifterlms\n"
@@ -1036,7 +1036,13 @@ msgstr ""
 msgid "Error deleting the %1$s \"%2$d\"."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1107
+#. Translators: %s = Lesson post id.
+#: includes/admin/class.llms.admin.builder.php:1112
+#, php-format
+msgid "Unable to update lesson \"%s\". You are not allowed to edit the parent course."
+msgstr ""
+
+#: includes/admin/class.llms.admin.builder.php:1123
 #: includes/class.llms.l10n.frontend.php:94
 #: includes/class.llms.l10n.frontend.php:388
 #: includes/class.llms.post-types.php:572
@@ -1045,28 +1051,34 @@ msgid "New Lesson"
 msgstr ""
 
 #. Translators: %s = Lesson post id.
-#: includes/admin/class.llms.admin.builder.php:1123
-#: includes/admin/class.llms.admin.builder.php:1128
-#: includes/admin/class.llms.admin.builder.php:1138
+#: includes/admin/class.llms.admin.builder.php:1139
+#: includes/admin/class.llms.admin.builder.php:1144
+#: includes/admin/class.llms.admin.builder.php:1154
 #, php-format
 msgid "Unable to update lesson \"%s\". Invalid lesson ID."
 msgstr ""
 
 #. Translators: %s = Question post id.
-#: includes/admin/class.llms.admin.builder.php:1257
-#: includes/admin/class.llms.admin.builder.php:1263
-#: includes/admin/class.llms.admin.builder.php:1282
+#: includes/admin/class.llms.admin.builder.php:1284
+#: includes/admin/class.llms.admin.builder.php:1290
+#: includes/admin/class.llms.admin.builder.php:1309
 #, php-format
 msgid "Unable to update question \"%s\". Invalid question ID."
 msgstr ""
 
 #. Translators: %s = Question choice ID.
-#: includes/admin/class.llms.admin.builder.php:1321
+#: includes/admin/class.llms.admin.builder.php:1348
 #, php-format
 msgid "Unable to update choice \"%s\". Invalid choice ID."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1382
+#. Translators: %s = Quiz post id.
+#: includes/admin/class.llms.admin.builder.php:1407
+#, php-format
+msgid "Unable to update quiz \"%s\". You are not allowed to edit the parent course."
+msgstr ""
+
+#: includes/admin/class.llms.admin.builder.php:1417
 #: includes/class.llms.l10n.frontend.php:116
 #: includes/class.llms.l10n.frontend.php:356
 #: includes/class.llms.post-types.php:611
@@ -1074,17 +1086,23 @@ msgid "New Quiz"
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1396
-#: includes/admin/class.llms.admin.builder.php:1400
-#: includes/admin/class.llms.admin.builder.php:1413
+#: includes/admin/class.llms.admin.builder.php:1431
+#: includes/admin/class.llms.admin.builder.php:1435
+#: includes/admin/class.llms.admin.builder.php:1448
 #, php-format
 msgid "Unable to update quiz \"%s\". Invalid quiz ID."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1496
-#: includes/admin/class.llms.admin.builder.php:1501
-#: includes/admin/class.llms.admin.builder.php:1510
+#: includes/admin/class.llms.admin.builder.php:1521
+#, php-format
+msgid "Unable to update section \"%s\". You are not allowed to edit the parent course."
+msgstr ""
+
+#. Translators: %s = Section post id.
+#: includes/admin/class.llms.admin.builder.php:1541
+#: includes/admin/class.llms.admin.builder.php:1546
+#: includes/admin/class.llms.admin.builder.php:1555
 #, php-format
 msgid "Unable to update section \"%s\". Invalid section ID."
 msgstr ""
@@ -12015,7 +12033,7 @@ msgid "%s passed a quiz"
 msgstr ""
 
 #: includes/notifications/views/class.llms.notification.view.section.complete.php:92
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:243
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:245
 msgid "Section Title"
 msgstr ""
 
@@ -24583,12 +24601,16 @@ msgstr ""
 msgid "The delivery url returned the response code \"%d\"."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:87
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:86
 msgid "Retrieve access plans for a specific list of one or more posts. Accepts a course/membership id or comma separated list of course/membership ids."
 msgstr ""
 
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:411
+msgid "Sorry, you are not allowed to manage access plans for the requested product."
+msgstr ""
+
 #. Translators: %1$d = access plans limit per product, %2$s access plan post type plural name, %3$s product post type singular name.
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:771
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:769
 #, php-format
 msgid "Only %1$d %2$s allowed per %3$s"
 msgstr ""
@@ -24626,6 +24648,10 @@ msgstr ""
 msgid "The date the key was last used. Format: Y-m-d H:i:s."
 msgstr ""
 
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-api-keys-controller.php:438
+msgid "You are not allowed to create or edit an API key for this user."
+msgstr ""
+
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-courses-controller.php:133
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-courses-controller.php:153
 msgid "Unique Course Identifier. The WordPress Post ID"
@@ -24656,12 +24682,12 @@ msgid "List of course instructors. Defaults to current user when creating a new 
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-courses-controller.php:248
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:367
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:389
 msgid "URL to an oEmbed enable audio URL."
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-courses-controller.php:257
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:376
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:398
 msgid "URL to an oEmbed enable video URL."
 msgstr ""
 
@@ -24882,77 +24908,89 @@ msgstr ""
 msgid "The enrollment trigger. Default is `any`."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:91
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:138
 msgid "You are not allowed to create new instructors."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:108
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:155
 msgid "You are not allowed to delete this instructor."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:126
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:173
 msgid "Retrieve only instructors for the specified course(s) and/or membership(s). Accepts a single WP Post ID or a comma separated list of IDs."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:134
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:181
 msgid "Exclude instructors who do not have permissions for the specified course(s) and/or membership(s). Accepts a single WP Post ID or a comma separated list of IDs."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:155
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:202
 msgid "You are not allowed to view this instructor."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:189
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:236
 msgid "You are not allowed to list instructors."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:269
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-instructors-controller.php:316
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-students-controller.php:389
 msgid "You are not allowed to edit this user."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:168
-msgid "Invalid course_id param. It must be a valid Course ID."
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:160
+msgid "Sorry, you are not allowed to create or move lessons into the requested section."
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:179
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:221
+msgid "Invalid course_id param. It must be a valid Course ID."
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:183
+msgid "Sorry, you are not allowed to create or move lessons into the requested course."
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:194
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:224
 msgid "Invalid order param. It must be greater than 0."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:200
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:215
 msgid "Invalid drip_days param. It must be greater than 0."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:323
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:256
+msgid "Sorry, you are not allowed to attach the requested quiz to this lesson."
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:345
 msgid "WordPress post ID of the parent item. Must be a Section ID. 0 indicates an \"orphaned\" lesson which can be edited and viewed by instructors and admins but cannot be read by students."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:331
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:353
 msgid "WordPress post ID of the lesson's parent course."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:340
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:362
 msgid "Order of the lesson within its immediate parent."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:350
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:372
 msgid "Lesson ID of the prerequisite lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:358
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:380
 msgid "Determines the weight of the lesson when grading the course."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:385
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:407
 msgid "The date and time when the lesson becomes available. Applicable only when drip_method is date. Format: Y-m-d H:i:s."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:393
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:415
 msgid "Number of days to wait before allowing access to the lesson. Applicable only when drip_method is enrollment, start, or prerequisite."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:402
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:424
 msgid ""
 "Determine the method with which to make the lesson content available.\n"
 "\t\t\t\t\t<ul>\n"
@@ -24964,23 +25002,23 @@ msgid ""
 "\t\t\t\t\t</ul>"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:419
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:441
 msgid "Denotes a lesson that's publicly accessible regardless of course enrollment."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:425
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:447
 msgid "Associate a quiz with this lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:434
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:456
 msgid "Determines if a quiz is enabled for the lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:440
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:462
 msgid "The post ID of the associated quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:449
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:471
 msgid ""
 "Determines lesson progression requirements related to the quiz.\n"
 "\t\t\t\t\t\t\t<ul>\n"
@@ -24989,7 +25027,7 @@ msgid ""
 "\t\t\t\t\t\t\t</ul>"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:506
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-lessons-controller.php:528
 msgid "Filter lessons by the parent post (section) ID."
 msgstr ""
 
@@ -25050,24 +25088,28 @@ msgid "Unique Membership Identifier. The WordPress Post ID"
 msgstr ""
 
 #. translators: %1$s the post type name.
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:117
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:116
 #, php-format
 msgid "Unique %1$s Identifier. The WordPress Post ID"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:210
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:209
 msgid "Invalid parent_id param. It must be a valid Course ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:247
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:213
+msgid "Sorry, you are not allowed to create or move sections into the requested course."
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:249
 msgid "WordPress post ID of the parent item. Must be a Course ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:258
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:260
 msgid "Order of the section within the course."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:326
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-sections-controller.php:327
 msgid "Filter sections by the parent post (course) ID."
 msgstr ""
 

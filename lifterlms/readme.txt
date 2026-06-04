@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.0.3
+Stable tag: 10.0.4
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,18 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.0.4 - 2026-06-04 =
+
+##### Developer Notes
+
++ Add AGENTS.md and CLAUDE.md to surface project context, contribution workflow, and AI integration interfaces to AI coding agents working in the repo.
+
+##### Security Fixes
+
++ Additional checks on permissions with the REST API. Thanks [@RegorSec](https://github.com/RegorSec)!
++ Improved checks when saving Course Builder data.
+
+
 = v10.0.3 - 2026-05-19 =
 
 ##### Bug Fixes
@@ -659,13 +671,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 + Filters for displaying already enrolled message during checkout.
 + Filter to avoid sending a Purchase Receipt under certain conditions.
 + Filter to prevent automatic enrollment in a product after purchase completed.
-
-
-= v9.1.1 - 2025-11-11 =
-
-##### Security Fixes
-
-+ Fixes security issue where student and instructor REST APIs can be used to modify roles incorrectly. Thanks [@shark3y](https://github.com/shark3y)!
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
