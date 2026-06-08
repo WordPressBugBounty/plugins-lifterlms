@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.0.4
+Stable tag: 10.0.5
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,13 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.0.5 - 2026-06-08 =
+
+##### Deprecations
+
++ Deprecated method for querying quiz questions. Quiz question searching is handled by the Course Builder via the `llms_builder` AJAX flow.
+
+
 = v10.0.4 - 2026-06-04 =
 
 ##### Developer Notes
@@ -654,23 +661,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Updated Templates
 
 + [templates/course/favorite.php](https://github.com/gocodebox/lifterlms/blob/9.2.0/templates/course/favorite.php)
-
-
-= v9.1.2 - 2025-11-20 =
-
-##### Updates and Enhancements
-
-+ Changed options for a new Access Plan to include gifts, and removing the Free Trial option.
-
-##### Bug Fixes
-
-+ Avoid warning when creating the first access plan on a course/membership. [#3046](https://github.com/gocodebox/lifterlms/issues/3046)
-
-##### Developer Notes
-
-+ Filters for displaying already enrolled message during checkout.
-+ Filter to avoid sending a Purchase Receipt under certain conditions.
-+ Filter to prevent automatic enrollment in a product after purchase completed.
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
