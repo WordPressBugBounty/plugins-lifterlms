@@ -3,7 +3,7 @@
         'name' => 'gocodebox/lifterlms',
         'pretty_version' => 'dev-trunk',
         'version' => 'dev-trunk',
-        'reference' => 'b1362746fb7df9b64a0dd5ad6700aca57bb95237',
+        'reference' => 'b953a94c83dbc2f7dbb789af06b395e9988191cb',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -40,7 +40,7 @@
         'gocodebox/lifterlms' => array(
             'pretty_version' => 'dev-trunk',
             'version' => 'dev-trunk',
-            'reference' => 'b1362746fb7df9b64a0dd5ad6700aca57bb95237',
+            'reference' => 'b953a94c83dbc2f7dbb789af06b395e9988191cb',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
