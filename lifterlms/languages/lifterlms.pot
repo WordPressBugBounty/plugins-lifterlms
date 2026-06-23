@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.0.6\n"
+"Project-Id-Version: LifterLMS 10.0.7\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-19T13:07:14+00:00\n"
+"POT-Creation-Date: 2026-06-23T13:07:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.0\n"
 "X-Domain: lifterlms\n"
@@ -1073,12 +1073,12 @@ msgid "Unable to update choice \"%s\". Invalid choice ID."
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1407
+#: includes/admin/class.llms.admin.builder.php:1409
 #, php-format
 msgid "Unable to update quiz \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1417
+#: includes/admin/class.llms.admin.builder.php:1419
 #: includes/class.llms.l10n.frontend.php:116
 #: includes/class.llms.l10n.frontend.php:356
 #: includes/class.llms.post-types.php:611
@@ -1086,23 +1086,23 @@ msgid "New Quiz"
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1431
-#: includes/admin/class.llms.admin.builder.php:1435
-#: includes/admin/class.llms.admin.builder.php:1448
+#: includes/admin/class.llms.admin.builder.php:1433
+#: includes/admin/class.llms.admin.builder.php:1437
+#: includes/admin/class.llms.admin.builder.php:1450
 #, php-format
 msgid "Unable to update quiz \"%s\". Invalid quiz ID."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1521
+#: includes/admin/class.llms.admin.builder.php:1523
 #, php-format
 msgid "Unable to update section \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1541
-#: includes/admin/class.llms.admin.builder.php:1546
-#: includes/admin/class.llms.admin.builder.php:1555
+#: includes/admin/class.llms.admin.builder.php:1543
+#: includes/admin/class.llms.admin.builder.php:1548
+#: includes/admin/class.llms.admin.builder.php:1557
 #, php-format
 msgid "Unable to update section \"%s\". Invalid section ID."
 msgstr ""
@@ -3878,13 +3878,13 @@ msgid "Actions"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.student.course.php:109
-#: templates/course/complete-lesson-link.php:56
+#: templates/course/complete-lesson-link.php:57
 msgid "Mark Incomplete"
 msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.student.course.php:113
 #: includes/beaver-builder/modules/lesson-mark-complete/includes/frontend.php:27
-#: templates/course/complete-lesson-link.php:91
+#: templates/course/complete-lesson-link.php:92
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:7
 msgid "Mark Complete"
 msgstr ""
@@ -10088,12 +10088,20 @@ msgstr ""
 msgid "You are not allowed to manage this certificate."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.lesson.progression.php:72
+#: includes/controllers/class.llms.controller.lesson.progression.php:71
 msgid "An error occurred, please try again."
 msgstr ""
 
+#: includes/controllers/class.llms.controller.lesson.progression.php:146
+msgid "You are not allowed to complete this lesson."
+msgstr ""
+
+#: includes/controllers/class.llms.controller.lesson.progression.php:195
+msgid "You are not allowed to update this lesson."
+msgstr ""
+
 #. Translators: %s is the title of the lesson.
-#: includes/controllers/class.llms.controller.lesson.progression.php:194
+#: includes/controllers/class.llms.controller.lesson.progression.php:202
 #, php-format
 msgid "The lesson %s is now marked as incomplete."
 msgstr ""
@@ -11541,7 +11549,7 @@ msgid "Enrollment"
 msgstr ""
 
 #: includes/notifications/controllers/class.llms.notification.controller.lesson.complete.php:110
-#: templates/course/complete-lesson-link.php:37
+#: templates/course/complete-lesson-link.php:38
 msgid "Lesson Complete"
 msgstr ""
 
@@ -25781,7 +25789,7 @@ msgstr ""
 msgid "Categories: "
 msgstr ""
 
-#: templates/course/complete-lesson-link.php:113
+#: templates/course/complete-lesson-link.php:114
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:7
 msgid "Take Quiz"
 msgstr ""

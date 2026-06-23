@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.0.6
+Stable tag: 10.0.7
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,23 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.0.7 - 2026-06-23 =
+
+##### Performance Improvements
+
++ Anonymous visitors no longer receive a LifterLMS session cookie until session data is actually written (an applied coupon, a queued notice, etc.), so otherwise-anonymous page views stay eligible for full-page caching instead of being skipped by the page cache. [#3210](https://github.com/gocodebox/lifterlms/issues/3210)
+
+##### Security Fixes
+
++ Additional checks in the course builder when associating protected media.
++ Improved validation of submitted filenames in the admin table export workflow. Thanks [Duy Tran](https://mrdarkroot.github.io/)!
++ Additional checks on lesson progression form submissions. Thanks [@0xEr3n](https://github.com/0xEr3n)!
+
+##### Updated Templates
+
++ [templates/course/complete-lesson-link.php](https://github.com/gocodebox/lifterlms/blob/10.0.7/templates/course/complete-lesson-link.php)
+
+
 = v10.0.6 - 2026-06-19 =
 
 ##### Developer Notes
@@ -637,13 +654,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 + [templates/myaccount/my-grades-single-table.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/myaccount/my-grades-single-table.php)
 + [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/quiz/questions/content-choice.php)
 + [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/quiz/questions/content-picture_choice.php)
-
-
-= v9.2.1 - 2026-02-02 =
-
-##### Bug Fixes
-
-+ Fix course data calculation not ending since 9.2.0. [#3087](https://github.com/gocodebox/lifterlms/issues/3087)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
