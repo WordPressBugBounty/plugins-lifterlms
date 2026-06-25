@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.0.7\n"
+"Project-Id-Version: LifterLMS 10.0.8\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-23T13:07:01+00:00\n"
+"POT-Creation-Date: 2026-06-25T16:39:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.0\n"
 "X-Domain: lifterlms\n"
@@ -295,8 +295,12 @@ msgstr ""
 msgid "Error creating the %s post object."
 msgstr ""
 
+#: includes/abstracts/llms-abstract-generator-posts.php:360
+msgid "You are not allowed to create a user with the requested role."
+msgstr ""
+
 #. translators: %s: name of term.
-#: includes/abstracts/llms-abstract-generator-posts.php:519
+#: includes/abstracts/llms-abstract-generator-posts.php:550
 #, php-format
 msgid "Error creating new term \"%s\"."
 msgstr ""
@@ -7449,13 +7453,13 @@ msgstr ""
 #. Translators: %s = coupon code.
 #: includes/class-llms-order-generator.php:582
 #: includes/class.llms.ajax.handler.php:1130
-#: includes/functions/llms.functions.order.php:357
+#: includes/functions/llms.functions.order.php:405
 #, php-format
 msgid "Coupon code \"%s\" not found."
 msgstr ""
 
 #: includes/class-llms-order-generator.php:619
-#: includes/functions/llms.functions.order.php:374
+#: includes/functions/llms.functions.order.php:422
 msgid "No payment method selected."
 msgstr ""
 
@@ -7476,13 +7480,13 @@ msgid "Access plan not found."
 msgstr ""
 
 #. Translators: %s = The title of the site's LifterLMS Terms and Conditions page.
-#: includes/class-llms-order-generator.php:706
+#: includes/class-llms-order-generator.php:712
 #, php-format
 msgid "You must agree to the %s."
 msgstr ""
 
 #. Translators: %s = The title of the course or membership.
-#: includes/class-llms-order-generator.php:738
+#: includes/class-llms-order-generator.php:744
 #, php-format
 msgid "You already have access to %s."
 msgstr ""
@@ -10216,6 +10220,10 @@ msgstr ""
 msgid "You must be logged in to perform this action."
 msgstr ""
 
+#: includes/forms/class-llms-form-handler.php:480
+msgid "This form contains a field that cannot be saved. Please contact the site administrator."
+msgstr ""
+
 #: includes/forms/class-llms-form-post-type.php:228
 msgid "LifterLMS Forms"
 msgstr ""
@@ -10430,7 +10438,7 @@ msgstr ""
 
 #: includes/forms/controllers/class.llms.controller.account.php:132
 #: includes/forms/controllers/class.llms.controller.registration.php:112
-#: includes/functions/llms.functions.order.php:404
+#: includes/functions/llms.functions.order.php:452
 msgid "An unknown error occurred when attempting to create an account, please try again."
 msgstr ""
 
@@ -10755,25 +10763,34 @@ msgstr ""
 msgid "The selected payment gateway does not support one-time payments."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:326
+#: includes/functions/llms.functions.order.php:300
+#: includes/functions/llms.functions.order.php:383
+msgid "Invalid Access Plan ID."
+msgstr ""
+
+#: includes/functions/llms.functions.order.php:302
+msgid "This access plan is not available."
+msgstr ""
+
+#: includes/functions/llms.functions.order.php:306
+msgid "This product is not available for purchase."
+msgstr ""
+
+#: includes/functions/llms.functions.order.php:369
 #, php-format
 msgid "You must agree to the %s to continue."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:333
+#: includes/functions/llms.functions.order.php:376
 msgid "Missing an Access Plan ID."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:340
-msgid "Invalid Access Plan ID."
-msgstr ""
-
-#: includes/functions/llms.functions.order.php:385
+#: includes/functions/llms.functions.order.php:433
 msgid "Missing customer information."
 msgstr ""
 
 #. Translators: %2$s = The product type (course/membership); %1$s = product permalink.
-#: includes/functions/llms.functions.order.php:425
+#: includes/functions/llms.functions.order.php:473
 #: includes/shortcodes/class.llms.shortcode.checkout.php:82
 #, php-format
 msgid "You already have access to this %2$s! Visit your dashboard <a href=\"%1$s\">here.</a>"
@@ -24307,9 +24324,13 @@ msgid "Invalid api key."
 msgstr ""
 
 #. Translators: %s = Invalid API Key ID.
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-settings-api-keys.php:296
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-settings-api-keys.php:303
 #, php-format
 msgid "\"%s\" is not a valid API Key."
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-settings-api-keys.php:337
+msgid "You are not allowed to assign this user as the key owner."
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-settings-page.php:83

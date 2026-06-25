@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.0.7
+Stable tag: 10.0.8
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,15 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.0.8 - 2026-06-25 =
+
+##### Security Fixes
+
++ Additional checks during checkout order creation. Thanks [@0xEr3n](https://github.com/0xEr3n)!
++ Additional checks when creating users during course and membership imports. Thanks [@0xEr3n](https://github.com/0xEr3n)!
++ Additional checks on the data saved when submitting account and registration forms. Thanks [@0xEr3n](https://github.com/0xEr3n)!
+
+
 = v10.0.7 - 2026-06-23 =
 
 ##### Performance Improvements
@@ -632,28 +641,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Security Fixes
 
 + Additional permission checks when performing certain admin actions. Thanks [@nobody090909](https://github.com/nobody090909)!
-
-
-= v9.2.2 - 2026-03-31 =
-
-##### Updates and Enhancements
-
-+ Various escaping and consistency changes.
-
-##### Bug Fixes
-
-+ Removes use of deprecated mb_convert_encoding(). [#2672](https://github.com/gocodebox/lifterlms/issues/2672)
-
-##### Security Fixes
-
-+ Validation of the order param for the quiz Students Without Attempts table.
-
-##### Updated Templates
-
-+ [templates/course/lesson-preview.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/course/lesson-preview.php)
-+ [templates/myaccount/my-grades-single-table.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/myaccount/my-grades-single-table.php)
-+ [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/quiz/questions/content-choice.php)
-+ [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/9.2.2/templates/quiz/questions/content-picture_choice.php)
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
