@@ -320,17 +320,17 @@
         },
         {
             "name": "lifterlms/lifterlms-helper",
-            "version": "3.5.9",
-            "version_normalized": "3.5.9.0",
+            "version": "3.5.10",
+            "version_normalized": "3.5.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/lifterlms-helper.git",
-                "reference": "ee1d7bd2e253839316bc22f6a70b80aadbf5f490"
+                "reference": "8cbc1cb0312502d97240ca62abd420957cb8edb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/lifterlms-helper/zipball/ee1d7bd2e253839316bc22f6a70b80aadbf5f490",
-                "reference": "ee1d7bd2e253839316bc22f6a70b80aadbf5f490",
+                "url": "https://api.github.com/repos/gocodebox/lifterlms-helper/zipball/8cbc1cb0312502d97240ca62abd420957cb8edb3",
+                "reference": "8cbc1cb0312502d97240ca62abd420957cb8edb3",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +341,7 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.3"
             },
-            "time": "2026-04-10T12:28:13+00:00",
+            "time": "2026-06-29T17:59:51+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "strauss": {
@@ -380,23 +380,23 @@
             "description": "Update, install, and beta test LifterLMS and LifterLMS add-ons",
             "support": {
                 "issues": "https://github.com/gocodebox/lifterlms-helper/issues",
-                "source": "https://github.com/gocodebox/lifterlms-helper/tree/3.5.9"
+                "source": "https://github.com/gocodebox/lifterlms-helper/tree/3.5.10"
             },
             "install-path": "../../libraries/lifterlms-helper"
         },
         {
             "name": "lifterlms/lifterlms-rest",
-            "version": "1.0.7",
-            "version_normalized": "1.0.7.0",
+            "version": "1.0.8",
+            "version_normalized": "1.0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gocodebox/lifterlms-rest.git",
-                "reference": "6ffdddca5e0a8859fb2251e89f9a1cb9cb549685"
+                "reference": "6c9b790895986e6e580e619f8a6232a11193898e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gocodebox/lifterlms-rest/zipball/6ffdddca5e0a8859fb2251e89f9a1cb9cb549685",
-                "reference": "6ffdddca5e0a8859fb2251e89f9a1cb9cb549685",
+                "url": "https://api.github.com/repos/gocodebox/lifterlms-rest/zipball/6c9b790895986e6e580e619f8a6232a11193898e",
+                "reference": "6c9b790895986e6e580e619f8a6232a11193898e",
                 "shasum": ""
             },
             "require": {
@@ -406,7 +406,7 @@
                 "lifterlms/lifterlms-cs": "dev-trunk",
                 "lifterlms/lifterlms-tests": "^4.1.1"
             },
-            "time": "2026-06-25T15:14:11+00:00",
+            "time": "2026-06-29T19:16:14+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
@@ -422,7 +422,7 @@
             "description": "REST API feature plugin for the LifterLMS Core.",
             "support": {
                 "issues": "https://github.com/gocodebox/lifterlms-rest/issues",
-                "source": "https://github.com/gocodebox/lifterlms-rest/tree/1.0.7"
+                "source": "https://github.com/gocodebox/lifterlms-rest/tree/1.0.8"
             },
             "install-path": "../../libraries/lifterlms-rest"
         },

@@ -495,7 +495,7 @@
     min-width: 100%;
   }
   .llms-focus-mode.llms-sidebar-collapsed .llms-focus-mode-sidebar .llms-focus-mode-sidebar-header,
-.llms-focus-mode.llms-sidebar-collapsed .llms-focus-mode-sidebar .llms-focus-mode-sidebar-content {
+  .llms-focus-mode.llms-sidebar-collapsed .llms-focus-mode-sidebar .llms-focus-mode-sidebar-content {
     display: block;
   }
   .llms-focus-mode.llms-focus-mode-sidebar-right .llms-focus-mode-body {

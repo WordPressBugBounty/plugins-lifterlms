@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.0.8\n"
+"Project-Id-Version: LifterLMS 10.0.9\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-25T16:39:45+00:00\n"
+"POT-Creation-Date: 2026-06-29T20:11:36+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.0\n"
 "X-Domain: lifterlms\n"
@@ -901,16 +901,16 @@ msgstr ""
 msgid "Email sending is currently disabled. %1$sVisit the SendWP Settings%2$s to enable sending.."
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:310
-#: includes/admin/class.llms.admin.addons.php:426
+#: includes/admin/class.llms.admin.addons.php:315
+#: includes/admin/class.llms.admin.addons.php:433
 msgid "There was an error retrieving add-ons. Please try again."
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:318
+#: includes/admin/class.llms.admin.addons.php:323
 msgid "LifterLMS Add-Ons, Courses, and Resources"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:338
+#: includes/admin/class.llms.admin.addons.php:344
 #: includes/admin/views/access-plans/access-plan-dialog.php:11
 #: includes/admin/views/builder/editor.php:29
 #: includes/class.llms.l10n.frontend.php:230
@@ -918,7 +918,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:344
+#: includes/admin/class.llms.admin.addons.php:350
 #: includes/admin/views/metaboxes/view-award-engagement-submit.php:158
 #: includes/admin/views/metaboxes/view-award-engagement-submit.php:159
 #: libraries/lifterlms-helper/includes/class-llms-helper-admin-add-ons.php:378
@@ -926,32 +926,32 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:349
+#: includes/admin/class.llms.admin.addons.php:355
 #: includes/models/model.llms.add-on.php:222
 #: libraries/lifterlms-helper/includes/class-llms-helper-admin-add-ons.php:344
 #: libraries/lifterlms-helper/includes/models/class-llms-helper-add-on.php:129
 msgid "Install"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:354
+#: includes/admin/class.llms.admin.addons.php:360
 #: includes/admin/views/addons/addon-item.php:104
 #: includes/models/model.llms.add-on.php:220
 #: libraries/lifterlms-helper/includes/models/class-llms-helper-add-on.php:127
 msgid "Activate"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:359
+#: includes/admin/class.llms.admin.addons.php:365
 #: includes/admin/views/addons/addon-item.php:96
 #: includes/models/model.llms.add-on.php:221
 #: libraries/lifterlms-helper/includes/models/class-llms-helper-add-on.php:128
 msgid "Deactivate"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:362
+#: includes/admin/class.llms.admin.addons.php:368
 msgid "Apply"
 msgstr ""
 
-#: includes/admin/class.llms.admin.addons.php:454
+#: includes/admin/class.llms.admin.addons.php:461
 msgid "All"
 msgstr ""
 
@@ -2051,7 +2051,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:64
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:70
-#: includes/class.llms.ajax.handler.php:1013
+#: includes/class.llms.ajax.handler.php:1011
 #: includes/llms.functions.core.php:1090
 msgid "ID#"
 msgstr ""
@@ -7452,7 +7452,7 @@ msgstr ""
 #. Translators: %s = The user-submitted coupon code.
 #. Translators: %s = coupon code.
 #: includes/class-llms-order-generator.php:582
-#: includes/class.llms.ajax.handler.php:1130
+#: includes/class.llms.ajax.handler.php:1128
 #: includes/functions/llms.functions.order.php:405
 #, php-format
 msgid "Coupon code \"%s\" not found."
@@ -7547,7 +7547,7 @@ msgstr ""
 #: includes/class.llms.ajax.handler.php:57
 #: includes/class.llms.ajax.handler.php:83
 #: includes/class.llms.ajax.handler.php:110
-#: includes/class.llms.ajax.handler.php:1064
+#: includes/class.llms.ajax.handler.php:1062
 msgid "Missing required parameters"
 msgstr ""
 
@@ -7588,93 +7588,93 @@ msgid "You must be enrolled in this course to take this quiz."
 msgstr ""
 
 #: includes/class.llms.ajax.handler.php:464
-#: includes/class.llms.ajax.handler.php:558
-#: includes/class.llms.ajax.handler.php:645
-#: includes/class.llms.ajax.handler.php:710
-#: includes/class.llms.ajax.handler.php:817
+#: includes/class.llms.ajax.handler.php:556
+#: includes/class.llms.ajax.handler.php:643
+#: includes/class.llms.ajax.handler.php:708
+#: includes/class.llms.ajax.handler.php:815
 #: includes/class.llms.template.loader.php:408
 msgid "You must be logged in to take quizzes."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:485
-#: includes/class.llms.ajax.handler.php:750
+#: includes/class.llms.ajax.handler.php:483
+#: includes/class.llms.ajax.handler.php:748
 msgid "You've reached the maximum number of attempts for this quiz."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:497
+#: includes/class.llms.ajax.handler.php:495
 msgid "There was an error starting the quiz. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:516
+#: includes/class.llms.ajax.handler.php:514
 msgid "Unable to start quiz because the quiz does not contain any questions."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:563
+#: includes/class.llms.ajax.handler.php:561
 msgid "Attempt key is required."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:570
-#: includes/class.llms.ajax.handler.php:829
+#: includes/class.llms.ajax.handler.php:568
+#: includes/class.llms.ajax.handler.php:827
 msgid "The requested attempt could not be found."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:581
+#: includes/class.llms.ajax.handler.php:579
 msgid "No quiz found."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:591
+#: includes/class.llms.ajax.handler.php:589
 msgid "There was an error resuming the quiz. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:603
+#: includes/class.llms.ajax.handler.php:601
 msgid "Unable to resume quiz because the quiz does not contain any questions."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:652
-#: includes/class.llms.ajax.handler.php:717
-#: includes/class.llms.ajax.handler.php:822
+#: includes/class.llms.ajax.handler.php:650
+#: includes/class.llms.ajax.handler.php:715
+#: includes/class.llms.ajax.handler.php:820
 msgid "Missing required parameters. Could not proceed."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:664
+#: includes/class.llms.ajax.handler.php:662
 msgid "There was an error retrieving the question. Please return to the lesson and try again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:676
+#: includes/class.llms.ajax.handler.php:674
 msgid "Cannot find the requested question id. Please return to the lesson and try again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:729
+#: includes/class.llms.ajax.handler.php:727
 msgid "There was an error recording your answer. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1068
+#: includes/class.llms.ajax.handler.php:1066
 msgid "Invalid status"
 msgstr ""
 
 #. Translators: %s = action add|remove|delete.
-#: includes/class.llms.ajax.handler.php:1090
+#: includes/class.llms.ajax.handler.php:1088
 #, php-format
 msgid "Action \"%1$s\" failed. Please try again"
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1117
+#: includes/class.llms.ajax.handler.php:1115
 msgid "Please enter a coupon code."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1121
+#: includes/class.llms.ajax.handler.php:1119
 msgid "Please enter a plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1280
+#: includes/class.llms.ajax.handler.php:1278
 msgid "Invalid access plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1284
+#: includes/class.llms.ajax.handler.php:1282
 msgid "Access plan does not belong to this product."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1332
+#: includes/class.llms.ajax.handler.php:1330
 msgid "Missing tracking data."
 msgstr ""
 
@@ -24427,7 +24427,7 @@ msgstr ""
 msgid "\"%s\" is not a valid permission."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/class-llms-rest-authentication.php:286
+#: libraries/lifterlms-rest/includes/class-llms-rest-authentication.php:311
 msgid "LifterLMS REST API"
 msgstr ""
 

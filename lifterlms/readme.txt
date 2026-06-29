@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.0.8
+Stable tag: 10.0.9
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,19 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.0.9 - 2026-06-29 =
+
+##### Bug Fixes
+
++ Fixed the "Add New Plan" access plan dialog not scrolling within the block editor meta boxes area in WordPress 7.0.
+
+##### Security Fixes
+
++ Additional checks when starting a quiz.
++ Additional checks on the add-ons management screen.
++ Additional checks when authenticating REST API requests.
+
+
 = v10.0.8 - 2026-06-25 =
 
 ##### Security Fixes
@@ -634,13 +647,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 + [templates/course/outline-list-small.php](https://github.com/gocodebox/lifterlms/blob/10.0.0/templates/course/outline-list-small.php)
 + [templates/loop/pagination.php](https://github.com/gocodebox/lifterlms/blob/10.0.0/templates/loop/pagination.php)
 + [templates/single-lesson-focus.php](https://github.com/gocodebox/lifterlms/blob/10.0.0/templates/single-lesson-focus.php)
-
-
-= v9.2.3 - 2026-04-07 =
-
-##### Security Fixes
-
-+ Additional permission checks when performing certain admin actions. Thanks [@nobody090909](https://github.com/nobody090909)!
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)

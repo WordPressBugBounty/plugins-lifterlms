@@ -301,6 +301,13 @@ a.llms-button-secondary {
   display: inline-block;
 }
 
+.llms-donut:before, .llms-donut:after {
+  content: " ";
+  display: table;
+}
+.llms-donut:after {
+  clear: both;
+}
 .llms-donut {
   background-color: #f1f1f1;
   background-image: none;
@@ -310,13 +317,6 @@ a.llms-button-secondary {
   overflow: hidden;
   position: relative;
   width: 200px;
-}
-.llms-donut:before, .llms-donut:after {
-  content: " ";
-  display: table;
-}
-.llms-donut:after {
-  clear: both;
 }
 .llms-donut svg {
   overflow: visible !important;
@@ -864,8 +864,8 @@ a.llms-button-secondary {
   border-radius: 50%;
   cursor: pointer;
   vertical-align: middle;
-  -webkit-box-shadow: hsla(0deg, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0deg, 0%, 0%, 0.5) 0 0 0 1px;
-          box-shadow: hsla(0deg, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0deg, 0%, 0%, 0.5) 0 0 0 1px;
+  -webkit-box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.5) 0 0 0 1px;
+          box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.5) 0 0 0 1px;
   background: #efefef;
   background-image: radial-gradient(ellipse at center, #bb231c 0%, #bb231c 40%, #efefef 45%);
   background-repeat: no-repeat;
@@ -1281,9 +1281,6 @@ svg .llms-animated-circle {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
-  list-style: none;
-  margin: 0 -10px;
-  padding: 0;
 }
 .llms-loop-list .llms-loop-item {
   list-style: none;
@@ -1294,6 +1291,11 @@ svg .llms-animated-circle {
   .llms-loop-list {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.llms-loop-list {
+  list-style: none;
+  margin: 0 -10px;
+  padding: 0;
 }
 @media all and (min-width: 600px) {
   .llms-loop-list.cols-1 {
@@ -1748,14 +1750,6 @@ svg .llms-animated-circle {
   list-style-type: none;
 }
 
-ul.llms-achievements-loop,
-.lifterlms ul.llms-achievements-loop,
-ul.llms-certificates-loop,
-.lifterlms ul.llms-certificates-loop {
-  list-style-type: none;
-  margin: 0 -10px;
-  padding: 0;
-}
 ul.llms-achievements-loop:before, ul.llms-achievements-loop:after,
 .lifterlms ul.llms-achievements-loop:before,
 .lifterlms ul.llms-achievements-loop:after,
@@ -1771,6 +1765,14 @@ ul.llms-achievements-loop:after,
 ul.llms-certificates-loop:after,
 .lifterlms ul.llms-certificates-loop:after {
   clear: both;
+}
+ul.llms-achievements-loop,
+.lifterlms ul.llms-achievements-loop,
+ul.llms-certificates-loop,
+.lifterlms ul.llms-certificates-loop {
+  list-style-type: none;
+  margin: 0 -10px;
+  padding: 0;
 }
 ul.llms-achievements-loop li.llms-achievement-loop-item,
 ul.llms-achievements-loop li.llms-certificate-loop-item,
@@ -1791,48 +1793,48 @@ ul.llms-certificates-loop li.llms-certificate-loop-item,
 }
 @media all and (min-width: 600px) {
   ul.llms-achievements-loop.loop-cols-1 li.llms-achievement-loop-item, ul.llms-achievements-loop.loop-cols-1 li.llms-certificate-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-1 li.llms-achievement-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-1 li.llms-certificate-loop-item,
-ul.llms-certificates-loop.loop-cols-1 li.llms-achievement-loop-item,
-ul.llms-certificates-loop.loop-cols-1 li.llms-certificate-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-1 li.llms-achievement-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-1 li.llms-certificate-loop-item {
+  .lifterlms ul.llms-achievements-loop.loop-cols-1 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-achievements-loop.loop-cols-1 li.llms-certificate-loop-item,
+  ul.llms-certificates-loop.loop-cols-1 li.llms-achievement-loop-item,
+  ul.llms-certificates-loop.loop-cols-1 li.llms-certificate-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-1 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-1 li.llms-certificate-loop-item {
     width: 100%;
   }
   ul.llms-achievements-loop.loop-cols-2 li.llms-achievement-loop-item, ul.llms-achievements-loop.loop-cols-2 li.llms-certificate-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-2 li.llms-achievement-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-2 li.llms-certificate-loop-item,
-ul.llms-certificates-loop.loop-cols-2 li.llms-achievement-loop-item,
-ul.llms-certificates-loop.loop-cols-2 li.llms-certificate-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-2 li.llms-achievement-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-2 li.llms-certificate-loop-item {
+  .lifterlms ul.llms-achievements-loop.loop-cols-2 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-achievements-loop.loop-cols-2 li.llms-certificate-loop-item,
+  ul.llms-certificates-loop.loop-cols-2 li.llms-achievement-loop-item,
+  ul.llms-certificates-loop.loop-cols-2 li.llms-certificate-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-2 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-2 li.llms-certificate-loop-item {
     width: 50%;
   }
   ul.llms-achievements-loop.loop-cols-3 li.llms-achievement-loop-item, ul.llms-achievements-loop.loop-cols-3 li.llms-certificate-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-3 li.llms-achievement-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-3 li.llms-certificate-loop-item,
-ul.llms-certificates-loop.loop-cols-3 li.llms-achievement-loop-item,
-ul.llms-certificates-loop.loop-cols-3 li.llms-certificate-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-3 li.llms-achievement-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-3 li.llms-certificate-loop-item {
+  .lifterlms ul.llms-achievements-loop.loop-cols-3 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-achievements-loop.loop-cols-3 li.llms-certificate-loop-item,
+  ul.llms-certificates-loop.loop-cols-3 li.llms-achievement-loop-item,
+  ul.llms-certificates-loop.loop-cols-3 li.llms-certificate-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-3 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-3 li.llms-certificate-loop-item {
     width: 33.3333333333%;
   }
   ul.llms-achievements-loop.loop-cols-4 li.llms-achievement-loop-item, ul.llms-achievements-loop.loop-cols-4 li.llms-certificate-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-4 li.llms-achievement-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-4 li.llms-certificate-loop-item,
-ul.llms-certificates-loop.loop-cols-4 li.llms-achievement-loop-item,
-ul.llms-certificates-loop.loop-cols-4 li.llms-certificate-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-4 li.llms-achievement-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-4 li.llms-certificate-loop-item {
+  .lifterlms ul.llms-achievements-loop.loop-cols-4 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-achievements-loop.loop-cols-4 li.llms-certificate-loop-item,
+  ul.llms-certificates-loop.loop-cols-4 li.llms-achievement-loop-item,
+  ul.llms-certificates-loop.loop-cols-4 li.llms-certificate-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-4 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-4 li.llms-certificate-loop-item {
     width: 25%;
   }
   ul.llms-achievements-loop.loop-cols-5 li.llms-achievement-loop-item, ul.llms-achievements-loop.loop-cols-5 li.llms-certificate-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-5 li.llms-achievement-loop-item,
-.lifterlms ul.llms-achievements-loop.loop-cols-5 li.llms-certificate-loop-item,
-ul.llms-certificates-loop.loop-cols-5 li.llms-achievement-loop-item,
-ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-5 li.llms-achievement-loop-item,
-.lifterlms ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item {
+  .lifterlms ul.llms-achievements-loop.loop-cols-5 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-achievements-loop.loop-cols-5 li.llms-certificate-loop-item,
+  ul.llms-certificates-loop.loop-cols-5 li.llms-achievement-loop-item,
+  ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-5 li.llms-achievement-loop-item,
+  .lifterlms ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item {
     width: 20%;
   }
 }
@@ -1913,6 +1915,13 @@ ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
   display: none;
 }
 
+.llms-notification:before, .llms-notification:after {
+  content: " ";
+  display: table;
+}
+.llms-notification:after {
+  clear: both;
+}
 .llms-notification {
   background: #fefefe;
   -webkit-box-shadow: 0 1px 2px -2px #333, 0 1px 1px -1px #333;
@@ -1929,13 +1938,6 @@ ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
   visibility: hidden;
   width: auto;
   z-index: 9999999;
-}
-.llms-notification:before, .llms-notification:after {
-  content: " ";
-  display: table;
-}
-.llms-notification:after {
-  clear: both;
 }
 .llms-notification.visible {
   right: 12px;
@@ -2328,12 +2330,12 @@ ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
   margin: 0;
   padding: 5px;
 }
-.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed {
-  opacity: 0.5;
-}
 .single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed .llms-question-title {
   font-style: italic;
   font-weight: normal;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed {
+  opacity: 0.5;
 }
 .single-llms_quiz .llms-return {
   margin-bottom: 10px;
@@ -2450,19 +2452,19 @@ ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
   transition: width 0.3s ease-in;
   width: 0;
 }
-.llms-quiz-ui .llms-error {
-  background: rgba(187, 35, 28, 0.15);
-  border: 1px solid #bb231c;
-  border-radius: 6px;
-  margin: 20px 0;
-  padding: 15px;
-}
 .llms-quiz-ui .llms-error:before, .llms-quiz-ui .llms-error:after {
   content: " ";
   display: table;
 }
 .llms-quiz-ui .llms-error:after {
   clear: both;
+}
+.llms-quiz-ui .llms-error {
+  background: rgba(187, 35, 28, 0.15);
+  border: 1px solid #bb231c;
+  border-radius: 6px;
+  margin: 20px 0;
+  padding: 15px;
 }
 .llms-quiz-ui .llms-error a {
   color: #bb231c;
@@ -2494,14 +2496,16 @@ ul.llms-certificates-loop.loop-cols-5 li.llms-certificate-loop-item,
 }
 .llms-question-wrapper .llms-question-choices {
   border: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 .llms-question-wrapper .llms-question-choices.type--picture {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
+}
+.llms-question-wrapper .llms-question-choices {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .llms-question-wrapper .llms-question-choices .llms-choice {
   border-bottom: 1px solid #e8e8e8;
@@ -3182,8 +3186,8 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
   background-position: -24px 0;
   background-repeat: no-repeat;
   border-radius: 50%;
-  -webkit-box-shadow: hsla(0deg, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0deg, 0%, 0%, 0.35) 0 0 0 1px;
-          box-shadow: hsla(0deg, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0deg, 0%, 0%, 0.35) 0 0 0 1px;
+  -webkit-box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.35) 0 0 0 1px;
+          box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.35) 0 0 0 1px;
   content: "";
   cursor: pointer;
   display: inline-block;
@@ -3320,11 +3324,6 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
   text-align: right;
 }
 
-.llms-student-dashboard {
-  /**
-   * Dashboard Home
-   */
-}
 .llms-student-dashboard .llms-sd-nav select {
   display: none;
 }
@@ -3369,15 +3368,15 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
   color: #666;
   margin: 0 5px;
 }
-.llms-student-dashboard .llms-sd-section {
-  margin-bottom: 40px;
-}
 .llms-student-dashboard .llms-sd-section h2 {
   margin: 0 0 15px 0;
 }
 .llms-student-dashboard .llms-sd-section .llms-sd-section-title {
   margin: 0;
   padding: 0;
+}
+.llms-student-dashboard .llms-sd-section {
+  margin-bottom: 40px;
 }
 .llms-student-dashboard .llms-sd-section .llms-sd-section-title:first-child {
   margin: 0 0 10px 0;
@@ -3528,6 +3527,11 @@ ul.llms-payment-gateways .llms-payment-gateway-error {
 }
 .llms-student-dashboard .llms-featured-pricing {
   display: none;
+}
+.llms-student-dashboard {
+  /**
+   * Dashboard Home
+   */
 }
 .llms-student-dashboard.dashboard .llms-sd-section {
   border: 1px solid #dedede;

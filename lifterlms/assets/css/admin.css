@@ -1841,75 +1841,75 @@ ul.tabs li {
     margin-right: 5%;
   }
   .llms-widget input[type=text],
-.llms-widget input[type=password],
-.llms-widget input[type=datetime],
-.llms-widget input[type=datetime-local],
-.llms-widget input[type=date],
-.llms-widget input[type=month],
-.llms-widget input[type=time],
-.llms-widget input[type=week],
-.llms-widget input[type=number],
-.llms-widget input[type=email],
-.llms-widget input[type=url],
-.llms-widget input[type=search],
-.llms-widget input[type=tel],
-.llms-widget input[type=color],
-.llms-widget select,
-.llms-widget textarea {
+  .llms-widget input[type=password],
+  .llms-widget input[type=datetime],
+  .llms-widget input[type=datetime-local],
+  .llms-widget input[type=date],
+  .llms-widget input[type=month],
+  .llms-widget input[type=time],
+  .llms-widget input[type=week],
+  .llms-widget input[type=number],
+  .llms-widget input[type=email],
+  .llms-widget input[type=url],
+  .llms-widget input[type=search],
+  .llms-widget input[type=tel],
+  .llms-widget input[type=color],
+  .llms-widget select,
+  .llms-widget textarea {
     width: 50%;
   }
   .llms-widget input[type=text].medium,
-.llms-widget input[type=password].medium,
-.llms-widget input[type=datetime].medium,
-.llms-widget input[type=datetime-local].medium,
-.llms-widget input[type=date].medium,
-.llms-widget input[type=month].medium,
-.llms-widget input[type=time].medium,
-.llms-widget input[type=week].medium,
-.llms-widget input[type=number].medium,
-.llms-widget input[type=email].medium,
-.llms-widget input[type=url].medium,
-.llms-widget input[type=search].medium,
-.llms-widget input[type=tel].medium,
-.llms-widget input[type=color].medium,
-.llms-widget select.medium,
-.llms-widget textarea.medium {
+  .llms-widget input[type=password].medium,
+  .llms-widget input[type=datetime].medium,
+  .llms-widget input[type=datetime-local].medium,
+  .llms-widget input[type=date].medium,
+  .llms-widget input[type=month].medium,
+  .llms-widget input[type=time].medium,
+  .llms-widget input[type=week].medium,
+  .llms-widget input[type=number].medium,
+  .llms-widget input[type=email].medium,
+  .llms-widget input[type=url].medium,
+  .llms-widget input[type=search].medium,
+  .llms-widget input[type=tel].medium,
+  .llms-widget input[type=color].medium,
+  .llms-widget select.medium,
+  .llms-widget textarea.medium {
     width: 30%;
   }
   .llms-widget input[type=text].small,
-.llms-widget input[type=password].small,
-.llms-widget input[type=datetime].small,
-.llms-widget input[type=datetime-local].small,
-.llms-widget input[type=date].small,
-.llms-widget input[type=month].small,
-.llms-widget input[type=time].small,
-.llms-widget input[type=week].small,
-.llms-widget input[type=number].small,
-.llms-widget input[type=email].small,
-.llms-widget input[type=url].small,
-.llms-widget input[type=search].small,
-.llms-widget input[type=tel].small,
-.llms-widget input[type=color].small,
-.llms-widget select.small,
-.llms-widget textarea.small {
+  .llms-widget input[type=password].small,
+  .llms-widget input[type=datetime].small,
+  .llms-widget input[type=datetime-local].small,
+  .llms-widget input[type=date].small,
+  .llms-widget input[type=month].small,
+  .llms-widget input[type=time].small,
+  .llms-widget input[type=week].small,
+  .llms-widget input[type=number].small,
+  .llms-widget input[type=email].small,
+  .llms-widget input[type=url].small,
+  .llms-widget input[type=search].small,
+  .llms-widget input[type=tel].small,
+  .llms-widget input[type=color].small,
+  .llms-widget select.small,
+  .llms-widget textarea.small {
     width: 20%;
   }
   .llms-widget input[type=text].tiny,
-.llms-widget input[type=password].tiny,
-.llms-widget input[type=datetime].tiny,
-.llms-widget input[type=datetime-local].tiny,
-.llms-widget input[type=date].tiny,
-.llms-widget input[type=month].tiny,
-.llms-widget input[type=time].tiny,
-.llms-widget input[type=week].tiny,
-.llms-widget input[type=number].tiny,
-.llms-widget input[type=email].tiny,
-.llms-widget input[type=url].tiny,
-.llms-widget input[type=search].tiny,
-.llms-widget input[type=tel].tiny,
-.llms-widget input[type=color].tiny,
-.llms-widget select.tiny,
-.llms-widget textarea.tiny {
+  .llms-widget input[type=password].tiny,
+  .llms-widget input[type=datetime].tiny,
+  .llms-widget input[type=datetime-local].tiny,
+  .llms-widget input[type=date].tiny,
+  .llms-widget input[type=month].tiny,
+  .llms-widget input[type=time].tiny,
+  .llms-widget input[type=week].tiny,
+  .llms-widget input[type=number].tiny,
+  .llms-widget input[type=email].tiny,
+  .llms-widget input[type=url].tiny,
+  .llms-widget input[type=search].tiny,
+  .llms-widget input[type=tel].tiny,
+  .llms-widget input[type=color].tiny,
+  .llms-widget select.tiny,
+  .llms-widget textarea.tiny {
     width: 10%;
   }
 }
@@ -1996,7 +1996,7 @@ ul.tabs li {
 
   ******************************************************************/
   .llms-nav-tab-filters,
-.llms-nav-tab-settings {
+  .llms-nav-tab-settings {
     float: left;
     width: 12.5%;
   }
@@ -2684,7 +2684,6 @@ a.llms-view-as {
   background: #fff;
   margin-top: 25px;
   position: relative;
-  /* Fixes to tighten the space between tinymce editor and label */
 }
 .llms-metabox-section.no-top-margin {
   margin-top: 0;
@@ -2727,6 +2726,9 @@ a.llms-view-as {
 }
 .llms-metabox-section .llms-metabox-field .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
   margin-bottom: 0;
+}
+.llms-metabox-section {
+  /* Fixes to tighten the space between tinymce editor and label */
 }
 .llms-metabox-section .llms-metabox-field:has(.wp-editor-wrap) label {
   position: relative;
@@ -3021,7 +3023,9 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   position: relative;
   background-color: white;
   overflow: auto;
-  max-height: 90vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: min(90vh, 100%);
 }
 .llms-dialog-container .llms-dialog-content .llms-dialog-close {
   position: absolute;
@@ -3052,13 +3056,6 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   font-size: 14px;
   text-align: center;
   vertical-align: baseline;
-  position: relative;
-  text-decoration: none;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  cursor: pointer;
 }
 .llms-dialog-container .llms-dialog-content .llms-access-plan-templates button strong, .llms-dialog-container .llms-dialog-content .llms-access-plan-templates a strong {
   font-size: 18px;
@@ -3067,6 +3064,15 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 .llms-dialog-container .llms-dialog-content .llms-access-plan-templates button span, .llms-dialog-container .llms-dialog-content .llms-access-plan-templates a span {
   display: block;
+}
+.llms-dialog-container .llms-dialog-content .llms-access-plan-templates button, .llms-dialog-container .llms-dialog-content .llms-access-plan-templates a {
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  cursor: pointer;
 }
 .llms-dialog-container .llms-dialog-content .llms-access-plan-templates a {
   border: 1px solid #466dd8;
@@ -3290,16 +3296,16 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 .llms-nav-tab-wrapper.llms-nav-style-filters .llms-nav-items .llms-nav-item .llms-nav-link {
   padding: 14px;
 }
-.llms-nav-tab-wrapper .llms-nav-items {
-  margin: 0;
-  padding-left: 10px;
-}
 .llms-nav-tab-wrapper .llms-nav-items:before, .llms-nav-tab-wrapper .llms-nav-items:after {
   content: " ";
   display: table;
 }
 .llms-nav-tab-wrapper .llms-nav-items:after {
   clear: both;
+}
+.llms-nav-tab-wrapper .llms-nav-items {
+  margin: 0;
+  padding-left: 10px;
 }
 .llms-nav-tab-wrapper .llms-nav-item {
   margin: 0;
@@ -3858,12 +3864,12 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   margin: 0;
   padding: 5px;
 }
-.llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed {
-  opacity: 0.5;
-}
 .llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed .llms-question-title {
   font-style: italic;
   font-weight: normal;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed {
+  opacity: 0.5;
 }
 
 .wrap.llms-reporting .llms-inside-wrap,
@@ -4181,8 +4187,8 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 @media only screen and (min-width: 782px) {
   .wrap.llms-reporting .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-item.llms-active .llms-nav-link,
-.wrap.lifterlms-settings .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-item.llms-active .llms-nav-link,
-.wrap.llms-status .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-item.llms-active .llms-nav-link {
+  .wrap.lifterlms-settings .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-item.llms-active .llms-nav-link,
+  .wrap.llms-status .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-item.llms-active .llms-nav-link {
     background: #fff;
   }
 }
@@ -4774,8 +4780,8 @@ button[name=llms_quiz_attempt_action].grading .save {
   background-position: -24px 0;
   background-repeat: no-repeat;
   border-radius: 50%;
-  -webkit-box-shadow: hsla(0deg, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0deg, 0%, 0%, 0.35) 0 0 0 1px;
-          box-shadow: hsla(0deg, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0deg, 0%, 0%, 0.35) 0 0 0 1px;
+  -webkit-box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.35) 0 0 0 1px;
+          box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.35) 0 0 0 1px;
   content: "";
   cursor: pointer;
   display: inline-block;

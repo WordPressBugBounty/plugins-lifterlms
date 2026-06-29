@@ -96,11 +96,11 @@ body {
     display: none !important;
   }
   .single-llms_my_certificate .container,
-.single-llms_certificate .container {
+  .single-llms_certificate .container {
     width: 100%;
   }
   .llms-certificate-container,
-.llms-certificate-container * {
+  .llms-certificate-container * {
     visibility: visible !important;
     background: transparent none;
   }
