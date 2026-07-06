@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.0.9\n"
+"Project-Id-Version: LifterLMS 10.0.10\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-29T20:11:36+00:00\n"
+"POT-Creation-Date: 2026-07-06T15:25:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.0\n"
 "X-Domain: lifterlms\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System."
 msgstr ""
 
-#: class-lifterlms.php:855
+#: class-lifterlms.php:853
 #: includes/admin/class-llms-admin-plugins.php:38
 #: includes/admin/class.llms.admin.menus.php:207
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.certificate.php:33
@@ -2051,7 +2051,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:64
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:70
-#: includes/class.llms.ajax.handler.php:1011
+#: includes/class.llms.ajax.handler.php:1031
 #: includes/llms.functions.core.php:1090
 msgid "ID#"
 msgstr ""
@@ -7452,7 +7452,7 @@ msgstr ""
 #. Translators: %s = The user-submitted coupon code.
 #. Translators: %s = coupon code.
 #: includes/class-llms-order-generator.php:582
-#: includes/class.llms.ajax.handler.php:1128
+#: includes/class.llms.ajax.handler.php:1148
 #: includes/functions/llms.functions.order.php:405
 #, php-format
 msgid "Coupon code \"%s\" not found."
@@ -7547,7 +7547,7 @@ msgstr ""
 #: includes/class.llms.ajax.handler.php:57
 #: includes/class.llms.ajax.handler.php:83
 #: includes/class.llms.ajax.handler.php:110
-#: includes/class.llms.ajax.handler.php:1062
+#: includes/class.llms.ajax.handler.php:1082
 msgid "Missing required parameters"
 msgstr ""
 
@@ -7648,33 +7648,33 @@ msgstr ""
 msgid "There was an error recording your answer. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1066
+#: includes/class.llms.ajax.handler.php:1086
 msgid "Invalid status"
 msgstr ""
 
 #. Translators: %s = action add|remove|delete.
-#: includes/class.llms.ajax.handler.php:1088
+#: includes/class.llms.ajax.handler.php:1108
 #, php-format
 msgid "Action \"%1$s\" failed. Please try again"
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1115
+#: includes/class.llms.ajax.handler.php:1135
 msgid "Please enter a coupon code."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1119
+#: includes/class.llms.ajax.handler.php:1139
 msgid "Please enter a plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1278
+#: includes/class.llms.ajax.handler.php:1298
 msgid "Invalid access plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1282
+#: includes/class.llms.ajax.handler.php:1302
 msgid "Access plan does not belong to this product."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1330
+#: includes/class.llms.ajax.handler.php:1350
 msgid "Missing tracking data."
 msgstr ""
 
