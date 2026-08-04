@@ -22,6 +22,23 @@
   clear: both;
 }
 
+/*
+ * Opinionated LifterLMS button styling (colors, shape, typography).
+ *
+ * When `$llms-buttons-theme-inherit` is true (front-end default), buttons
+ * carrying the `wp-element-button` class opt out of these rules and instead
+ * inherit the theme's button styling — `theme.json` element styles in block
+ * themes, or the `classic-themes.css` defaults (and any theme overrides) in
+ * classic themes — so the text and background colors always come from the
+ * same source and remain a legible pair.
+ *
+ * Admin sets `$llms-buttons-theme-inherit` to false so LifterLMS chrome always
+ * applies in settings, reporting, and other wp-admin screens.
+ *
+ * The opinionated block must precede the structural rules below: the `:not()`
+ * guard puts these selectors at the same specificity as the size modifiers
+ * (`.small`, `.large`), so source order decides the winner.
+ */
 .llms-button-action,
 .llms-button-danger,
 .llms-button-primary,
@@ -29,26 +46,13 @@
   border: none;
   border-radius: 8px;
   color: #fefefe;
-  cursor: pointer;
-  display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  text-decoration: none;
-  text-shadow: none;
   line-height: 1;
-  margin: 0;
-  max-width: 100%;
   padding: 12px 24px;
-  position: relative;
+  text-shadow: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  white-space: nowrap;
-}
-.llms-button-action:disabled,
-.llms-button-danger:disabled,
-.llms-button-primary:disabled,
-.llms-button-secondary:disabled {
-  opacity: 0.5;
 }
 .llms-button-action:hover, .llms-button-action:active,
 .llms-button-danger:hover,
@@ -64,6 +68,25 @@
 .llms-button-primary:focus,
 .llms-button-secondary:focus {
   color: #fefefe;
+}
+
+.llms-button-action,
+.llms-button-danger,
+.llms-button-primary,
+.llms-button-secondary {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.llms-button-action:disabled,
+.llms-button-danger:disabled,
+.llms-button-primary:disabled,
+.llms-button-secondary:disabled {
+  opacity: 0.5;
 }
 .llms-button-action.auto,
 .llms-button-danger.auto,
@@ -1168,7 +1191,7 @@ a.llms-voucher-delete:hover {
   margin-left: 15px;
 }
 .llms-voucher-codes-wrapper .llms-voucher-uses {
-  width: 50px;
+  width: 80px;
 }
 .llms-voucher-codes-wrapper .llms-voucher-add-codes {
   float: left;
@@ -2247,6 +2270,36 @@ div[id^=lifterlms-] .inside {
 #lifterlms-notifications .lifterlms_notification .llms-button-primary {
   display: inline-block;
 }
+.notice.llms-admin-notice a.llms-button-action,
+.notice.llms-admin-notice a.llms-button-danger,
+.notice.llms-admin-notice a.llms-button-primary, #lifterlms-notifications .lifterlms_notification a.llms-button-action,
+#lifterlms-notifications .lifterlms_notification a.llms-button-danger,
+#lifterlms-notifications .lifterlms_notification a.llms-button-primary {
+  color: #fefefe;
+  text-decoration: none;
+}
+.notice.llms-admin-notice a.llms-button-action:hover, .notice.llms-admin-notice a.llms-button-action:focus, .notice.llms-admin-notice a.llms-button-action:active,
+.notice.llms-admin-notice a.llms-button-danger:hover,
+.notice.llms-admin-notice a.llms-button-danger:focus,
+.notice.llms-admin-notice a.llms-button-danger:active,
+.notice.llms-admin-notice a.llms-button-primary:hover,
+.notice.llms-admin-notice a.llms-button-primary:focus,
+.notice.llms-admin-notice a.llms-button-primary:active, #lifterlms-notifications .lifterlms_notification a.llms-button-action:hover, #lifterlms-notifications .lifterlms_notification a.llms-button-action:focus, #lifterlms-notifications .lifterlms_notification a.llms-button-action:active,
+#lifterlms-notifications .lifterlms_notification a.llms-button-danger:hover,
+#lifterlms-notifications .lifterlms_notification a.llms-button-danger:focus,
+#lifterlms-notifications .lifterlms_notification a.llms-button-danger:active,
+#lifterlms-notifications .lifterlms_notification a.llms-button-primary:hover,
+#lifterlms-notifications .lifterlms_notification a.llms-button-primary:focus,
+#lifterlms-notifications .lifterlms_notification a.llms-button-primary:active {
+  color: #fefefe;
+}
+.notice.llms-admin-notice a.llms-button-secondary, #lifterlms-notifications .lifterlms_notification a.llms-button-secondary {
+  color: #444;
+  text-decoration: none;
+}
+.notice.llms-admin-notice a.llms-button-secondary:hover, .notice.llms-admin-notice a.llms-button-secondary:focus, .notice.llms-admin-notice a.llms-button-secondary:active, #lifterlms-notifications .lifterlms_notification a.llms-button-secondary:hover, #lifterlms-notifications .lifterlms_notification a.llms-button-secondary:focus, #lifterlms-notifications .lifterlms_notification a.llms-button-secondary:active {
+  color: #444;
+}
 .notice.llms-admin-notice p, #lifterlms-notifications .lifterlms_notification p {
   font-size: 14px;
   line-height: 22px;
@@ -3002,7 +3055,7 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 
 .llms-dialog-container {
-  z-index: 2;
+  z-index: 100000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3636,6 +3689,9 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
           flex: 3;
   max-width: 75%;
 }
+.llms-reporting-tab-content .llms-reporting-tab-main:only-child {
+  max-width: none;
+}
 .llms-reporting-tab-content .llms-reporting-tab-side {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -3654,6 +3710,34 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 .llms-reporting-widgets:after {
   clear: both;
+}
+
+.llms-reporting-widgets-grid {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10px;
+  row-gap: 10px;
+}
+.llms-reporting-widgets-grid > * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: none;
+}
+.llms-reporting-widgets-grid .llms-reporting-widget {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-bottom: 0;
 }
 
 .llms-reporting-widget {
@@ -3764,16 +3848,60 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   list-style-type: none;
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font: inherit;
   gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 15px 15px 35px;
+  padding: 15px;
+  text-align: right;
   text-decoration: none;
+  width: 100%;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer .llms-status-icon-tip {
+  position: static;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question .llms-toggle-answer-icon {
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 0.55em;
+  margin-right: 8px;
+  opacity: 0.7;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+  width: 0.55em;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer[aria-expanded=true] .llms-toggle-answer-icon {
+  opacity: 1;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.correct, .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.incorrect {
   background: rgba(192, 86, 33, 0.2);
@@ -3797,9 +3925,18 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   overflow: auto;
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-question-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 22px;
   margin: 0;
   line-height: 1.4;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question .llms-question-title p {
+  margin: 0 0 0.5em;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question .llms-question-title p:last-child {
+  margin-bottom: 0;
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-points {
   line-height: 1.4;

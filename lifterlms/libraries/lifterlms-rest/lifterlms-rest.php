@@ -7,17 +7,8 @@
  * @since 1.0.0-beta.1
  * @version 1.0.0-beta.26
  *
- * Plugin Name: LifterLMS REST API
- * Plugin URI: https://lifterlms.com/
- * Description: REST API feature plugin for the LifterLMS Core.
- * Version: 1.0.8
- * Author: LifterLMS
- * Author URI: https://lifterlms.com/
- * Text Domain: lifterlms
- * Domain Path: /i18n
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Requires LifterLMS: 7.0.2
+ * REST API for the LifterLMS Core.
+ * Bundled as a library within LifterLMS core; not installable as a standalone plugin.
  */
 
 defined( 'ABSPATH' ) || exit;

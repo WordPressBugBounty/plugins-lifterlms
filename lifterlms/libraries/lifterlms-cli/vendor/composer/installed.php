@@ -3,7 +3,7 @@
         'name' => 'lifterlms/lifterlms-cli',
         'pretty_version' => 'dev-trunk',
         'version' => 'dev-trunk',
-        'reference' => '2da269d8626e54c3d74821d0c2441e99dece4707',
+        'reference' => '59cbd1ea0808c4edbbb519b2d3dc1ea3056a08f5',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'lifterlms/lifterlms-cli' => array(
             'pretty_version' => 'dev-trunk',
             'version' => 'dev-trunk',
-            'reference' => '2da269d8626e54c3d74821d0c2441e99dece4707',
+            'reference' => '59cbd1ea0808c4edbbb519b2d3dc1ea3056a08f5',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

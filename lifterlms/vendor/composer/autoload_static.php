@@ -9,7 +9,6 @@ class ComposerStaticInit4a597af877aae0a5a83e681ae3213e7a
     public static $prefixLengthsPsr4 = array (
         'L' =>
         array (
-            'LifterLMS\\CLI\\' => 14,
             'LLMS\\' => 5,
         ),
         'C' =>
@@ -19,10 +18,6 @@ class ComposerStaticInit4a597af877aae0a5a83e681ae3213e7a
     );
 
     public static $prefixDirsPsr4 = array (
-        'LifterLMS\\CLI\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/libraries/lifterlms-cli/src',
-        ),
         'LLMS\\' =>
         array (
             0 => __DIR__ . '/../..' . '/includes',

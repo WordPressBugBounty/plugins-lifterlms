@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  10.0.0
+ * @version  10.1.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  10.0.0
+	 * @version  10.1.0
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -146,6 +146,11 @@ class LLMS_L10n_JS {
 			'Lesson Weight' => esc_html__( 'Lesson Weight', 'lifterlms' ),
 			'POINTS' => esc_html__( 'POINTS', 'lifterlms' ),
 			'Determines the weight of the lesson when calculating the overall grade of the course.' => esc_html__( 'Determines the weight of the lesson when calculating the overall grade of the course.', 'lifterlms' ),
+			'Minimum Time on Lesson' => esc_html__( 'Minimum Time on Lesson', 'lifterlms' ),
+			'Require students to spend a minimum amount of time on this lesson before they can mark it complete' => esc_html__( 'Require students to spend a minimum amount of time on this lesson before they can mark it complete', 'lifterlms' ),
+			'Hours' => esc_html__( 'Hours', 'lifterlms' ),
+			'Minutes' => esc_html__( 'Minutes', 'lifterlms' ),
+			'Seconds' => esc_html__( 'Seconds', 'lifterlms' ),
 			'Prerequisite' => esc_html__( 'Prerequisite', 'lifterlms' ),
 			'Course Drip Method' => esc_html__( 'Course Drip Method', 'lifterlms' ),
 			'Drip settings are currently set at the course level, under the Restrictions settings tab. Disable to allow lesson level drip settings.' => esc_html__( 'Drip settings are currently set at the course level, under the Restrictions settings tab. Disable to allow lesson level drip settings.', 'lifterlms' ),
@@ -202,7 +207,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/builder/Views/_Editable.js.
 			 *
 			 * @since    3.16.0
-			 * @version  10.0.0
+			 * @version  10.1.0
 			 */
 			'Select an image' => esc_html__( 'Select an image', 'lifterlms' ),
 			'Use this image' => esc_html__( 'Use this image', 'lifterlms' ),
@@ -368,6 +373,11 @@ class LLMS_L10n_JS {
 			'Lesson Weight' => esc_html__( 'Lesson Weight', 'lifterlms' ),
 			'POINTS' => esc_html__( 'POINTS', 'lifterlms' ),
 			'Determines the weight of the lesson when calculating the overall grade of the course.' => esc_html__( 'Determines the weight of the lesson when calculating the overall grade of the course.', 'lifterlms' ),
+			'Minimum Time on Lesson' => esc_html__( 'Minimum Time on Lesson', 'lifterlms' ),
+			'Require students to spend a minimum amount of time on this lesson before they can mark it complete' => esc_html__( 'Require students to spend a minimum amount of time on this lesson before they can mark it complete', 'lifterlms' ),
+			'Hours' => esc_html__( 'Hours', 'lifterlms' ),
+			'Minutes' => esc_html__( 'Minutes', 'lifterlms' ),
+			'Seconds' => esc_html__( 'Seconds', 'lifterlms' ),
 			'Prerequisite' => esc_html__( 'Prerequisite', 'lifterlms' ),
 			'Course Drip Method' => esc_html__( 'Course Drip Method', 'lifterlms' ),
 			'Drip settings are currently set at the course level, under the Restrictions settings tab. Disable to allow lesson level drip settings.' => esc_html__( 'Drip settings are currently set at the course level, under the Restrictions settings tab. Disable to allow lesson level drip settings.', 'lifterlms' ),
@@ -442,7 +452,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/llms-metabox-product.js.
 			 *
 			 * @since    3.0.0
-			 * @version  7.3.0
+			 * @version  10.1.0
 			 */
 			'There was an error loading the necessary resources. Please try again.' => esc_html__( 'There was an error loading the necessary resources. Please try again.', 'lifterlms' ),
 			'Restrictions' => esc_html__( 'Restrictions', 'lifterlms' ),

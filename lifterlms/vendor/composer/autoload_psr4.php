@@ -6,7 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'LifterLMS\\CLI\\' => array($baseDir . '/libraries/lifterlms-cli/src'),
     'LLMS\\' => array($baseDir . '/includes'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );

@@ -4,19 +4,8 @@
  *
  * @package Gocodebox_Blocks/Main
  *
- * @wordpress-plugin
- * Plugin Name: Banner Notifications
- * Plugin URI: https://github.com/gocodebox/banner-notifications
- * Description: Admin banner notifications library.
- * Version: 1.0.1
- * Author: Gocodebox
- * Author URI: https://lifterlms.com/
- * Text Domain: gocodebox-banner-notifications
- * Domain Path: /i18n
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Requires at least: 5.5
- * Tested up to: 6.8
+ * Admin banner notifications library.
+ * Bundled as a library within LifterLMS core; not installable as a standalone plugin.
  */
 
 // Restrict Direct Access.

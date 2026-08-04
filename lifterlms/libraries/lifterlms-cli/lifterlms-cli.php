@@ -7,17 +7,8 @@
  * @since 0.0.1
  * @version 0.0.1
  *
- * Plugin Name: LifterLMS CLI
- * Plugin URI: https://lifterlms.com/
- * Description: WP CLI feature plugin for the LifterLMS Core.
- * Version: 0.0.5
- * Author: LifterLMS
- * Author URI: https://lifterlms.com/
- * Text Domain: lifterlms
- * Domain Path: /i18n
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Requires LifterLMS: 5.0
+ * WP CLI commands for the LifterLMS Core.
+ * Bundled as a library within LifterLMS core; not installable as a standalone plugin.
  */
 
 use LifterLMS\CLI\Main;

@@ -3711,7 +3711,7 @@ define( 'Schemas/Lesson',[], function() {
 						label: LLMS.l10n.translate( 'Audio Embed URL' ),
 						type: 'audio_embed',
 			},
-				], [
+			], [
 					{
 						attribute: 'free_lesson',
 						id: 'free-lesson',
@@ -3753,7 +3753,52 @@ define( 'Schemas/Lesson',[], function() {
 							return ( ( 'yes' === this.get( 'quiz_enabled' ) ) || ( 'undefined' !== window.llms_builder.assignments && 'yes' === this.get( 'assignment_enabled' ) ) );
 						},
 			},
-				], [
+			], [
+				{
+					attribute: 'has_minimum_time',
+					id: 'has-minimum-time',
+					label: LLMS.l10n.translate( 'Minimum Time on Lesson' ),
+					tip: LLMS.l10n.translate( 'Require students to spend a minimum amount of time on this lesson before they can mark it complete' ),
+					type: 'switch',
+					condition: function() {
+						return 'yes' !== this.get( 'free_lesson' );
+					},
+			},
+			], [
+				{
+					attribute: 'minimum_time_hours',
+					id: 'minimum-time-hours',
+					label: LLMS.l10n.translate( 'Hours' ),
+					min: 0,
+					max: 999,
+					type: 'number',
+					condition: function() {
+						return 'yes' === this.get( 'has_minimum_time' ) && 'yes' !== this.get( 'free_lesson' );
+					},
+			},
+				{
+					attribute: 'minimum_time_minutes',
+					id: 'minimum-time-minutes',
+					label: LLMS.l10n.translate( 'Minutes' ),
+					min: 0,
+					max: 59,
+					type: 'number',
+					condition: function() {
+						return 'yes' === this.get( 'has_minimum_time' ) && 'yes' !== this.get( 'free_lesson' );
+					},
+			},
+				{
+					attribute: 'minimum_time_seconds',
+					id: 'minimum-time-seconds',
+					label: LLMS.l10n.translate( 'Seconds' ),
+					min: 0,
+					max: 59,
+					type: 'number',
+					condition: function() {
+						return 'yes' === this.get( 'has_minimum_time' ) && 'yes' !== this.get( 'free_lesson' );
+					},
+			},
+			], [
 					{
 						attribute: 'prerequisite',
 						condition: function() {
@@ -3959,6 +4004,11 @@ define( 'Models/Lesson',[ 'Models/Quiz', 'Models/_Relationships', 'Models/_Utili
 				content: '',
 				audio_embed: '',
 				has_prerequisite: 'no',
+				has_minimum_time: 'no',
+				minimum_time: 0,
+				minimum_time_hours: 0,
+				minimum_time_minutes: 0,
+				minimum_time_seconds: 0,
 				require_passing_grade: 'yes',
 				require_assignment_passing_grade: 'yes',
 				video_embed: '',
@@ -3994,6 +4044,12 @@ define( 'Models/Lesson',[ 'Models/Quiz', 'Models/_Relationships', 'Models/_Utili
 			this.maybe_init_assignments();
 			this.init_relationships();
 
+			// Decompose minimum_time (total seconds) into H/M/S display fields.
+			this.fill_minimum_time_fields();
+
+			// Recompose H/M/S back to total seconds when any component changes.
+			this.on( 'change:minimum_time_hours change:minimum_time_minutes change:minimum_time_seconds', this.compute_minimum_time, this );
+
 			// If the lesson ID isn't set on a quiz, set it.
 			var quiz = this.get( 'quiz' );
 			if ( ! _.isEmpty( quiz ) && ! quiz.get( 'lesson_id' ) ) {
@@ -4001,6 +4057,43 @@ define( 'Models/Lesson',[ 'Models/Quiz', 'Models/_Relationships', 'Models/_Utili
 			}
 
 			window.llms.hooks.doAction( 'llms_lesson_model_init', this );
+
+		},
+
+		/**
+		 * Decompose minimum_time (total seconds) into hours, minutes, seconds fields.
+		 *
+		 * @since 10.1.0
+		 *
+		 * @return {void}
+		 */
+		fill_minimum_time_fields: function() {
+
+			var total   = parseInt( this.get( 'minimum_time' ), 10 ) || 0,
+				hours   = Math.floor( total / 3600 ),
+				minutes = Math.floor( ( total % 3600 ) / 60 ),
+				seconds = total % 60;
+
+			this.set( 'minimum_time_hours', hours, { silent: true } );
+			this.set( 'minimum_time_minutes', minutes, { silent: true } );
+			this.set( 'minimum_time_seconds', seconds, { silent: true } );
+
+		},
+
+		/**
+		 * Recompose hours, minutes, seconds into minimum_time (total seconds).
+		 *
+		 * @since 10.1.0
+		 *
+		 * @return {void}
+		 */
+		compute_minimum_time: function() {
+
+			var hours   = parseInt( this.get( 'minimum_time_hours' ), 10 ) || 0,
+				minutes = parseInt( this.get( 'minimum_time_minutes' ), 10 ) || 0,
+				seconds = parseInt( this.get( 'minimum_time_seconds' ), 10 ) || 0;
+
+			this.set( 'minimum_time', ( hours * 3600 ) + ( minutes * 60 ) + seconds );
 
 		},
 
@@ -5133,7 +5226,8 @@ define( 'Views/_Detachable',[], function() {
  * @since 3.25.4 Unknown
  * @since 3.37.11 Replace reference to `wp.editor` with `_.getEditor()` helper.
  * @since 10.0.0 Add paste event handler for plain contenteditable elements to strip formatting. Fixes #3057.
- * @version 10.0.0
+ * @since 10.1.0 Revert edits as plain text unless the element allows formatting.
+ * @version 10.1.0
  */
 define( 'Views/_Editable',[], function() {
 
@@ -5599,12 +5693,22 @@ define( 'Views/_Editable',[], function() {
 		 * @param    obj   event  js event object
 		 * @return   void
 		 * @since    3.16.0
-		 * @version  3.16.0
+		 * @version  10.1.0
 		 */
 		revert_edits: function( event ) {
+
 			var $el = $( event.target ),
 				val = $el.attr( 'data-original-content' );
-			$el.html( val );
+
+			if ( 'INPUT' === $el[0].tagName ) {
+				$el.val( val );
+			} else if ( $el.attr( 'data-formatting' ) || $el.hasClass( 'ql-editor' ) ) {
+				// Restore formatted content through the same tag whitelist applied when saving.
+				$el.html( _.stripFormatting( val, this.get_allowed_tags( $el ) ) );
+			} else {
+				$el.text( val );
+			}
+
 		},
 
 		/**
@@ -7398,8 +7502,31 @@ define( 'Views/Lesson',[
 
 			this.listenTo( this.model, 'change', this.render );
 
+			this._bind_quiz_listener();
+			this.listenTo( this.model, 'change:quiz_enabled', this._bind_quiz_listener );
+
 			Backbone.pubSub.on(  'lesson-selected', this.on_select, this );
 			Backbone.pubSub.on(  'new-lesson-added', this.maybe_open_editor, this );
+
+		},
+
+		/**
+		 * Listen for quiz model ID changes so the displayed quiz ID updates after save.
+		 *
+		 * @since 10.1.0
+		 *
+		 * @return {void}
+		 */
+		_bind_quiz_listener: function() {
+
+			var quiz = this.model.get( 'quiz' );
+			if ( quiz instanceof Backbone.Model && quiz !== this._quiz_ref ) {
+				if ( this._quiz_ref ) {
+					this.stopListening( this._quiz_ref, 'change:id' );
+				}
+				this._quiz_ref = quiz;
+				this.listenTo( quiz, 'change:id', this.render );
+			}
 
 		},
 
@@ -8747,6 +8874,8 @@ define( 'Views/LessonEditor',[
 				var change_events = window.llms.hooks.applyFilters( 'llms_lesson_rerender_change_events', [
 					'change:date_available',
 					'change:drip_method',
+					'change:free_lesson',
+					'change:has_minimum_time',
 					'change:permalink',
 					'change:content_added_in_builder',
 					'change:name',

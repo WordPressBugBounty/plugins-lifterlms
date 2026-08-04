@@ -7,17 +7,8 @@
  * @since 1.0.0
  * @version 3.3.0
  *
- * Plugin Name: LifterLMS Helper
- * Plugin URI: https://lifterlms.com/
- * Description: Update, install, and beta test LifterLMS and LifterLMS add-ons
- * Version: 3.5.10
- * Author: LifterLMS
- * Author URI: https://lifterlms.com
- * Text Domain: lifterlms
- * Domain Path: /i18n
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Requires LifterLMS: 3.22.0
+ * Update, install, and beta test LifterLMS and LifterLMS add-ons.
+ * Bundled as a library within LifterLMS core; not installable as a standalone plugin.
  */
 
 defined( 'ABSPATH' ) || exit;

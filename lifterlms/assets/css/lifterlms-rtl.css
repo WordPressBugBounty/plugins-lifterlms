@@ -82,26 +82,64 @@
     width: 8.3333333333%;
   }
 }
+/*
+ * Opinionated LifterLMS button styling (colors, shape, typography).
+ *
+ * When `$llms-buttons-theme-inherit` is true (front-end default), buttons
+ * carrying the `wp-element-button` class opt out of these rules and instead
+ * inherit the theme's button styling — `theme.json` element styles in block
+ * themes, or the `classic-themes.css` defaults (and any theme overrides) in
+ * classic themes — so the text and background colors always come from the
+ * same source and remain a legible pair.
+ *
+ * Admin sets `$llms-buttons-theme-inherit` to false so LifterLMS chrome always
+ * applies in settings, reporting, and other wp-admin screens.
+ *
+ * The opinionated block must precede the structural rules below: the `:not()`
+ * guard puts these selectors at the same specificity as the size modifiers
+ * (`.small`, `.large`), so source order decides the winner.
+ */
+.llms-button-action:not(.wp-element-button),
+.llms-button-danger:not(.wp-element-button),
+.llms-button-primary:not(.wp-element-button),
+.llms-button-secondary:not(.wp-element-button) {
+  border: none;
+  border-radius: 8px;
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 12px 24px;
+  text-shadow: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.llms-button-action:not(.wp-element-button):hover, .llms-button-action:not(.wp-element-button):active,
+.llms-button-danger:not(.wp-element-button):hover,
+.llms-button-danger:not(.wp-element-button):active,
+.llms-button-primary:not(.wp-element-button):hover,
+.llms-button-primary:not(.wp-element-button):active,
+.llms-button-secondary:not(.wp-element-button):hover,
+.llms-button-secondary:not(.wp-element-button):active {
+  color: #fefefe;
+}
+.llms-button-action:not(.wp-element-button):focus,
+.llms-button-danger:not(.wp-element-button):focus,
+.llms-button-primary:not(.wp-element-button):focus,
+.llms-button-secondary:not(.wp-element-button):focus {
+  color: #fefefe;
+}
+
 .llms-button-action,
 .llms-button-danger,
 .llms-button-primary,
 .llms-button-secondary {
-  border: none;
-  border-radius: 8px;
-  color: #fefefe;
   cursor: pointer;
   display: inline-block;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  text-shadow: none;
-  line-height: 1;
   margin: 0;
   max-width: 100%;
-  padding: 12px 24px;
   position: relative;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  text-decoration: none;
   white-space: nowrap;
 }
 .llms-button-action:disabled,
@@ -109,21 +147,6 @@
 .llms-button-primary:disabled,
 .llms-button-secondary:disabled {
   opacity: 0.5;
-}
-.llms-button-action:hover, .llms-button-action:active,
-.llms-button-danger:hover,
-.llms-button-danger:active,
-.llms-button-primary:hover,
-.llms-button-primary:active,
-.llms-button-secondary:hover,
-.llms-button-secondary:active {
-  color: #fefefe;
-}
-.llms-button-action:focus,
-.llms-button-danger:focus,
-.llms-button-primary:focus,
-.llms-button-secondary:focus {
-  color: #fefefe;
 }
 .llms-button-action.auto,
 .llms-button-danger.auto,
@@ -181,57 +204,76 @@
 }
 
 /* Fix for cases where link color overrides the button color */
-a.llms-button-action,
-a.llms-button-danger,
-a.llms-button-primary {
+a.llms-button-action:not(.wp-element-button),
+a.llms-button-danger:not(.wp-element-button),
+a.llms-button-primary:not(.wp-element-button) {
   color: #fefefe;
 }
 
-.llms-button-primary {
+.llms-button-primary:not(.wp-element-button) {
   background: #466dd8;
 }
-.llms-button-primary:hover, .llms-button-primary.clicked {
+.llms-button-primary:not(.wp-element-button):hover, .llms-button-primary:not(.wp-element-button).clicked {
   background: #274eba;
 }
-.llms-button-primary:focus, .llms-button-primary:active {
+.llms-button-primary:not(.wp-element-button):focus, .llms-button-primary:not(.wp-element-button):active {
   background: #6888df;
 }
 
-.llms-button-secondary {
+.llms-button-secondary:not(.wp-element-button) {
   background: #e1e1e1;
   color: #444;
 }
-.llms-button-secondary:hover {
+.llms-button-secondary:not(.wp-element-button):hover {
   color: #414141;
   background: #cdcdcd;
 }
-.llms-button-secondary:focus, .llms-button-secondary:active {
+.llms-button-secondary:not(.wp-element-button):focus, .llms-button-secondary:not(.wp-element-button):active {
   color: #414141;
   background: #ebebeb;
 }
 
 /* Fix for cases where link color overrides the button color */
-a.llms-button-secondary {
+a.llms-button-secondary:not(.wp-element-button) {
   color: #444;
 }
 
-.llms-button-action {
+/*
+ * Theme-styled secondary buttons keep LifterLMS's neutral colors so they stay
+ * visually distinct from primary/action buttons, but the complete pair
+ * (background and text color) is asserted together to guarantee contrast.
+ * Shape and typography still come from the theme's button styling.
+ */
+.llms-button-secondary.wp-element-button {
+  background: #e1e1e1;
+  color: #444;
+}
+.llms-button-secondary.wp-element-button:hover {
+  color: #414141;
+  background: #cdcdcd;
+}
+.llms-button-secondary.wp-element-button:focus, .llms-button-secondary.wp-element-button:active {
+  color: #414141;
+  background: #ebebeb;
+}
+
+.llms-button-action:not(.wp-element-button) {
   background: #c05621;
 }
-.llms-button-action:hover, .llms-button-action.clicked {
+.llms-button-action:not(.wp-element-button):hover, .llms-button-action:not(.wp-element-button).clicked {
   background: #f67d28;
 }
-.llms-button-action:focus, .llms-button-action:active {
+.llms-button-action:not(.wp-element-button):focus, .llms-button-action:not(.wp-element-button):active {
   background: #faad76;
 }
 
-.llms-button-danger {
+.llms-button-danger:not(.wp-element-button) {
   background: #bb231c;
 }
-.llms-button-danger:hover {
+.llms-button-danger:not(.wp-element-button):hover {
   background: #981c17;
 }
-.llms-button-danger:focus, .llms-button-danger:active {
+.llms-button-danger:not(.wp-element-button):focus, .llms-button-danger:not(.wp-element-button):active {
   background: #cd261f;
 }
 
@@ -2230,16 +2272,60 @@ ul.llms-certificates-loop li.llms-certificate-loop-item,
   list-style-type: none;
 }
 .single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font: inherit;
   gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 15px 15px 35px;
+  padding: 15px;
+  text-align: right;
   text-decoration: none;
+  width: 100%;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer .llms-status-icon-tip {
+  position: static;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-toggle-answer-icon {
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 0.55em;
+  margin-right: 8px;
+  opacity: 0.7;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+  width: 0.55em;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .toggle-answer[aria-expanded=true] .llms-toggle-answer-icon {
+  opacity: 1;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.correct, .single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.incorrect {
   background: rgba(192, 86, 33, 0.2);
@@ -2263,9 +2349,18 @@ ul.llms-certificates-loop li.llms-certificate-loop-item,
   overflow: auto;
 }
 .single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-question-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 22px;
   margin: 0;
   line-height: 1.4;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-question-title p {
+  margin: 0 0 0.5em;
+}
+.single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-question-title p:last-child {
+  margin-bottom: 0;
 }
 .single-llms_quiz #llms-quiz-wrapper .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-points {
   line-height: 1.4;
@@ -2493,6 +2588,12 @@ ul.llms-certificates-loop li.llms-certificate-loop-item,
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 15px;
+}
+.llms-question-wrapper .llms-question-text p {
+  margin: 0 0 0.75em;
+}
+.llms-question-wrapper .llms-question-text p:last-child {
+  margin-bottom: 0;
 }
 .llms-question-wrapper .llms-question-choices {
   border: none;
