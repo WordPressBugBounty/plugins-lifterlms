@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.1.0
+Stable tag: 10.1.1
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,33 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.1.1 - 2026-08-11 =
+
+##### Updates and Enhancements
+
++ Increased entropy used when generating order keys.
+
+##### Bug Fixes
+
++ Fixed saving when attaching an existing lesson after editing its title or permalink in the Course Builder.
++ Fixed the "View add-on details" tooltip being cut off on the Add-ons screen. [#3301](https://github.com/gocodebox/lifterlms/issues/3301)
++ Fixed access plan details not saving when using the course or membership Save button in the block editor. [#3256](https://github.com/gocodebox/lifterlms/issues/3256), [#3300](https://github.com/gocodebox/lifterlms/issues/3300)
++ Fixed duplicate engagement emails sent to all recipients when multiple emails share the same triggering post.
++ Aligned admin Select2 fields with WordPress 7.0 form control sizing. [#3291](https://github.com/gocodebox/lifterlms/issues/3291)
++ Fixed lesson completion being rejected when the Mark Complete button was clicked the moment the minimum time requirement was reached, before the next time-tracking heartbeat had persisted the elapsed time. [#3295](https://github.com/gocodebox/lifterlms/issues/3295)
++ Prevented a fatal error when cloning a course or creating a course cohort if a cloned lesson or course could not be loaded during prerequisite handling.
+
+##### Developer Notes
+
++ Corrected the REST API student progress `status` property description to reflect the completion status rather than the enrollment status, and noted that the students ability lists LifterLMS students only.
+
+##### Security Fixes
+
++ Additional checks on checkout completion redirects.
++ Additional checks when creating users during course import.
++ Additional authorization checks on REST API key and webhook admin actions.
+
+
 = v10.1.0 - 2026-07-31 =
 
 ##### New Features
@@ -664,13 +691,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Security Fixes
 
 + Additional verifications for updates and reads to course builder and access plan data.
-
-
-= v10.0.2 - 2026-05-14 =
-
-##### Security Fixes
-
-+ Check access to the course a quiz is associated with. Thanks [@RegorSec](https://github.com/RegorSec)!
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)

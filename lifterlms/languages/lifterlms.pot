@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.1.0\n"
+"Project-Id-Version: LifterLMS 10.1.1\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-31T19:03:51+00:00\n"
+"POT-Creation-Date: 2026-08-11T13:45:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.0\n"
 "X-Domain: lifterlms\n"
@@ -213,7 +213,7 @@ msgid "Debug Log"
 msgstr ""
 
 #. translators: %s: the title of the payment gateway.
-#: includes/abstracts/abstract.llms.payment.gateway.php:810
+#: includes/abstracts/abstract.llms.payment.gateway.php:866
 #, php-format
 msgid "The selected payment gateway \"%s\" does not support payment method switching."
 msgstr ""
@@ -297,12 +297,13 @@ msgstr ""
 msgid "Error creating the %s post object."
 msgstr ""
 
-#: includes/abstracts/llms-abstract-generator-posts.php:360
+#: includes/abstracts/llms-abstract-generator-posts.php:364
+#: includes/abstracts/llms-abstract-generator-posts.php:373
 msgid "You are not allowed to create a user with the requested role."
 msgstr ""
 
 #. translators: %s: name of term.
-#: includes/abstracts/llms-abstract-generator-posts.php:550
+#: includes/abstracts/llms-abstract-generator-posts.php:563
 #, php-format
 msgid "Error creating new term \"%s\"."
 msgstr ""
@@ -982,15 +983,15 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: includes/admin/class.llms.admin.assets.php:107
+#: includes/admin/class.llms.admin.assets.php:127
 msgid "White"
 msgstr ""
 
-#: includes/admin/class.llms.admin.assets.php:112
+#: includes/admin/class.llms.admin.assets.php:132
 msgid "White Smoke"
 msgstr ""
 
-#: includes/admin/class.llms.admin.assets.php:117
+#: includes/admin/class.llms.admin.assets.php:137
 msgid "Ivory"
 msgstr ""
 
@@ -1012,68 +1013,68 @@ msgstr ""
 msgid "Course: %1$s (#%2$d)"
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:463
+#: includes/admin/class.llms.admin.builder.php:468
 msgid "Success"
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:470
+#: includes/admin/class.llms.admin.builder.php:475
 msgid "Error: Invalid or missing course ID."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:475
+#: includes/admin/class.llms.admin.builder.php:480
 msgid "Error: You do not have permission to edit this course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:597
+#: includes/admin/class.llms.admin.builder.php:602
 msgid "Invalid course ID"
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:604
+#: includes/admin/class.llms.admin.builder.php:609
 msgid "You cannot edit this course!"
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:613
+#: includes/admin/class.llms.admin.builder.php:618
 #: includes/class.llms.post-types.php:498
 msgid "New Course"
 msgstr ""
 
 #. Translators: %s = Item id.
-#: includes/admin/class.llms.admin.builder.php:736
+#: includes/admin/class.llms.admin.builder.php:741
 #, php-format
 msgid "Unable to detach \"%s\". Invalid ID."
 msgstr ""
 
 #. Translators: %s = Item id.
-#: includes/admin/class.llms.admin.builder.php:825
+#: includes/admin/class.llms.admin.builder.php:830
 #, php-format
 msgid "Unable to delete \"%s\". Invalid ID."
 msgstr ""
 
 #. Translators: %s = Question choice ID.
-#: includes/admin/class.llms.admin.builder.php:918
+#: includes/admin/class.llms.admin.builder.php:923
 #, php-format
 msgid "Error deleting the question choice \"%s\""
 msgstr ""
 
 #. Translators: %s = Post type name.
-#: includes/admin/class.llms.admin.builder.php:955
+#: includes/admin/class.llms.admin.builder.php:960
 #, php-format
 msgid "%s cannot be deleted via the Course Builder."
 msgstr ""
 
 #. Translators: %1$s = Post type singular name; %2$d = Post id.
-#: includes/admin/class.llms.admin.builder.php:979
+#: includes/admin/class.llms.admin.builder.php:984
 #, php-format
 msgid "Error deleting the %1$s \"%2$d\"."
 msgstr ""
 
 #. Translators: %s = Lesson post id.
-#: includes/admin/class.llms.admin.builder.php:1112
+#: includes/admin/class.llms.admin.builder.php:1117
 #, php-format
 msgid "Unable to update lesson \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1123
+#: includes/admin/class.llms.admin.builder.php:1128
 #: includes/class.llms.l10n.frontend.php:94
 #: includes/class.llms.l10n.frontend.php:398
 #: includes/class.llms.post-types.php:572
@@ -1082,34 +1083,34 @@ msgid "New Lesson"
 msgstr ""
 
 #. Translators: %s = Lesson post id.
-#: includes/admin/class.llms.admin.builder.php:1139
 #: includes/admin/class.llms.admin.builder.php:1144
-#: includes/admin/class.llms.admin.builder.php:1154
+#: includes/admin/class.llms.admin.builder.php:1149
+#: includes/admin/class.llms.admin.builder.php:1159
 #, php-format
 msgid "Unable to update lesson \"%s\". Invalid lesson ID."
 msgstr ""
 
 #. Translators: %s = Question post id.
-#: includes/admin/class.llms.admin.builder.php:1284
-#: includes/admin/class.llms.admin.builder.php:1290
-#: includes/admin/class.llms.admin.builder.php:1309
+#: includes/admin/class.llms.admin.builder.php:1301
+#: includes/admin/class.llms.admin.builder.php:1307
+#: includes/admin/class.llms.admin.builder.php:1326
 #, php-format
 msgid "Unable to update question \"%s\". Invalid question ID."
 msgstr ""
 
 #. Translators: %s = Question choice ID.
-#: includes/admin/class.llms.admin.builder.php:1348
+#: includes/admin/class.llms.admin.builder.php:1365
 #, php-format
 msgid "Unable to update choice \"%s\". Invalid choice ID."
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1409
+#: includes/admin/class.llms.admin.builder.php:1426
 #, php-format
 msgid "Unable to update quiz \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1419
+#: includes/admin/class.llms.admin.builder.php:1436
 #: includes/class.llms.l10n.frontend.php:116
 #: includes/class.llms.l10n.frontend.php:361
 #: includes/class.llms.post-types.php:611
@@ -1117,23 +1118,23 @@ msgid "New Quiz"
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1433
-#: includes/admin/class.llms.admin.builder.php:1437
 #: includes/admin/class.llms.admin.builder.php:1450
+#: includes/admin/class.llms.admin.builder.php:1454
+#: includes/admin/class.llms.admin.builder.php:1467
 #, php-format
 msgid "Unable to update quiz \"%s\". Invalid quiz ID."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1523
+#: includes/admin/class.llms.admin.builder.php:1540
 #, php-format
 msgid "Unable to update section \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1543
-#: includes/admin/class.llms.admin.builder.php:1548
-#: includes/admin/class.llms.admin.builder.php:1557
+#: includes/admin/class.llms.admin.builder.php:1560
+#: includes/admin/class.llms.admin.builder.php:1565
+#: includes/admin/class.llms.admin.builder.php:1574
 #, php-format
 msgid "Unable to update section \"%s\". Invalid section ID."
 msgstr ""
@@ -1709,7 +1710,7 @@ msgstr ""
 
 #: includes/admin/class.llms.student.bulk.enroll.php:93
 #: includes/functions/updates/llms-functions-updates-300.php:61
-#: includes/models/model.llms.access.plan.php:567
+#: includes/models/model.llms.access.plan.php:616
 msgid "Enroll"
 msgstr ""
 
@@ -1858,7 +1859,7 @@ msgid "for internal use only"
 msgstr ""
 
 #: includes/admin/post-types/class.llms.post.tables.php:61
-#: includes/class-llms-generator-courses.php:670
+#: includes/class-llms-generator-courses.php:694
 #: includes/class.llms.l10n.frontend.php:254
 #: includes/class.llms.l10n.frontend.php:416
 msgid "Clone"
@@ -7453,54 +7454,54 @@ msgstr ""
 msgid "User \"%d\" not found."
 msgstr ""
 
-#: includes/class-llms-engagement-handler.php:238
+#: includes/class-llms-engagement-handler.php:235
 msgid "An error was encountered during post creation."
 msgstr ""
 
 #. Translators: %d = the WP_Post ID.
-#: includes/class-llms-engagement-handler.php:315
+#: includes/class-llms-engagement-handler.php:310
 #, php-format
 msgid "Post \"%d\" not found."
 msgstr ""
 
 #. Translators: %d = the WP_Post ID.
-#: includes/class-llms-engagement-handler.php:320
+#: includes/class-llms-engagement-handler.php:315
 #, php-format
 msgid "Post \"%d\" is not published."
 msgstr ""
 
 #. Translators: %d = the WP_Post ID.
-#: includes/class-llms-engagement-handler.php:325
+#: includes/class-llms-engagement-handler.php:320
 #, php-format
 msgid "Post \"%d\" is not the expected post type."
 msgstr ""
 
 #. Translators: %1$d = WP_User ID; %2$d = WP_Post ID.
-#: includes/class-llms-engagement-handler.php:351
+#: includes/class-llms-engagement-handler.php:345
 #, php-format
 msgid "User \"%1$d\" is not enrolled in \"%2$d\"."
 msgstr ""
 
 #. Translators: %s = the WP_User ID.
-#: includes/class-llms-engagement-handler.php:422
+#: includes/class-llms-engagement-handler.php:415
 #, php-format
 msgid "User \"%s\" has already earned this engagement."
 msgstr ""
 
-#: includes/class-llms-engagement-handler.php:573
+#: includes/class-llms-engagement-handler.php:563
 #, php-format
 msgid "Email #%1$d to user #%2$d triggered by %3$s"
 msgstr ""
 
-#: includes/class-llms-engagement-handler.php:578
+#: includes/class-llms-engagement-handler.php:570
 msgid "not sent because of dupcheck."
 msgstr ""
 
-#: includes/class-llms-engagement-handler.php:591
+#: includes/class-llms-engagement-handler.php:584
 msgid "sent successfully."
 msgstr ""
 
-#: includes/class-llms-engagement-handler.php:596
+#: includes/class-llms-engagement-handler.php:589
 msgid "not sent due to email sending issues."
 msgstr ""
 
@@ -7552,49 +7553,53 @@ msgstr ""
 msgid "Error creating the question post object."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:241
-#: includes/controllers/class-llms-controller-checkout.php:260
+#: includes/class-llms-generator-courses.php:635
+msgid "Some items could not be fully processed during cloning and were skipped. Check the \"generator\" log under LifterLMS > Status > Logs for details."
+msgstr ""
+
+#: includes/class-llms-order-generator.php:240
+#: includes/controllers/class-llms-controller-checkout.php:257
 msgid "There was an error creating your order, please try again."
 msgstr ""
 
 #. Translators: %s = The user-submitted coupon code.
 #. Translators: %s = coupon code.
-#: includes/class-llms-order-generator.php:582
+#: includes/class-llms-order-generator.php:573
 #: includes/class.llms.ajax.handler.php:1160
 #: includes/functions/llms.functions.order.php:405
 #, php-format
 msgid "Coupon code \"%s\" not found."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:619
+#: includes/class-llms-order-generator.php:610
 #: includes/functions/llms.functions.order.php:422
 msgid "No payment method selected."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:649
-#: includes/class-llms-order-generator.php:657
-#: includes/controllers/class-llms-controller-checkout.php:106
-#: includes/controllers/class-llms-controller-checkout.php:112
+#: includes/class-llms-order-generator.php:639
+#: includes/class-llms-order-generator.php:647
+#: includes/controllers/class-llms-controller-checkout.php:105
+#: includes/controllers/class-llms-controller-checkout.php:111
 #: includes/shortcodes/class.llms.shortcode.checkout.php:304
 msgid "Could not locate an order to confirm."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:679
+#: includes/class-llms-order-generator.php:668
 msgid "Missing access plan ID."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:684
+#: includes/class-llms-order-generator.php:673
 msgid "Access plan not found."
 msgstr ""
 
 #. Translators: %s = The title of the site's LifterLMS Terms and Conditions page.
-#: includes/class-llms-order-generator.php:712
+#: includes/class-llms-order-generator.php:700
 #, php-format
 msgid "You must agree to the %s."
 msgstr ""
 
 #. Translators: %s = The title of the course or membership.
-#: includes/class-llms-order-generator.php:744
+#: includes/class-llms-order-generator.php:731
 #, php-format
 msgid "You already have access to %s."
 msgstr ""
@@ -10158,29 +10163,29 @@ msgstr ""
 msgid "You have already redeemed this voucher."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:117
+#: includes/controllers/class-llms-controller-checkout.php:116
 msgid "Only pending orders can be confirmed."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:566
+#: includes/controllers/class-llms-controller-checkout.php:555
 msgid "Missing order information."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:571
+#: includes/controllers/class-llms-controller-checkout.php:560
 msgid "Invalid order."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:576
+#: includes/controllers/class-llms-controller-checkout.php:565
 msgid "Missing gateway information."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:588
+#: includes/controllers/class-llms-controller-checkout.php:577
 #: libraries/lifterlms-helper/includes/class-llms-helper-upgrader.php:126
 msgid "Invalid action."
 msgstr ""
 
 #. Translators: %1$s = old payment gateway ID; %2$s = new payment gateway ID.
-#: includes/controllers/class-llms-controller-checkout.php:644
+#: includes/controllers/class-llms-controller-checkout.php:632
 #, php-format
 msgid "Payment source updated by customer. Payment gateway changed from \"%1$s\" to \"%2$s\"."
 msgstr ""
@@ -11070,7 +11075,7 @@ msgid "Next %s"
 msgstr ""
 
 #: includes/functions/updates/llms-functions-updates-300.php:61
-#: includes/models/model.llms.access.plan.php:571
+#: includes/models/model.llms.access.plan.php:620
 msgid "Join"
 msgstr ""
 
@@ -11337,48 +11342,48 @@ msgstr ""
 msgid "Get Started"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:378
+#: includes/models/model.llms.access.plan.php:427
 #: includes/models/model.llms.lesson.php:411
 msgid "FREE"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:580
+#: includes/models/model.llms.access.plan.php:629
 #, php-format
 msgctxt "Verbose enrollment text"
 msgid "%1$s: Select the %2$s plan."
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:599
+#: includes/models/model.llms.access.plan.php:648
 #, php-format
 msgctxt "Access expiration date"
 msgid "access until %s"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:601
+#: includes/models/model.llms.access.plan.php:650
 #, php-format
 msgctxt "Access period description"
 msgid "%1$d %2$s of access"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:626
+#: includes/models/model.llms.access.plan.php:675
 #, php-format
 msgctxt "subscription schedule"
 msgid "per %s"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:628
+#: includes/models/model.llms.access.plan.php:677
 #, php-format
 msgctxt "subscription schedule"
 msgid "every %1$d %2$s"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:634
+#: includes/models/model.llms.access.plan.php:683
 #, php-format
 msgctxt "subscription # of payments"
 msgid "for %1$d total payments"
 msgstr ""
 
-#: includes/models/model.llms.access.plan.php:657
+#: includes/models/model.llms.access.plan.php:706
 #, php-format
 msgctxt "trial offer description"
 msgid "for %1$d %2$s"
@@ -24019,153 +24024,157 @@ msgstr ""
 msgid "students"
 msgstr ""
 
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:160
+msgid "Returns LifterLMS students only. Check the WordPress users endpoint to find out whether someone already has an account."
+msgstr ""
+
 #. Translators: %s = plural resource label (e.g. "Courses").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:186
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:189
 #, php-format
 msgid "List %s"
 msgstr ""
 
-#. Translators: %s = plural resource noun (e.g. "courses").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:188
+#. Translators: %1$s = plural resource noun (e.g. "courses"); %2$s = optional resource-specific note.
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:191
 #, php-format
-msgid "Retrieves a paginated list of %s from this LifterLMS site. Supports filtering, ordering, and pagination parameters."
+msgid "Retrieves a paginated list of %1$s from this LifterLMS site. Supports filtering, ordering, and pagination parameters.%2$s"
 msgstr ""
 
 #. Translators: %s = singular resource label (e.g. "Course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:196
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:199
 #, php-format
 msgid "Get %s"
 msgstr ""
 
 #. Translators: %s = singular resource noun (e.g. "course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:198
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:201
 #, php-format
 msgid "Retrieves the details of a single %s by its ID."
 msgstr ""
 
 #. Translators: %s = singular resource label (e.g. "Course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:206
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:209
 #, php-format
 msgid "Create %s"
 msgstr ""
 
 #. Translators: %s = singular resource noun (e.g. "course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:208
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:211
 #, php-format
 msgid "Creates a new %s on this LifterLMS site."
 msgstr ""
 
 #. Translators: %s = singular resource label (e.g. "Course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:216
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:219
 #, php-format
 msgid "Update %s"
 msgstr ""
 
 #. Translators: %s = singular resource noun (e.g. "course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:218
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:221
 #, php-format
 msgid "Updates an existing %s by its ID."
 msgstr ""
 
 #. Translators: %s = singular resource label (e.g. "Course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:226
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:229
 #, php-format
 msgid "Delete %s"
 msgstr ""
 
 #. Translators: %s = singular resource noun (e.g. "course").
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:228
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:231
 #, php-format
 msgid "Deletes a %s by its ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:248
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:251
 msgid "Unique student identifier. The WordPress user ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:249
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:252
 msgid "Unique course identifier. The WordPress post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:250
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:253
 msgid "Unique course or membership identifier. The WordPress post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:257
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:260
 msgid "Get Course Content"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:258
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:261
 msgid "Retrieves the sections that make up the content of a course, ordered as they appear in the course."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:271
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:274
 msgid "Get Course Enrollments"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:272
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:275
 msgid "Retrieves the enrollments for a course, listing the enrolled students and their enrollment status."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:287
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:290
 msgid "List Enrollments"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:288
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:291
 msgid "Retrieves the list of course and membership enrollments for a student."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:299
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:302
 msgid "Enroll Student"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:300
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:303
 msgid "Enrolls a student in a course or membership."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:313
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:316
 msgid "Update Enrollment"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:314
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:317
 msgid "Updates the status of an existing enrollment of a student in a course or membership."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:327
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:330
 msgid "Unenroll Student"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:328
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:331
 msgid "Removes the enrollment of a student in a course or membership."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:343
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:346
 msgid "Get Student Progress"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:344
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:347
 msgid "Retrieves the progress of a student in a course, section, or lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:351
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:365
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:378
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:354
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:368
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:381
 msgid "Unique course, section, or lesson identifier. The WordPress post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:356
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:359
 msgid "Update Student Progress"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:357
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:360
 msgid "Updates the progress of a student in a course, section, or lesson, marking it complete or incomplete."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:370
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:373
 msgid "Delete Student Progress"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:371
+#: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:374
 msgid "Deletes (resets) the progress of a student in a course, section, or lesson."
 msgstr ""
 
@@ -24317,7 +24326,7 @@ msgid "Unique Identifier. The WordPress Post ID."
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1120
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:229
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:224
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-webhooks-controller.php:182
 msgid "Creation date. Format: Y-m-d H:i:s"
 msgstr ""
@@ -24328,7 +24337,7 @@ msgid "Creation date (in GMT). Format: Y-m-d H:i:s"
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1130
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:238
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:233
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-webhooks-controller.php:189
 msgid "Date last modified. Format: Y-m-d H:i:s"
 msgstr ""
@@ -24574,35 +24583,35 @@ msgstr ""
 msgid "Username is not editable."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:46
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:57
 msgid "The API Key has been successfully deleted."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:54
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:75
 msgid "The webhook has been successfully deleted."
 msgstr ""
 
 #. Translators: %s = Consumer Key.
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:84
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:109
 #, php-format
 msgid "Consumer Key: %s"
 msgstr ""
 
 #. Translators: %s = Consumer Secret.
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:87
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:112
 #, php-format
 msgid "Consumer Secret: %s"
 msgstr ""
 
 #. Translators: %s = Webhook ID.
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:127
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:152
 #, php-format
 msgid "\"%s\" is not a valid Webhook."
 msgstr ""
 
 #. Translators: %1$s = error message; %2$s = error code.
 #. Translators: %1$s = Error message; %2$s = Error code.
-#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:139
+#: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-form-controller.php:164
 #: libraries/lifterlms-rest/includes/admin/class-llms-rest-admin-settings-api-keys.php:249
 #, php-format
 msgid "Error: %1$s [Code: %2$s]"
@@ -25264,12 +25273,12 @@ msgid "Limit results to a specific course or membership or a list of courses and
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:690
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:223
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:218
 msgid "The ID of the course/membership."
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:696
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:217
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:212
 msgid "The ID of the student."
 msgstr ""
 
@@ -25282,7 +25291,6 @@ msgid "Date last modified. Format: `Y-m-d H:i:s`"
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:713
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:245
 msgid "The status of the enrollment."
 msgstr ""
 
@@ -25523,19 +25531,23 @@ msgstr ""
 msgid "You are not allowed to list students."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:252
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:240
+msgid "The completion status of the item for the student."
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:247
 msgid "Student's progress as a percentage."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:418
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:407
 msgid "Unique identifier for the student. The WP User ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:422
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:411
 msgid "Unique course, lesson, or section Identifer. The WordPress Post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:516
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:502
 msgid "Created date cannot be in the future."
 msgstr ""
 

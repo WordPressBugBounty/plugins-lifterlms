@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  10.1.0
+ * @version  10.1.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  10.1.0
+	 * @version  10.1.1
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -452,7 +452,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/llms-metabox-product.js.
 			 *
 			 * @since    3.0.0
-			 * @version  10.1.0
+			 * @version  10.1.1
 			 */
 			'There was an error loading the necessary resources. Please try again.' => esc_html__( 'There was an error loading the necessary resources. Please try again.', 'lifterlms' ),
 			'Restrictions' => esc_html__( 'Restrictions', 'lifterlms' ),
