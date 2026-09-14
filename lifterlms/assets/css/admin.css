@@ -4540,6 +4540,71 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-growth-tools {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid #efefef;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-growth-tools h3 {
+  margin: 0 0 14px;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-growth-tools ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 14px 24px;
+  list-style: none;
+  margin: 0;
+}
+@media only screen and (min-width: 782px) {
+  .wrap.llms-dashboard #llms_dashboard_quick_links .llms-growth-tools ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-growth-tools a {
+  display: block;
+  font-weight: 600;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-growth-tool-meta {
+  display: block;
+  font-size: 13px;
+  color: #646970;
+  line-height: 1.4;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-dashboard-newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 22px 0 0;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-dashboard-widget-newsletter-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid #2271b1;
+  border-radius: 4px;
+  color: #2271b1;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-dashboard-widget-newsletter-btn .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+.wrap.llms-dashboard #llms_dashboard_quick_links .llms-dashboard-widget-newsletter-btn:hover {
+  background: #2271b1;
+  color: #fff;
+}
 .wrap.llms-dashboard #llms_dashboard_quick_links .llms-help-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -4669,6 +4734,53 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 #llms_dashboard_widget .subsubsub {
   color: #dcdcde;
 }
+#llms_dashboard_widget .llms-dashboard-widget-section {
+  margin: 0 -12px;
+  padding: 10px 12px;
+  background: #f6f7f7;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+#llms_dashboard_widget .llms-dashboard-widget-section h3 {
+  margin: 0;
+  font-size: 13px;
+}
+#llms_dashboard_widget .llms-dashboard-widget-newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 14px 16px;
+  border-top: 1px solid #e8e8e8;
+}
+#llms_dashboard_widget .llms-dashboard-widget-newsletter-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 1px solid #2271b1;
+  border-radius: 4px;
+  color: #2271b1;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+}
+#llms_dashboard_widget .llms-dashboard-widget-newsletter-btn .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+#llms_dashboard_widget .llms-dashboard-widget-newsletter-btn:hover {
+  background: #2271b1;
+  color: #fff;
+}
 
 .llms-dashboard-widget-feed {
   margin: 0 -12px;
@@ -4682,6 +4794,9 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 .llms-dashboard-widget-feed span {
   display: block;
+}
+.llms-dashboard-widget-feed.llms-dashboard-widget-tools {
+  background-color: #fff;
 }
 
 .wrap.llms-resources .llms-inside-wrap {

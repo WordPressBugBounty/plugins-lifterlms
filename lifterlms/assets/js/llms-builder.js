@@ -3663,11 +3663,55 @@ define( 'Models/Quiz',[
  * Lesson Schemas
  *
  * @since    3.17.0
- * @version  3.25.4
+ * @version  10.2.1
  */
 define( 'Schemas/Lesson',[], function() {
 
-	return window.llms.hooks.applyFilters( 'llms_define_lesson_schema', {
+	/**
+	 * Whether the Advanced Videos promo fields should render.
+	 *
+	 * @since 10.2.1
+	 *
+	 * @return {boolean}
+	 */
+	function is_av_promo_visible() {
+		return ! window.llms_builder.av && !! this.get( 'video_embed' );
+	}
+
+	/**
+	 * Dummy cascading options matching Advanced Videos selects.
+	 *
+	 * @since 10.2.1
+	 *
+	 * @return {Array}
+	 */
+	function get_av_promo_options() {
+		var disabled = LLMS.l10n.translate( 'Disabled' );
+		return [
+			{
+				key: 'global',
+				val: LLMS.l10n.replace( 'Global setting (%s)', {
+					'%s': disabled,
+				} ),
+			},
+			{
+				key: 'course',
+				val: LLMS.l10n.replace( 'Course setting (%s)', {
+					'%s': disabled,
+				} ),
+			},
+			{
+				key: 'yes',
+				val: LLMS.l10n.translate( 'Enabled' ),
+			},
+			{
+				key: 'no',
+				val: LLMS.l10n.translate( 'Disabled' ),
+			},
+		];
+	}
+
+	var schema = {
 
 		default: {
 			title: LLMS.l10n.translate( 'General Settings' ),
@@ -3935,7 +3979,44 @@ define( 'Schemas/Lesson',[], function() {
 		],
 	},
 
-} );
+	};
+
+	schema.default.fields.splice(
+		4,
+		0,
+			[
+				{
+					attribute: 'llms_av_promo_require',
+					id: 'llms-av-promo-require',
+					label: LLMS.l10n.translate( 'Require Video Completion' ),
+					tip: LLMS.l10n.translate( 'When enabled, students must watch the entire video before they can progress to the next lesson or attempt a quiz associated with the lesson.' ),
+					type: 'select',
+					disabled: true,
+					options: get_av_promo_options,
+					condition: is_av_promo_visible,
+				},
+				{
+					attribute: 'llms_av_promo_advance',
+					id: 'llms-av-promo-advance',
+					label: LLMS.l10n.translate( 'Auto-Advance Videos' ),
+					tip: LLMS.l10n.translate( 'After a student completes the lesson video, a countdown timer is displayed and when the timer expires, the student is automatically redirected to the next lesson, quiz, or assignment.' ),
+					type: 'select',
+					disabled: true,
+					options: get_av_promo_options,
+					condition: is_av_promo_visible,
+				},
+			],
+			[
+				{
+					id: 'llms-av-promo',
+					type: 'heading',
+					detail: LLMS.l10n.translate( 'Require lesson video completion, auto-advance lessons on video completion, customize video player controls, and more with the LifterLMS Advanced Videos add-on.' ) + ' <a href="https://lifterlms.com/product/advanced-videos/?utm_source=LifterLMS%20Plugin&utm_medium=Course%20Builder%20Upsell&utm_campaign=Plugin%20to%20Sale" target="_blank">' + LLMS.l10n.translate( 'Learn More' ) + '</a>',
+					condition: is_av_promo_visible,
+				},
+			]
+		);
+
+	return window.llms.hooks.applyFilters( 'llms_define_lesson_schema', schema );
 
 } );
 
@@ -5451,9 +5532,15 @@ define( 'Views/_Editable',[], function() {
 		 */
 		init_selects: function() {
 
-			this.$el.find( '.llms-editable-select select' ).llmsSelect2( {
-				width: '100%',
-			} ).trigger( 'change' );
+			this.$el.find( '.llms-editable-select select' ).each( function() {
+				var $select = $( this );
+				$select.llmsSelect2( {
+					width: '100%',
+				} );
+				if ( ! $select.prop( 'disabled' ) ) {
+					$select.trigger( 'change' );
+				}
+			} );
 
 		},
 
@@ -5534,8 +5621,13 @@ define( 'Views/_Editable',[], function() {
 
 			event.stopPropagation();
 
-			var $el       = $( event.target ),
-				multi     = ( $el.attr( 'multiple' ) ),
+			var $el = $( event.target );
+
+			if ( $el.prop( 'disabled' ) ) {
+				return;
+			}
+
+			var multi     = ( $el.attr( 'multiple' ) ),
 				attr      = $el.attr( 'name' ),
 				$selected = $el.find( 'option:selected' ),
 				val;
@@ -8961,7 +9053,7 @@ define( 'Views/LessonEditor',[
 
 				this.model = data.lesson;
 
-				var change_events = window.llms.hooks.applyFilters( 'llms_lesson_rerender_change_events', [
+				var change_events = [
 					'change:date_available',
 					'change:drip_method',
 					'change:free_lesson',
@@ -8970,7 +9062,11 @@ define( 'Views/LessonEditor',[
 					'change:content_added_in_builder',
 					'change:name',
 					'change:time_available',
-				] );
+				];
+				if ( ! window.llms_builder.av ) {
+					change_events.push( 'change:video_embed' );
+				}
+				change_events = window.llms.hooks.applyFilters( 'llms_lesson_rerender_change_events', change_events );
 				_.each( change_events, function( event ) {
 					this.listenTo( this.model, event, this.render );
 				}, this );

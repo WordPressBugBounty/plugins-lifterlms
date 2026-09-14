@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  10.1.1
+ * @version  10.2.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  10.1.1
+	 * @version  10.2.1
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -131,8 +131,12 @@ class LLMS_L10n_JS {
 			 * File: assets/js/builder/Schemas/Lesson.js.
 			 *
 			 * @since    3.17.0
-			 * @version  3.25.4
+			 * @version  10.2.1
 			 */
+			'Disabled' => esc_html__( 'Disabled', 'lifterlms' ),
+			'Global setting (%s)' => esc_html__( 'Global setting (%s)', 'lifterlms' ),
+			'Course setting (%s)' => esc_html__( 'Course setting (%s)', 'lifterlms' ),
+			'Enabled' => esc_html__( 'Enabled', 'lifterlms' ),
 			'General Settings' => esc_html__( 'General Settings', 'lifterlms' ),
 			'Content' => esc_html__( 'Content', 'lifterlms' ),
 			'Video Embed URL' => esc_html__( 'Video Embed URL', 'lifterlms' ),
@@ -168,6 +172,11 @@ class LLMS_L10n_JS {
 			'Associated Event(s)' => esc_html__( 'Associated Event(s)', 'lifterlms' ),
 			'Schedule events for your lessons with the LifterLMS Events add-on.' => esc_html__( 'Schedule events for your lessons with the LifterLMS Events add-on.', 'lifterlms' ),
 			'Learn More' => esc_html__( 'Learn More', 'lifterlms' ),
+			'Require Video Completion' => esc_html__( 'Require Video Completion', 'lifterlms' ),
+			'When enabled, students must watch the entire video before they can progress to the next lesson or attempt a quiz associated with the lesson.' => esc_html__( 'When enabled, students must watch the entire video before they can progress to the next lesson or attempt a quiz associated with the lesson.', 'lifterlms' ),
+			'Auto-Advance Videos' => esc_html__( 'Auto-Advance Videos', 'lifterlms' ),
+			'After a student completes the lesson video, a countdown timer is displayed and when the timer expires, the student is automatically redirected to the next lesson, quiz, or assignment.' => esc_html__( 'After a student completes the lesson video, a countdown timer is displayed and when the timer expires, the student is automatically redirected to the next lesson, quiz, or assignment.', 'lifterlms' ),
+			'Require lesson video completion, auto-advance lessons on video completion, customize video player controls, and more with the LifterLMS Advanced Videos add-on.' => esc_html__( 'Require lesson video completion, auto-advance lessons on video completion, customize video player controls, and more with the LifterLMS Advanced Videos add-on.', 'lifterlms' ),
 
 			/**
 			 * File: assets/js/builder/Schemas/Quiz.js.
@@ -361,6 +370,10 @@ class LLMS_L10n_JS {
 			'New Quiz' => esc_html__( 'New Quiz', 'lifterlms' ),
 			'quizzes' => esc_html__( 'quizzes', 'lifterlms' ),
 			'quiz' => esc_html__( 'quiz', 'lifterlms' ),
+			'Disabled' => esc_html__( 'Disabled', 'lifterlms' ),
+			'Global setting (%s)' => esc_html__( 'Global setting (%s)', 'lifterlms' ),
+			'Course setting (%s)' => esc_html__( 'Course setting (%s)', 'lifterlms' ),
+			'Enabled' => esc_html__( 'Enabled', 'lifterlms' ),
 			'Content' => esc_html__( 'Content', 'lifterlms' ),
 			'Video Embed URL' => esc_html__( 'Video Embed URL', 'lifterlms' ),
 			'Audio Embed URL' => esc_html__( 'Audio Embed URL', 'lifterlms' ),
@@ -395,6 +408,11 @@ class LLMS_L10n_JS {
 			'Associated Event(s)' => esc_html__( 'Associated Event(s)', 'lifterlms' ),
 			'Schedule events for your lessons with the LifterLMS Events add-on.' => esc_html__( 'Schedule events for your lessons with the LifterLMS Events add-on.', 'lifterlms' ),
 			'Learn More' => esc_html__( 'Learn More', 'lifterlms' ),
+			'Require Video Completion' => esc_html__( 'Require Video Completion', 'lifterlms' ),
+			'When enabled, students must watch the entire video before they can progress to the next lesson or attempt a quiz associated with the lesson.' => esc_html__( 'When enabled, students must watch the entire video before they can progress to the next lesson or attempt a quiz associated with the lesson.', 'lifterlms' ),
+			'Auto-Advance Videos' => esc_html__( 'Auto-Advance Videos', 'lifterlms' ),
+			'After a student completes the lesson video, a countdown timer is displayed and when the timer expires, the student is automatically redirected to the next lesson, quiz, or assignment.' => esc_html__( 'After a student completes the lesson video, a countdown timer is displayed and when the timer expires, the student is automatically redirected to the next lesson, quiz, or assignment.', 'lifterlms' ),
+			'Require lesson video completion, auto-advance lessons on video completion, customize video player controls, and more with the LifterLMS Advanced Videos add-on.' => esc_html__( 'Require lesson video completion, auto-advance lessons on video completion, customize video player controls, and more with the LifterLMS Advanced Videos add-on.', 'lifterlms' ),
 			'New Lesson' => esc_html__( 'New Lesson', 'lifterlms' ),
 			'lessons' => esc_html__( 'lessons', 'lifterlms' ),
 			'lesson' => esc_html__( 'lesson', 'lifterlms' ),
@@ -464,7 +482,6 @@ class LLMS_L10n_JS {
 			'Paid Trial' => esc_html__( 'Paid Trial', 'lifterlms' ),
 			'Free Trial' => esc_html__( 'Free Trial', 'lifterlms' ),
 			'Hidden Access' => esc_html__( 'Hidden Access', 'lifterlms' ),
-			'Sale' => esc_html__( 'Sale', 'lifterlms' ),
 			'Pre-sale' => esc_html__( 'Pre-sale', 'lifterlms' ),
 			'After deleting this access plan, any students subscribed to this plan will still have access and will continue to make recurring payments according to the access plan\'s settings. If you wish to terminate their plans you must do so manually. This action cannot be reversed.' => esc_html__( 'After deleting this access plan, any students subscribed to this plan will still have access and will continue to make recurring payments according to the access plan\'s settings. If you wish to terminate their plans you must do so manually. This action cannot be reversed.', 'lifterlms' ),
 			'An error was encountered during the save attempt. Please try again.' => esc_html__( 'An error was encountered during the save attempt. Please try again.', 'lifterlms' ),
