@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  10.2.1
+ * @version  10.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  10.2.1
+	 * @version  10.3.0
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -244,10 +244,10 @@ class LLMS_L10n_JS {
 			'Close' => esc_html__( 'Close', 'lifterlms' ),
 
 			/**
-			 * File: assets/js/builder/Views/Elements.js.
+			 * File: assets/js/builder/Views/ExistingLessonPopover.js.
 			 *
-			 * @since    3.16.0
-			 * @version  3.16.12
+			 * @since    10.3.0
+			 * @version  10.3.0
 			 */
 			'Add Existing Lesson' => esc_html__( 'Add Existing Lesson', 'lifterlms' ),
 			'Search for existing lessons...' => esc_html__( 'Search for existing lessons...', 'lifterlms' ),
@@ -426,13 +426,15 @@ class LLMS_L10n_JS {
 			'Select an image' => esc_html__( 'Select an image', 'lifterlms' ),
 			'Use this image' => esc_html__( 'Use this image', 'lifterlms' ),
 			'Are you sure you want to move this %s to the trash?' => esc_html__( 'Are you sure you want to move this %s to the trash?', 'lifterlms' ),
-			'Use SoundCloud or Spotify audio URLS.' => esc_html__( 'Use SoundCloud or Spotify audio URLS.', 'lifterlms' ),
-			'Permalink' => esc_html__( 'Permalink', 'lifterlms' ),
-			'Use YouTube, Vimeo, or Wistia video URLS.' => esc_html__( 'Use YouTube, Vimeo, or Wistia video URLS.', 'lifterlms' ),
 			'Searching...' => esc_html__( 'Searching...', 'lifterlms' ),
 			'Attach' => esc_html__( 'Attach', 'lifterlms' ),
 			'Clone' => esc_html__( 'Clone', 'lifterlms' ),
 			'ID' => esc_html__( 'ID', 'lifterlms' ),
+			'Add Existing Lesson' => esc_html__( 'Add Existing Lesson', 'lifterlms' ),
+			'Search for existing lessons...' => esc_html__( 'Search for existing lessons...', 'lifterlms' ),
+			'Use SoundCloud or Spotify audio URLS.' => esc_html__( 'Use SoundCloud or Spotify audio URLS.', 'lifterlms' ),
+			'Permalink' => esc_html__( 'Permalink', 'lifterlms' ),
+			'Use YouTube, Vimeo, or Wistia video URLS.' => esc_html__( 'Use YouTube, Vimeo, or Wistia video URLS.', 'lifterlms' ),
 			'Add Existing Question' => esc_html__( 'Add Existing Question', 'lifterlms' ),
 			'Search for existing questions...' => esc_html__( 'Search for existing questions...', 'lifterlms' ),
 			'Are you sure you want to delete this question?' => esc_html__( 'Are you sure you want to delete this question?', 'lifterlms' ),
@@ -447,8 +449,6 @@ class LLMS_L10n_JS {
 			'Get Assignments Now!' => esc_html__( 'Get Assignments Now!', 'lifterlms' ),
 			'Unlock LifterLMS Assignments' => esc_html__( 'Unlock LifterLMS Assignments', 'lifterlms' ),
 			'Close' => esc_html__( 'Close', 'lifterlms' ),
-			'Add Existing Lesson' => esc_html__( 'Add Existing Lesson', 'lifterlms' ),
-			'Search for existing lessons...' => esc_html__( 'Search for existing lessons...', 'lifterlms' ),
 
 			/**
 			 * File: assets/js/llms-form-checkout.js.

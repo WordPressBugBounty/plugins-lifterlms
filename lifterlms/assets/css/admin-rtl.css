@@ -2472,6 +2472,68 @@ a.llms-view-as {
   outline: 2px solid rgba(0, 0, 0, 0);
 }
 
+.llms-customers-wrap .subsubsub {
+  position: relative;
+  z-index: 2;
+}
+.llms-customers-wrap .llms-customers-table {
+  clear: none;
+}
+.llms-customers-wrap .llms-table-header:before, .llms-customers-wrap .llms-table-header:after {
+  content: none;
+  display: none;
+}
+.llms-customers-wrap .llms-table-search {
+  float: left;
+  margin: 6px 0 8px;
+}
+.llms-customers-wrap .llms-table {
+  clear: both;
+}
+.llms-customers-wrap .llms-customer-name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+  text-decoration: none;
+}
+.llms-customers-wrap .llms-customer-name img {
+  border-radius: 50%;
+}
+.llms-customers-wrap .llms-customer-header-links {
+  margin: 8px 0 0;
+}
+.llms-customers-wrap .llms-customer-billing,
+.llms-customers-wrap .llms-customer-enrollments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.llms-customers-wrap .llms-customer-billing li,
+.llms-customers-wrap .llms-customer-enrollments li {
+  margin: 0 0 12px;
+}
+.llms-customers-wrap .llms-customer-orders-table {
+  margin-top: 12px;
+  width: 100%;
+}
+.llms-customers-wrap .llms-customer-orders-pagination {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 16px;
+}
+
 .llms-table-wrap {
   position: relative;
 }
@@ -3242,6 +3304,101 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
           box-sizing: border-box;
 }
 
+/**
+ * Certificate / achievement editor document sidebar.
+ *
+ * WP 7.0+ bumped Gutenberg TextControl height to 40px. The inner-margin
+ * labels used a negative top margin sized for the old shorter inputs, which
+ * then sat on top of the fields. Classic side metaboxes (sync awarded) also
+ * sat flush against the settings panel, and the full-width Sync button
+ * overflowed the ~280px complementary area.
+ */
+.llms-certificate-doc-settings.components-panel__body .components-panel__body-content {
+  padding-bottom: 16px;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-sequential-id-control {
+  margin-bottom: 0;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margins-control__fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px 12px;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control {
+  min-width: 0;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control input.components-text-control__input {
+  padding-left: 40px;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--top, .llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--bottom {
+  grid-column: 1/-1;
+  justify-self: center;
+  width: calc(50% - 6px);
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--left {
+  grid-column: 1;
+  grid-row: 2;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--right {
+  grid-column: 2;
+  grid-row: 2;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--bottom {
+  grid-row: 3;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control__label {
+  display: block;
+  margin: 4px 0 0;
+}
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--top .llms-certificate-margin-control__label,
+.llms-certificate-doc-settings.components-panel__body .llms-certificate-margin-control--bottom .llms-certificate-margin-control__label {
+  text-align: center;
+}
+
+.interface-complementary-area #poststuff,
+.editor-sidebar #poststuff,
+.edit-post-sidebar #poststuff {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+}
+
+#certificate_sync,
+#achievement_sync {
+  margin-top: 16px;
+}
+#certificate_sync .postbox-header,
+#achievement_sync .postbox-header {
+  border-top: 0;
+}
+.edit-post-meta-boxes-area #certificate_sync .postbox-header .hndle,
+.edit-post-meta-boxes-area #achievement_sync .postbox-header .hndle {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+#certificate_sync .inside,
+#achievement_sync .inside {
+  overflow-x: hidden;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+#certificate_sync .llms-sync-action-wrap,
+#achievement_sync .llms-sync-action-wrap {
+  margin: 1em 0 0;
+}
+#certificate_sync .sync-action,
+#achievement_sync .sync-action {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+}
+
 .llms-media-protection-warning {
   border-right: 4px solid #c05621;
   padding-right: 10px;
@@ -3650,6 +3807,17 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
   margin: 20px auto;
   padding: 0;
+}
+.llms-reporting-tab .llms-reporting-body .llms-nav-tab-wrapper.llms-nav-secondary {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.llms-reporting-tab .llms-reporting-body .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-items {
+  padding-right: 16px;
+  padding-left: 16px;
 }
 .llms-reporting-tab .llms-reporting-body .llms-reporting-stab {
   padding: 30px;
@@ -4442,6 +4610,13 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   .wrap.llms-reporting .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-items {
     padding-right: 10px;
   }
+  .wrap.llms-reporting .llms-reporting-body .llms-nav-tab-wrapper.llms-nav-secondary {
+    margin: 0;
+  }
+  .wrap.llms-reporting .llms-reporting-body .llms-nav-tab-wrapper.llms-nav-secondary .llms-nav-items {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
   .wrap.llms-status .llms-nav-tab-wrapper.llms-nav-secondary {
     margin: 0 -22px 20px -20px;
   }
@@ -4948,9 +5123,6 @@ button[name=llms_quiz_attempt_action].grading .save {
 }
 .llms-form-fields label:not(.llms-field-html label) {
   font-weight: 700;
-}
-.llms-form-fields .wp-block-columns, .llms-form-fields .wp-block-column {
-  margin-bottom: 0;
 }
 
 .llms-form-heading {

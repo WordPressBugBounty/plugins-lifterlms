@@ -2800,6 +2800,65 @@ define( 'Models/_Utilities',[], function() {
 		},
 
 		/**
+		 * Slugify a title the way `sanitize_title()` would for basic (ASCII) input.
+		 *
+		 * A conflict suffix (-2, -3) isn't predicted; the real slug is confirmed on save.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @param {String} text Text to slugify.
+		 * @return {String}
+		 */
+		slugify: function( text ) {
+
+			return ( text || '' ).toString().toLowerCase().trim()
+				.replace( /[\s_]+/g, '-' )
+				.replace( /[^a-z0-9\-]/g, '' )
+				.replace( /-+/g, '-' )
+				.replace( /^-+|-+$/g, '' );
+
+		},
+
+		/**
+		 * Preview the permalink an unsaved lesson or quiz would get on save.
+		 *
+		 * Computed client-side from the title and the localized permalink template.
+		 * Follows title edits until the slug is edited by hand. Sets silently so the
+		 * settings panel isn't re-rendered mid-edit (which would steal focus); the
+		 * on-screen preview is updated directly by the view.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @param {String} title Optional title override, used for live previews while typing
+		 *                       before the title is committed to the model on blur.
+		 * @return {String} The previewed permalink or an empty string.
+		 */
+		preview_permalink: function( title ) {
+
+			if ( ! this.has_temp_id() || 'yes' === this.get( 'slug_edited' ) ) {
+				return '';
+			}
+
+			var structs  = ( window.llms_builder && window.llms_builder.sample_permalinks ) || {},
+				template = structs[ this.get( 'type' ) ],
+				slug     = this.slugify( _.isString( title ) ? title : this.get( 'title' ) );
+
+			if ( ! template || ! slug ) {
+				return '';
+			}
+
+			var permalink = template.replace( '%pagename%', slug );
+
+			this.set( {
+				permalink: permalink,
+				name: slug,
+			}, { silent: true } );
+
+			return permalink;
+
+		},
+
+		/**
 		 * Initializes 3rd party custom schema (field) data for a model
 		 *
 		 * @return   void
@@ -3531,6 +3590,9 @@ define( 'Models/Quiz',[
 
 			this.set( '_points', this.get_total_points() );
 
+			this.on( 'change:title', this.preview_permalink, this );
+			this.preview_permalink();
+
 			// when a quiz is published, ensure the parent lesson is marked as "Enabled" for quizzing
 			this.on( 'change:status', function() {
 				if ( 'publish' === this.get( 'status' ) ) {
@@ -4130,6 +4192,8 @@ define( 'Models/Lesson',[ 'Models/Quiz', 'Models/_Relationships', 'Models/_Utili
 
 			// Recompose H/M/S back to total seconds when any component changes.
 			this.on( 'change:minimum_time_hours change:minimum_time_minutes change:minimum_time_seconds', this.compute_minimum_time, this );
+			this.on( 'change:title', this.preview_permalink, this );
+			this.preview_permalink();
 
 			// If the lesson ID isn't set on a quiz, set it.
 			var quiz = this.get( 'quiz' );
@@ -5334,6 +5398,7 @@ define( 'Views/_Editable',[], function() {
 			'focusout .llms-input': 'on_blur',
 			'keydown .llms-input': 'on_keydown',
 			'input .llms-input[type="number"]': 'on_blur',
+			'input .llms-input[data-attribute="title"]': 'on_title_input',
 			'paste .llms-input[data-formatting]': 'on_paste',
 			'paste .llms-input[contenteditable]:not([data-formatting])': 'on_paste',
 		},
@@ -5419,6 +5484,31 @@ define( 'Views/_Editable',[], function() {
 
 			} else if ( 'permalink' === type ) {
 
+				// Not underscore-prefixed: underscore attrs are stripped from the sync
+				// payload and the server needs this to know not to re-derive the slug
+				// from the title when creating the post.
+				self.model.set( 'slug_edited', 'yes', { silent: true } );
+
+				// Unsaved models can't be checked server-side; preview the edited slug locally.
+				if ( self.model.has_temp_id && self.model.has_temp_id() ) {
+
+					var structs  = ( window.llms_builder && window.llms_builder.sample_permalinks ) || {},
+						template = structs[ self.model.get( 'type' ) ],
+						slug     = self.model.slugify( content );
+
+					if ( ! template || ! slug ) {
+						return false;
+					}
+
+					// Normalize the input so `save_edits()` stores the slugified value.
+					$el.val( slug );
+
+					// Not silent: `change:permalink` re-renders the settings panel, closing the editor UI.
+					self.model.set( 'permalink', template.replace( '%pagename%', slug ) );
+
+					return true;
+				}
+
 				LLMS.Ajax.call( {
 					data: {
 						action: 'llms_builder',
@@ -5445,6 +5535,37 @@ define( 'Views/_Editable',[], function() {
 			}
 
 			return true;
+
+		},
+
+		/**
+		 * Update the permalink preview live while the title of an unsaved model is edited.
+		 *
+		 * The preview text is written to the DOM directly (never via render) so the
+		 * title field keeps focus while typing.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @param {Object} event JS event object.
+		 * @return {Void}
+		 */
+		on_title_input: function( event ) {
+
+			var model = this.model;
+
+			if ( ! model || ! model.preview_permalink || ! model.has_temp_id() || 'yes' === model.get( 'slug_edited' ) ) {
+				return;
+			}
+
+			var permalink = model.preview_permalink( this.get_content( $( event.target ) ) );
+
+			if ( permalink ) {
+				this.$el.find( '.llms-permalink-preview' ).text( permalink );
+				// Keep the (hidden) slug input in sync so the pencil edits the previewed slug, not the render-time one.
+				this.$el.find( 'input.permalink' )
+					.val( model.get( 'name' ) )
+					.attr( 'data-original-content', model.get( 'name' ) );
+			}
 
 		},
 
@@ -5524,6 +5645,34 @@ define( 'Views/_Editable',[], function() {
 		},
 
 		/**
+		 * Release Select2's scroll lock before this view's markup is replaced.
+		 *
+		 * An open dropdown pins scrollTop on scrollable ancestors and only
+		 * releases that pin when it closes. Replacing the field first leaves
+		 * the pin behind. select2('destroy') does not release it either.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @return {Void}
+		 */
+		release_select2_scroll_lock: function() {
+
+			this.$el.find( 'select' ).each( function() {
+
+				var $select = $( this );
+
+				if ( $select.data( 'select2' ) ) {
+					$select.llmsSelect2( 'close' );
+				}
+
+			} );
+
+			// close() only unbinds ancestors it can still walk to.
+			this.$el.off( '.select2' );
+
+		},
+
+		/**
 		 * Initialize editable select elements
 		 *
 		 * @return   void
@@ -5570,6 +5719,11 @@ define( 'Views/_Editable',[], function() {
 				} else {
 					this.save_edits( event );
 				}
+
+			} else if ( 'permalink' === $el.attr( 'data-type' ) ) {
+
+				// Nothing changed so no re-render will run; restore the permalink display manually.
+				this.render();
 
 			}
 
@@ -5908,29 +6062,29 @@ define( 'Views/_Editable',[], function() {
 		 */
 		make_slug_editable: function( event ) {
 
-			var self      = this,
-				$btn      = $( event.currentTarget ),
-				$link     = $btn.prevAll( 'a' ),
-				$input    = $btn.prev( 'input.permalink' ),
-				full_url  = $link.attr( 'href' ),
-				slug      = $input.val(),
-				short_url = full_url.replace( slug, '' );
+			var $btn     = $( event.currentTarget ),
+				$display = $btn.prevAll( 'a, .llms-permalink-preview' ).first(),
+				$input   = $btn.prev( 'input.permalink' ),
+				full_url = $display.is( 'a' ) ? $display.attr( 'href' ) : $.trim( $display.text() ),
+				slug     = $input.val();
 
-			// hide the button
+			if ( ! full_url || ! slug ) {
+				return;
+			}
+
+			var short_url = full_url.replace( slug, '' );
+
 			$btn.hide();
 
-			// make the link not clickable
-			$link.css( {
+			$display.css( {
 				color: '#999',
 				'pointer-events': 'none',
 				'text-decoration': 'none',
 			} );
 
-			// remove the current slug & trailing slash from the URL
-			$link.text( short_url.substring( 0, short_url.length - 1 ) );
+			$display.text( short_url.substring( 0, short_url.length - 1 ) );
 
-			// focus in on the field
-			$input.show().focus();
+			$input.css( 'display', 'inline-block' ).focus();
 
 		},
 
@@ -7976,20 +8130,350 @@ define( 'Views/LessonList',[ 'Views/Lesson', 'Views/_Receivable' ], function( Le
 } );
 
 /**
+ * Popover View
+ *
+ * @since 3.16.0
+ * @version 4.0.0
+ */
+define( 'Views/Popover',[], function() {
+
+	return Backbone.View.extend( {
+
+		/**
+		 * Default Properties
+		 *
+		 * @type {Object}
+		 */
+		defaults: {
+			placement: 'auto',
+			// container: document.body,
+			width: 'auto',
+			trigger: 'manual',
+			style: 'light',
+			animation: 'pop',
+			title: '',
+			content: '',
+			closeable: false,
+			backdrop: false,
+			onShow: function( $el ) {},
+			onHide: function( $el ) {},
+		},
+
+		/**
+		 * Wrapper Tag name
+		 *
+		 * @type {String}
+		 */
+		tagName: 'div',
+
+		/**
+		 * Initialization callback func (renders the element on screen)
+		 *
+		 * @since 3.14.1
+		 * @since 4.0.0 Add RTL support for popovers.
+		 *
+		 * @return void
+		 */
+		initialize: function( data ) {
+
+			if ( this.$el.length ) {
+				this.defaults.container = this.$el.parent();
+			}
+
+			this.args = _.defaults( data.args, this.defaults );
+
+			// Reverse directions for RTL sites.
+			if ( $( 'body' ).hasClass( 'rtl' ) ) {
+
+				if ( -1 !== this.args.placement.indexOf( 'left' ) ) {
+					this.args.placement = this.args.placement.replace( 'left', 'right' );
+				} else if ( -1 !== this.args.placement.indexOf( 'right' ) ) {
+					this.args.placement = this.args.placement.replace( 'right', 'left' );
+				}
+
+			}
+
+			this.render();
+
+		},
+
+		/**
+		 * Compiles the template and renders the view
+		 *
+		 * @since 3.16.0
+		 *
+		 * @return {Object} Instance of the Backbone.view.
+		 */
+		render: function() {
+
+			this.$el.webuiPopover( this.args );
+			return this;
+
+		},
+
+		/**
+		 * Hide the popover
+		 *
+		 * @since 3.16.0
+		 * @since 3.16.12 Unknown.
+		 *
+		 * @return {Object} Instance of the Backbone.view.
+		 */
+		hide: function() {
+
+			this.$el.webuiPopover( 'hide' );
+			return this;
+
+		},
+
+		/**
+		 * Show the popover
+		 *
+		 * @since 3.16.0
+		 * @since 3.16.12 Unknown.
+		 *
+		 * @return {Object} Instance of the Backbone.view.
+		 */
+		show: function() {
+
+			this.$el.webuiPopover( 'show' );
+			return this;
+
+		},
+
+	} );
+
+} );
+
+/**
+ * Post Popover Search content View
+ *
+ * @since 3.16.0
+ * @version 4.4.0
+ */
+define( 'Views/PostSearch',[], function() {
+
+	return Backbone.View.extend( {
+
+		/**
+		 * DOM Events
+		 *
+		 * @type     obj
+		 * @since    3.16.0
+		 * @version  3.16.0
+		 */
+		events: {
+			'select2:select': 'add_post',
+		},
+
+		/**
+		 * Wrapper Tag name
+		 *
+		 * @type  {String}
+		 */
+		tagName: 'select',
+
+		/**
+		 * Initializer
+		 *
+		 * @param    obj   data  customize the search box with data
+		 * @return   void
+		 * @since    3.16.12
+		 * @version  3.16.12
+		 */
+		initialize: function( data ) {
+
+			this.post_type         = data.post_type;
+			this.searching_message = data.searching_message || LLMS.l10n.translate( 'Searching...' );
+
+		},
+
+		/**
+		 * Select event, adds the existing lesson to the course
+		 *
+		 * @param    obj   event  select2:select event object
+		 * @since    3.16.0
+		 * @version  3.17.0
+		 */
+		add_post: function( event ) {
+
+			var type = this.$el.attr( 'data-post-type' );
+
+			Backbone.pubSub.trigger( type.replace( 'llms_', '' ) + '-search-select', event.params.data, event );
+			this.$el.val( null ).trigger( 'change' );
+
+		},
+
+		/**
+		 * Render the section
+		 *
+		 * Initializes a new collection and views for all lessons in the section.
+		 *
+		 * @since 3.16.0
+		 * @since 3.16.12 Unknown.
+		 * @since 4.4.0 Update ajax nonce source.
+		 *
+		 * @return void
+		 */
+		render: function() {
+			var self = this;
+			setTimeout( function () {
+				self.$el.llmsSelect2( {
+					ajax: {
+						dataType: 'JSON',
+						delay: 250,
+						method: 'POST',
+						url: window.ajaxurl,
+						data: function( params ) {
+							return {
+								action: 'llms_builder',
+								action_type: 'search',
+								course_id: window.llms_builder.course.id,
+								post_type: self.post_type,
+								term: params.term,
+								page: params.page,
+								_ajax_nonce: window.llms.ajax_nonce,
+							};
+						},
+					},
+					dropdownParent: $( '.wrap.lifterlms.llms-builder' ),
+					// Don't escape html from render_result.
+					escapeMarkup: function( markup ) {
+						return markup;
+					},
+					placeholder: self.searching_message,
+					templateResult: self.render_result,
+					width: '100%',
+				} );
+				self.$el.attr( 'data-post-type', self.post_type );
+			}, 0 );
+			return this;
+
+		},
+
+		/**
+		 * Render a nicer UI for each search result in the in the Select2 search results
+		 *
+		 * @param    object   res  result data
+		 * @return   string
+		 * @since    3.16.0
+		 * @version  3.16.12
+		 */
+		render_result: function( res ) {
+
+			var $html = $( '<div class="llms-existing-lesson-result" />' );
+
+			if ( res.loading ) {
+				return $html.append( res.text );
+			}
+
+			var $side = $( '<aside class="llms-existing-action" />' ),
+				$main = $( '<div class="llms-existing-info" />' );
+				icon  = ( 'attach' === res.action ) ? 'paperclip' : 'clone',
+				text  = ( 'attach' === res.action ) ? LLMS.l10n.translate( 'Attach' ) : LLMS.l10n.translate( 'Clone' );
+
+			$side.append( '<i class="fa fa-' + icon + '" aria-hidden="true"></i><small>' + text + '</small>' );
+
+			$main.append( '<h4>' + res.data.title + '</h4>' );
+			$main.append( '<h5>' + LLMS.l10n.translate( 'ID' ) + ': <em>' + res.data.id + '</em></h5>' );
+
+			_.each( res.parents, function( parent ) {
+				$main.append( '<h5>' + parent + '</em></h5>' );
+			} );
+
+			return $html.append( $side ).append( $main );
+
+		},
+
+	} );
+
+} );
+
+/**
+ * Existing Lesson search popover.
+ *
+ * @since 10.3.0
+ * @version 10.3.0
+ */
+define( 'Views/ExistingLessonPopover',[ 'Views/Popover', 'Views/PostSearch' ], function( Popover, LessonSearch ) {
+
+	/**
+	 * Show the popover used to attach or clone an existing lesson.
+	 *
+	 * webuiPopover keeps its instance on the trigger and ignores later inits, so
+	 * destroy any previous instance first. Leave cache on so the select is moved
+	 * (not cloned) into the popover — Select2 is initialized on that node via
+	 * setTimeout after it is in the DOM.
+	 *
+	 * @since 10.3.0
+	 *
+	 * @param {String|Element} el        Popover trigger selector or element.
+	 * @param {String}         placement webuiPopover placement.
+	 * @return {Void}
+	 */
+	return function( el, placement ) {
+
+		var $el = $( el ), pop, onLessonSelect;
+
+		if ( $el.data( 'plugin_webuiPopover' ) ) {
+			$el.webuiPopover( 'destroy' );
+		}
+
+		pop = new Popover( {
+			el: el,
+			args: {
+				backdrop: true,
+				closeable: true,
+				container: '.wrap.lifterlms.llms-builder',
+				dismissible: true,
+				placement: placement || 'left',
+				width: 480,
+				title: LLMS.l10n.translate( 'Add Existing Lesson' ),
+				content: new LessonSearch( {
+					post_type: 'lesson',
+					searching_message: LLMS.l10n.translate( 'Search for existing lessons...' ),
+				} ).render().$el,
+				onHide: function() {
+					Backbone.pubSub.off( 'lesson-search-select', onLessonSelect );
+				},
+			}
+		} );
+
+		onLessonSelect = function() {
+			if ( $el.data( 'plugin_webuiPopover' ) ) {
+				$el.webuiPopover( 'destroy' );
+			}
+
+			// Ref #3097 — hide/destroy leaves the popover and backdrop in the DOM.
+			$( '.webui-popover' ).remove();
+			$( '.webui-popover-backdrop' ).remove();
+		};
+
+		pop.show();
+		Backbone.pubSub.once( 'lesson-search-select', onLessonSelect );
+
+	};
+
+} );
+
+/**
  * Single Section View
+ *
  * @since    3.13.0
- * @version  3.16.12
+ * @version  10.3.0
  */
 define( 'Views/Section',[
 		'Views/LessonList',
 		'Views/_Editable',
 		'Views/_Shiftable',
-		'Views/_Trashable'
+		'Views/_Trashable',
+		'Views/ExistingLessonPopover'
 	], function(
 		LessonListView,
 		Editable,
 		Shiftable,
-		Trashable
+		Trashable,
+		show_existing_lesson_popover
 	) {
 
 	return Backbone.View.extend( _.defaults( {
@@ -8016,7 +8500,7 @@ define( 'Views/Section',[
 		 * Events
 		 * @type     {Object}
 		 * @since    3.16.0
-		 * @version  3.16.12
+		 * @version  10.3.0
 		 */
 		events: _.defaults( {
 
@@ -8025,6 +8509,7 @@ define( 'Views/Section',[
 			'click .shift-up--section': 'shift_up',
 			'click .shift-down--section': 'shift_down',
 			'click .new-lesson': 'add_new_lesson',
+			'click .existing-lesson': 'add_existing_lesson',
 			'click .llms-builder-header': 'toggle',
 			'mouseenter .llms-lessons': 'on_mouseenter',
 
@@ -8108,6 +8593,23 @@ define( 'Views/Section',[
 
 			Backbone.pubSub.trigger( 'section-select', this.model );
 			Backbone.pubSub.trigger( 'add-new-lesson' );
+
+		},
+
+		/**
+		 * Open the existing-lesson search popover for this section.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @param {Object} event JS event object.
+		 * @return {Void}
+		 */
+		add_existing_lesson: function( event ) {
+
+			event.preventDefault();
+
+			Backbone.pubSub.trigger( 'section-select', this.model );
+			show_existing_lesson_popover( event.currentTarget, 'top' );
 
 		},
 
@@ -9099,6 +9601,8 @@ define( 'Views/LessonEditor',[
 
 			var is_initial = ! this._has_rendered;
 
+			this.release_select2_scroll_lock();
+
 			this.$el.html( this.template( this.model ) );
 
 			this.remove_subview( 'settings' );
@@ -9139,266 +9643,6 @@ define( 'Views/LessonEditor',[
 			}
 
 		}, Detachable, Editable, Trashable, Subview, SettingsFields ) );
-
-} );
-
-/**
- * Popover View
- *
- * @since 3.16.0
- * @version 4.0.0
- */
-define( 'Views/Popover',[], function() {
-
-	return Backbone.View.extend( {
-
-		/**
-		 * Default Properties
-		 *
-		 * @type {Object}
-		 */
-		defaults: {
-			placement: 'auto',
-			// container: document.body,
-			width: 'auto',
-			trigger: 'manual',
-			style: 'light',
-			animation: 'pop',
-			title: '',
-			content: '',
-			closeable: false,
-			backdrop: false,
-			onShow: function( $el ) {},
-			onHide: function( $el ) {},
-		},
-
-		/**
-		 * Wrapper Tag name
-		 *
-		 * @type {String}
-		 */
-		tagName: 'div',
-
-		/**
-		 * Initialization callback func (renders the element on screen)
-		 *
-		 * @since 3.14.1
-		 * @since 4.0.0 Add RTL support for popovers.
-		 *
-		 * @return void
-		 */
-		initialize: function( data ) {
-
-			if ( this.$el.length ) {
-				this.defaults.container = this.$el.parent();
-			}
-
-			this.args = _.defaults( data.args, this.defaults );
-
-			// Reverse directions for RTL sites.
-			if ( $( 'body' ).hasClass( 'rtl' ) ) {
-
-				if ( -1 !== this.args.placement.indexOf( 'left' ) ) {
-					this.args.placement = this.args.placement.replace( 'left', 'right' );
-				} else if ( -1 !== this.args.placement.indexOf( 'right' ) ) {
-					this.args.placement = this.args.placement.replace( 'right', 'left' );
-				}
-
-			}
-
-			this.render();
-
-		},
-
-		/**
-		 * Compiles the template and renders the view
-		 *
-		 * @since 3.16.0
-		 *
-		 * @return {Object} Instance of the Backbone.view.
-		 */
-		render: function() {
-
-			this.$el.webuiPopover( this.args );
-			return this;
-
-		},
-
-		/**
-		 * Hide the popover
-		 *
-		 * @since 3.16.0
-		 * @since 3.16.12 Unknown.
-		 *
-		 * @return {Object} Instance of the Backbone.view.
-		 */
-		hide: function() {
-
-			this.$el.webuiPopover( 'hide' );
-			return this;
-
-		},
-
-		/**
-		 * Show the popover
-		 *
-		 * @since 3.16.0
-		 * @since 3.16.12 Unknown.
-		 *
-		 * @return {Object} Instance of the Backbone.view.
-		 */
-		show: function() {
-
-			this.$el.webuiPopover( 'show' );
-			return this;
-
-		},
-
-	} );
-
-} );
-
-/**
- * Post Popover Search content View
- *
- * @since 3.16.0
- * @version 4.4.0
- */
-define( 'Views/PostSearch',[], function() {
-
-	return Backbone.View.extend( {
-
-		/**
-		 * DOM Events
-		 *
-		 * @type     obj
-		 * @since    3.16.0
-		 * @version  3.16.0
-		 */
-		events: {
-			'select2:select': 'add_post',
-		},
-
-		/**
-		 * Wrapper Tag name
-		 *
-		 * @type  {String}
-		 */
-		tagName: 'select',
-
-		/**
-		 * Initializer
-		 *
-		 * @param    obj   data  customize the search box with data
-		 * @return   void
-		 * @since    3.16.12
-		 * @version  3.16.12
-		 */
-		initialize: function( data ) {
-
-			this.post_type         = data.post_type;
-			this.searching_message = data.searching_message || LLMS.l10n.translate( 'Searching...' );
-
-		},
-
-		/**
-		 * Select event, adds the existing lesson to the course
-		 *
-		 * @param    obj   event  select2:select event object
-		 * @since    3.16.0
-		 * @version  3.17.0
-		 */
-		add_post: function( event ) {
-
-			var type = this.$el.attr( 'data-post-type' );
-
-			Backbone.pubSub.trigger( type.replace( 'llms_', '' ) + '-search-select', event.params.data, event );
-			this.$el.val( null ).trigger( 'change' );
-
-		},
-
-		/**
-		 * Render the section
-		 *
-		 * Initializes a new collection and views for all lessons in the section.
-		 *
-		 * @since 3.16.0
-		 * @since 3.16.12 Unknown.
-		 * @since 4.4.0 Update ajax nonce source.
-		 *
-		 * @return void
-		 */
-		render: function() {
-			var self = this;
-			setTimeout( function () {
-				self.$el.llmsSelect2( {
-					ajax: {
-						dataType: 'JSON',
-						delay: 250,
-						method: 'POST',
-						url: window.ajaxurl,
-						data: function( params ) {
-							return {
-								action: 'llms_builder',
-								action_type: 'search',
-								course_id: window.llms_builder.course.id,
-								post_type: self.post_type,
-								term: params.term,
-								page: params.page,
-								_ajax_nonce: window.llms.ajax_nonce,
-							};
-						},
-					},
-					dropdownParent: $( '.wrap.lifterlms.llms-builder' ),
-					// Don't escape html from render_result.
-					escapeMarkup: function( markup ) {
-						return markup;
-					},
-					placeholder: self.searching_message,
-					templateResult: self.render_result,
-					width: '100%',
-				} );
-				self.$el.attr( 'data-post-type', self.post_type );
-			}, 0 );
-			return this;
-
-		},
-
-		/**
-		 * Render a nicer UI for each search result in the in the Select2 search results
-		 *
-		 * @param    object   res  result data
-		 * @return   string
-		 * @since    3.16.0
-		 * @version  3.16.12
-		 */
-		render_result: function( res ) {
-
-			var $html = $( '<div class="llms-existing-lesson-result" />' );
-
-			if ( res.loading ) {
-				return $html.append( res.text );
-			}
-
-			var $side = $( '<aside class="llms-existing-action" />' ),
-				$main = $( '<div class="llms-existing-info" />' );
-				icon  = ( 'attach' === res.action ) ? 'paperclip' : 'clone',
-				text  = ( 'attach' === res.action ) ? LLMS.l10n.translate( 'Attach' ) : LLMS.l10n.translate( 'Clone' );
-
-			$side.append( '<i class="fa fa-' + icon + '" aria-hidden="true"></i><small>' + text + '</small>' );
-
-			$main.append( '<h4>' + res.data.title + '</h4>' );
-			$main.append( '<h5>' + LLMS.l10n.translate( 'ID' ) + ': <em>' + res.data.id + '</em></h5>' );
-
-			_.each( res.parents, function( parent ) {
-				$main.append( '<h5>' + parent + '</em></h5>' );
-			} );
-
-			return $html.append( $side ).append( $main );
-
-		},
-
-	} );
 
 } );
 
@@ -10485,6 +10729,12 @@ define( 'Views/Quiz',[
 
 				this.model.load_questions( _.bind( function( err ) {
 
+					// Editor was replaced before this response arrived. Rendering now
+					// targets the new #llms-quiz-questions and leaves it empty.
+					if ( ! this.$el.closest( 'body' ).length ) {
+						return;
+					}
+
 					if ( err ) {
 						alert( LLMS.l10n.translate( 'An error occurred while trying to load the questions. Please refresh the page and try again.' ) );
 						return this;
@@ -11293,9 +11543,9 @@ define( 'Views/Editor',[
  * Sidebar Elements View
  *
  * @since    3.16.0
- * @version  3.16.12
+ * @version  10.3.0
  */
-define( 'Views/Elements',[ 'Models/Section', 'Views/Section', 'Models/Lesson', 'Views/Lesson', 'Views/Popover', 'Views/PostSearch' ], function( Section, SectionView, Lesson, LessonView, Popover, LessonSearch ) {
+define( 'Views/Elements',[ 'Models/Section', 'Views/Section', 'Models/Lesson', 'Views/Lesson', 'Views/ExistingLessonPopover' ], function( Section, SectionView, Lesson, LessonView, show_existing_lesson_popover ) {
 
 	return Backbone.View.extend( {
 
@@ -11340,7 +11590,7 @@ define( 'Views/Elements',[ 'Models/Section', 'Views/Section', 'Models/Lesson', '
 
 			// watch course sections and enable/disable lesson buttons conditionally
 			this.listenTo( this.SidebarView.CourseView.model.get( 'sections' ), 'add', this.maybe_disable_buttons );
-			this.listenTo( this.SidebarView.CourseView.model.get( 'sections' ), 'remove', this.maybe_disable_buttons );
+			this.listenTo( this.SidebarView.CourseView.model.get( 'sections' ), 'remove', this.on_section_remove );
 
 		},
 
@@ -11415,66 +11665,142 @@ define( 'Views/Elements',[ 'Models/Section', 'Views/Section', 'Models/Lesson', '
 		 * @param    object   event  JS Event Object
 		 * @return   void
 		 * @since    3.16.12
-		 * @version  3.16.12
+		 * @version  10.3.0
 		 */
 		add_existing_lesson: function( event ) {
 
 			event.preventDefault();
-
-			var pop, onLessonSelect;
-
-			pop = new Popover( {
-				el: '#llms-existing-lesson',
-				args: {
-					backdrop: true,
-					closeable: true,
-					container: '.wrap.lifterlms.llms-builder',
-					dismissible: true,
-					placement: 'left',
-					width: 480,
-					title: LLMS.l10n.translate( 'Add Existing Lesson' ),
-					content: new LessonSearch( {
-						post_type: 'lesson',
-						searching_message: LLMS.l10n.translate( 'Search for existing lessons...' ),
-					} ).render().$el,
-					onHide: function() {
-						Backbone.pubSub.off( 'lesson-search-select', onLessonSelect );
-					},
-				}
-			} );
-
-			onLessonSelect = function() {
-				pop.hide();
-
-				// Ref #3097 — pop.hide() doesn't always remove the DOM elements.
-				$( '.webui-popover' ).remove();
-				$( '.webui-popover-backdrop' ).remove();
-			};
-
-			pop.show();
-			Backbone.pubSub.once( 'lesson-search-select', onLessonSelect );
+			show_existing_lesson_popover( '#llms-existing-lesson', 'left' );
 
 		},
 
 		/**
-		 * Disables lesson add buttons if no sections are available to add a lesson to
+		 * Add a demo section and three lessons when a course outline is empty.
+		 *
+		 * Later empty outlines get a single section and no lessons. The elements
+		 * view is rebuilt when the sidebar re-renders, so the demo seed runs once.
 		 *
 		 * @return   void
 		 * @since    3.16.0
-		 * @version  3.16.0
+		 * @version  10.3.0
 		 */
 		maybe_add_initial_section: function() {
+
+			var course = this.SidebarView.CourseView.model;
+
+			if ( course._outline_seeded ) {
+				this.maybe_add_blank_section();
+				this.maybe_disable_buttons();
+				return;
+			}
+
+			course._outline_seeded = true;
+
+			if ( ! course.get( 'sections' ).length ) {
+				if ( false !== window.llms_builder.seed_starter ) {
+					Backbone.pubSub.trigger( 'add-new-section' );
+					Backbone.pubSub.trigger( 'add-new-lesson' );
+					Backbone.pubSub.trigger( 'add-new-lesson' );
+					Backbone.pubSub.trigger( 'add-new-lesson' );
+				} else {
+					this.maybe_add_blank_section();
+				}
+			}
+
+			this.maybe_disable_buttons();
+
+		},
+
+		/**
+		 * Keep one section on screen when the outline would otherwise be empty.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @return {void}
+		 */
+		maybe_add_blank_section: function() {
+
+			var course = this.SidebarView.CourseView.model;
+
+			if ( course.get( 'sections' ).length || course._adding_blank_section ) {
+				return;
+			}
+
+			course._adding_blank_section = true;
+			Backbone.pubSub.trigger( 'add-new-section' );
+			course._adding_blank_section = false;
+
+			// A blank replacement must not bring the three demo lessons back on reload.
+			this.dismiss_starter_outline();
+
+		},
+
+		/**
+		 * Disable lesson buttons when the course has no section to add a lesson to.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @return {void}
+		 */
+		maybe_disable_buttons: function() {
 
 			var $els = $( '#llms-new-lesson, #llms-existing-lesson' );
 
 			if ( ! this.SidebarView.CourseView.model.get( 'sections' ).length ) {
-				Backbone.pubSub.trigger( 'add-new-section' );
-				Backbone.pubSub.trigger( 'add-new-lesson' );
-				Backbone.pubSub.trigger( 'add-new-lesson' );
-				Backbone.pubSub.trigger( 'add-new-lesson' );
+				$els.attr( 'disabled', 'disabled' );
 			} else {
 				$els.removeAttr( 'disabled' );
 			}
+
+		},
+
+		/**
+		 * After a section is removed, keep a section on screen without demo lessons.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @return {void}
+		 */
+		on_section_remove: function() {
+
+			this.maybe_disable_buttons();
+			this.maybe_add_blank_section();
+
+		},
+
+		/**
+		 * Persist that the demo lessons should not be inserted again.
+		 *
+		 * The demo outline is unsaved until the course is saved, so deleting it does
+		 * not produce a trash payload. Without this flag the next builder load sees
+		 * an empty course and inserts the three lessons again.
+		 *
+		 * @since 10.3.0
+		 *
+		 * @return {void}
+		 */
+		dismiss_starter_outline: function() {
+
+			var course = this.SidebarView.CourseView.model;
+
+			if ( course._starter_dismissed || ! course.get( 'id' ) ) {
+				return;
+			}
+
+			course._starter_dismissed = true;
+			window.llms_builder.seed_starter = false;
+
+			if ( ! window.LLMS || ! LLMS.Ajax ) {
+				return;
+			}
+
+			LLMS.Ajax.call( {
+				data: {
+					action: 'llms_builder',
+					action_type: 'dismiss_starter',
+					course_id: course.get( 'id' ),
+				},
+			} );
 
 		},
 
@@ -11862,10 +12188,30 @@ define( 'Views/Sidebar',[
 		 */
 		on_lesson_select: function( lesson_model, tab ) {
 
-			if ( 'editor' !== this.state ) {
-				this.set_state( 'editor' );
-			} else {
+			tab = tab || 'lesson';
+
+			if ( 'editor' === this.state ) {
+
+				var editor = this.get_subview( 'editor' );
+
+				// Deep link and a second click on the same icon both fire this.
+				// Re-rendering destroys the quiz view while its questions are still lazy-loading.
+				if (
+					editor &&
+					editor.instance &&
+					editor.instance.model &&
+					String( editor.instance.model.get( 'id' ) ) === String( lesson_model.get( 'id' ) ) &&
+					editor.instance.state === tab
+				) {
+					return;
+				}
+
 				this.remove_subview( 'editor' );
+
+			} else {
+
+				this.set_state( 'editor' );
+
 			}
 
 			this.render( {

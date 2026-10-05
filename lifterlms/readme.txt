@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 10.2.1
+Stable tag: 10.3.0
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,12 +506,53 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.3.0 - 2026-10-05 =
+
+##### New Features
+
++ Course builder shows a permalink preview for unsaved lessons and quizzes, based on the title, until the slug is edited.
++ Added an "Add Existing Lesson" button next to "Add New Lesson" in each Course Builder section.
++ Added a Customers screen under Orders with lifetime value, order history, and customer segments.
+
+##### Updates and Enhancements
+
++ Refreshed the course builder settings panels and outline columns.
+
+##### Bug Fixes
+
++ Fix overlapping percentage sign when entering certificate margins. [#3373](https://github.com/gocodebox/lifterlms/issues/3373)
++ Fixed certificate editor sidebar control layout. [#3340](https://github.com/gocodebox/lifterlms/issues/3340)
++ Improved styling in the back end editor for Lesson Progression and Access Plan buttons. [#3359](https://github.com/gocodebox/lifterlms/issues/3359)
++ Fixed the course builder hiding the lesson editor after saving content added in the builder. [#3360](https://github.com/gocodebox/lifterlms/issues/3360)
++ Fixed editing the access plan description on a new plan before it is saved. [#3369](https://github.com/gocodebox/lifterlms/issues/3369)
++ Fixed a blank line in the order billing address when Address 2 is empty. [#3375](https://github.com/gocodebox/lifterlms/issues/3375)
++ Fixed lesson settings in the course builder jumping back down after the drip method is changed. [#3376](https://github.com/gocodebox/lifterlms/issues/3376)
++ Fixed deleting the last course section immediately adding three new lessons. [#3377](https://github.com/gocodebox/lifterlms/issues/3377)
++ Fixed the course builder dropping quiz questions when the quiz editor is opened again while they are still loading.
++ Improved prevention of recurring charges when the site URL no longer matches the stored lock.
++ Show address fields that are populated. Thanks [@robindevitt](https://github.com/robindevitt)! [#3020](https://github.com/gocodebox/lifterlms/issues/3020)
+
+##### Security Fixes
+
++ Additional checks on feeds. Thanks [@Yo1o-sir](https://github.com/Yo1o-sir)!
++ Additional checks on REST API endpoints.
++ Improved validation of course builder and import data.
+
+##### Updated Templates
+
++ [templates/admin/customers/customer.php](https://github.com/gocodebox/lifterlms/blob/10.3.0/templates/admin/customers/customer.php)
++ [templates/admin/customers/list.php](https://github.com/gocodebox/lifterlms/blob/10.3.0/templates/admin/customers/list.php)
++ [templates/admin/customers/orders-table.php](https://github.com/gocodebox/lifterlms/blob/10.3.0/templates/admin/customers/orders-table.php)
++ [templates/admin/customers/orders.php](https://github.com/gocodebox/lifterlms/blob/10.3.0/templates/admin/customers/orders.php)
++ [templates/admin/customers/overview.php](https://github.com/gocodebox/lifterlms/blob/10.3.0/templates/admin/customers/overview.php)
+
+
 = v10.2.1 - 2026-09-14 =
 
 ##### New Features
 
 + Added informative notices about available add-ons in the admin.
-+ Makes Course IDs easier to find. [#3321](https://github.com/gocodebox/lifterlms/issues/3321)
++ Makes Course IDs easier to find. [#3321](https://github.com/gocodebox/lifterlms/issues/3321) Thanks [@robindevitt](https://github.com/robindevitt)!
 
 ##### Updates and Enhancements
 
@@ -526,9 +567,9 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 ##### Security Fixes
 
-+ Hardened certificate export handling.
-+ Additional checks in admin reporting.
-+ Additional authorization checks on REST API endpoints.
++ Hardened certificate export handling. Thanks [@s3rt4c](https://github.com/s3rt4c)!
++ Additional checks in admin reporting. Thanks [@s3rt4c](https://github.com/s3rt4c)!
++ Additional authorization checks on REST API endpoints. Thanks [@s3rt4c](https://github.com/s3rt4c) and [@MrDarkRoot](https://github.com/MrDarkRoot)!
 
 ##### Updated Templates
 
@@ -744,13 +785,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Security Fixes
 
 + Additional check when updating a quiz question. Thanks [@0xEr3n](https://github.com/0xEr3n)!
-
-
-= v10.0.5 - 2026-06-08 =
-
-##### Deprecations
-
-+ Deprecated method for querying quiz questions. Quiz question searching is handled by the Course Builder via the `llms_builder` AJAX flow.
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
