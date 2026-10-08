@@ -2,16 +2,16 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.3.0\n"
+"Project-Id-Version: LifterLMS 10.3.1\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-05T15:46:52+00:00\n"
+"POT-Creation-Date: 2026-10-08T12:53:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: llms/dev 0.3.0\n"
+"X-Generator: llms/dev 0.3.1\n"
 "X-Domain: lifterlms\n"
 
 #. Plugin Name of the plugin
@@ -332,14 +332,14 @@ msgstr ""
 msgid "Unable to generate export file, could not open file for writing."
 msgstr ""
 
-#: includes/abstracts/llms.abstract.exportable.admin.table.php:251
+#: includes/abstracts/llms.abstract.exportable.admin.table.php:317
 msgctxt "Used in export filenames"
 msgid "export"
 msgstr ""
 
 #. Translators: %s = the name of the method.
 #. Translators: %s = method name.
-#: includes/abstracts/llms.abstract.exportable.admin.table.php:319
+#: includes/abstracts/llms.abstract.exportable.admin.table.php:385
 #: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-controller-stubs.php:88
 #: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-controller-stubs.php:116
 #: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-controller-stubs.php:134
@@ -1829,16 +1829,16 @@ msgstr ""
 msgid "Your settings have been saved."
 msgstr ""
 
-#: includes/admin/class.llms.admin.settings.php:675
+#: includes/admin/class.llms.admin.settings.php:684
 #: includes/admin/views/import.php:21
 msgid "Upload"
 msgstr ""
 
-#: includes/admin/class.llms.admin.settings.php:718
+#: includes/admin/class.llms.admin.settings.php:727
 msgid "Select a page&hellip;"
 msgstr ""
 
-#: includes/admin/class.llms.admin.settings.php:747
+#: includes/admin/class.llms.admin.settings.php:756
 #: includes/admin/settings/class.llms.settings.security.php:53
 #: includes/class.llms.l10n.frontend.php:164
 #: includes/class.llms.l10n.frontend.php:400
@@ -2295,7 +2295,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:64
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:70
-#: includes/class.llms.ajax.handler.php:1043
+#: includes/class.llms.ajax.handler.php:1078
 #: includes/llms.functions.core.php:1091
 msgid "ID#"
 msgstr ""
@@ -5314,39 +5314,44 @@ msgstr ""
 msgid "reCAPTCHA v3 Site Key"
 msgstr ""
 
+#: includes/admin/settings/class.llms.settings.security.php:75
+#: includes/admin/settings/class.llms.settings.security.php:108
+msgid "Saved keys are partially hidden. Enter a new key to replace the current one, or clear the field to remove it."
+msgstr ""
+
 #: includes/admin/settings/class.llms.settings.security.php:76
 msgid "reCAPTCHA v3 Secret Key"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:84
+#: includes/admin/settings/class.llms.settings.security.php:89
 msgid "reCAPTCHA Minimum Score"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:96
+#: includes/admin/settings/class.llms.settings.security.php:101
 msgid "Turnstile Site Key"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:104
+#: includes/admin/settings/class.llms.settings.security.php:109
 msgid "Turnstile Secret Key"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:111
+#: includes/admin/settings/class.llms.settings.security.php:121
 msgid "Block IPs from checkout if there are more than 10 failures within 15 minutes."
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:112
+#: includes/admin/settings/class.llms.settings.security.php:122
 msgid "Spam Protection"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:122
+#: includes/admin/settings/class.llms.settings.security.php:132
 msgid "Enable Akismet spam protection."
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:123
+#: includes/admin/settings/class.llms.settings.security.php:133
 msgid "Akismet Spam Protection"
 msgstr ""
 
-#: includes/admin/settings/class.llms.settings.security.php:154
+#: includes/admin/settings/class.llms.settings.security.php:164
 msgid "Security"
 msgstr ""
 
@@ -7838,42 +7843,42 @@ msgstr ""
 
 #. Translators: %s = The user-submitted coupon code.
 #. Translators: %s = coupon code.
-#: includes/class-llms-order-generator.php:573
-#: includes/class.llms.ajax.handler.php:1160
-#: includes/functions/llms.functions.order.php:405
+#: includes/class-llms-order-generator.php:554
+#: includes/class.llms.ajax.handler.php:1195
+#: includes/functions/llms.functions.order.php:402
 #, php-format
 msgid "Coupon code \"%s\" not found."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:610
-#: includes/functions/llms.functions.order.php:422
+#: includes/class-llms-order-generator.php:591
+#: includes/functions/llms.functions.order.php:419
 msgid "No payment method selected."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:639
-#: includes/class-llms-order-generator.php:647
+#: includes/class-llms-order-generator.php:620
+#: includes/class-llms-order-generator.php:628
 #: includes/controllers/class-llms-controller-checkout.php:105
 #: includes/controllers/class-llms-controller-checkout.php:111
 #: includes/shortcodes/class.llms.shortcode.checkout.php:304
 msgid "Could not locate an order to confirm."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:668
+#: includes/class-llms-order-generator.php:649
 msgid "Missing access plan ID."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:673
+#: includes/class-llms-order-generator.php:654
 msgid "Access plan not found."
 msgstr ""
 
 #. Translators: %s = The title of the site's LifterLMS Terms and Conditions page.
-#: includes/class-llms-order-generator.php:700
+#: includes/class-llms-order-generator.php:681
 #, php-format
 msgid "You must agree to the %s."
 msgstr ""
 
 #. Translators: %s = The title of the course or membership.
-#: includes/class-llms-order-generator.php:731
+#: includes/class-llms-order-generator.php:712
 #, php-format
 msgid "You already have access to %s."
 msgstr ""
@@ -7934,7 +7939,7 @@ msgstr ""
 #: includes/class.llms.ajax.handler.php:57
 #: includes/class.llms.ajax.handler.php:83
 #: includes/class.llms.ajax.handler.php:110
-#: includes/class.llms.ajax.handler.php:1094
+#: includes/class.llms.ajax.handler.php:1129
 msgid "Missing required parameters"
 msgstr ""
 
@@ -8039,60 +8044,60 @@ msgstr ""
 msgid "There was an error recording your answer. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1098
+#: includes/class.llms.ajax.handler.php:1133
 msgid "Invalid status"
 msgstr ""
 
 #. Translators: %s = action add|remove|delete.
-#: includes/class.llms.ajax.handler.php:1120
+#: includes/class.llms.ajax.handler.php:1155
 #, php-format
 msgid "Action \"%1$s\" failed. Please try again"
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1147
+#: includes/class.llms.ajax.handler.php:1182
 msgid "Please enter a coupon code."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1151
+#: includes/class.llms.ajax.handler.php:1186
 msgid "Please enter a plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1310
+#: includes/class.llms.ajax.handler.php:1345
 msgid "Invalid access plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1314
+#: includes/class.llms.ajax.handler.php:1349
 msgid "Access plan does not belong to this product."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1362
+#: includes/class.llms.ajax.handler.php:1397
 msgid "Missing tracking data."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1388
-#: includes/class.llms.ajax.handler.php:1476
+#: includes/class.llms.ajax.handler.php:1423
+#: includes/class.llms.ajax.handler.php:1511
 msgid "Session token is required."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1393
-#: includes/class.llms.ajax.handler.php:1481
+#: includes/class.llms.ajax.handler.php:1428
+#: includes/class.llms.ajax.handler.php:1516
 msgid "Invalid session token."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1398
+#: includes/class.llms.ajax.handler.php:1433
 msgid "You must be logged in."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1402
-#: includes/class.llms.ajax.handler.php:1486
+#: includes/class.llms.ajax.handler.php:1437
+#: includes/class.llms.ajax.handler.php:1521
 msgid "Invalid session."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1408
+#: includes/class.llms.ajax.handler.php:1443
 msgid "This session has been replaced. Please reload the page to continue tracking time."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1427
+#: includes/class.llms.ajax.handler.php:1462
 msgid "Rate limit exceeded."
 msgstr ""
 
@@ -10234,7 +10239,7 @@ msgstr ""
 msgid "Sorry, you are not allowed to delete %s with active subscriptions."
 msgstr ""
 
-#: includes/class.llms.query.php:368
+#: includes/class.llms.query.php:465
 msgctxt "slug"
 msgid "my_certificate"
 msgstr ""
@@ -10469,25 +10474,25 @@ msgstr ""
 msgid "Only pending orders can be confirmed."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:555
+#: includes/controllers/class-llms-controller-checkout.php:578
 msgid "Missing order information."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:560
+#: includes/controllers/class-llms-controller-checkout.php:583
 msgid "Invalid order."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:565
+#: includes/controllers/class-llms-controller-checkout.php:588
 msgid "Missing gateway information."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:577
+#: includes/controllers/class-llms-controller-checkout.php:600
 #: libraries/lifterlms-helper/includes/class-llms-helper-upgrader.php:126
 msgid "Invalid action."
 msgstr ""
 
 #. Translators: %1$s = old payment gateway ID; %2$s = new payment gateway ID.
-#: includes/controllers/class-llms-controller-checkout.php:632
+#: includes/controllers/class-llms-controller-checkout.php:655
 #, php-format
 msgid "Payment source updated by customer. Payment gateway changed from \"%1$s\" to \"%2$s\"."
 msgstr ""
@@ -10898,7 +10903,7 @@ msgstr ""
 
 #: includes/forms/controllers/class.llms.controller.account.php:132
 #: includes/forms/controllers/class.llms.controller.registration.php:112
-#: includes/functions/llms.functions.order.php:452
+#: includes/functions/llms.functions.order.php:449
 msgid "An unknown error occurred when attempting to create an account, please try again."
 msgstr ""
 
@@ -11243,34 +11248,34 @@ msgstr ""
 msgid "The selected payment gateway does not support one-time payments."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:300
-#: includes/functions/llms.functions.order.php:383
+#: includes/functions/llms.functions.order.php:296
+#: includes/functions/llms.functions.order.php:380
 msgid "Invalid Access Plan ID."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:302
+#: includes/functions/llms.functions.order.php:299
 msgid "This access plan is not available."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:306
+#: includes/functions/llms.functions.order.php:303
 msgid "This product is not available for purchase."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:369
+#: includes/functions/llms.functions.order.php:366
 #, php-format
 msgid "You must agree to the %s to continue."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:376
+#: includes/functions/llms.functions.order.php:373
 msgid "Missing an Access Plan ID."
 msgstr ""
 
-#: includes/functions/llms.functions.order.php:433
+#: includes/functions/llms.functions.order.php:430
 msgid "Missing customer information."
 msgstr ""
 
 #. Translators: %2$s = The product type (course/membership); %1$s = product permalink.
-#: includes/functions/llms.functions.order.php:473
+#: includes/functions/llms.functions.order.php:470
 #: includes/shortcodes/class.llms.shortcode.checkout.php:82
 #, php-format
 msgid "You already have access to this %2$s! Visit your dashboard <a href=\"%1$s\">here.</a>"
@@ -11975,7 +11980,7 @@ msgstr ""
 msgid "Trial"
 msgstr ""
 
-#: includes/models/model.llms.user.certificate.php:748
+#: includes/models/model.llms.user.certificate.php:739
 msgid "Loading custom HTML from the certificate template is deprecated. All HTML should be added to the certificate directly via the editor or applied via post content filters."
 msgstr ""
 
@@ -24728,192 +24733,192 @@ msgstr ""
 msgid "Bypass the trash and force course deletion."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:129
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:128
 msgid "Post password. Required if the post is password protected."
 msgstr ""
 
 #. Translators: %s = The post type name.
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:211
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:207
 #, php-format
 msgid "Cannot create existing %s."
 msgstr ""
 
 #. Translators: %s = The post type name.
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:216
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:212
 #, php-format
 msgid "Sorry, you are not allowed to create %s as this user."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:220
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:517
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:216
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:673
 msgid "Sorry, you are not allowed to assign the provided terms."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:365
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:361
 msgid "Incorrect password."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:396
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:392
 msgid "Limit result set to posts assigned one or more statuses."
-msgstr ""
-
-#. Translators: %s = The post type name.
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:513
-#, php-format
-msgid "Sorry, you are not allowed to update %s as this user."
 msgstr ""
 
 #. Translators: %s = The post type name.
 #: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:669
 #, php-format
+msgid "Sorry, you are not allowed to update %s as this user."
+msgstr ""
+
+#. Translators: %s = The post type name.
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:824
+#, php-format
 msgid "Sorry, you are not allowed to delete %s as this user."
 msgstr ""
 
 #. translators: %1$s: post type name, %2$s: force=true
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:720
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:874
 #, php-format
 msgid "The %1$s does not support trashing. Set '%2$s' to delete."
 msgstr ""
 
 #. translators: %s: post type name
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:744
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:898
 #, php-format
 msgid "The %s cannot be deleted."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1114
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1259
 msgid "Unique Identifier. The WordPress Post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1120
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1265
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:233
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-webhooks-controller.php:182
 msgid "Creation date. Format: Y-m-d H:i:s"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1125
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1270
 msgid "Creation date (in GMT). Format: Y-m-d H:i:s"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1130
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1275
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:242
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-webhooks-controller.php:189
 msgid "Date last modified. Format: Y-m-d H:i:s"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1136
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1281
 msgid "Date last modified (in GMT). Format: Y-m-d H:i:s"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1142
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1287
 msgid "Order of the post among its siblings. Used for ordering questions within a quiz, lessons within a section, and similar hierarchical relationships."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1151
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1296
 msgid "Post title."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1161
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1306
 msgid "Raw title. Useful when displaying title in the WP Block Editor. Only returned in edit context."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1166
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1311
 msgid "Rendered title."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1175
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1320
 msgid "The HTML content of the post."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1184
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1329
 msgid "Rendered HTML content."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1190
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1335
 msgid "Raw HTML content. Useful when displaying title in the WP Block Editor. Only returned in edit context."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1195
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1340
 msgid "Whether the content is protected with a password."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1204
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1349
 msgid "The HTML excerpt of the post."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1212
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1357
 msgid "Rendered HTML excerpt."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1218
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1363
 msgid "Raw HTML excerpt. Useful when displaying title in the WP Block Editor. Only returned in edit context."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1223
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1368
 msgid "Whether the excerpt is protected with a password."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1231
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1376
 msgid "Post URL."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1238
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1383
 msgid "Post URL slug."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1246
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1391
 msgid "LifterLMS custom post type"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1252
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1397
 msgid "The publication status of the post."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1266
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1411
 msgid "Password used to protect access to the content."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1271
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1416
 msgid "Featured image ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1276
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1421
 msgid "Post comment status. Default comment status dependent upon general WordPress post discussion settings."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1283
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1428
 msgid "Post ping status. Default ping status dependent upon general WordPress post discussion settings."
 msgstr ""
 
 #. translators: %s: post type
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1324
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1468
 #, php-format
 msgid "The %s cannot be retrieved."
 msgstr ""
 
 #. translators: %s: post type
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1350
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1494
 #, php-format
 msgid "The %s cannot be created."
 msgstr ""
 
 #. Translators: %s = The post type name.
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1532
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1673
 #, php-format
 msgid "Sorry, you are not allowed to create private %s."
 msgstr ""
 
 #. Translators: $s = The post type name.
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1539
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1680
 #, php-format
 msgid "Sorry, you are not allowed to publish %s."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1572
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1713
 msgid "Invalid featured media ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1847
+#: libraries/lifterlms-rest/includes/abstracts/class-llms-rest-posts-controller.php:1982
 msgid "Status is forbidden."
 msgstr ""
 
@@ -25252,7 +25257,7 @@ msgstr ""
 msgid "\"%s\" is not a valid permission."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/class-llms-rest-authentication.php:311
+#: libraries/lifterlms-rest/includes/class-llms-rest-authentication.php:387
 msgid "LifterLMS REST API"
 msgstr ""
 
@@ -25825,74 +25830,73 @@ msgid "The trigger of the enrollment to act on."
 msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:102
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:723
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:704
 msgid "The status of the enrollment."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:148
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:147
 msgid "Unique course or membership Identifier. The WordPress Post `ID.`"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:291
-msgid "Cannot create existing enrollment. Use the PATCH method if you want to update an existing enrollment"
-msgstr ""
-
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:295
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:284
 msgid "Sorry, you are not allowed to create an enrollment as this user."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:343
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:290
+msgid "Cannot create existing enrollment. Use the PATCH method if you want to update an existing enrollment"
+msgstr ""
+
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:338
 msgid "The enrollment could not be created"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:385
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:374
 msgid "Sorry, you are not allowed to update an enrollment as this user."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:437
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:430
 msgid "The enrollment status could not be updated"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:451
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:444
 msgid "The enrollment creation date could not be updated"
 msgstr ""
 
-#. Translators: %s = The post type name.
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:497
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:476
 msgid "Sorry, you are not allowed to delete enrollments as this user."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:537
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:521
 msgid "The enrollment cannot be deleted."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:670
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:651
 msgid "Filter results to records matching the specified status."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:677
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:658
 msgid "Limit results to a specific course or membership or a list of courses and/or memberships. Accepts a single post id or a comma separated list of post ids."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:700
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:681
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:227
 msgid "The ID of the course/membership."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:706
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:687
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-students-progress-controller.php:221
 msgid "The ID of the student."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:712
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:693
 msgid "Creation date. Format: `Y-m-d H:i:s`"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:717
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:698
 msgid "Date last modified. Format: `Y-m-d H:i:s`"
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:729
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-enrollments-controller.php:710
 msgid "The enrollment trigger. Requests default to `any`, which matches an enrollment with any trigger; enrollments created without an explicit trigger are stored as `unspecified`."
 msgstr ""
 
@@ -26217,63 +26221,63 @@ msgstr ""
 msgid "Unique identifier for the parent quiz. The WordPress Post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:129
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:156
 msgid "Limit results to questions belonging to a specific quiz. Accepts a quiz WP_Post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:191
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:218
 msgid "The provided parent_id is not a valid quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:195
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:222
 msgid "Sorry, you are not allowed to add questions to the requested quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:426
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:453
 msgid "WordPress post ID of the question's parent quiz. 0 indicates an \"orphaned\" question."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:434
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:461
 msgid "The type of the question. Additional types may be registered by add-ons such as LifterLMS Advanced Quizzes."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:441
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:468
 msgid "The number of points awarded for a correct answer to the question."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:450
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:477
 msgid "Whether students may select more than one choice. Only used by choice-type questions."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:456
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:483
 msgid "Clarification text (HTML) displayed to students when reviewing the question after grading."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:464
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:491
 msgid "URL to an oEmbed enabled video to display with the question."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:473
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:500
 msgid "List of the question's choices. Only used by question types which support choices. Treated as the complete set on update: existing choices omitted from the list are deleted."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:480
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:507
 msgid "The choice unique identifier. Provide to update an existing choice, omit to create a new choice."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:484
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:511
 msgid "The choice content. A string for text choices or an object (id, src) for image choices."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:488
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:515
 msgid "The type of the choice content."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:494
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:521
 msgid "Whether the choice is a correct answer."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:499
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-questions-controller.php:526
 msgid "The choice marker (A, B, C...). Automatically generated when omitted."
 msgstr ""
 
@@ -26417,55 +26421,55 @@ msgstr ""
 msgid "URL to download the file. For protected uploads this is a temporary signed URL which expires; fetch it promptly and do not store it."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:78
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:104
 msgid "Limit results to quizzes attached to a specific lesson. Accepts a lesson WP_Post ID."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:146
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:172
 msgid "The provided lesson_id is not a valid lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:150
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:176
 msgid "Sorry, you are not allowed to attach a quiz to the requested lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:328
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:354
 msgid "WordPress post ID of the quiz's parent lesson. 0 indicates an \"orphaned\" quiz not attached to any lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:336
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:362
 msgid "Grade required for a student to \"pass\" the quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:344
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:370
 msgid "Whether the number of attempts students are allowed to take the quiz is limited."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:350
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:376
 msgid "Number of times a student is allowed to take the quiz before being locked out of it. Only used when limit_attempts is true. `null` when limit_attempts is false."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:358
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:384
 msgid "Whether a time limit is enforced on the quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:364
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:390
 msgid "Quiz time limit, in minutes. Only used when limit_time is true. `null` when limit_time is false."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:372
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:398
 msgid "Whether to show the correct answer(s) to students on the quiz results screen."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:378
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:404
 msgid "Whether to randomize the order of questions for each attempt."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:384
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:410
 msgid "Whether the latest incomplete quiz attempt can be resumed."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:390
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quizzes-controller.php:416
 msgid "Whether students are prevented from retaking the quiz after passing it."
 msgstr ""
 

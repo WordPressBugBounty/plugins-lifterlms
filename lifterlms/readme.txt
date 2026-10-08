@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 10.3.0
+Stable tag: 10.3.1
 
 Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
 
@@ -506,6 +506,23 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 
 == Changelog ==
 
+= v10.3.1 - 2026-10-08 =
+
+##### Updates and Enhancements
+
++ Captcha secret keys are partially hidden in Security settings after they are saved. [#3387](https://github.com/gocodebox/lifterlms/issues/3387)
+
+##### Bug Fixes
+
++ Additional fix for the plan description editor when adding a new access plan in some cases.
++ Clear the post cache after migrating a post to the block editor.
+
+##### Security Fixes
+
++ Additional checks on REST API collection requests. Thanks [@pokeroot](https://github.com/pokeroot) and Huzaifa Jawaid!
++ Additional security enhancements.
+
+
 = v10.3.0 - 2026-10-05 =
 
 ##### New Features
@@ -774,17 +791,6 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 ##### Updated Templates
 
 + [templates/course/complete-lesson-link.php](https://github.com/gocodebox/lifterlms/blob/10.0.7/templates/course/complete-lesson-link.php)
-
-
-= v10.0.6 - 2026-06-19 =
-
-##### Developer Notes
-
-+ Additional E2E tests.
-
-##### Security Fixes
-
-+ Additional check when updating a quiz question. Thanks [@0xEr3n](https://github.com/0xEr3n)!
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
