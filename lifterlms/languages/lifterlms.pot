@@ -1,15 +1,16 @@
-# Copyright (C) 2014-2026 LifterLMS
+# Copyright (C) 2026 LifterLMS
+# This file is distributed under the GPLv3.# Copyright (C) 2026 LifterLMS
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 10.3.1\n"
+"Project-Id-Version: LifterLMS 10.3.2\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-08T12:53:43+00:00\n"
+"POT-Creation-Date: 2026-10-09T14:37:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.1\n"
 "X-Domain: lifterlms\n"
@@ -2525,8 +2526,8 @@ msgstr ""
 
 #. translators: %s: current global setting label
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.course.options.php:173
-#: includes/functions/llms.functions.template.php:382
-#: includes/functions/llms.functions.template.php:421
+#: includes/functions/llms.functions.template.php:480
+#: includes/functions/llms.functions.template.php:519
 #, php-format
 msgid "Inherit Global Setting (%s)"
 msgstr ""
@@ -4915,38 +4916,38 @@ msgid "Enabling this setting will display lessons in a distraction-free focus mo
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:93
-#: includes/functions/llms.functions.template.php:366
+#: includes/functions/llms.functions.template.php:464
 msgid "Full Width"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:94
-#: includes/functions/llms.functions.template.php:367
+#: includes/functions/llms.functions.template.php:465
 msgid "Extra Wide (1600px)"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:95
-#: includes/functions/llms.functions.template.php:368
+#: includes/functions/llms.functions.template.php:466
 msgid "Wide (1180px)"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:96
-#: includes/functions/llms.functions.template.php:369
+#: includes/functions/llms.functions.template.php:467
 msgid "Default (960px)"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:97
-#: includes/functions/llms.functions.template.php:370
+#: includes/functions/llms.functions.template.php:468
 msgid "Narrow (768px)"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:108
-#: includes/functions/llms.functions.template.php:408
+#: includes/functions/llms.functions.template.php:506
 #: assets/js/llms-admin-certificate-editor.js:1
 msgid "Left"
 msgstr ""
 
 #: includes/admin/settings/class.llms.settings.courses.php:109
-#: includes/functions/llms.functions.template.php:409
+#: includes/functions/llms.functions.template.php:507
 #: assets/js/llms-admin-certificate-editor.js:1
 msgid "Right"
 msgstr ""
@@ -7859,7 +7860,7 @@ msgstr ""
 #: includes/class-llms-order-generator.php:628
 #: includes/controllers/class-llms-controller-checkout.php:105
 #: includes/controllers/class-llms-controller-checkout.php:111
-#: includes/shortcodes/class.llms.shortcode.checkout.php:304
+#: includes/shortcodes/class.llms.shortcode.checkout.php:309
 msgid "Could not locate an order to confirm."
 msgstr ""
 
@@ -13386,11 +13387,11 @@ msgstr ""
 msgid "Already have an account? <a href=\"%s\">Click here to login</a>"
 msgstr ""
 
-#: includes/shortcodes/class.llms.shortcode.checkout.php:296
+#: includes/shortcodes/class.llms.shortcode.checkout.php:301
 msgid "Invalid access plan."
 msgstr ""
 
-#: includes/shortcodes/class.llms.shortcode.checkout.php:323
+#: includes/shortcodes/class.llms.shortcode.checkout.php:328
 #, php-format
 msgid "Your cart is currently empty. Click <a href=\"%s\">here</a> to get started."
 msgstr ""
