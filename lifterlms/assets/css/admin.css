@@ -1,4 +1,39 @@
 @charset "UTF-8";
+:where(body.wp-admin) {
+  --llms-color-primary: #466dd8;
+  --llms-color-primary-hover: #2b55cb;
+  --llms-color-primary-focus: #6888df;
+  --llms-color-primary-subtle: rgba(70, 109, 216, 0.3);
+  --llms-color-on-primary: #fefefe;
+  --llms-color-action: #c05621;
+  --llms-color-action-hover: #f67d28;
+  --llms-color-action-focus: #faad76;
+  --llms-color-action-subtle: rgba(192, 86, 33, 0.15);
+  --llms-color-on-action: #fefefe;
+  --llms-color-success: #4d8d3c;
+  --llms-color-success-subtle: rgba(77, 141, 60, 0.15);
+  --llms-color-warning: #c05621;
+  --llms-color-warning-subtle: rgba(192, 86, 33, 0.15);
+  --llms-color-warning-muted: rgba(192, 86, 33, 0.2);
+  --llms-color-danger: #bb231c;
+  --llms-color-danger-hover: #981c17;
+  --llms-color-danger-focus: #cd261f;
+  --llms-color-danger-subtle: rgba(187, 35, 28, 0.15);
+  --llms-color-danger-muted: rgba(187, 35, 28, 0.3);
+  --llms-color-on-danger: #fefefe;
+  --llms-color-neutral: #e1e1e1;
+  --llms-color-neutral-hover: #cdcdcd;
+  --llms-color-neutral-focus: #ebebeb;
+  --llms-color-on-neutral: #444;
+  --llms-color-on-neutral-hover: #414141;
+  --llms-color-on-solid: #fefefe;
+  --llms-color-border: #dedede;
+  --llms-color-input-border: #999;
+  --llms-color-ink: #1d2327;
+  --llms-radius-sm: 6px;
+  --llms-radius-control: 8px;
+}
+
 #poststuff .llms-metabox:before, #poststuff .llms-metabox:after,
 .llms-form-fields:before,
 .llms-metabox .llms-access-plans:before,
@@ -44,8 +79,8 @@
 .llms-button-primary,
 .llms-button-secondary {
   border: none;
-  border-radius: 8px;
-  color: #fefefe;
+  border-radius: var(--llms-radius-control, var(--llms-radius, 8px));
+  color: var(--llms-color-on-solid, #fefefe);
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
@@ -61,25 +96,38 @@
 .llms-button-primary:active,
 .llms-button-secondary:hover,
 .llms-button-secondary:active {
-  color: #fefefe;
+  color: var(--llms-color-on-solid, #fefefe);
 }
 .llms-button-action:focus,
 .llms-button-danger:focus,
 .llms-button-primary:focus,
 .llms-button-secondary:focus {
-  color: #fefefe;
+  color: var(--llms-color-on-solid, #fefefe);
 }
 
 .llms-button-action,
 .llms-button-danger,
 .llms-button-primary,
 .llms-button-secondary {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
   margin: 0;
   max-width: 100%;
   position: relative;
   text-decoration: none;
+  vertical-align: middle;
   white-space: nowrap;
 }
 .llms-button-action:disabled,
@@ -98,7 +146,9 @@
 .llms-button-danger.full,
 .llms-button-primary.full,
 .llms-button-secondary.full {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   width: 100%;
 }
@@ -144,65 +194,80 @@
 }
 
 /* Fix for cases where link color overrides the button color */
-a.llms-button-action,
-a.llms-button-danger,
 a.llms-button-primary {
-  color: #fefefe;
+  color: var(--llms-color-on-primary, var(--llms-color-on-solid, #fefefe));
+}
+
+a.llms-button-action {
+  color: var(--llms-color-on-action, var(--llms-color-on-solid, #fefefe));
+}
+
+a.llms-button-danger {
+  color: var(--llms-color-on-danger, var(--llms-color-on-solid, #fefefe));
 }
 
 .llms-button-primary {
-  background: #466dd8;
+  background: var(--llms-color-primary, #466dd8);
+  color: var(--llms-color-on-primary, var(--llms-color-on-solid, #fefefe));
 }
 .llms-button-primary:hover, .llms-button-primary.clicked {
-  background: #2b55cb;
+  background: var(--llms-color-primary-hover, color-mix(in srgb, var(--llms-color-primary, #466dd8) 82%, #000));
+  color: var(--llms-color-on-primary, var(--llms-color-on-solid, #fefefe));
 }
 .llms-button-primary:focus, .llms-button-primary:active {
-  background: #6888df;
+  background: var(--llms-color-primary-focus, color-mix(in srgb, var(--llms-color-primary, #466dd8) 81%, #fff));
+  color: var(--llms-color-on-primary, var(--llms-color-on-solid, #fefefe));
 }
 
 .llms-button-secondary {
-  background: #e1e1e1;
-  color: #444;
+  background: var(--llms-color-neutral, #e1e1e1);
+  color: var(--llms-color-on-neutral, #444);
 }
 .llms-button-secondary:hover {
-  color: #414141;
-  background: #cdcdcd;
+  color: var(--llms-color-on-neutral-hover, color-mix(in srgb, var(--llms-color-on-neutral, #444) 96%, #000));
+  background: var(--llms-color-neutral-hover, color-mix(in srgb, var(--llms-color-neutral, #e1e1e1) 91%, #000));
 }
 .llms-button-secondary:focus, .llms-button-secondary:active {
-  color: #414141;
-  background: #ebebeb;
+  color: var(--llms-color-on-neutral-hover, color-mix(in srgb, var(--llms-color-on-neutral, #444) 96%, #000));
+  background: var(--llms-color-neutral-focus, color-mix(in srgb, var(--llms-color-neutral, #e1e1e1) 67%, #fff));
 }
 
 /* Fix for cases where link color overrides the button color */
 a.llms-button-secondary {
-  color: #444;
+  color: var(--llms-color-on-neutral, #444);
 }
 
 .llms-button-action {
-  background: #c05621;
+  background: var(--llms-color-action, #c05621);
+  color: var(--llms-color-on-action, var(--llms-color-on-solid, #fefefe));
 }
 .llms-button-action:hover, .llms-button-action.clicked {
-  background: #f67d28;
+  background: var(--llms-color-action-hover, color-mix(in srgb, var(--llms-color-action, #c05621) 82%, #000));
+  color: var(--llms-color-on-action, var(--llms-color-on-solid, #fefefe));
 }
 .llms-button-action:focus, .llms-button-action:active {
-  background: #faad76;
+  background: var(--llms-color-action-focus, color-mix(in srgb, var(--llms-color-action, #c05621) 81%, #fff));
+  color: var(--llms-color-on-action, var(--llms-color-on-solid, #fefefe));
 }
 
 .llms-button-danger {
-  background: #bb231c;
+  background: var(--llms-color-danger, #bb231c);
+  color: var(--llms-color-on-danger, var(--llms-color-on-solid, #fefefe));
 }
 .llms-button-danger:hover {
-  background: #981c17;
+  background: var(--llms-color-danger-hover, color-mix(in srgb, var(--llms-color-danger, #bb231c) 82%, #000));
+  color: var(--llms-color-on-danger, var(--llms-color-on-solid, #fefefe));
 }
 .llms-button-danger:focus, .llms-button-danger:active {
-  background: #cd261f;
+  background: var(--llms-color-danger-focus, color-mix(in srgb, var(--llms-color-danger, #bb231c) 81%, #fff));
+  color: var(--llms-color-on-danger, var(--llms-color-on-solid, #fefefe));
 }
 
 .llms-button-outline {
   background: transparent;
-  border: 3px solid #1D2327;
-  border-radius: 8px;
-  color: #1D2327;
+  border: 3px solid var(--llms-color-ink, #1d2327);
+  border-radius: var(--llms-radius-control, var(--llms-radius, 8px));
+  color: var(--llms-color-ink, #1d2327);
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
@@ -220,16 +285,18 @@ a.llms-button-secondary {
   opacity: 0.5;
 }
 .llms-button-outline:hover, .llms-button-outline:active {
-  color: #1D2327;
+  color: var(--llms-color-ink, #1d2327);
 }
 .llms-button-outline:focus {
-  color: #1D2327;
+  color: var(--llms-color-ink, #1d2327);
 }
 .llms-button-outline.auto {
   width: auto;
 }
 .llms-button-outline.full {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   width: 100%;
 }
@@ -241,7 +308,7 @@ a.llms-button-secondary {
   background: transparent;
   border: none;
   border-radius: 3px;
-  color: #1D2327;
+  color: var(--llms-color-ink, #1d2327);
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
@@ -254,10 +321,10 @@ a.llms-button-secondary {
   position: relative;
 }
 .llms-button-plain:hover, .llms-button-plain:active {
-  color: #1D2327;
+  color: var(--llms-color-ink, #1d2327);
 }
 .llms-button-plain:focus {
-  color: #1D2327;
+  color: var(--llms-color-ink, #1d2327);
 }
 
 .llms-course-continue-button {
@@ -2581,6 +2648,7 @@ a.llms-view-as {
   border-bottom: 1px solid #c3c4c7;
   padding: 10px 12px;
   text-align: center;
+  vertical-align: top;
 }
 .llms-table td.expandable.closed, .llms-table th.expandable.closed {
   display: none;
@@ -2735,6 +2803,23 @@ a.llms-view-as {
 
 .llms-gb-table-notifications th, .llms-gb-table-notifications td {
   text-align: left;
+}
+
+.llms-gb-table-orders_transactions td,
+.llms-gb-table-orders_transactions th,
+.llms-gb-table-subscriptions td,
+.llms-gb-table-subscriptions th {
+  text-align: left;
+}
+.llms-gb-table-orders_transactions td.amount,
+.llms-gb-table-orders_transactions th.amount,
+.llms-gb-table-orders_transactions td.revenue,
+.llms-gb-table-orders_transactions th.revenue,
+.llms-gb-table-subscriptions td.amount,
+.llms-gb-table-subscriptions th.amount,
+.llms-gb-table-subscriptions td.revenue,
+.llms-gb-table-subscriptions th.revenue {
+  text-align: right;
 }
 
 .llms-order-note .llms-order-note-content {
@@ -3406,8 +3491,10 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   margin: 10px 0;
 }
 
-.wp-list-table .llms-status {
-  border-radius: 6px;
+.wp-list-table .llms-status,
+.llms-orders-transactions-wrap .llms-status,
+.llms-subscriptions-wrap .llms-status {
+  border-radius: var(--llms-radius-sm, var(--llms-radius, 6px));
   display: inline-block;
   font-size: 13px;
   font-weight: 700;
@@ -3415,25 +3502,109 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   padding: 2px 6px;
   vertical-align: middle;
 }
-.wp-list-table .llms-status.llms-size--large {
+.wp-list-table .llms-status.llms-size--large,
+.llms-orders-transactions-wrap .llms-status.llms-size--large,
+.llms-subscriptions-wrap .llms-status.llms-size--large {
   font-size: 105%;
   padding: 6px 12px;
 }
-.wp-list-table .llms-status.llms-active, .wp-list-table .llms-status.llms-completed, .wp-list-table .llms-status.llms-pass, .wp-list-table .llms-status.llms-txn-succeeded {
-  color: #4d8d3c;
-  background-color: rgba(77, 141, 60, 0.15);
+.wp-list-table .llms-status.llms-active, .wp-list-table .llms-status.llms-completed, .wp-list-table .llms-status.llms-pass, .wp-list-table .llms-status.llms-txn-succeeded,
+.llms-orders-transactions-wrap .llms-status.llms-active,
+.llms-orders-transactions-wrap .llms-status.llms-completed,
+.llms-orders-transactions-wrap .llms-status.llms-pass,
+.llms-orders-transactions-wrap .llms-status.llms-txn-succeeded,
+.llms-subscriptions-wrap .llms-status.llms-active,
+.llms-subscriptions-wrap .llms-status.llms-completed,
+.llms-subscriptions-wrap .llms-status.llms-pass,
+.llms-subscriptions-wrap .llms-status.llms-txn-succeeded {
+  color: var(--llms-color-success, #4d8d3c);
+  background-color: var(--llms-color-success-subtle, color-mix(in srgb, var(--llms-color-success, #4d8d3c) 15%, transparent));
 }
-.wp-list-table .llms-status.llms-fail, .wp-list-table .llms-status.llms-failed, .wp-list-table .llms-status.llms-expired, .wp-list-table .llms-status.llms-cancelled, .wp-list-table .llms-status.llms-txn-failed {
-  color: #bb231c;
-  background-color: rgba(187, 35, 28, 0.15);
+.wp-list-table .llms-status.llms-fail, .wp-list-table .llms-status.llms-failed, .wp-list-table .llms-status.llms-expired, .wp-list-table .llms-status.llms-cancelled, .wp-list-table .llms-status.llms-txn-failed,
+.llms-orders-transactions-wrap .llms-status.llms-fail,
+.llms-orders-transactions-wrap .llms-status.llms-failed,
+.llms-orders-transactions-wrap .llms-status.llms-expired,
+.llms-orders-transactions-wrap .llms-status.llms-cancelled,
+.llms-orders-transactions-wrap .llms-status.llms-txn-failed,
+.llms-subscriptions-wrap .llms-status.llms-fail,
+.llms-subscriptions-wrap .llms-status.llms-failed,
+.llms-subscriptions-wrap .llms-status.llms-expired,
+.llms-subscriptions-wrap .llms-status.llms-cancelled,
+.llms-subscriptions-wrap .llms-status.llms-txn-failed {
+  color: var(--llms-color-danger, #bb231c);
+  background-color: var(--llms-color-danger-subtle, color-mix(in srgb, var(--llms-color-danger, #bb231c) 15%, transparent));
 }
-.wp-list-table .llms-status.llms-incomplete, .wp-list-table .llms-status.llms-on-hold, .wp-list-table .llms-status.llms-pending, .wp-list-table .llms-status.llms-pending-cancel, .wp-list-table .llms-status.llms-refunded, .wp-list-table .llms-status.llms-txn-pending, .wp-list-table .llms-status.llms-txn-refunded {
-  color: #c05621;
-  background-color: rgba(192, 86, 33, 0.15);
+.wp-list-table .llms-status.llms-incomplete, .wp-list-table .llms-status.llms-on-hold, .wp-list-table .llms-status.llms-pending, .wp-list-table .llms-status.llms-pending-cancel, .wp-list-table .llms-status.llms-refunded, .wp-list-table .llms-status.llms-txn-pending, .wp-list-table .llms-status.llms-txn-refunded,
+.llms-orders-transactions-wrap .llms-status.llms-incomplete,
+.llms-orders-transactions-wrap .llms-status.llms-on-hold,
+.llms-orders-transactions-wrap .llms-status.llms-pending,
+.llms-orders-transactions-wrap .llms-status.llms-pending-cancel,
+.llms-orders-transactions-wrap .llms-status.llms-refunded,
+.llms-orders-transactions-wrap .llms-status.llms-txn-pending,
+.llms-orders-transactions-wrap .llms-status.llms-txn-refunded,
+.llms-subscriptions-wrap .llms-status.llms-incomplete,
+.llms-subscriptions-wrap .llms-status.llms-on-hold,
+.llms-subscriptions-wrap .llms-status.llms-pending,
+.llms-subscriptions-wrap .llms-status.llms-pending-cancel,
+.llms-subscriptions-wrap .llms-status.llms-refunded,
+.llms-subscriptions-wrap .llms-status.llms-txn-pending,
+.llms-subscriptions-wrap .llms-status.llms-txn-refunded {
+  color: var(--llms-color-warning, #946200);
+  background-color: var(--llms-color-warning-subtle, color-mix(in srgb, var(--llms-color-warning, #946200) 15%, transparent));
 }
 
 #lifterlms-order-transactions .llms-table tfoot th {
   text-align: right;
+}
+
+.llms-orders-transactions-wrap .llms-table-header,
+.llms-subscriptions-wrap .llms-table-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0 0 12px;
+}
+.llms-orders-transactions-wrap .llms-table-header:before, .llms-orders-transactions-wrap .llms-table-header:after,
+.llms-subscriptions-wrap .llms-table-header:before,
+.llms-subscriptions-wrap .llms-table-header:after {
+  content: none;
+  display: none;
+}
+.llms-orders-transactions-wrap .llms-table-header h2,
+.llms-subscriptions-wrap .llms-table-header h2 {
+  margin: 0;
+}
+.llms-orders-transactions-wrap .llms-table-search,
+.llms-orders-transactions-wrap .llms-table-filters,
+.llms-subscriptions-wrap .llms-table-search,
+.llms-subscriptions-wrap .llms-table-filters {
+  float: none;
+  padding-left: 0;
+}
+.llms-orders-transactions-wrap .llms-table-filters,
+.llms-subscriptions-wrap .llms-table-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.llms-orders-transactions-wrap .llms-table-search,
+.llms-subscriptions-wrap .llms-table-search {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .llms-post-table-post-filter {
@@ -4058,7 +4229,7 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question {
   background: #efefef;
-  border-radius: 6px;
+  border-radius: var(--llms-radius-sm, var(--llms-radius, 6px));
   margin: 0 0 15px;
   position: relative;
   list-style-type: none;
@@ -4120,22 +4291,22 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
           transform: rotate(-135deg);
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.correct, .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.incorrect {
-  background: rgba(192, 86, 33, 0.2);
+  background: var(--llms-color-warning-muted, color-mix(in srgb, var(--llms-color-warning, #946200) 20%, transparent));
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.correct .llms-status-icon, .llms-quiz-attempt-results .llms-quiz-attempt-question.status--waiting.incorrect .llms-status-icon {
-  background-color: #c05621;
+  background-color: var(--llms-color-warning, #946200);
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--graded.correct {
-  background: rgba(77, 141, 60, 0.15);
+  background: var(--llms-color-success-subtle, color-mix(in srgb, var(--llms-color-success, #4d8d3c) 15%, transparent));
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--graded.correct .llms-status-icon {
-  background-color: #4d8d3c;
+  background-color: var(--llms-color-success, #4d8d3c);
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--graded.incorrect {
-  background: rgba(187, 35, 28, 0.15);
+  background: var(--llms-color-danger-subtle, color-mix(in srgb, var(--llms-color-danger, #bb231c) 15%, transparent));
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.status--graded.incorrect .llms-status-icon {
-  background-color: #bb231c;
+  background-color: var(--llms-color-danger, #bb231c);
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question pre {
   overflow: auto;
@@ -4180,17 +4351,16 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   margin: 0 0 10px;
   padding: 0;
 }
+.llms-quiz-attempt-results .llms-quiz-attempt-question .llms-quiz-attempt-question-main .llms-quiz-attempt-answer {
+  margin: 0;
+  padding: 0;
+}
 .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-quiz-attempt-question-main ul.llms-quiz-attempt-answers {
   margin: 0;
   padding: 0;
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-quiz-attempt-question-main ul.llms-quiz-attempt-answers li.llms-quiz-attempt-answer {
-  padding: 0;
   margin: 0 0 0 30px;
-}
-.llms-quiz-attempt-results .llms-quiz-attempt-question .llms-quiz-attempt-question-main ul.llms-quiz-attempt-answers li.llms-quiz-attempt-answer:only-child {
-  list-style-type: none;
-  margin-left: 0;
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question .llms-quiz-attempt-question-main img {
   height: auto;
@@ -4206,16 +4376,18 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   margin-top: 0;
   padding-top: 0;
 }
-.llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_choice ul.llms-quiz-attempt-answers, .llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_reorder ul.llms-quiz-attempt-answers {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_choice ul.llms-quiz-attempt-answers li.llms-quiz-attempt-answer, .llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_reorder ul.llms-quiz-attempt-answers li.llms-quiz-attempt-answer {
+.llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_choice .llms-quiz-attempt-answer,
+.llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_choice ul.llms-quiz-attempt-answers li.llms-quiz-attempt-answer, .llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_reorder .llms-quiz-attempt-answer,
+.llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_reorder ul.llms-quiz-attempt-answers li.llms-quiz-attempt-answer {
   display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 5px;
+}
+.llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_choice ul.llms-quiz-attempt-answers, .llms-quiz-attempt-results .llms-quiz-attempt-question.type--picture_reorder ul.llms-quiz-attempt-answers {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .llms-quiz-attempt-results .llms-quiz-attempt-question.type--removed .llms-question-title {
   font-style: italic;
@@ -5146,8 +5318,8 @@ button[name=llms_quiz_attempt_action].grading .save {
 .llms-form-field [type=number] {
   background-color: #fefefe;
   background-clip: padding-box;
-  border: 1px solid #999;
-  border-radius: 6px;
+  border: 1px solid var(--llms-color-input-border, #999);
+  border-radius: var(--llms-radius-sm, var(--llms-radius, 6px));
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
@@ -5161,7 +5333,7 @@ button[name=llms_quiz_attempt_action].grading .save {
 }
 .llms-form-field input:focus,
 .llms-form-field input:focus-visible {
-  border-color: #6888df;
+  border-color: var(--llms-color-primary-focus, color-mix(in srgb, var(--llms-color-primary, #466dd8) 81%, #fff));
   outline: thin solid;
 }
 .llms-form-field select {
@@ -5170,8 +5342,8 @@ button[name=llms_quiz_attempt_action].grading .save {
   -ms-appearance: none;
   appearance: none;
   background-color: #fefefe;
-  border: 1px solid #999;
-  border-radius: 6px;
+  border: 1px solid var(--llms-color-input-border, #999);
+  border-radius: var(--llms-radius-sm, var(--llms-radius, 6px));
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #010101;
@@ -5193,7 +5365,7 @@ button[name=llms_quiz_attempt_action].grading .save {
   display: none;
 }
 .llms-form-field select:focus {
-  border: 1px solid #6888df;
+  border: 1px solid var(--llms-color-primary-focus, color-mix(in srgb, var(--llms-color-primary, #466dd8) 81%, #fff));
   outline: thin solid;
 }
 .llms-form-field.valid input[type=date], .llms-form-field.valid input[type=time], .llms-form-field.valid input[type=datetime-local], .llms-form-field.valid input[type=week], .llms-form-field.valid input[type=month], .llms-form-field.valid input[type=text], .llms-form-field.valid input[type=email], .llms-form-field.valid input[type=url], .llms-form-field.valid input[type=password], .llms-form-field.valid input[type=search], .llms-form-field.valid input[type=tel], .llms-form-field.valid input[type=number], .llms-form-field.valid textarea, .llms-form-field.valid select {
@@ -5201,8 +5373,8 @@ button[name=llms_quiz_attempt_action].grading .save {
   border-color: #83c373;
 }
 .llms-form-field.error input[type=date], .llms-form-field.error input[type=time], .llms-form-field.error input[type=datetime-local], .llms-form-field.error input[type=week], .llms-form-field.error input[type=month], .llms-form-field.error input[type=text], .llms-form-field.error input[type=email], .llms-form-field.error input[type=url], .llms-form-field.error input[type=password], .llms-form-field.error input[type=search], .llms-form-field.error input[type=tel], .llms-form-field.error input[type=number], .llms-form-field.error textarea, .llms-form-field.error select, .llms-form-field.invalid input[type=date], .llms-form-field.invalid input[type=time], .llms-form-field.invalid input[type=datetime-local], .llms-form-field.invalid input[type=week], .llms-form-field.invalid input[type=month], .llms-form-field.invalid input[type=text], .llms-form-field.invalid input[type=email], .llms-form-field.invalid input[type=url], .llms-form-field.invalid input[type=password], .llms-form-field.invalid input[type=search], .llms-form-field.invalid input[type=tel], .llms-form-field.invalid input[type=number], .llms-form-field.invalid textarea, .llms-form-field.invalid select {
-  background: rgba(187, 35, 28, 0.3);
-  border-color: #bb231c;
+  background: var(--llms-color-danger-muted, color-mix(in srgb, var(--llms-color-danger, #bb231c) 30%, transparent));
+  border-color: var(--llms-color-danger, #bb231c);
 }
 .llms-form-field.llms-visually-hidden-field {
   display: none;
@@ -5292,7 +5464,7 @@ button[name=llms_quiz_attempt_action].grading .save {
   -webkit-transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1);
   transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1);
   background-position: 0 0;
-  background-image: radial-gradient(ellipse at center, #466dd8 0%, #466dd8 40%, #fafafa 45%);
+  background-image: radial-gradient(ellipse at center, var(--llms-color-primary, #466dd8) 0%, var(--llms-color-primary, #466dd8) 40%, #fafafa 45%);
 }
 .llms-form-field .llms-input-group {
   margin-top: 5px;
@@ -5309,7 +5481,7 @@ button[name=llms_quiz_attempt_action].grading .save {
   line-height: 18px;
 }
 .llms-form-field .llms-required {
-  color: #bb231c;
+  color: var(--llms-color-danger, #bb231c);
   margin-left: 4px;
 }
 .llms-form-field input, .llms-form-field textarea, .llms-form-field select {
@@ -5390,6 +5562,16 @@ button[name=llms_quiz_attempt_action].grading .save {
 .llms-password-strength-meter.strong:before {
   background: rgba(131, 195, 115, 0.25);
   width: 100%;
+}
+.llms-password-strength-meter.reused-info {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 5px;
+  padding: 8px 10px;
+  text-align: left;
+}
+.llms-password-strength-meter.reused-info:before {
+  display: none;
 }
 .llms-password-strength-meter + .llms-description {
   display: block;

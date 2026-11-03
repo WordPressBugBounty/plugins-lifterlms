@@ -1,269 +1,316 @@
 === LifterLMS - WP LMS for eLearning, Online Courses, & Quizzes ===
-Contributors: lifterlms, chrisbadgett, strangerstudios, kimannwall, d4z_c0nf, actuallyakash, codeboxllc, brianhogg
-Donate link: https://lifterlms.com/
-Tags: lms, course, elearning, learning management system, quiz
+Contributors: lifterlms, chrisbadgett, strangerstudios, kimannwall, codeboxllc, brianhogg, alextonio22, nadiaakther, vonconcepts, wpcourseguide, scalemath
+Donate link: https://lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale
+Tags: lms, elearning, learning management system, course, quiz
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 10.3.2
+Stable tag: 11.0.0
 
-Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System.
-
+Complete WordPress LMS (learning management system) to create, launch, and scale eLearning: sell online courses, memberships, quizzes, and training.
 
 == Description ==
-LifterLMS is a secure easy-to-use WordPress LMS plugin packed with features to easily create & sell courses online.
 
-Turn your WordPress website into a professional eLearning platform with every customizable feature you could possibly need from your LMS.
+LifterLMS is a complete WordPress LMS plugin designed to make it easy to create, launch, and scale online courses from your own website.
 
-+ **Intuitive LMS Course Builder:** Create Courses, Sections, and Interactive Lessons with multimedia content.
-+ **Track Student Progress:** In-Depth Reporting, Create Timed or Open Quizzes, Drip Content, Add Prerequisites, Analyze Progress, and Award Certificates
-+ **Complete Ecommerce Platform:** Built-in Gateway Integration for Stripe and PayPal With Memberships and Subscriptions 
-+ **Community and Social Learning:** Integrate a Community Forum or Discussion Area, Add Multiple Instructors, and Display Course Reviews
++ **Build structured courses:** Create courses with sections, lessons, and quizzes, and track every student's progress.
++ **Sell and protect your content:** Sell courses and memberships, take payments, and restrict access to members-only content.
++ **Engage and certify learners:** Manage students, award certificates, and report on how they are doing.
++ **Grow with premium add-ons:** Start with the free core plugin, then add extensions for advanced ecommerce, [assignments](https://lifterlms.com/product/assignments/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [groups](https://lifterlms.com/product/groups/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [social learning](https://lifterlms.com/product/social-learning/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [private coaching](https://lifterlms.com/product/private-areas/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [advanced video](https://lifterlms.com/product/advanced-videos/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [PDFs](https://lifterlms.com/product/lifterlms-pdfs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), and [more](https://lifterlms.com/store/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
 
-[Explore All LMS Features](https://lifterlms.com/features/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+[**Try LifterLMS for $1**](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale): get a 30-day demo site with every premium add-on installed.
 
-LifterLMS makes it easy to create, sell, and protect engaging online courses and training-based membership websites.
+Use LifterLMS for course businesses, membership sites, coaching, schools, corporate training, compliance, continuing education, certifications, and client LMS projects.
 
 https://www.youtube.com/watch?v=N72Zw2EBm4A
 
-### Integrate LifterLMS With Any Theme, Page Builder, & Block Editor
+**Own your platform, content, and student data.**
 
-LifterLMS works with any modern WordPress theme/FSE, the Block Editor (Gutenberg), and every popular WordPress page builder including Elementor, Beaver Builder, and Divi.
+[Explore All LMS Features](https://lifterlms.com/features/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
-**With over 10 years development,** our team is deeply engaged with the WordPress community. We encourage our integration partners to create the extensions you need most, like Affiliate WP, Monster Insights, WP Fusion, popular form plugins, GamiPress, Astra Pro, and more.
+### What You Can Build With LifterLMS
 
+LifterLMS helps you create and manage many types of online learning websites, including:
 
-### Open Source, Free Core Plugin
++ Online course websites
++ Training portals
++ Membership-based learning sites
++ [Coaching programs](https://lifterlms.com/solutions/coaches/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Corporate training platforms](https://lifterlms.com/solutions/corporate-training/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Continuing education websites](https://lifterlms.com/solutions/certifications-compliance/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ Internal training systems
++ [Client LMS projects](https://lifterlms.com/solutions/wordpress-professionals/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ Multi-instructor learning platforms
++ Course marketplaces
++ [Private student communities](https://lifterlms.com/solutions/community-builders/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
-LifterLMS gives back to the open-source community. The core LifterLMS plugin is a totally FREE forever LMS - no limits on your courses, memberships, enrollments, or earnings.
+Not sure which fits you? [Explore LifterLMS solutions](https://lifterlms.com/solutions/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+
+https://www.youtube.com/watch?v=gqT6hQrAMXw
+
+### A WordPress LMS You Own
+
+Hosted course platforms often limit how you build, customize, price, and grow your learning business. With LifterLMS, you run your LMS on your own WordPress website: choose your hosting, control your content, connect the tools you use, and grow without platform fees based on your number of courses, students, instructors, or revenue. That gives creators, educators, developers, agencies, and organizations complete control over their online learning platform.
+
+### Free and Open Source WordPress LMS Plugin
+
+The core LifterLMS plugin is free and open source, with no limits on courses, memberships, enrollments, or earnings. Use it to create courses, build quizzes, manage students, and protect members-only content. When your project needs more, extend it with official add-ons and bundles for payments, [advanced quizzes](https://lifterlms.com/product/advanced-quizzes/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [assignments](https://lifterlms.com/product/assignments/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [groups](https://lifterlms.com/product/groups/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [social learning](https://lifterlms.com/product/social-learning/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [advanced video](https://lifterlms.com/product/advanced-videos/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [private areas](https://lifterlms.com/product/private-areas/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [PDFs](https://lifterlms.com/product/lifterlms-pdfs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [notes](https://lifterlms.com/product/lifterlms-notes/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [continuing education](https://lifterlms.com/product/lifterlms-continuing-education/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), and more. Start simple and expand as your courses, students, and training programs grow.
 
 We believe in free, distributed learning for all. **LifterLMS exists to democratize education in the digital classroom.**
 
+### Get Started With LifterLMS
+
+Install the free LifterLMS plugin from WordPress.org to start building your LMS, or get a temporary 30-day demo website with LifterLMS and all premium add-ons installed to test the course builder, learner experience, ecommerce settings, reporting tools, and add-ons before deciding which setup is right for your project.
+
+[Try LifterLMS for $1](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+
+### Works With Your WordPress Theme, Block Editor, and Page Builder
+
+LifterLMS works with modern WordPress themes, full-site editing themes, the Block Editor, and popular WordPress page builders, so you can use your existing WordPress site or build a new LMS website around the theme and tools you prefer.
+
+LifterLMS works with:
+
++ Elementor
++ Beaver Builder
++ Divi
++ Custom WordPress themes
++ WordPress plugins used for marketing, ecommerce, analytics, forms, automation, and community features
+
 ### Premium Add-ons and Bundles
 
-Get to know our team and product. by signing up for a **[$1 temporary _30 Day_ website](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)**. You'll get instant access to a private demo site hosted on our servers pre-installed with:
+Some LMS projects need more than the free core plugin. LifterLMS offers official add-ons and bundles for advanced features, ecommerce, vouchers, student engagement, reporting, integrations, and business growth. [See LifterLMS pricing](https://lifterlms.com/pricing/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
 
-+ the core LifterLMS plugin, AND
-+ every premium LMS add-on
-
-See why so many people start with or switch from another WordPress LMS or hosted platform to [LifterLMS](https://lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) for online courses, membership sites, and remote schools.
+See why so many people start with LifterLMS or switch from another WordPress LMS or hosted platform to [LifterLMS](https://lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) for their successful online courses, membership sites, and remote schools.
 
 https://www.youtube.com/watch?v=RnZflrWG5YQ
 
-### LifterLMS is Perfect For:
+### Who LifterLMS Is For
 
-**Builders**
-We’re the favorite LMS plugin for WordPress developers, designers and IT pros who **build LMS websites and training portals** for clients, employers, and themselves
+**Course creators:** Create and sell courses, quizzes, certificates, and memberships from your own website instead of a hosted course platform.
 
-**DIY**
-Do-it-yourself innovators love that LifterLMS helps them easily **create high-value online courses, coaching or training-based membership websites,** right on WordPress.
+**Coaches and consultants:** Turn your expertise into guided programs, private coaching offers, memberships, and premium learning experiences.
 
-**Switchers**
-Have you outgrown a hosted LMS platform or an incomplete WordPress LMS stack? Choose LifterLMS if you are looking for **more power, control, and better support**.
+**Schools and educators:** Create online learning spaces for students, lessons, assessments, certificates, and course materials.
 
-### Meet The LifterLMS Team
+**Training teams:** Build internal training, employee onboarding, compliance training, professional development, and client education programs, with groups and group leaders.
 
+**Developers and agencies:** Build WordPress LMS websites for clients who need courses, memberships, ecommerce, reporting, and custom design.
+
+**Membership site owners:** Add structured courses to a membership website, restrict learning content, and bundle course access with membership plans.
+
+**Organizations and nonprofits:** Deliver educational programs, community training, certification paths, or continuing education.
+
+https://www.youtube.com/watch?v=-0FriLN_Rf8&feature=youtu.be
+
+### Meet the LifterLMS Team
 
 The LifterLMS team is a **diverse group of talented course creators, developers, designers, marketers, and entrepreneurs**.
 
-Before developing LifterLMS, we consulted and built custom WordPress-based online learning and membership sites for clients worldwide. LifterLMS was born through this deep hands-on experience building high-end, custom WordPress LMS websites from scratch.
+Before creating LifterLMS, we built high-end, custom WordPress learning and membership websites for clients worldwide. LifterLMS was born from that hands-on experience, with the goal of giving WordPress users the kind of LMS tools that previously required custom development.
 
-Learn more about [the people behind LifterLMS](https://lifterlms.com/about-us/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale#h-meet-the-team).
+The team continues to develop LifterLMS as an open-source project while supporting the people who use WordPress for online learning.
 
-### LifterLMS By The Numbers
+Learn more about [the people behind LifterLMS](https://lifterlms.com/about-us/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale#h-meet-the-team).
 
-+ 8,377,042 Course Enrollments powered by LifterLMS
-+ 12,570,881 Course and lesson completions powered by LifterLMS
-+ 186,997 Achievement badges awarded by LifterLMS
-+ 310,728 Certificates awarded by LifterLMS
-+ Over 10,000 active installs of the WordPress LMS plugin
-+ [308 5-star reviews](https://wordpress.org/support/plugin/lifterlms/reviews/?filter=5)
+### LifterLMS by the Numbers
 
-### [Features](https://lifterlms.com/features/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ **130 million+** Course & Membership Enrollments
++ **151 million+** Courses & Lessons Completed
++ **1.8 million+** Achievements Awarded
++ **9.7 million+** Certificates Earned
++ [308 5-star reviewers](https://wordpress.org/support/plugin/lifterlms/reviews/?filter=5)
 
-Start with the free LMS plugin and [scale-up](https://lifterlms.com/pricing/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale) as you grow.
+### Features
+
+### Make Money Teaching Online
+
+Set up LifterLMS and add the [Stripe](https://lifterlms.com/product/stripe-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) or [PayPal](https://lifterlms.com/product/paypal-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) payment add-on, or use [WooCommerce](https://lifterlms.com/product/woocommerce-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale). That's all you need to get started. As your business grows, free and premium add-ons help you create more value for your students and increase revenue.
 
 https://www.youtube.com/watch?v=ZNwo5inRSdM
-
-**Make Money Teaching Online**
-Set up LifterLMS, activate built-in payments with [Stripe](https://lifterlms.com/product/stripe-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) or [PayPal](https://lifterlms.com/product/paypal-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale). That's all you need to get started.
-
-When you need more features and to expand your online learning business, we're here for you. We have several free and premium add-ons to help you create more value for your users, and scale your business revenue.
 
 + Credit card payments
 + One-time payments
 + Recurring payments
 + Payment plans
 + Unlimited course and membership pricing models
-+ PayPal
-+ Subscriptions
 + Checkout
 + Free courses
 + Course bundles
 + Private coaching upsells
-+ Course and membership Coupons
++ Course and membership coupons
 + Bulk course and membership sales
 + Affiliate ready
 + Native course and membership sales pages
 + Offline course and membership sales
 + Customizable course and membership enrollment
 + Country and currency
-+ E-commerce dashboard
++ Ecommerce dashboard
 + Credit card management
 + Subscription switching
 + Payment switching
-+ Native Zapier integration
 
-**Create Courses on Your WordPress LMS Website**
+### Create Courses on Your WordPress LMS Website
 
+Use LifterLMS to:
 
-+ Course multimedia lessons
-+ Course quizzes
-+ Quiz question banks
-+ Course builder
-+ Course cohorts
-+ Drip Content
-+ Course and lesson prerequisites
-+ Course tracks
-+ Course assignments
-+ Quiz time limits
-+ Student dashboard
-+ Student note-taking
-+ Multi-instructor courses
-+ Lesson downloads
-+ Course import & export
-+ Discussion areas
-+ Instructional design
-+ Forum integrations
-+ Graphics pack
-+ Course reviews
-+ Group enrollments for courses and memberships
++ Create multimedia lessons
++ Build courses with sections and lessons
++ Add quizzes and quiz question banks
++ Create assignments
++ Use course tracks
++ Set course and lesson prerequisites
++ Drip lesson content over time
++ Add quiz time limits
++ Support multiple instructors
++ Add lesson downloads
++ Import and export courses
++ Create discussion areas
++ Add course reviews
++ Manage group enrollments for courses and memberships
 
-**Engage Your Students**
+The Course Builder lets you manage sections, lessons, quizzes, and other course elements from one place, without losing sight of how the learning path fits together. Focused lesson and quiz layouts and clear course navigation help students move through course content with fewer distractions.
 
+### Engage Your Students
 
-+ Achievement badges
-+ Certificates
-+ Personalized email
-+ Social learning
-+ Private coaching
-+ Text messaging
+Use LifterLMS to:
 
-**Offer Memberships**
++ Award achievement badges
++ Issue certificates
++ Send personalized emails
++ Support social learning
++ Use student dashboards
++ Show learner progress
++ Track lesson and course completion
 
-+ Sitewide membership
-+ Course bundles
-+ Traditional memberships
-+ Automatic course enrollment
-+ Bulk course enrollment
-+ Content restrictions outside of a course
-+ Members-only payment plans
-+ Private group discussions
-+ Members-only forums
+These tools help students understand where they are, what they have completed, and what to do next, and let you follow learner activity. For training programs, that supports completion rates, accountability, and clearer learner progress; for course businesses, a better student experience without manually guiding every learner.
 
-**Integrate your WordPress LMS with the Tools You Need**
+### Offer Memberships
 
-+ Payment gateways
-+ Email marketing
-+ Forums
-+ Mobile friendly
-+ Use any theme or page builder
-+ Built for compatibility
-+ CRMs
-+ E-learning authoring tools
-+ Tin Can API (xAPI)
+LifterLMS includes membership tools, so you can sell more than individual courses: protect content, bundle courses, create members-only areas, and give learners access to a wider learning experience.
 
-**Secure and Protect Your Content**
+Use LifterLMS to:
 
-+ Course protection
-+ User account management and registration
-+ Members only content
-+ Course only content
-+ Restricted access
-+ Password management
-+ Self-hosted
++ Create sitewide memberships
++ Create traditional membership plans
++ Automatically enroll members into courses
++ Restrict non-course content
++ Offer members-only payment plans
++ Create private group discussions
++ Build members-only forums
++ Create learning paths for different member levels
 
-**Own and Manage Your WordPress LMS Platform**
+### Own and Manage Your WordPress LMS Platform
 
-+ Detailed course, membership, ecommerce, and student reporting
-+ Course gradebook
-+ Email notifications
-+ Bulk course and membership enrollments
-+ Student management
-+ Course and membership access management
-+ Web design management
-+ Branding & typography
-+ WordPress LMS User Roles
-+ Security
-+ Require terms
-+ Scalable
-+ Layout
-+ Testing tools
+LifterLMS gives you LMS management tools inside the WordPress admin, from registration, student accounts, and passwords to reporting.
 
-**Get Support For Your WordPress LMS Project**
+Use LifterLMS to:
+
++ View course, membership, ecommerce, and student reporting
++ Use a course gradebook
++ Send email and SMS notifications
++ Manage bulk course and membership enrollments
++ Manage course capacity
++ Use WordPress LMS user roles
++ Manage branding and typography through your WordPress setup
++ Test and troubleshoot your LMS
++ Use the system analyzer
+
+### Get Support for Your WordPress LMS Project
+
+LifterLMS includes documentation, training, setup tools, and support resources to help you build and manage your LMS.
 
 + Technical support
-+ 30 Days of live weekly onboarding calls called [Liftoff Sessions](https://lifterlms.com/blog/liftoff/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
-+ [Live office hours](https://lifterlms.com/product/office-hours/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [Free training courses](https://academy.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
-+ [Free training webinars](https://lifterlms.com/lifterlms-webinars/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
++ 30 Days of live weekly onboarding calls called [Liftoff Sessions](https://lifterlms.com/blog/liftoff/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Live Office Hours](https://lifterlms.com/product/office-hours/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Free training courses](https://academy.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Free training webinars](https://lifterlms.com/lifterlms-webinars/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + Setup wizard
 + [Detailed documentation](https://lifterlms.com/docs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + Dynamic resources
 + Demo course
-+ System analyzer
-+ User community
-+ [REST API](https://developer.lifterlms.com/rest-api/)
-+ [Developer ecosystem](https://make.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
-+ [Recommended Resources](https://lifterlms.com/recommended-resources/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale) for course creators
++ [REST API](https://developer.lifterlms.com/rest-api/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Developer ecosystem](https://make.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Recommended Resources](https://lifterlms.com/recommended-resources/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) for course creators
 
 **More Resources**
 
-+ The [LifterLMS Official Homepage](https://lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ The [LifterLMS Knowledge base](https://lifterlms.com/docs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ The [LifterLMS Blog](https://lifterlms.com/blog/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ The [LifterLMS Podcast](https://podcast.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ The [LifterLMS Academy](https://academy.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
-+ The [LifterLMS Developer Blog](https://make.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Official Homepage](https://lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Blog](https://lifterlms.com/blog/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Podcast](https://podcast.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
+### Enhance Your LMS With LifterLMS Add-ons
 
-### Enhance Your LMS With LifterLMS Add-Ons
+When your course, membership, or training website needs more advanced tools, extend LifterLMS with official add-ons for assessment, ecommerce, groups, media, private student support, reporting, and learning design.
 
-**Advanced**
+Advanced LMS add-ons include:
 
-Increase your LMS website and it's training program's value with these add-ons:
-
-+ [LifterLMS Advanced Quizzes](https://lifterlms.com/product/advanced-quizzes//?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Assignments](https://lifterlms.com/product/lifterlms-assignments/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Private Areas](https://lifterlms.com/product/private-areas/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Social Learning](https://lifterlms.com/product/social-learning/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Advanced Video](https://lifterlms.com/product/advanced-video/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Custom Fields](https://lifterlms.com/product/custom-fields/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Advanced Quizzes](https://lifterlms.com/product/advanced-quizzes/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Assignments](https://lifterlms.com/product/assignments/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Groups](https://lifterlms.com/product/groups/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS PDFs](https://lifterlms.com/product/lifterlms-pdfs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Private Areas](https://lifterlms.com/product/private-areas/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Private Site](https://lifterlms.com/product/private-site/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Course Cohorts](https://lifterlms.com/product/course-cohorts/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Advanced Coupons](https://lifterlms.com/product/lifterlms-advanced-coupons/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Social Learning](https://lifterlms.com/product/social-learning/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Advanced Videos](https://lifterlms.com/product/advanced-videos/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS PDFs](https://lifterlms.com/product/lifterlms-pdfs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Notes](https://lifterlms.com/product/lifterlms-notes/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Cart Abandonment Recovery](https://lifterlms.com/product/lifterlms-car/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Name Your Price](https://lifterlms.com/product/lifterlms-name-your-price/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Course Cohorts](https://lifterlms.com/product/course-cohorts/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Continuing Education](https://lifterlms.com/product/lifterlms-continuing-education/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Custom Fields](https://lifterlms.com/product/custom-fields/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Advanced Coupons](https://lifterlms.com/product/lifterlms-advanced-coupons/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Events](https://lifterlms.com/product/lifterlms-events/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Gifts](https://lifterlms.com/product/lifterlms-gifts/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
-**Integrations**
+### Connect LifterLMS With Your Payment, Email, and Business Tools
 
-Integrate your LMS with the tools you use:
+Official LifterLMS extensions include:
 
 + [LifterLMS Stripe](https://lifterlms.com/product/stripe-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS PayPal](https://lifterlms.com/product/paypal-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Authorize.Net](https://lifterlms.com/product/authorize-net/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS WooCommerce](https://lifterlms.com/product/woocommerce-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
-+ [LifterLMS Kit](https://lifterlms.com/product/lifterlms-convertkit/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Kit](https://lifterlms.com/product/convertkit/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Mailchimp](https://lifterlms.com/product/mailchimp-extension/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+
+You can also connect LifterLMS with WordPress plugins for SEO, forms, CRM, forums, page building, analytics, security, caching, backups, community features, affiliates, and marketing automation. It also supports xAPI / Tin Can API workflows and learning authoring tools, and connects to thousands of apps through automation tools such as Zapier.
+
+### Run LifterLMS From Any AI Tool You Already Use
+
+LifterLMS is built to work with AI assistants, agents, and automation tools.
+
+Core LMS resources are exposed as WordPress Abilities, so compatible AI and automation tools can discover what your LMS can do and act on it through the same permissions and safeguards used by logged-in WordPress users.
+
+The free core plugin includes AI-ready abilities for:
+
++ Courses, sections, and lessons
++ Memberships and access plans
++ Students, enrollments, and student progress
++ Quizzes, quiz questions, and quiz attempts
++ Manual quiz grading
++ Student grades and lesson-level progress
++ Certificate templates and awarded certificates
++ Orders and transactions in read-only mode
+
+LifterLMS add-ons can extend this further.
+
+With supported add-ons such as [Assignments](https://lifterlms.com/product/assignments/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [Groups](https://lifterlms.com/product/groups/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), and [Events](https://lifterlms.com/product/lifterlms-events/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) installed, AI-ready workflows can also cover assignments and submissions, group management, seats, invitations, and events.
+
+LifterLMS can support AI and automation workflows through:
+
++ WordPress Abilities API
++ LifterLMS MCP Server
++ LifterLMS CLI / WP-CLI
++ LifterLMS REST API
++ Webhooks for course, enrollment, quiz, order, and certificate activity
+
+[Learn more in the LifterLMS AI agent guide](https://github.com/gocodebox/lifterlms/blob/trunk/docs/ai-agents.md)
 
 ### LMS Website and User Experience Design Tools
 
-Use LifterLMS with the modern LifterLMS [Sky Pilot Theme](https://lifterlms.com/product/sky-pilot/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) for even more beautiful results. LifterLMS works with any well-coded WordPress theme, but check out [Sky Pilot](https://lifterlms.com/product/sky-pilot/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) if you want to start with a modern, beautiful, full-site editing block-based theme. And consider using our [Aircraft page builder plugin](https://lifterlms.com/product/aircraft/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), to make building beautiful web pages fast using our design template library.
+Use LifterLMS with the modern LifterLMS [Sky Pilot Theme](https://lifterlms.com/product/sky-pilot/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) for even more beautiful results. LifterLMS works with any well-coded WordPress theme, but check out [Sky Pilot](https://lifterlms.com/product/sky-pilot/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) if you want to start with a modern, beautiful, full-site editing block-based theme. And consider using our [Aircraft page builder plugin](https://lifterlms.com/product/aircraft/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) to make building beautiful web pages fast using our design template library.
 
 + [LifterLMS Sky Pilot Theme](https://lifterlms.com/product/sky-pilot/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 + [LifterLMS Aircraft](https://lifterlms.com/product/aircraft/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
@@ -271,226 +318,223 @@ Use LifterLMS with the modern LifterLMS [Sky Pilot Theme](https://lifterlms.com/
 
 https://www.youtube.com/watch?v=tE1K1FHiYDM
 
-### Why Do People Switch to LifterLMS From Other LMS Plugins?
+### Why People Switch to LifterLMS
 
-There are several other LMS plugins like:
-
-+ Sensei LMS
-+ Tutor LMS
-+ WP Courseware
-+ LearnDash
-+ Masterstudy LMS
-+ Academy LMS
-+ Namaste LMS
-+ LearnPress
-
-There are some membership plugins with some course features like:
-
-+ Paid Memberships Pro (Membership plugin that also integrates with LifterLMS)
-+ MemberPress
-
-The main reasons we hear from users who switched to LifterLMS after trying out the [best WordPress LMS plugins](https://lifterlms.com/blog/best-wordpress-lms-plugins/) is that LifterLMS has:
+The main reasons we hear from users switching to LifterLMS from plugins like LearnDash, Tutor LMS, LearnPress, Sensei LMS, WP Courseware, and MasterStudy LMS (see our shortlist of the [best WordPress LMS plugins](https://lifterlms.com/blog/best-wordpress-lms-plugins/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)) are:
 
 + The best most feature-complete customizable well-coded features
 + Outstanding customer support including live calls
 + The free LifterLMS plugin is amazing making the project affordable
 + Memberships, ecommerce, and gamification included in LifterLMS without the need for 3rd party plugins
 
-### Other Plugins and Themes Commonly Used with LifterLMS
+Hosted course platforms and other WordPress LMS plugins can suit different priorities; LifterLMS is designed for people who want to build and own a WordPress-based LMS they can truly grow with.
 
-The most common plugins and themes used with LifterLMS include Elementor, WooCommerce, Contact Form 7, Yoast SEO, WP Forms Lite, Akismet Anti-Spam, Elementor, Jetpack by WordPress.com, Classic Editor, Updrafts Plus Backup/Restore, Realy Simple SSL, All-in-One WP Migration, WordPress Importer, Starter Templates, Wordfence Security, Google Analytics for WordPress by MonsterInsights, Loco Translate, Slider Revolution, Astra Pro, Essential Addons for Elementor, WP Mail SMTP, WooCommerce Stripe Gateway, LiteSpeed Cache, Jetpack, Gravity Forms, MailChimp for WooCommerce, BuddyPress, BuddyBoss, Divi, Kadnece, Beaver Builder, bbpress, The Events Calendar, Ultmate Member, and more.
+### Save on LifterLMS With a Bundle
 
-Connect LifterLMS to over 7,000 other apps like Facebook, Google Sheets, Zoom, Shopify, etc. using the [LifterLMS Zapier app](https://lifterlms.com/blog/zapier/).
+If your LMS project needs several add-ons, a bundle may be a better fit than buying individual extensions. LifterLMS bundles give you access to groups of tools for course creation, ecommerce, design, marketing, automation, student engagement, and advanced LMS features.
 
+Explore:
 
-### Support From LifterLMS
-
-**All of our paid products include priority private support.
-
-+ LifterLMS Support Ticket System, ready for any question you have about your LMS
-+ Liftoff Sessions access with live screen-sharing to help you get started with the LMS software
-+ [LifterLMS Office Hours](https://lifterlms.com/product/office-hours/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) is a weekly Mastermind group hosted by LifterLMS CEO Chris Badgett and special guests
-
-### Save on LifterLMS With A Bundle
-
-Save money and get more features.
-
-+ [Earth Bundle](https://lifterlms.com/product/earth-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) gives you all the essentials you need to get your online learning website up and running so it's collecting money today with the most powerful secure learning management system software.
-+ Level up your online course LMS website with our ecommerce, design, marketing technology, and automation tools with the [Universe Bundle](https://lifterlms.com/product/universe-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
-+ Add more engagement and student transformation potential to your immersive training programs with our entire suite of products including advanced features used by the best teachers, experts, and coaches with the [Infinity Bundle](https://lifterlms.com/product/infinity-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
-
-### Try the Best LMS Plugin
-
-+ Install the free core LifterLMS plugin right now. See how extensive and customizable our free core plugin is.
-
-+ Get a temporary _30 Day_ website on our servers with the core LifterLMS plugin AND all the premium add-ons installed. This demo website allows you to test drive all the LMS add-ons before you invest. Practice creating courses, test out the learner experience, and see how easy it will be to manage your course with WordPress. Install your favorite plugins & themes to test compatibility. **[Try LifterLMS for $1](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)** now.
-+ Test LifterLMS as a student. Take a **free** course on how to build a LifterLMS website in 20 minutes. [Take a Free Course](https://academy.lifterlms.com/course/how-to-build-a-learning-management-system-with-lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) now.
++ [Earth Bundle](https://lifterlms.com/product/earth-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Universe Bundle](https://lifterlms.com/product/universe-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Infinity Bundle](https://lifterlms.com/product/infinity-bundle/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
 ### Scaling LifterLMS
 
-LifterLMS is incredibly flexible, customizable, and scalable. Use it for a simple one course website. Use it as a course marketplace or multi-instructor online school.
+LifterLMS can support anything from a single paid course or a free training resource library to a multi-course academy, a client LMS build, or a larger learning website with multiple audiences. It is lightweight enough for small niche sites while powering huge universities and employee training in Fortune 500 corporations, and we've even worked with a site that has 8,019,355 course enrollments.
 
-LifterLMS is lightweight enough to handle small niche sites, while also powering huge universities and employee training in Fortune 500 corporations. We've even worked with a site that has 4,470,829 course enrollments.
-
-Unlike hosted LMS software where you would pay increasing monthly fees for access and growth, LifterLMS does not charge you more per course, per instructor, per student, or based on your revenue.
-
-Whether you are going big or keeping it small, LifterLMS scales to meet your needs.
+Because LifterLMS runs on WordPress, performance at scale depends on your hosting, caching, theme, and plugins, all of which you control.
 
 ### LifterLMS in Action
-+ [Success Stories](https://lifterlms.com/success/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale) — Discover these amazing stories and accomplishments from our community of course creators.
-+ [Showcase](https://lifterlms.com/showcase/?utm_source=LifterLMS%20Plugin&utm_medium=Readme&utm_campaign=Readme%20to%20Sale) — Check out these websites using LifterLMS
 
-### What Others Are Saying About LifterLMS
+Explore real LifterLMS websites and customer stories to see how course businesses, memberships, professional training, coaching, schools, and client LMS projects use WordPress for online learning.
 
-> _"I've used many LMS platforms over the years. And they were all fine… right up to the day when they weren't. The trouble is, they all want you to package and manage your course the way THEY think you should do it. THEIR feature set. THEIR way to do it. **Now I host all my courses on LifterLMS. TOTALLY different experience. I'm free to do things MY way. I've never yet hit a wall where LifterLMS didn't enable me to do things the way I wanted.** Love it! Great support and community too."_
++ [LifterLMS Success Stories](https://lifterlms.com/customers/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [LifterLMS Showcase](https://lifterlms.com/showcase/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
-> _**Nick Usborne**, Teacher, Entrepreneur_
+### What LifterLMS Users Say
 
-***
+> "Now I host all my courses on LifterLMS. Totally different experience. I'm free to do things my way. I've never yet hit a wall where LifterLMS didn't enable me to do things the way I wanted."
 
-> _"As a former School Teacher, professional User Experience Designer, and current online course creator – I can honestly attribute much of our success to LifterLMS and it’s consideration for multiple learning modalities, the LMS UI/UX out of the box, and natural student Engagement opportunities. **In less than 10 months we’ve gone from $0 to $300K in revenue with LifterLMS** playing a huge part in that!!"_
+> Nick Usborne, Teacher and Entrepreneur
 
-> _**Sarah Lorenzen**, Teacher, Entrepreneur_
+> "As a former school teacher, professional user experience designer, and current online course creator, I can honestly attribute much of our success to LifterLMS and its consideration for multiple learning modalities, the LMS UI/UX out of the box, and natural student engagement opportunities. **In less than 10 months we've gone from $0 to $300K in revenue with LifterLMS** playing a huge part in that!!"
 
-***
+> Sarah Lorenzen, Teacher and Entrepreneur
 
+### Join the LifterLMS Community
 
-### Join Our Growing Community
+When you download LifterLMS, you **join a thriving community** of education entrepreneurs, course creators, developers, LMS professionals, and WordPress enthusiasts. Use it to see what others are building, ask questions, share ideas, and learn from other WordPress LMS projects.
 
-When you download LifterLMS, you **join a thriving community** of education entrepreneurs, course creators, developers, LMS professionals, and WordPress enthusiasts.
+Join the [LifterLMS VIP Facebook group](https://www.facebook.com/groups/lifterlmsvip/) to connect with other LifterLMS users, or the [LifterLMS Slack community](https://join.slack.com/t/lifterlms/shared_invite/enQtMzk3ODczNjc4Mjc3LTBlMmEzMWYyOTIwMDU3NDc2MmRhNGIxNGE0Nzc1OWIxZjg1OGVhM2E5YTkwYzZmMmM1ZTU4MDQxYjVlZDYyZTE) if you prefer Slack.
 
-We’re a fast growing open source eLearning community, and everyone seeking to build a sustainable online course business is welcome.
+### Contribute to LifterLMS
 
-Join the [LifterLMS VIP Facebook group](https://www.facebook.com/groups/lifterlmsvip/) to:
-
-+ check out what other LifterLMS users are creating
-+ ask questions and support fellow course creators
-
-Join the [LifterLMS Slack community](https://join.slack.com/t/lifterlms/shared_invite/enQtMzk3ODczNjc4Mjc3LTBlMmEzMWYyOTIwMDU3NDc2MmRhNGIxNGE0Nzc1OWIxZjg1OGVhM2E5YTkwYzZmMmM1ZTU4MDQxYjVlZDYyZTE) if you’d prefer to connect in Slack.
-
-### Contribute
-
-Are you a developer interested in contributing to LifterLMS? Visit the [LifterLMS GitHub Repository](https://github.com/gocodebox/lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) to find out how to support this open source WordPress LMS software.
-
-Want to add a new language to LifterLMS? Contribute language translations at [translate.wordpress.org](https://translate.lifterlms.com/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
-
+Developers can review the code, report issues, and suggest improvements in the [LifterLMS GitHub repository](https://github.com/gocodebox/lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), helping improve the plugin for the wider WordPress LMS community. Start with the [contributing guidelines](https://github.com/gocodebox/lifterlms/blob/trunk/.github/CONTRIBUTING.md). You can also help translate LifterLMS for more users around the world through [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
 
 ### What Should You Do Next?
 
-** Install the free LifterLMS plugin on your website **,
+If you are building an LMS with WordPress, start with the free LifterLMS plugin to create your first course, test the learner experience, and see how LifterLMS fits your website. Then choose the next step that matches your project:
 
-then ...
-
-**[Try out all the premium add-ons for $1 by signing up >>HERE<<](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)**
-
-🚀
-
-<!-- Test Auto deployment -->
-
-
++ [Explore LifterLMS features](https://lifterlms.com/features/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [See LifterLMS pricing](https://lifterlms.com/pricing/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Try LifterLMS for $1](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Take a free LifterLMS course](https://academy.lifterlms.com/course/how-to-build-a-learning-management-system-with-lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
++ [Explore the LifterLMS Video Demo](https://lifterlms.com/video-demo?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
 == Installation ==
 
 #### Minimum System Requirements
 
-LifterLMS Requires
+LifterLMS requires:
 
 + PHP 7.4 or later
-+ WordPress 5.6 or later
++ WordPress 5.9 or later
 + MySQL 5.6 or later
 
-Visit our [full system requirements](https://lifterlms.com/docs/minimum-system-requirements-lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) for additional information.
+For the best experience, use supported versions of WordPress, PHP, your theme, and your other active plugins.
+
+Review the full system requirements here:
+
+[Minimum System Requirements for LifterLMS](https://lifterlms.com/docs/minimum-system-requirements-lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
 #### Automatic Installation
 
-The simplest way to install LifterLMS is through your existing WordPress site’s admin. Let WordPress handle file transfers for you - you’ll never need to leave the web browser or admin panel.
+The easiest way to install LifterLMS is from your WordPress dashboard.
 
-1. Log in to your WordPress dashboard
-2. Navigate to Plugins -> Add New
-3. In the search field, type "LifterLMS" and click "Search Plugins"
-4. Once you've located LifterLMS, click "Install Now"
-5. Once installation is complete, click "Activate"
+1. Log in to your WordPress dashboard.
+2. Go to Plugins > Add New.
+3. Search for "LifterLMS".
+4. Click Install Now.
+5. Click Activate.
+
+After activation, LifterLMS will guide you through the setup wizard.
 
 #### Manual Installation
 
-To manually install LifterLMS, you'll need to download the zip file using the "Download" link on this screen. Then, use FTP to manually upload the unzipped plugin folder to the proper plugins directory on your webserver.
+You can also install LifterLMS manually.
 
-Please see this [WordPress Codex document](https://wordpress.org/documentation/article/manage-plugins/#manual-plugin-installation-1) for full instructions on Manual Plugin Installation.
+Download the plugin zip file from WordPress.org, then upload it through your WordPress dashboard or by FTP.
+
+For full instructions, see the WordPress guide to manual plugin installation:
+
+[Managing Plugins in WordPress](https://wordpress.org/documentation/article/manage-plugins/#manual-plugin-installation-1)
 
 #### Setup Wizard
 
-After installation, LifterLMS launches a friendly (and super quick) Setup Wizard.
+After installation, LifterLMS launches a setup wizard to help you configure your LMS.
 
-This wizard helps you configure LifterLMS so you can get to the fun stuff - like creating your courses - as quickly as possible.
+The setup wizard helps you create the core pages your LMS needs, including student account, checkout, course catalog, and membership catalog pages.
 
-The wizard includes a few sample courses you can import if you want to see some examples before you start creating your own content.
+You can also import sample courses if you want to explore how a LifterLMS course is structured before building your own.
 
-You can return to the setup wizard at any time by following [these steps](https://lifterlms.com/docs/rerun-lifterlms-setup-wizard/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
+You can return to the setup wizard later if you need to review or update your setup.
 
+[How to rerun the LifterLMS setup wizard](https://lifterlms.com/docs/rerun-lifterlms-setup-wizard/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
 == Frequently Asked Questions ==
 
-#### Where do I buy add-ons or bundles for my LifterLMS eLearning Website?
+#### What is an LMS plugin for WordPress?
 
-You can explore the individual learning management system add-ons [here](https://lifterlms.com/store/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) or save BIG with a [bundle](https://lifterlms.com/product-category/bundles/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+An LMS plugin lets you create, manage, and deliver online learning from a WordPress website.
 
+With an LMS plugin, you can create courses, add lessons, enroll students, run quizzes, track progress, protect learning content, issue certificates, and sell access to courses or memberships.
 
-#### How do I troubleshoot issues with my LMS website?
+#### What is LifterLMS?
 
-First, make sure that you're running the latest version of LifterLMS. And if you've got any other LifterLMS plugins active on your site, make sure those are running the most current version as well.
+LifterLMS is the most trusted WordPress LMS plugin for creating online courses, memberships, quizzes, training programs, and learning websites.
 
-The most common issues we see are either plugin conflicts, theme conflicts, or outdated servers. You can test if a plugin or theme is conflicting by manually deactivating other plugins until just LifterLMS is running on your site. If the issue persists from there, revert to the default Twenty Fifteen theme. If the issue is resolved after deactivating a specific plugin or your theme, you'll know that is the source of the conflict. If it is a hosting issue, contact your web host and make sure they’re running the most current version of PHP.
+You can use it to build a course website, sell training, manage students, protect content, and run your LMS from WordPress.
 
-Also be sure to check out the official LifterLMS [Knowledge Base](https://lifterlms.com/docs/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
+#### Is LifterLMS free?
 
+Yes. The core LifterLMS plugin is free and open source.
 
-#### How do I ask a question about my online course website?
+You can use the free plugin to create courses, lessons, quizzes, memberships, student dashboards, certificates, and more.
 
-Users of the free LifterLMS should post their questions here in our WordPress.org support area. If you find you're not getting support in as timely a fashion as you wish, you might want to consider [purchasing a product from LifterLMS](https://lifterlms.com/pricing/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale) so you can access the LifterLMS support team.
+Premium add-ons are available when you need more advanced features, such as payments, assignments, groups, advanced quizzes, private areas, advanced video, PDFs, notes, continuing education, and integrations.
 
-If you're already a LifterLMS customer, you can simply log into your account and contact the support team directly on the [LifterLMS website](https://lifterlms.com/my-account/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale). We can provide a deeper level of support in there and address your needs on a daily basis during the work week. Generally, except in times of increased support loads, we reply to all comments within 12 business hours.
+#### Can I create and sell online courses with LifterLMS?
 
+Yes. You can create online courses with lessons, sections, quizzes, assignments, downloads, prerequisites, course tracks, and drip schedules.
 
-#### LifterLMS is awesome! Can you set up my online course site for me?
+You can also sell course access using access plans, one-time payments, subscriptions, payment plans, coupons, memberships, and bundles.
 
-LifterLMS offers technical support, but we do not offer custom website development services. However, we do recommend third party LifterLMS Experts who can help with web design, web development, instructional design or marketing for a fee.  Click here to visit the [LifterLMS Experts page](https://lifterlms.com/experts/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
+#### Do I need WooCommerce to sell courses with LifterLMS?
 
+No. LifterLMS has its own checkout and ecommerce tools, and takes payments through the LifterLMS Stripe and PayPal add-ons.
 
-#### I'm interested in purchasing add-ons for my WordPress LMS website, but I have a few questions first.
+You can also use the LifterLMS WooCommerce extension if your project needs a WooCommerce-based checkout workflow.
 
-If you're not finding your questions answered here or on our website, you can ask your presales questions through this [contact form](https://lifterlms.com/contact/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale). You can also connect live with a member of our team [here](https://lifterlms.com/contact/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
+#### Can I build a membership site with LifterLMS?
 
+Yes. LifterLMS includes membership features.
 
-#### What add-ons are available for LifterLMS, and where can I read more about them?
+You can create memberships, restrict content, bundle courses, create members-only areas, and automatically enroll members into courses.
 
-You can find a full list of official LifterLMS Add-ons [here](https://lifterlms.com/store/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+#### Can I use LifterLMS for corporate training or team training?
 
+Yes. LifterLMS can be used for employee training, client training, onboarding, professional development, continuing education, and other structured training programs.
 
-#### I have a feature idea. What's the best way to tell you about it?
+With LifterLMS Groups, you can organize learners into groups, assign group leaders, manage bulk enrollments, and support team-based learning.
 
-We care about your feature ideas and what you have to say. You can [request a feature](https://lifterlms.com/contact/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), [vote on existing feature requests](?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale), and checkout the [product roadmap](https://lifterlms.com/roadmap/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale).
+#### Does LifterLMS support quizzes and assessments?
 
+Yes. LifterLMS includes quiz tools in the core plugin.
 
-#### Do you have any training for building an online course website?
+You can also use LifterLMS Advanced Quizzes and LifterLMS Assignments when you need more advanced assessment options.
 
-Be sure you’ve taken the free tutorial training video course: [How to Create an Online Course with LifterLMS](https://academy.lifterlms.com/course/how-to-build-a-learning-management-system-with-lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale). We also encourage you to get to know us by signing up for a $1 temporary _30 Day_ website on our servers which comes with the core LifterLMS plugin all our add-ons intalled. This demo allows you to test drive all the add-ons before you invest. Check it out here: **[Try LifterLMS for $1](https://lifterlms.com/try/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)**.
+#### Does LifterLMS support certificates?
 
+Yes. LifterLMS can award certificates and achievement badges based on student activity and course progress.
 
-#### I'm interested in contributing to LifterLMS, how can I start?
+This can be used for course completion, professional development, continuing education, and other learning milestones.
 
-LifterLMS is an open source project. We manage our team, developers, issues, and code on [GitHub](https://github.com/gocodebox/lifterlms/).
+#### Does LifterLMS work with my WordPress theme?
 
-We welcome contributions of all kinds, anyone can contribute even if you don't write code! Check out our [Contributor's Guidelines](https://github.com/gocodebox/lifterlms/blob/master/.github/CONTRIBUTING.md) to get started.
+LifterLMS works with modern WordPress themes, full-site editing themes, the WordPress Block Editor, and popular page builders.
 
+It is designed to work with your WordPress site rather than forcing you into one fixed hosted platform layout.
 
-#### I found a security vulnerability or issue, how can I report it to the team?
+#### Does LifterLMS work with Elementor, Beaver Builder, or Divi?
+
+Yes. LifterLMS works with popular WordPress page builders, including Elementor, Beaver Builder, and Divi.
+
+You can also use LifterLMS with the WordPress Block Editor and compatible full-site editing themes.
+
+#### Can I track student progress in LifterLMS?
+
+Yes. LifterLMS includes reporting and student management tools.
+
+You can track student enrollments, course progress, lesson completion, quiz attempts, certificates, achievements, memberships, and ecommerce activity.
+
+#### Can I migrate from another LMS to LifterLMS?
+
+Many site owners move to LifterLMS when they want to build their LMS on WordPress, own their content, control student data, customize the learner experience, or connect their LMS with the rest of their WordPress tools.
+
+Migration details depend on your current platform, course structure, users, payments, and content format.
+
+#### Where can I get help with LifterLMS?
+
+Free plugin users can use the WordPress.org support forum.
+
+LifterLMS customers can access private support through their LifterLMS account.
+
+You can also use the documentation, training courses, webinars, community groups, developer resources, and system analyzer.
+
+#### Where can I buy LifterLMS add-ons or bundles?
+
+You can explore official LifterLMS add-ons and bundles on the LifterLMS website.
+
+[View LifterLMS add-ons](https://lifterlms.com/store/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+
+[View LifterLMS bundles](https://lifterlms.com/product-category/bundles/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
+
+#### How do I report a security issue?
 
 The LifterLMS team takes security issues and vulnerabilities very seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
-Please contact team@lifterlms.com to report a security vulnerability.
-
-You can review our full security policy at [https://lifterlms.com/security-policy](https://lifterlms.com/security-policy).
-
+Please contact the LifterLMS team directly to report a security issue: [https://lifterlms.com/security/](https://lifterlms.com/security/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)
 
 == Screenshots ==
 
@@ -505,6 +549,99 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 9. Setup Wizard to help you install and configure your new online course website with LifterLMS in 5 simple steps.
 
 == Changelog ==
+
+= v11.0.0 - 2026-11-03 =
+
+##### New Features
+
++ Added an admin notice for sites on WP Engine with protected media, linking to instructions for more efficient file serving. [#3365](https://github.com/gocodebox/lifterlms/issues/3365)
++ Added CSS custom properties for frontend colors and corner radius so a single override updates related hovers, focus styles, and tinted backgrounds. [#2286](https://github.com/gocodebox/lifterlms/issues/2286)
++ Added a {related_post_title} merge code for engagement emails and certificates which outputs the title of the post that triggered the engagement. [#3064](https://github.com/gocodebox/lifterlms/issues/3064)
++ Added new engagement triggers: course progress percentage reached, course completed with a low grade, quiz failed multiple times, enrollment cancelled or expired, order failed/refunded/cancelled, and daily-scanned inactivity triggers for no course progress, course never started, days since last login, course completion deadline, and abandoned quiz attempts. [#3051](https://github.com/gocodebox/lifterlms/issues/3051)
++ Added unenrollment notification trigger (popup and email) for courses and memberships, disabled by default.
++ Added a new 'Order Failed' email notification for when an order fails at checkout or after recurring payment retries are exhausted. It is disabled by default and can be enabled for the customer, the product author, and custom recipients.
++ Adds a "My Subscriptions" student dashboard tab and per-transaction receipt downloads.
+
+##### Updates and Enhancements
+
++ Orders now lists transactions (and free orders) with a separate Subscriptions listing, allowing export of transactions and subscriptions to csv.
++ Added CSS custom properties for element border width, border style, and surface hover, using the current values as defaults.
++ Updated the default password strength message so it no longer says a weak password is required. [#3370](https://github.com/gocodebox/lifterlms/issues/3370)
++ Add-on updates are no longer installed from Add-ons & more. Available updates now link to the WordPress Plugins or Themes screen. [#3371](https://github.com/gocodebox/lifterlms/issues/3371)
++ Explained when a password is rejected because it includes other information from the form. [#3401](https://github.com/gocodebox/lifterlms/issues/3401)
++ Course and membership loop tiles and certificate cards now link only the title, and achievement cards open from a title button. The whole card stays clickable. Featured image alt text uses the image's alt text, or is left empty. Themes that override the loop template keep the previous wrapping link until that template is updated.
++ Improved heading structure, labels, tables, and page titles for quizzes, focus mode, and the student dashboard.
++ Updated the bundled Action Scheduler library to version 3.9.3, improving compatibility with PHP 8.4.
++ Clarified the help text for course enrollment, course time period, and access plan sale dates to show the exact time each date starts or ends. [#3341](https://github.com/gocodebox/lifterlms/issues/3341)
+
+##### Bug Fixes
+
++ Fixed a blank Scheduled Actions tab on the LifterLMS Status page after searching or running a row or bulk action. [#3418](https://github.com/gocodebox/lifterlms/issues/3418)
++ Fixed a "headers already sent" PHP warning when a logged-out visitor views the checkout page and another plugin has already flushed the page output. [#3425](https://github.com/gocodebox/lifterlms/issues/3425)
++ Fixed a PHP warning on REST API instructors collection requests that return no results. [#3439](https://github.com/gocodebox/lifterlms/issues/3439)
++ Display an error message when the checkout form is submitted with an expired security nonce instead of silently reloading the form. [#3422](https://github.com/gocodebox/lifterlms/issues/3422)
++ Fixed the permalink of a newly created quiz not being clickable in the Course Builder after saving. [#3414](https://github.com/gocodebox/lifterlms/issues/3414)
++ Fixed icon spacing on LifterLMS buttons rendered with an icon and no supporting CSS from a theme or plugin.
++ Fixed the student dashboard mobile navigation not navigating to the selected endpoint when the Go button is clicked.
++ Fixed manual entry of datepicker dates being mis-parsed on sites using a non-US date format.
++ Fixed lesson progression button layout and text alignment in the block editor.
++ Course and membership loop titles use their previous size and weight again now that they are h2 or h3 headings.
++ Fixed a PHP fatal error when viewing a course's grades page on the student dashboard using the course ID instead of its slug.
++ Fixed frontend notification toasts overlapping when several are displayed at once.
++ Fixed frontend notification toasts stacking with extra space between them when the theme adds margins to notifications.
++ Improved customer search in the combined orders and transactions table to match a customer's full name.
++ On the order update payment method form, only the submit button is now labeled "Reactivate Subscription" for subscriptions pending cancellation.
++ Fixed a PHP 8.1+ "Automatic conversion of false to array is deprecated" notice when uploading a protected non-image file.
+
+##### Developer Notes
+
++ Updated `AGENTS.md` with the add-on and theme repositories agents can clone and how to build them.
++ Replaced `[version]` placeholders left in deprecation and `_doing_it_wrong()` notices with the versions they refer to, and release tooling now replaces any `'[version]'` string, including in multi-line calls.
++ Release preparation bumps the REST API library version when the library changed since the last release, and replaces its `[version]` placeholders with that version.
+
+##### Performance Improvements
+
++ Replaced the unbounded order exclusion list in the Orders & Transactions report with an indexed `_llms_has_transaction` order flag, backfilled via a batched background migration, for better performance on large stores.
++ Improved performance of REST API collection requests and of the protected media folder check in the admin.
+
+##### Security Fixes
+
++ Additional checks when serving protected media.
++ Additional checks on reporting collection requests.
++ Additional checks on REST enrollment collection requests.
++ Additional checks on quiz attempt answers.
++ Additional checks on REST API collection requests.
++ Additional checks when authorizing access to protected media.
++ Additional checks when protecting the media uploads folder.
++ Additional checks on restricted content in post type listings.
++ Additional checks on restricted content in feeds.
++ Additional checks on restricted content in search results and archives.
++ Additional checks on timed quiz answers.
++ Additional checks on REST API sections and access plans requests.
++ Additional checks on student management table requests.
++ Additional checks on webhook topics.
+
+##### Updated Templates
+
++ [templates/achievements/template.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/achievements/template.php)
++ [templates/admin/receipt-transaction.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/admin/receipt-transaction.php)
++ [templates/certificates/preview.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/certificates/preview.php)
++ [templates/checkout/form-switch-source.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/checkout/form-switch-source.php)
++ [templates/content-single-question.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/content-single-question.php)
++ [templates/loop/content.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/loop/content.php)
++ [templates/myaccount/form-edit-account.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/form-edit-account.php)
++ [templates/myaccount/my-grades-single-table.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/my-grades-single-table.php)
++ [templates/myaccount/my-notifications.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/my-notifications.php)
++ [templates/myaccount/my-subscriptions.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/my-subscriptions.php)
++ [templates/myaccount/my-transactions.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/my-transactions.php)
++ [templates/myaccount/navigation.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/navigation.php)
++ [templates/myaccount/receipt-transaction.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/receipt-transaction.php)
++ [templates/myaccount/view-order-transactions.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/myaccount/view-order-transactions.php)
++ [templates/quiz/questions/content-choice.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/quiz/questions/content-choice.php)
++ [templates/quiz/questions/content-picture_choice.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/quiz/questions/content-picture_choice.php)
++ [templates/quiz/results.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/quiz/results.php)
++ [templates/single-lesson-focus.php](https://github.com/gocodebox/lifterlms/blob/11.0.0/templates/single-lesson-focus.php)
+
 
 = v10.3.2 - 2026-10-09 =
 
@@ -774,13 +911,4 @@ You can review our full security policy at [https://lifterlms.com/security-polic
 + Additional checks when authenticating REST API requests.
 
 
-= v10.0.8 - 2026-06-25 =
-
-##### Security Fixes
-
-+ Additional checks during checkout order creation. Thanks [@0xEr3n](https://github.com/0xEr3n)!
-+ Additional checks when creating users during course and membership imports. Thanks [@0xEr3n](https://github.com/0xEr3n)!
-+ Additional checks on the data saved when submitting account and registration forms. Thanks [@0xEr3n](https://github.com/0xEr3n)!
-
-
-[Read the full changelog](https://make.lifterlms.com/tag/lifterlms)
+[Read the full changelog](https://make.lifterlms.com/tag/lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)

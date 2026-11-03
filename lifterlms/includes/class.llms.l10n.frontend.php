@@ -7,7 +7,7 @@
  *
  * @package  LifterLMS/Classes/Localization
  * @since    3.17.8
- * @version  10.3.0
+ * @version  11.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class LLMS_L10n_JS {
 	 * @param    array $strings existing strings from core / 3rd parties.
 	 * @return   array
 	 * @since    3.17.8
-	 * @version  10.3.0
+	 * @version  11.0.0
 	 */
 	public function get_strings( $strings ) {
 		// phpcs:disable
@@ -59,9 +59,10 @@ class LLMS_L10n_JS {
 			 * File: assets/js/app/llms-password-strength.js.
 			 *
 			 * @since    3.0.0
-			 * @version  5.0.0
+			 * @version  11.0.0
 			 */
 			'There is an issue with your chosen password.' => esc_html__( 'There is an issue with your chosen password.', 'lifterlms' ),
+			'This password includes your name, email, or other information from this form. Choose a password that doesn\'t include those details.' => esc_html__( 'This password includes your name, email, or other information from this form. Choose a password that doesn\'t include those details.', 'lifterlms' ),
 			'Too Short' => esc_html__( 'Too Short', 'lifterlms' ),
 			'Very Weak' => esc_html__( 'Very Weak', 'lifterlms' ),
 			'Weak' => esc_html__( 'Weak', 'lifterlms' ),
@@ -516,7 +517,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/llms-quiz-attempt-review.js.
 			 *
 			 * @since    3.16.0
-			 * @version  5.3.0
+			 * @version  11.0.0
 			 */
 			'Remarks to Student' => esc_html__( 'Remarks to Student', 'lifterlms' ),
 			'points' => esc_html__( 'points', 'lifterlms' ),
@@ -525,7 +526,7 @@ class LLMS_L10n_JS {
 			 * File: assets/js/llms-quiz.js.
 			 *
 			 * @since    1.0.0
-			 * @version  7.8.0
+			 * @version  11.0.0
 			 */
 			'Are you sure you wish to quit this quiz attempt?' => esc_html__( 'Are you sure you wish to quit this quiz attempt?', 'lifterlms' ),
 			'Grading Quiz...' => esc_html__( 'Grading Quiz...', 'lifterlms' ),
@@ -554,6 +555,7 @@ class LLMS_L10n_JS {
 			'This is a %2$s %1$s String' => esc_html__( 'This is a %2$s %1$s String', 'lifterlms' ),
 			'You do not have permission to access this content' => esc_html__( 'You do not have permission to access this content', 'lifterlms' ),
 			'There is an issue with your chosen password.' => esc_html__( 'There is an issue with your chosen password.', 'lifterlms' ),
+			'This password includes your name, email, or other information from this form. Choose a password that doesn\'t include those details.' => esc_html__( 'This password includes your name, email, or other information from this form. Choose a password that doesn\'t include those details.', 'lifterlms' ),
 			'Too Short' => esc_html__( 'Too Short', 'lifterlms' ),
 			'Very Weak' => esc_html__( 'Very Weak', 'lifterlms' ),
 			'Weak' => esc_html__( 'Weak', 'lifterlms' ),

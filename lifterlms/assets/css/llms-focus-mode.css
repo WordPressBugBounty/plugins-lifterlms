@@ -1,3 +1,56 @@
+:where(:root) {
+  --llms-color-primary: #466dd8;
+  --llms-color-primary-hover: color-mix(in srgb, var(--llms-color-primary) 82%, #000);
+  --llms-color-primary-focus: color-mix(in srgb, var(--llms-color-primary) 81%, #fff);
+  --llms-color-primary-subtle: color-mix(in srgb, var(--llms-color-primary) 30%, transparent);
+  --llms-color-on-primary: var(--llms-color-on-solid);
+  --llms-color-action: #c05621;
+  --llms-color-action-hover: color-mix(in srgb, var(--llms-color-action) 82%, #000);
+  --llms-color-action-focus: color-mix(in srgb, var(--llms-color-action) 81%, #fff);
+  --llms-color-action-subtle: color-mix(in srgb, var(--llms-color-action) 15%, transparent);
+  --llms-color-on-action: var(--llms-color-on-solid);
+  --llms-color-accent: #ef476f;
+  --llms-color-accent-hover: color-mix(in srgb, var(--llms-color-accent) 82%, #000);
+  --llms-color-accent-focus: color-mix(in srgb, var(--llms-color-accent) 81%, #fff);
+  --llms-color-accent-subtle: color-mix(in srgb, var(--llms-color-accent) 15%, transparent);
+  --llms-color-on-accent: var(--llms-color-on-solid);
+  --llms-color-success: #4d8d3c;
+  --llms-color-success-hover: color-mix(in srgb, var(--llms-color-success) 82%, #000);
+  --llms-color-success-focus: color-mix(in srgb, var(--llms-color-success) 81%, #fff);
+  --llms-color-success-subtle: color-mix(in srgb, var(--llms-color-success) 15%, transparent);
+  --llms-color-warning: #946200;
+  --llms-color-warning-hover: color-mix(in srgb, var(--llms-color-warning) 82%, #000);
+  --llms-color-warning-focus: color-mix(in srgb, var(--llms-color-warning) 81%, #fff);
+  --llms-color-warning-subtle: color-mix(in srgb, var(--llms-color-warning) 15%, transparent);
+  --llms-color-warning-muted: color-mix(in srgb, var(--llms-color-warning) 20%, transparent);
+  --llms-color-danger: #bb231c;
+  --llms-color-danger-hover: color-mix(in srgb, var(--llms-color-danger) 82%, #000);
+  --llms-color-danger-focus: color-mix(in srgb, var(--llms-color-danger) 81%, #fff);
+  --llms-color-danger-subtle: color-mix(in srgb, var(--llms-color-danger) 15%, transparent);
+  --llms-color-danger-muted: color-mix(in srgb, var(--llms-color-danger) 30%, transparent);
+  --llms-color-on-danger: var(--llms-color-on-solid);
+  --llms-color-neutral: #e1e1e1;
+  --llms-color-neutral-hover: color-mix(in srgb, var(--llms-color-neutral) 91%, #000);
+  --llms-color-neutral-focus: color-mix(in srgb, var(--llms-color-neutral) 67%, #fff);
+  --llms-color-on-neutral: #444;
+  --llms-color-on-neutral-hover: color-mix(in srgb, var(--llms-color-on-neutral) 96%, #000);
+  --llms-color-on-solid: #fefefe;
+  --llms-color-border: #dedede;
+  --llms-color-input-border: #999;
+  --llms-color-track: var(--llms-color-border);
+  --llms-color-surface: #f1f1f1;
+  --llms-color-surface-hover: #eaeaea;
+  --llms-color-ink: #1d2327;
+  --llms-radius-sm: var(--llms-radius, 6px);
+  --llms-radius-md: calc(var(--llms-radius, 6px) * 2);
+  --llms-radius-control: var(--llms-radius, 8px);
+  --llms-element-border-width: 1px;
+  --llms-element-border-style: solid;
+  --llms-loop-title-size: 1.5rem;
+  --llms-loop-title-weight: 600;
+  --llms-loop-title-line-height: 1.3;
+}
+
 .llms-focus-mode {
   margin: 0;
   padding: 0;
@@ -95,9 +148,9 @@
   gap: 6px;
   padding: 6px 14px;
   border: 1px solid #e5e5e5;
-  border-radius: 6px;
+  border-radius: var(--llms-radius-sm, var(--llms-radius, 6px));
   background: #fafafa;
-  color: #1d2327;
+  color: var(--llms-color-ink, #1d2327);
   text-decoration: none;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -109,7 +162,7 @@
 .llms-focus-mode .llms-focus-mode-nav-btn:hover {
   background: #f0f0f0;
   border-color: #ccc;
-  color: #1d2327;
+  color: var(--llms-color-ink, #1d2327);
 }
 .llms-focus-mode .llms-focus-mode-nav-btn .llms-focus-mode-nav-icon {
   width: 12px;
@@ -205,6 +258,7 @@
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+.llms-focus-mode .llms-focus-mode-sidebar .llms-focus-mode-sidebar-header h2,
 .llms-focus-mode .llms-focus-mode-sidebar .llms-focus-mode-sidebar-header h3 {
   margin: 0;
   font-size: inherit;
@@ -246,7 +300,7 @@
   height: 28px;
   padding: 0;
   border: 1px solid #e5e5e5;
-  border-radius: 8px;
+  border-radius: var(--llms-radius-control, var(--llms-radius, 8px));
   background: #fff;
   -webkit-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.08);
           box-shadow: 2px 0 4px rgba(0, 0, 0, 0.08);
@@ -259,7 +313,7 @@
   transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
 }
 .llms-focus-mode .llms-focus-mode-sidebar-toggle:hover {
-  color: #1d2327;
+  color: var(--llms-color-ink, #1d2327);
   background: #f0f0f0;
   -webkit-box-shadow: 2px 0 6px rgba(0, 0, 0, 0.12);
           box-shadow: 2px 0 6px rgba(0, 0, 0, 0.12);
@@ -308,7 +362,7 @@
   margin: 0 0 30px;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #1d2327;
+  color: var(--llms-color-ink, #1d2327);
 }
 .llms-focus-mode .llms-focus-mode-content .llms-lesson-content {
   max-width: 100%;
@@ -539,5 +593,17 @@
   .admin-bar.llms-focus-mode .llms-focus-mode-wrapper {
     height: calc(100dvh - 46px);
   }
+}
+
+.llms-quiz-attempt-select-form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
 }
 /*# sourceMappingURL=../maps/css/llms-focus-mode.css.map */

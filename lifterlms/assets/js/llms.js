@@ -28,7 +28,8 @@ var LLMS = window.LLMS || {};
 	 * @package LifterLMS/Scripts
 	 *
 	 * @since 3.14.0
-	 * @version 6.10.2
+	 * @since 11.0.0 Open from a title button and keep that button out of the modal.
+	 * @version 11.0.0
 	 */
 	
 	LLMS.Achievements = {
@@ -59,6 +60,7 @@ var LLMS = window.LLMS || {};
 		 * Bind DOM events
 		 *
 		 * @since 3.14.0
+		 * @since 11.0.0 Look up the modal by ID instead of building a selector from the `data-id` attribute.
 		 *
 		 * @return {void}
 		 */
@@ -76,7 +78,7 @@ var LLMS = window.LLMS || {};
 	
 				var $this  = $( this ),
 					id     = 'achievement-' + $this.attr( 'data-id' ),
-					$modal = $( '#' + id );
+					$modal = $( document.getElementById( id ) );
 	
 				if ( ! $modal.length ) {
 					self.create_modal( $this );
@@ -92,6 +94,7 @@ var LLMS = window.LLMS || {};
 		 * Creates modal a modal for an achievement
 		 *
 		 * @since 3.14.0
+		 * @since 11.0.0 Don't parse the `data-id` attribute as HTML.
 		 *
 		 * @param obj $el The jQuery selector for the modal card.
 		 * @return {void}
@@ -99,10 +102,10 @@ var LLMS = window.LLMS || {};
 		create_modal: function( $el ) {
 	
 			var id     = 'achievement-' + $el.attr( 'data-id' ),
-				$modal = $( '#' + id );
+				$modal = $( document.getElementById( id ) );
 	
 			if ( ! $modal.length ) {
-				$modal = $( '<div class="llms-achievement-modal" id="' + id + '" />' );
+				$modal = $( '<div class="llms-achievement-modal" />' ).attr( 'id', id );
 				$( 'body' ).append( $modal );
 			}
 	
@@ -117,14 +120,23 @@ var LLMS = window.LLMS || {};
 				width: 340,
 				onOpening: function( modal ) {
 	
-					modal.setTitle( $el.find( '.llms-achievement-title' ).html() );
+					var $clone = $el.clone();
+					$clone.find( '.llms-achievement-trigger' ).each( function() {
+						$( this ).replaceWith( document.createTextNode( $( this ).text() ) );
+					} );
+	
+					modal.setTitle( $el.find( '.llms-achievement-title' ).text() );
 					modal.setSubtitle( $el.find( '.llms-achievement-date' ).html() );
-					modal.setContent( '<div class="llms-achievement">' + $el.html() + '</div>' );
+					modal.setContent( '<div class="llms-achievement">' + $clone.html() + '</div>' );
 	
 				},
 	
 				onClosing: function() {
 					window.history.pushState( '', document.title, window.location.pathname + window.location.search );
+					var trigger = $el.find( '.llms-achievement-trigger' ).get( 0 );
+					if ( trigger ) {
+						trigger.focus();
+					}
 				},
 	
 			} );
@@ -151,7 +163,14 @@ var LLMS = window.LLMS || {};
 				return;
 			}
 	
-			const a = document.querySelector( `a[href="${ hash.join( '-' ) }"]` )
+			const card = document.querySelector( `.llms-achievement[data-id="${ hash[1] }"]` );
+			if ( card ) {
+				card.click();
+				return;
+			}
+	
+			// Older template overrides wrap the card in an anchor.
+			const a = document.querySelector( `a[href="${ hash.join( '-' ) }"]` );
 			if ( ! a ) {
 				return;
 			}
@@ -292,6 +311,73 @@ var LLMS = window.LLMS || {};
 			$.ajax( settings );
 	
 			return this;
+	
+		}
+	
+	};
+	
+		/**
+	 * Student dashboard mobile navigation.
+	 *
+	 * @package LifterLMS/Scripts
+	 *
+	 * @since 11.0.0
+	 * @version 11.0.0
+	 */
+	
+	/**
+	 * Same-origin http(s) URL from a dashboard select option.
+	 *
+	 * @since 11.0.0
+	 *
+	 * @param {string} url Candidate URL.
+	 * @return {string} Safe URL, or an empty string.
+	 */
+	function llmsSafeSameOriginUrl( url ) {
+		var parsed;
+	
+		if ( 'string' !== typeof url || '' === url ) {
+			return '';
+		}
+	
+		try {
+			parsed = new URL( url, window.location.href );
+		} catch ( error ) {
+			return '';
+		}
+	
+		if ( 'http:' !== parsed.protocol && 'https:' !== parsed.protocol ) {
+			return '';
+		}
+	
+		if ( parsed.origin !== window.location.origin ) {
+			return '';
+		}
+	
+		return parsed.href;
+	}
+	
+	LLMS.DashboardNav = {
+	
+		/**
+		 * Bind the mobile dashboard navigation form.
+		 *
+		 * Changing the select does not navigate. Submitting the form does.
+		 *
+		 * @since 11.0.0
+		 *
+		 * @return {void}
+		 */
+		init: function() {
+	
+			$( '.llms-sd-mobile-nav' ).on( 'submit', function( e ) {
+				var url = llmsSafeSameOriginUrl( $( this ).find( 'select' ).val() );
+				e.preventDefault();
+				if ( ! url ) {
+					return;
+				}
+				window.location.assign( url );
+			} );
 	
 		}
 	
@@ -1187,7 +1273,7 @@ var LLMS = window.LLMS || {};
 	 * @package LifterLMS/Scripts
 	 *
 	 * @since 3.0.0
-	 * @version 5.0.0
+	 * @version 11.0.0
 	 */
 	
 	$.extend( LLMS.PasswordStrength, {
@@ -1273,6 +1359,12 @@ var LLMS = window.LLMS || {};
 				self.check_strength();
 			} );
 	
+			// recheck the password strength when the values of other form fields
+			// change as their values are used when checking the password for reuse
+			self.$form.on( 'input change', 'input[type="text"], input[type="email"], input[type="tel"], input[type="number"]', function() {
+				self.check_strength();
+			} );
+	
 		},
 	
 		/**
@@ -1313,9 +1405,21 @@ var LLMS = window.LLMS || {};
 				}
 			}
 	
-			this.$meter.removeClass( 'too-short very-weak weak medium strong mismatch' );
-			this.$meter.show().addClass( this.get_current_strength( 'slug' ) );
-			this.$meter.html( this.get_current_strength( 'text' ) );
+			var slug = this.get_current_strength( 'slug' ),
+				text = this.get_current_strength( 'text' );
+	
+			// When the password is rejected because it reuses a value found in
+			// another form field, replace the generic label with an explanation.
+			// The very-weak slug is retained so the password still fails
+			// `get_current_strength_status()` and the meter stays red.
+			if ( 'very-weak' === slug && this.get_reuse_match() ) {
+				slug += ' reused-info';
+				text = this.get_reuse_message();
+			}
+	
+			this.$meter.removeClass( 'too-short very-weak weak medium strong mismatch reused-info' );
+			this.$meter.show().addClass( slug );
+			this.$meter.html( text );
 	
 		},
 	
@@ -1336,9 +1440,18 @@ var LLMS = window.LLMS || {};
 	
 			} else {
 	
-				callback( LLMS.l10n.translate( 'There is an issue with your chosen password.' ) );
+				var error = LLMS.l10n.translate( 'There is an issue with your chosen password.' );
+	
+				// When the password is rejected because it reuses a value found in
+				// another form field, use a more helpful error message.
+				if ( 'very-weak' === self.get_current_strength( 'slug' ) && self.get_reuse_match() ) {
+					error = self.get_reuse_message();
+				}
+	
+				callback( error );
 	
 			}
+	
 		},
 	
 		/**
@@ -1362,6 +1475,93 @@ var LLMS = window.LLMS || {};
 			} );
 	
 			return blocklist;
+	
+		},
+	
+		/**
+		 * Retrieve the values of the other form fields used when checking the
+		 * password for reuse of information from the form.
+		 *
+		 * @since 11.0.0
+		 *
+		 * @return {String[]} Lowercased values of all text, email, tel, and number inputs in the form.
+		 */
+		get_form_field_values: function() {
+	
+			var values = [];
+	
+			this.$form.find( 'input[type="text"], input[type="email"], input[type="tel"], input[type="number"]' ).each( function() {
+				var val = $( this ).val();
+				if ( val ) {
+					values.push( val.toLowerCase() );
+				}
+			} );
+	
+			return values;
+	
+		},
+	
+		/**
+		 * Retrieve the translated message displayed when the password is rejected
+		 * because it reuses information found in another form field.
+		 *
+		 * @since 11.0.0
+		 *
+		 * @return {String}
+		 */
+		get_reuse_message: function() {
+			return LLMS.l10n.translate( 'This password includes your name, email, or other information from this form. Choose a password that doesn\'t include those details.' );
+		},
+	
+		/**
+		 * Determine if the password's weakness is caused by reusing a value from
+		 * another field in the form.
+		 *
+		 * A reuse is identified when the password's blocklist matches include a
+		 * match against the form's field values: the matched token must equal a
+		 * full field value or a word of four or more characters from a field
+		 * value. Shorter values are excluded so short fields, such as a state
+		 * abbreviation, do not produce a false explanation. Those values can
+		 * still score as very weak and keep the existing label.
+		 *
+		 * @since 11.0.0
+		 *
+		 * @return {Boolean|Object} The zxcvbn match which caused the reuse or `false` when the password's weakness is not caused by field reuse.
+		 */
+		get_reuse_match: function() {
+	
+			if ( 'undefined' === typeof zxcvbn ) {
+				return false;
+			}
+	
+			var words = [];
+	
+			$.each( this.get_form_field_values(), function( index, val ) {
+				if ( 3 < val.length ) {
+					words.push( val );
+				}
+				$.each( val.split( /\W+/ ), function( index, word ) {
+					if ( 3 < word.length ) {
+						words.push( word );
+					}
+				} );
+			} );
+	
+			if ( ! words.length ) {
+				return false;
+			}
+	
+			var result = zxcvbn( this.$pass.val(), this.get_blocklist() ),
+				matches = ( result && ( result.match_sequence || result.sequence ) ) ? ( result.match_sequence || result.sequence ) : [];
+	
+			for ( var i = 0; i < matches.length; i++ ) {
+				var match = matches[ i ];
+				if ( match && 'dictionary' === match.pattern && 'user_inputs' === match.dictionary_name && -1 !== $.inArray( match.token.toLowerCase(), words ) ) {
+					return match;
+				}
+			}
+	
+			return false;
 	
 		},
 	
