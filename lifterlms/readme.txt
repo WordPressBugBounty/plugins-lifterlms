@@ -7,7 +7,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 5.9
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 11.0.0
+Stable tag: 11.0.1
 
 Complete WordPress LMS (learning management system) to create, launch, and scale eLearning: sell online courses, memberships, quizzes, and training.
 
@@ -550,6 +550,13 @@ Please contact the LifterLMS team directly to report a security issue: [https://
 
 == Changelog ==
 
+= v11.0.1 - 2026-11-04 =
+
+##### Bug Fixes
+
++ Adding missing ActionScheduler file. [#3444](https://github.com/gocodebox/lifterlms/issues/3444)
+
+
 = v11.0.0 - 2026-11-03 =
 
 ##### New Features
@@ -896,19 +903,6 @@ Please contact the LifterLMS team directly to report a security issue: [https://
 
 + Additional sanitization of pricing display markup. Thanks Mustafa Ahmed!
 + Additional checks on post search AJAX requests. Thanks [@devploit](https://github.com/devploit)!
-
-
-= v10.0.9 - 2026-06-29 =
-
-##### Bug Fixes
-
-+ Fixed the "Add New Plan" access plan dialog not scrolling within the block editor meta boxes area in WordPress 7.0.
-
-##### Security Fixes
-
-+ Additional checks when starting a quiz. Thanks [@Civitasmass](https://github.com/Civitasmass)!
-+ Additional checks on the add-ons management screen.
-+ Additional checks when authenticating REST API requests.
 
 
 [Read the full changelog](https://make.lifterlms.com/tag/lifterlms/?utm_source=LifterLMS%20Plugin&utm_medium=README&utm_campaign=Readme%20to%20Sale)

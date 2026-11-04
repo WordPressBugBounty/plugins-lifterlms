@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 11.0.0\n"
+"Project-Id-Version: LifterLMS 11.0.1\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-03T12:20:00+00:00\n"
+"POT-Creation-Date: 2026-11-04T11:50:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.1\n"
 "X-Domain: lifterlms\n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #. Description of the plugin
 #: lifterlms.php
-msgid "Complete e-learning platform to sell online courses, protect lessons, offer memberships, and quiz students. WP Learning Management System."
+msgid "Complete WordPress LMS (learning management system) to create, launch, and scale eLearning: sell online courses, memberships, quizzes, and training."
 msgstr ""
 
 #: class-lifterlms.php:863
