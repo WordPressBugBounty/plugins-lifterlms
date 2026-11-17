@@ -3999,7 +3999,6 @@ define( 'Schemas/Lesson',[], function() {
 			},
 					{
 						attribute: 'date_available',
-						date_format: 'Y-m-d',
 						condition: function() {
 							if ( this.get_course() && 'yes' === this.get_course().get( 'lesson_drip' ) && this.get_course().get( 'drip_method' ) ) {
 								return false;
@@ -4009,8 +4008,7 @@ define( 'Schemas/Lesson',[], function() {
 						},
 						id: 'date-available',
 						label: LLMS.l10n.translate( 'Date' ),
-						timepicker: 'false',
-						type: 'datepicker',
+						type: 'date',
 			},
 					{
 						attribute: 'time_available',
@@ -4021,11 +4019,9 @@ define( 'Schemas/Lesson',[], function() {
 
 							return ( 'date' === this.get( 'drip_method' ) );
 						},
-						datepicker: 'false',
-						date_format: 'h:i A',
 						id: 'time-available',
 						label: LLMS.l10n.translate( 'Time' ),
-			type: 'datepicker',
+			type: 'time',
 		},
 			], [
 				{
@@ -5477,6 +5473,11 @@ define( 'Views/_Editable',[], function() {
 				return false;
 			}
 
+			// A partly filled date or time input has an empty value, and a date can be out of range; keep the previous value.
+			if ( -1 !== [ 'date', 'time' ].indexOf( $el.attr( 'type' ) ) && ! $el[0].validity.valid ) {
+				return false;
+			}
+
 			if ( 'url' === type || 'video' === type ) {
 				if ( ! this._validate_url( this.get_content( $el ) ) ) {
 					return false;
@@ -5585,7 +5586,16 @@ define( 'Views/_Editable',[], function() {
 					datepicker: ( undefined === $( this ).attr( 'data-date-datepicker' ) ) ? true : ( 'true' == $( this ).attr( 'data-date-datepicker' ) ),
 					timepicker: ( undefined === $( this ).attr( 'data-date-timepicker' ) ) ? true : ( 'true' == $( this ).attr( 'data-date-timepicker' ) ),
 					onClose: function( current_time, $input ) {
-						$input.blur();
+						// Pressing Tab closes the picker from its keydown handler. Blurring there saves the value and re-renders
+						// the view before the browser moves focus, so Tab lands on the view's first field and the model keeps
+						// `_has_focus`, which holds back the change. Wait until Tab has moved focus away on its own.
+						setTimeout( function() {
+							// Blurring runs the picker's own blur handler, which closes it again. Only blur a focused input so that
+							// second close doesn't blur again and recurse until the stack overflows, which left the picker open.
+							if ( $input.is( ':focus' ) ) {
+								$input.trigger( 'blur' );
+							}
+						} );
 					}
 				} );
 
@@ -5968,7 +5978,14 @@ define( 'Views/_Editable',[], function() {
 		save_edits: function( event ) {
 
 			var $el = $( event.target ),
-				val = this.get_content( $el );
+				val = this.get_content( $el ),
+				hour;
+
+			// Time inputs return 24-hour `H:i`; keep storing times as `h:i A`, the format the builder has always saved.
+			if ( 'time' === $el.attr( 'type' ) && val ) {
+				hour = parseInt( val, 10 );
+				val  = ( '0' + ( hour % 12 || 12 ) ).slice( -2 ) + val.substr( 2, 3 ) + ( hour < 12 ? ' AM' : ' PM' );
+			}
 
 			this.model.set( $el.attr( 'data-attribute' ), val );
 
@@ -9189,8 +9206,63 @@ define( 'Views/SettingsFields',[], function() {
 		 */
 		is_default_field: function( type ) {
 
-			var types = [ 'audio_embed', 'datepicker', 'number', 'text', 'video_embed' ];
+			var types = [ 'audio_embed', 'date', 'datepicker', 'number', 'text', 'time', 'video_embed' ];
 			return ( -1 !== types.indexOf( type.replace( 'switch-', '' ) ) );
+
+		},
+
+		/**
+		 * Retrieve the value to display in a default field's input.
+		 *
+		 * Date and time inputs only accept `Y-m-d` and 24-hour `H:i` values. Drip dates stored as `m/d/Y`
+		 * (saved by the lesson metabox before 8.0.7) and times stored as `h:i A` (builder), `H:i:s` (REST API),
+		 * or other text typed into the lesson metabox are converted the way `strtotime()` reads them on the server.
+		 * A stored value that can't be read displays as empty.
+		 *
+		 * @since 11.1.0
+		 *
+		 * @param {Object} input Field input data.
+		 * @return {String}
+		 */
+		get_input_value: function( input ) {
+
+			var val = this.model.get( input.attribute ),
+				pad = function( num ) {
+					return ( '0' + num ).slice( -2 );
+				},
+				parts, hour, min;
+
+			if ( ! val || ( 'date' !== input.type && 'time' !== input.type ) ) {
+				return val;
+			}
+
+			if ( 'date' === input.type ) {
+
+				if ( /^\d{4}-\d{2}-\d{2}$/.test( val ) ) {
+					return val;
+				}
+
+				parts = val.match( /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/ );
+				return parts ? parts[3] + '-' + pad( parts[1] ) + '-' + pad( parts[2] ) : '';
+
+			}
+
+			parts = val.trim().match( /^(\d{1,2})(?::(\d{2})(?::\d{2})?)?\s*(?:([ap])\.?m\.?)?$/i );
+			if ( ! parts || ( ! parts[2] && ! parts[3] ) ) {
+				return '';
+			}
+
+			hour = parseInt( parts[1], 10 );
+			min  = parts[2] ? parseInt( parts[2], 10 ) : 0;
+
+			if ( parts[3] ) {
+				if ( hour < 1 || hour > 12 ) {
+					return '';
+				}
+				hour = ( hour % 12 ) + ( 'p' === parts[3].toLowerCase() ? 12 : 0 );
+			}
+
+			return ( hour > 23 || min > 59 ) ? '' : pad( hour ) + ':' + pad( min );
 
 		},
 
@@ -9377,6 +9449,16 @@ define( 'Views/SettingsFields',[], function() {
 					defaults.placeholder = 'https://';
 					defaults.tip         = LLMS.l10n.translate( 'Use SoundCloud or Spotify audio URLS.' );
 					defaults.input_type  = 'url';
+				break;
+
+				case 'date':
+					defaults.input_type = 'date';
+					// Without a max, browsers accept years with up to 6 digits.
+					defaults.max = '9999-12-31';
+				break;
+
+				case 'time':
+					defaults.input_type = 'time';
 				break;
 
 				case 'datepicker':
@@ -10173,7 +10255,13 @@ define( 'Views/Question',[
 				this.listenTo( this.model, event, this.render );
 			}, this );
 
-			this.listenTo( this.model.get( 'image' ), 'change', this.render );
+			// Re-render only the image and video settings so the question's editors aren't rebuilt.
+			this.listenTo( this.model.get( 'image' ), 'change', function() {
+				this.render_toggle_group( 'image.enabled' );
+			} );
+			this.listenTo( this.model, 'change:video_enabled', function() {
+				this.render_toggle_group( 'video_enabled' );
+			} );
 
 			this.listenTo( this.model.get_parent(), 'change:_points', this.render_points_percentage );
 
@@ -10241,6 +10329,23 @@ define( 'Views/Question',[
 			this.init_selects();
 
 			return this;
+		},
+
+		/**
+		 * Re-renders the toggle group of a feature switch, such as the image or video settings, without re-rendering the question.
+		 *
+		 * @since 11.1.0
+		 *
+		 * @param {String} name Name attribute of the feature's switch input.
+		 * @return {Void}
+		 */
+		render_toggle_group: function( name ) {
+
+			var selector = 'input[name="' + name + '"]',
+				$group   = $( '<div>' ).html( this.template( this.model ) ).find( selector ).first().closest( '.llms-editable-toggle-group' );
+
+			this.$el.find( selector ).first().closest( '.llms-editable-toggle-group' ).replaceWith( $group );
+
 		},
 
 		/**

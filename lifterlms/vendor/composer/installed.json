@@ -30,6 +30,7 @@
                 "symfony/process": "^2.3"
             },
             "time": "2020-04-07T06:57:05+00:00",
+            "published-time": "2020-04-07T06:58:38+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Composer\\Installers\\Plugin",
@@ -166,6 +167,7 @@
                 "coenjacobs/mozart": "Easily wrap this library with your own prefix, to prevent collisions when multiple plugins use this library"
             },
             "time": "2020-07-31T07:00:11+00:00",
+            "published-time": "2020-07-31T07:05:06+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -215,6 +217,7 @@
                 "yoast/phpunit-polyfills": "^2.0"
             },
             "time": "2025-07-15T09:32:30+00:00",
+            "published-time": "2025-07-15T09:33:47+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "scripts-description": {

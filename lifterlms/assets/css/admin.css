@@ -3568,7 +3568,7 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 8px 12px;
-  margin: 0 0 12px;
+  margin: 16px 0 12px;
 }
 .llms-orders-transactions-wrap .llms-table-header:before, .llms-orders-transactions-wrap .llms-table-header:after,
 .llms-subscriptions-wrap .llms-table-header:before,
@@ -3605,6 +3605,29 @@ body:not(.admin-color-fresh) .llms-award-engagement-submitbox .llms-mb-list.post
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+.llms-orders-transactions-wrap .llms-table-bulk-actions,
+.llms-subscriptions-wrap .llms-table-bulk-actions {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  gap: 8px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.llms-orders-transactions-wrap .llms-table-trash-link,
+.llms-subscriptions-wrap .llms-table-trash-link {
+  margin-left: auto;
+}
+.llms-orders-transactions-wrap .llms-table-trash-link .count,
+.llms-subscriptions-wrap .llms-table-trash-link .count {
+  color: #50575e;
 }
 
 .llms-post-table-post-filter {

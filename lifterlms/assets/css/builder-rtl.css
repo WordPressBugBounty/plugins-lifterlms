@@ -677,6 +677,7 @@ body.admin_page_llms-course-builder .webui-popover .select2-container--default .
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  pointer-events: none;
   width: 100%;
 }
 .wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-label,
@@ -687,10 +688,35 @@ body.admin_page_llms-course-builder .webui-popover .select2-container--default .
   min-width: 0;
   width: auto;
 }
+.wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-label-text,
+.wrap.lifterlms.llms-builder .llms-editable-toggle-group .llms-switch .llms-label-text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+.wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-help-tip,
+.wrap.lifterlms.llms-builder .llms-editable-toggle-group .llms-switch .llms-help-tip {
+  margin-right: auto;
+}
+.wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-label-text,
+.wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-help-tip,
+.wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-switch-slider,
+.wrap.lifterlms.llms-builder .llms-editable-toggle-group .llms-switch .llms-label-text,
+.wrap.lifterlms.llms-builder .llms-editable-toggle-group .llms-switch .llms-help-tip,
+.wrap.lifterlms.llms-builder .llms-editable-toggle-group .llms-switch .llms-switch-slider {
+  pointer-events: auto;
+}
 .wrap.lifterlms.llms-builder .llms-settings-field .llms-switch .llms-switch-slider,
 .wrap.lifterlms.llms-builder .llms-editable-toggle-group .llms-switch .llms-switch-slider {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+.wrap.lifterlms.llms-builder .llms-settings-field.llms-editable-toggle-group .llms-switch .llms-label,
+.wrap.lifterlms.llms-builder .llms-editable-toggle-group.llms-editable-toggle-group .llms-switch .llms-label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  pointer-events: auto;
 }
 .wrap.lifterlms.llms-builder .llms-settings-field .llms-editable-image,
 .wrap.lifterlms.llms-builder .llms-settings-field .llms-editable-video,
@@ -1584,6 +1610,11 @@ body.admin_page_llms-course-builder .webui-popover .select2-container--default .
 }
 .wrap.lifterlms.llms-builder ul.llms-quiz-questions li.llms-question .llms-question-features:last-child {
   margin: 0;
+}
+.wrap.lifterlms.llms-builder ul.llms-quiz-questions li.llms-question .llms-question-features .llms-settings-row {
+  -webkit-column-gap: 48px;
+     -moz-column-gap: 48px;
+          column-gap: 48px;
 }
 .wrap.lifterlms.llms-builder ul.llms-quiz-questions li.llms-question .llms-question-features .llms-switch {
   margin-left: 15px;
