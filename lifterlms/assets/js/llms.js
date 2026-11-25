@@ -712,22 +712,30 @@ var LLMS = window.LLMS || {};
 	
 			event.preventDefault();
 	
-			var $this       = $( this ),
-				$fields     = $( $( this ).attr( 'data-fields' ) ),
-				isShowing   = $this.attr( 'data-is-showing' ) || 'no',
-				displayFunc = 'yes' === isShowing ? 'hide' : 'show',
-				disabled    = 'yes' === isShowing ? 'disabled' : null,
-				textAttr    = 'yes' === isShowing ? 'data-change-text' : 'data-cancel-text';
+			var $this     = $( this ),
+				$form     = $this.closest( 'form' ),
+				isShowing = 'yes' === $this.attr( 'data-is-showing' ),
+				$open;
 	
-			$fields.each( function() {
+			$this.text( $this.attr( isShowing ? 'data-change-text' : 'data-cancel-text' ) );
+			$this.attr( 'data-is-showing', isShowing ? 'no' : 'yes' );
 	
-				$( this ).closest( '.llms-form-field' )[ displayFunc ]();
-				$( this ).attr( 'disabled', disabled );
+			// Toggles still open after this click, such as the password toggle when cancelling an email change.
+			$open = $form.find( '.llms-toggle-fields[data-is-showing="yes"]' );
+	
+			// Use find() so the data-fields value is only ever treated as a selector, never parsed as HTML.
+			$form.find( $this.attr( 'data-fields' ) ).each( function() {
+	
+				var field = this,
+					// A field shared with another open toggle, like Current Password, stays visible and enabled.
+					show  = ! isShowing || $open.filter( function() {
+						return $form.find( $( this ).attr( 'data-fields' ) ).is( field );
+					} ).length > 0;
+	
+				$( field ).closest( '.llms-form-field' )[ show ? 'show' : 'hide' ]();
+				$( field ).attr( 'disabled', show ? null : 'disabled' );
 	
 			} );
-	
-			$this.text( $this.attr( textAttr ) );
-			$this.attr( 'data-is-showing', 'yes' === isShowing ? 'no' : 'yes' );
 	
 		},
 	
@@ -1804,6 +1812,8 @@ var LLMS = window.LLMS || {};
 				return;
 			}
 	
+			this.bind_free_enroll();
+	
 			if ( $( '.llms-access-plans' ).length ) {
 	
 				LLMS.wait_for_matchHeight( function() {
@@ -1834,6 +1844,37 @@ var LLMS = window.LLMS || {};
 	
 			$( '.llms-access-plan-content' ).matchHeight();
 			$( '.llms-access-plan-pricing.trial' ).matchHeight();
+	
+		},
+	
+		/**
+		 * Submit each free enrollment form only once, so a double click doesn't send a second enrollment request.
+		 *
+		 * @since 11.1.1
+		 *
+		 * @return void
+		 */
+		bind_free_enroll: function() {
+	
+			$( document ).on( 'submit', '.llms-free-enroll-form', function( e ) {
+	
+				var $form = $( this );
+	
+				if ( $form.hasClass( 'llms-is-processing' ) ) {
+					e.preventDefault();
+					return;
+				}
+	
+				$form.addClass( 'llms-is-processing' ).find( 'button[type="submit"]' ).prop( 'disabled', true );
+	
+			} );
+	
+			// Re-enable forms when the page is restored from the back/forward cache.
+			$( window ).on( 'pageshow', function( e ) {
+				if ( e.originalEvent && e.originalEvent.persisted ) {
+					$( '.llms-free-enroll-form' ).removeClass( 'llms-is-processing' ).find( 'button[type="submit"]' ).prop( 'disabled', false );
+				}
+			} );
 	
 		},
 	

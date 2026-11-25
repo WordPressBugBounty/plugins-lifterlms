@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: LifterLMS 11.1.0\n"
+"Project-Id-Version: LifterLMS 11.1.1\n"
 "Report-Msgid-Bugs-To: https://lifterlms.com/my-account/my-tickets\n"
 "Last-Translator: Team LifterLMS <team@lifterlms.com>\n"
 "Language-Team: Team LifterLMS <team@lifterlms.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-17T13:17:45+00:00\n"
+"POT-Creation-Date: 2026-11-24T17:22:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: llms/dev 0.3.1\n"
 "X-Domain: lifterlms\n"
@@ -1108,7 +1108,7 @@ msgstr ""
 #: includes/admin/reporting/tables/llms.table.students.php:670
 #: includes/admin/reporting/tabs/class.llms.admin.reporting.tab.students.php:118
 #: includes/admin/settings/class.llms.settings.memberships.php:32
-#: includes/admin/views/access-plans/access-plan.php:618
+#: includes/admin/views/access-plans/access-plan.php:620
 #: includes/class-llms-beaver-builder.php:178
 #: includes/class.llms.post-types.php:680
 #: libraries/lifterlms-rest/includes/abilities/class-llms-rest-abilities.php:144
@@ -1121,6 +1121,17 @@ msgstr ""
 
 #: includes/admin/class-llms-admin-users-table.php:229
 msgid "Never"
+msgstr ""
+
+#. Translators: %s = HTTP response status code.
+#: includes/admin/class-llms-export-api.php:67
+#, php-format
+msgid "Unexpected response from the LifterLMS.com exports API (HTTP status code: %s)."
+msgstr ""
+
+#: includes/admin/class-llms-export-api.php:68
+#: includes/admin/post-types/meta-boxes/class.llms.meta.box.order.submit.php:165
+msgid "none"
 msgstr ""
 
 #: includes/admin/class-llms-mailhawk.php:62
@@ -1260,56 +1271,56 @@ msgstr ""
 msgid "Error: You do not have permission to edit this course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:663
+#: includes/admin/class.llms.admin.builder.php:684
 msgid "Invalid course ID"
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:670
+#: includes/admin/class.llms.admin.builder.php:691
 msgid "You cannot edit this course!"
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:679
+#: includes/admin/class.llms.admin.builder.php:700
 #: includes/class.llms.post-types.php:498
 msgid "New Course"
 msgstr ""
 
 #. Translators: %s = Item id.
-#: includes/admin/class.llms.admin.builder.php:807
+#: includes/admin/class.llms.admin.builder.php:828
 #, php-format
 msgid "Unable to detach \"%s\". Invalid ID."
 msgstr ""
 
 #. Translators: %s = Item id.
-#: includes/admin/class.llms.admin.builder.php:896
+#: includes/admin/class.llms.admin.builder.php:917
 #, php-format
 msgid "Unable to delete \"%s\". Invalid ID."
 msgstr ""
 
 #. Translators: %s = Question choice ID.
-#: includes/admin/class.llms.admin.builder.php:989
+#: includes/admin/class.llms.admin.builder.php:1010
 #, php-format
 msgid "Error deleting the question choice \"%s\""
 msgstr ""
 
 #. Translators: %s = Post type name.
-#: includes/admin/class.llms.admin.builder.php:1026
+#: includes/admin/class.llms.admin.builder.php:1047
 #, php-format
 msgid "%s cannot be deleted via the Course Builder."
 msgstr ""
 
 #. Translators: %1$s = Post type singular name; %2$d = Post id.
-#: includes/admin/class.llms.admin.builder.php:1050
+#: includes/admin/class.llms.admin.builder.php:1071
 #, php-format
 msgid "Error deleting the %1$s \"%2$d\"."
 msgstr ""
 
 #. Translators: %s = Lesson post id.
-#: includes/admin/class.llms.admin.builder.php:1183
+#: includes/admin/class.llms.admin.builder.php:1204
 #, php-format
 msgid "Unable to update lesson \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1194
+#: includes/admin/class.llms.admin.builder.php:1215
 #: includes/class.llms.l10n.frontend.php:95
 #: includes/class.llms.l10n.frontend.php:417
 #: includes/class.llms.post-types.php:572
@@ -1318,34 +1329,34 @@ msgid "New Lesson"
 msgstr ""
 
 #. Translators: %s = Lesson post id.
-#: includes/admin/class.llms.admin.builder.php:1210
-#: includes/admin/class.llms.admin.builder.php:1215
-#: includes/admin/class.llms.admin.builder.php:1225
+#: includes/admin/class.llms.admin.builder.php:1231
+#: includes/admin/class.llms.admin.builder.php:1236
+#: includes/admin/class.llms.admin.builder.php:1246
 #, php-format
 msgid "Unable to update lesson \"%s\". Invalid lesson ID."
 msgstr ""
 
 #. Translators: %s = Question post id.
-#: includes/admin/class.llms.admin.builder.php:1391
-#: includes/admin/class.llms.admin.builder.php:1397
-#: includes/admin/class.llms.admin.builder.php:1416
+#: includes/admin/class.llms.admin.builder.php:1412
+#: includes/admin/class.llms.admin.builder.php:1418
+#: includes/admin/class.llms.admin.builder.php:1437
 #, php-format
 msgid "Unable to update question \"%s\". Invalid question ID."
 msgstr ""
 
 #. Translators: %s = Question choice ID.
-#: includes/admin/class.llms.admin.builder.php:1455
+#: includes/admin/class.llms.admin.builder.php:1490
 #, php-format
 msgid "Unable to update choice \"%s\". Invalid choice ID."
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1516
+#: includes/admin/class.llms.admin.builder.php:1538
 #, php-format
 msgid "Unable to update quiz \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
-#: includes/admin/class.llms.admin.builder.php:1526
+#: includes/admin/class.llms.admin.builder.php:1548
 #: includes/class.llms.l10n.frontend.php:117
 #: includes/class.llms.l10n.frontend.php:371
 #: includes/class.llms.post-types.php:611
@@ -1353,23 +1364,23 @@ msgid "New Quiz"
 msgstr ""
 
 #. Translators: %s = Quiz post id.
-#: includes/admin/class.llms.admin.builder.php:1540
-#: includes/admin/class.llms.admin.builder.php:1544
-#: includes/admin/class.llms.admin.builder.php:1557
+#: includes/admin/class.llms.admin.builder.php:1562
+#: includes/admin/class.llms.admin.builder.php:1566
+#: includes/admin/class.llms.admin.builder.php:1579
 #, php-format
 msgid "Unable to update quiz \"%s\". Invalid quiz ID."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1630
+#: includes/admin/class.llms.admin.builder.php:1652
 #, php-format
 msgid "Unable to update section \"%s\". You are not allowed to edit the parent course."
 msgstr ""
 
 #. Translators: %s = Section post id.
-#: includes/admin/class.llms.admin.builder.php:1650
-#: includes/admin/class.llms.admin.builder.php:1655
-#: includes/admin/class.llms.admin.builder.php:1664
+#: includes/admin/class.llms.admin.builder.php:1672
+#: includes/admin/class.llms.admin.builder.php:1677
+#: includes/admin/class.llms.admin.builder.php:1686
 #, php-format
 msgid "Unable to update section \"%s\". Invalid section ID."
 msgstr ""
@@ -2392,7 +2403,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:64
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.coupon.php:70
-#: includes/class.llms.ajax.handler.php:1129
+#: includes/class.llms.ajax.handler.php:1135
 #: includes/llms.functions.core.php:1105
 msgid "ID#"
 msgstr ""
@@ -2585,7 +2596,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.course.options.php:116
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.membership.php:150
-#: includes/admin/views/access-plans/access-plan.php:759
+#: includes/admin/views/access-plans/access-plan.php:761
 msgid "Select a Page"
 msgstr ""
 
@@ -2968,7 +2979,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.course.options.php:535
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.membership.php:320
-#: includes/admin/views/access-plans/access-plan.php:161
+#: includes/admin/views/access-plans/access-plan.php:163
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:32
 msgid "Visibility"
 msgstr ""
@@ -3314,7 +3325,7 @@ msgstr ""
 
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.membership.php:36
 #: includes/admin/settings/class.llms.settings.memberships.php:60
-#: includes/admin/views/access-plans/access-plan.php:598
+#: includes/admin/views/access-plans/access-plan.php:600
 msgid "Membership Settings"
 msgstr ""
 
@@ -3555,10 +3566,6 @@ msgstr ""
 msgid "The status of a Legacy order cannot be changed."
 msgstr ""
 
-#: includes/admin/post-types/meta-boxes/class.llms.meta.box.order.submit.php:165
-msgid "none"
-msgstr ""
-
 #. Translators: %1$s = old access expiration date; %2$s = new access expiration date.
 #: includes/admin/post-types/meta-boxes/class.llms.meta.box.order.submit.php:169
 #, php-format
@@ -3758,7 +3765,7 @@ msgid "Usage / Limit"
 msgstr ""
 
 #: includes/admin/post-types/post-tables/class.llms.admin.post.table.coupons.php:48
-#: includes/admin/views/access-plans/access-plan.php:663
+#: includes/admin/views/access-plans/access-plan.php:665
 #: templates/myaccount/view-order-information.php:172
 msgid "Expiration Date"
 msgstr ""
@@ -4347,7 +4354,7 @@ msgstr ""
 
 #: includes/admin/reporting/tables/llms.table.orders.transactions.php:445
 #: includes/admin/views/access-plans/access-plan-dialog.php:19
-#: includes/admin/views/access-plans/access-plan.php:260
+#: includes/admin/views/access-plans/access-plan.php:262
 #: includes/class.llms.gateway.manual.php:185
 #: includes/class.llms.l10n.frontend.php:478
 #: includes/functions/updates/llms-functions-updates-300.php:170
@@ -5949,45 +5956,45 @@ msgstr ""
 msgid "Show all settings to create an access plan from scratch."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:59
+#: includes/admin/views/access-plans/access-plan.php:61
 msgid "Unnamed Access Plan"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:60
+#: includes/admin/views/access-plans/access-plan.php:62
 #, php-format
 msgctxt "Product Access Plan ID"
 msgid "ID# %s"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:62
+#: includes/admin/views/access-plans/access-plan.php:64
 #: includes/class.llms.post-types.php:1136
 msgid "New Access Plan"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:67
+#: includes/admin/views/access-plans/access-plan.php:69
 msgid "This access plan requires attention for possible misconfigurations"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:70
+#: includes/admin/views/access-plans/access-plan.php:72
 msgid "Errors were found during access plan validation"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:97
+#: includes/admin/views/access-plans/access-plan.php:99
 msgid "General Plan Information"
 msgstr ""
 
 #. translators: %1$s - Open anchor tag to the checkout settings page, %2$s - Closing of anchor tag.
-#: includes/admin/views/access-plans/access-plan.php:114
+#: includes/admin/views/access-plans/access-plan.php:116
 #, php-format
 msgid "Your site does not have a checkout page configured. Configure a Checkout Page in the %1$sCheckout Settings%2$s."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:131
+#: includes/admin/views/access-plans/access-plan.php:133
 #, php-format
 msgid "Direct to Checkout Purchase Link: %s"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:138
+#: includes/admin/views/access-plans/access-plan.php:140
 #: includes/notifications/views/class.llms.notification.view.manual.payment.due.php:136
 #: includes/notifications/views/class.llms.notification.view.order.failed.php:103
 #: includes/notifications/views/class.llms.notification.view.payment.retry.php:138
@@ -5997,118 +6004,118 @@ msgstr ""
 msgid "Plan Title"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:139
-#: includes/admin/views/access-plans/access-plan.php:270
+#: includes/admin/views/access-plans/access-plan.php:141
+#: includes/admin/views/access-plans/access-plan.php:272
 #: templates/admin/user-edit.php:25
 msgid "required"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:140
-#: includes/admin/views/access-plans/access-plan.php:141
+#: includes/admin/views/access-plans/access-plan.php:142
+#: includes/admin/views/access-plans/access-plan.php:143
 msgid "The title of the access plan, displayed to users at the top of the plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:150
+#: includes/admin/views/access-plans/access-plan.php:152
 msgid "Enroll Button Text"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:151
-#: includes/admin/views/access-plans/access-plan.php:152
+#: includes/admin/views/access-plans/access-plan.php:153
+#: includes/admin/views/access-plans/access-plan.php:154
 msgid "The text displayed on the enrollment button for this access plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:156
+#: includes/admin/views/access-plans/access-plan.php:158
 #: templates/checkout/form-checkout.php:134
 msgid "Enroll Now"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:162
-#: includes/admin/views/access-plans/access-plan.php:163
+#: includes/admin/views/access-plans/access-plan.php:164
+#: includes/admin/views/access-plans/access-plan.php:165
 msgid "Set whether this access plan is visible, hidden, or featured in the pricing table."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:195
+#: includes/admin/views/access-plans/access-plan.php:197
 msgid "Plan Description"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:196
-#: includes/admin/views/access-plans/access-plan.php:197
+#: includes/admin/views/access-plans/access-plan.php:198
+#: includes/admin/views/access-plans/access-plan.php:199
 msgid "Description text of the access plan shown on the pricing table. Bullet points of top plan benefits are often used here. "
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:246
+#: includes/admin/views/access-plans/access-plan.php:248
 msgid "Plan Pricing"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:252
+#: includes/admin/views/access-plans/access-plan.php:254
 msgid "Plan Type"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:253
-#: includes/admin/views/access-plans/access-plan.php:254
+#: includes/admin/views/access-plans/access-plan.php:255
+#: includes/admin/views/access-plans/access-plan.php:256
 msgid "Specify if the plan is free or paid."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:259
+#: includes/admin/views/access-plans/access-plan.php:261
 msgid "Paid"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:269
+#: includes/admin/views/access-plans/access-plan.php:271
 msgid "Price"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:271
-#: includes/admin/views/access-plans/access-plan.php:272
+#: includes/admin/views/access-plans/access-plan.php:273
+#: includes/admin/views/access-plans/access-plan.php:274
 msgid "Set the pricing for this access plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:291
+#: includes/admin/views/access-plans/access-plan.php:293
 msgid "Frequency"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:292
-#: includes/admin/views/access-plans/access-plan.php:293
+#: includes/admin/views/access-plans/access-plan.php:294
+#: includes/admin/views/access-plans/access-plan.php:295
 msgid "Choose how often the payment is charged: one-time or recurring."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:298
+#: includes/admin/views/access-plans/access-plan.php:300
 msgid "one-time payment"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:299
+#: includes/admin/views/access-plans/access-plan.php:301
 msgid "every"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:300
+#: includes/admin/views/access-plans/access-plan.php:302
 msgid "every 2nd"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:301
+#: includes/admin/views/access-plans/access-plan.php:303
 msgid "every 3rd"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:302
+#: includes/admin/views/access-plans/access-plan.php:304
 msgid "every 4th"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:303
+#: includes/admin/views/access-plans/access-plan.php:305
 msgid "every 5th"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:304
+#: includes/admin/views/access-plans/access-plan.php:306
 msgid "every 6th"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:313
+#: includes/admin/views/access-plans/access-plan.php:315
 msgid "Plan Period"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:314
-#: includes/admin/views/access-plans/access-plan.php:315
+#: includes/admin/views/access-plans/access-plan.php:316
+#: includes/admin/views/access-plans/access-plan.php:317
 msgid "Define the billing cycle period for the recurring plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:320
+#: includes/admin/views/access-plans/access-plan.php:322
 #: includes/functions/llms-functions-locale.php:132
 #: includes/llms.functions.core.php:330
 msgid "year"
@@ -6116,7 +6123,7 @@ msgid_plural "years"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:321
+#: includes/admin/views/access-plans/access-plan.php:323
 #: includes/functions/llms-functions-locale.php:128
 #: includes/llms.functions.core.php:331
 msgid "month"
@@ -6124,14 +6131,14 @@ msgid_plural "months"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:322
+#: includes/admin/views/access-plans/access-plan.php:324
 #: includes/functions/llms-functions-locale.php:124
 msgid "week"
 msgid_plural "weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:323
+#: includes/admin/views/access-plans/access-plan.php:325
 #: includes/functions/llms-functions-locale.php:120
 #: includes/llms.functions.core.php:332
 msgid "day"
@@ -6139,44 +6146,44 @@ msgid_plural "days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:329
+#: includes/admin/views/access-plans/access-plan.php:331
 msgid "Plan Length"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:330
-#: includes/admin/views/access-plans/access-plan.php:331
+#: includes/admin/views/access-plans/access-plan.php:332
+#: includes/admin/views/access-plans/access-plan.php:333
 msgid "Specify the duration of the plan period."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:336
-#: includes/admin/views/access-plans/access-plan.php:346
-#: includes/admin/views/access-plans/access-plan.php:356
-#: includes/admin/views/access-plans/access-plan.php:366
+#: includes/admin/views/access-plans/access-plan.php:338
+#: includes/admin/views/access-plans/access-plan.php:348
+#: includes/admin/views/access-plans/access-plan.php:358
+#: includes/admin/views/access-plans/access-plan.php:368
 msgid "for all time"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:338
+#: includes/admin/views/access-plans/access-plan.php:340
 #, php-format
 msgid "for %s year"
 msgid_plural "for %s years"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:348
+#: includes/admin/views/access-plans/access-plan.php:350
 #, php-format
 msgid "for %s month"
 msgid_plural "for %s months"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:358
+#: includes/admin/views/access-plans/access-plan.php:360
 #, php-format
 msgid "for %s week"
 msgid_plural "for %s weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin/views/access-plans/access-plan.php:368
+#: includes/admin/views/access-plans/access-plan.php:370
 #, php-format
 msgid "for %s day"
 msgid_plural "for %s days"
@@ -6184,269 +6191,269 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: opening anchor for ecommerce add-ons; 2: closing anchor; 3: opening anchor for Earth Bundle; 4: closing anchor
-#: includes/admin/views/access-plans/access-plan.php:396
+#: includes/admin/views/access-plans/access-plan.php:398
 #, php-format
 msgid "Your site is not set up to process payments. Check out the %1$sEcommerce Add-ons for LifterLMS%2$s to enable live payments via credit card, PayPal, and more. All Ecommerce Add-ons are available in the %3$sEarth Bundle%4$s and higher plans."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:415
+#: includes/admin/views/access-plans/access-plan.php:417
 msgid "View Payment Gateway Settings"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:450
+#: includes/admin/views/access-plans/access-plan.php:452
 msgid "Trial Offer"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:451
-#: includes/admin/views/access-plans/access-plan.php:452
+#: includes/admin/views/access-plans/access-plan.php:453
+#: includes/admin/views/access-plans/access-plan.php:454
 msgid "Enable or disable a free or paid trial period for this plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:457
+#: includes/admin/views/access-plans/access-plan.php:459
 msgid "No trial offer"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:458
+#: includes/admin/views/access-plans/access-plan.php:460
 msgid "Enable trial"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:464
+#: includes/admin/views/access-plans/access-plan.php:466
 msgid "Trial Price"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:465
-#: includes/admin/views/access-plans/access-plan.php:466
+#: includes/admin/views/access-plans/access-plan.php:467
+#: includes/admin/views/access-plans/access-plan.php:468
 msgid "Set the price for the trial period of this plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:475
+#: includes/admin/views/access-plans/access-plan.php:477
 msgid "Trial Length"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:476
-#: includes/admin/views/access-plans/access-plan.php:477
+#: includes/admin/views/access-plans/access-plan.php:478
+#: includes/admin/views/access-plans/access-plan.php:479
 msgid "Specify the length of the trial period."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:486
+#: includes/admin/views/access-plans/access-plan.php:488
 msgid "Trial Period"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:487
-#: includes/admin/views/access-plans/access-plan.php:488
+#: includes/admin/views/access-plans/access-plan.php:489
+#: includes/admin/views/access-plans/access-plan.php:490
 msgid "Define the time length for the trial period (days, weeks, months, years)."
-msgstr ""
-
-#: includes/admin/views/access-plans/access-plan.php:493
-#: includes/admin/views/access-plans/access-plan.php:692
-msgid "year(s)"
-msgstr ""
-
-#: includes/admin/views/access-plans/access-plan.php:494
-#: includes/admin/views/access-plans/access-plan.php:693
-msgid "month(s)"
 msgstr ""
 
 #: includes/admin/views/access-plans/access-plan.php:495
 #: includes/admin/views/access-plans/access-plan.php:694
-msgid "week(s)"
+msgid "year(s)"
 msgstr ""
 
 #: includes/admin/views/access-plans/access-plan.php:496
 #: includes/admin/views/access-plans/access-plan.php:695
+msgid "month(s)"
+msgstr ""
+
+#: includes/admin/views/access-plans/access-plan.php:497
+#: includes/admin/views/access-plans/access-plan.php:696
+msgid "week(s)"
+msgstr ""
+
+#: includes/admin/views/access-plans/access-plan.php:498
+#: includes/admin/views/access-plans/access-plan.php:697
 msgid "day(s)"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:521
+#: includes/admin/views/access-plans/access-plan.php:523
 msgid "Sale Pricing"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:522
-#: includes/admin/views/access-plans/access-plan.php:523
+#: includes/admin/views/access-plans/access-plan.php:524
+#: includes/admin/views/access-plans/access-plan.php:525
 msgid "Indicate if the plan has a sale."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:528
+#: includes/admin/views/access-plans/access-plan.php:530
 msgid "Not on sale"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:529
+#: includes/admin/views/access-plans/access-plan.php:531
 msgid "On Sale"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:535
+#: includes/admin/views/access-plans/access-plan.php:537
 msgid "Sale Price"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:536
-#: includes/admin/views/access-plans/access-plan.php:537
+#: includes/admin/views/access-plans/access-plan.php:538
+#: includes/admin/views/access-plans/access-plan.php:539
 msgid "Set the discounted price for the sale period."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:546
+#: includes/admin/views/access-plans/access-plan.php:548
 msgid "Sale Start Date"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:547
-#: includes/admin/views/access-plans/access-plan.php:548
+#: includes/admin/views/access-plans/access-plan.php:549
+#: includes/admin/views/access-plans/access-plan.php:550
 msgid "The sale starts at the beginning of this date (12:00 AM in the site's timezone)."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:557
+#: includes/admin/views/access-plans/access-plan.php:559
 msgid "Sale End Date"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:558
-#: includes/admin/views/access-plans/access-plan.php:559
+#: includes/admin/views/access-plans/access-plan.php:560
+#: includes/admin/views/access-plans/access-plan.php:561
 msgid "The sale runs through the end of this date (11:59 PM in the site's timezone)."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:604
+#: includes/admin/views/access-plans/access-plan.php:606
 msgid "Plan Availability"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:605
-#: includes/admin/views/access-plans/access-plan.php:606
+#: includes/admin/views/access-plans/access-plan.php:607
+#: includes/admin/views/access-plans/access-plan.php:608
 msgid "Choose who can purchase this plan: anyone or members only."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:611
+#: includes/admin/views/access-plans/access-plan.php:613
 msgid "Anyone"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:612
+#: includes/admin/views/access-plans/access-plan.php:614
 msgid "Members only"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:619
-#: includes/admin/views/access-plans/access-plan.php:620
+#: includes/admin/views/access-plans/access-plan.php:621
+#: includes/admin/views/access-plans/access-plan.php:622
 msgid "Select the memberships required to access this plan."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:627
+#: includes/admin/views/access-plans/access-plan.php:629
 #, php-format
 msgid "ID# %d"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:642
+#: includes/admin/views/access-plans/access-plan.php:644
 msgid "Expiration Settings"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:648
+#: includes/admin/views/access-plans/access-plan.php:650
 #: includes/admin/views/metaboxes/view-order-submit.php:89
 msgid "Access Expiration"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:649
-#: includes/admin/views/access-plans/access-plan.php:650
+#: includes/admin/views/access-plans/access-plan.php:651
+#: includes/admin/views/access-plans/access-plan.php:652
 msgid "Define if and when the access to the plan expires."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:655
+#: includes/admin/views/access-plans/access-plan.php:657
 #: includes/models/model.llms.order.php:549
 msgid "Lifetime Access"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:656
+#: includes/admin/views/access-plans/access-plan.php:658
 msgid "Expires after"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:657
+#: includes/admin/views/access-plans/access-plan.php:659
 msgid "Expires on"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:664
-#: includes/admin/views/access-plans/access-plan.php:665
+#: includes/admin/views/access-plans/access-plan.php:666
+#: includes/admin/views/access-plans/access-plan.php:667
 msgid "Specify the exact date when the access from this plan expires."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:674
+#: includes/admin/views/access-plans/access-plan.php:676
 msgid "Access Length"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:675
-#: includes/admin/views/access-plans/access-plan.php:676
+#: includes/admin/views/access-plans/access-plan.php:677
+#: includes/admin/views/access-plans/access-plan.php:678
 msgid "Set the length of the access period for limited-duration plans."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:685
+#: includes/admin/views/access-plans/access-plan.php:687
 msgid "Access Period"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:686
-#: includes/admin/views/access-plans/access-plan.php:687
+#: includes/admin/views/access-plans/access-plan.php:688
+#: includes/admin/views/access-plans/access-plan.php:689
 msgid "Define the time unit for the access period (days, weeks, months, years)."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:716
+#: includes/admin/views/access-plans/access-plan.php:718
 msgid "Redirection Settings"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:722
+#: includes/admin/views/access-plans/access-plan.php:724
 msgid "Override Membership Redirects"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:723
-#: includes/admin/views/access-plans/access-plan.php:724
+#: includes/admin/views/access-plans/access-plan.php:725
+#: includes/admin/views/access-plans/access-plan.php:726
 msgid "Enable this to override membership redirects with the settings below."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:730
+#: includes/admin/views/access-plans/access-plan.php:732
 msgid "Any redirection set up on the Membership Access Plans will be overridden by the following settings."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:738
+#: includes/admin/views/access-plans/access-plan.php:740
 msgid "Checkout Redirect"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:739
-#: includes/admin/views/access-plans/access-plan.php:740
+#: includes/admin/views/access-plans/access-plan.php:741
+#: includes/admin/views/access-plans/access-plan.php:742
 msgid "Choose where users are redirected after checkout."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:760
-#: includes/admin/views/access-plans/access-plan.php:761
+#: includes/admin/views/access-plans/access-plan.php:762
+#: includes/admin/views/access-plans/access-plan.php:763
 msgid "Select a page to redirect users to after checkout."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:777
+#: includes/admin/views/access-plans/access-plan.php:779
 msgid "Enter a URL"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:778
-#: includes/admin/views/access-plans/access-plan.php:779
+#: includes/admin/views/access-plans/access-plan.php:780
+#: includes/admin/views/access-plans/access-plan.php:781
 msgid "Enter a specific URL to redirect users to after checkout."
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:794
+#: includes/admin/views/access-plans/access-plan.php:796
 msgid "Advanced Access Plan Settings"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:800
+#: includes/admin/views/access-plans/access-plan.php:802
 msgid "Plan SKU"
 msgstr ""
 
-#: includes/admin/views/access-plans/access-plan.php:801
-#: includes/admin/views/access-plans/access-plan.php:802
+#: includes/admin/views/access-plans/access-plan.php:803
+#: includes/admin/views/access-plans/access-plan.php:804
 msgid "Set a unique SKU for this access plan for inventory tracking."
 msgstr ""
 
 #. Translators: %1$s = Link to access plans documentation; %2$s = The singular label of the custom post type.
-#: includes/admin/views/access-plans/metabox.php:28
+#: includes/admin/views/access-plans/metabox.php:29
 #, php-format
 msgid "<a target=\"_blank\" href=\"%1$s\">Access plans</a> define the payment options and access time-periods available for this %2$s."
 msgstr ""
 
-#: includes/admin/views/access-plans/metabox.php:34
+#: includes/admin/views/access-plans/metabox.php:35
 #, php-format
 msgid "No access plans exist for your %s, click \"Add New\" to get started."
 msgstr ""
 
-#: includes/admin/views/access-plans/metabox.php:45
+#: includes/admin/views/access-plans/metabox.php:50
 msgid "Add New Plan"
 msgstr ""
 
-#: includes/admin/views/access-plans/metabox.php:52
+#: includes/admin/views/access-plans/metabox.php:57
 msgid "Save All Plans"
 msgstr ""
 
@@ -8243,50 +8250,50 @@ msgstr ""
 msgid "Some items could not be fully processed during cloning and were skipped. Check the \"generator\" log under LifterLMS > Status > Logs for details."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:240
-#: includes/controllers/class-llms-controller-checkout.php:262
-#: includes/controllers/class-llms-controller-checkout.php:311
+#: includes/class-llms-order-generator.php:242
+#: includes/controllers/class-llms-controller-checkout.php:263
+#: includes/controllers/class-llms-controller-checkout.php:319
 msgid "There was an error creating your order, please try again."
 msgstr ""
 
 #. Translators: %s = The user-submitted coupon code.
 #. Translators: %s = coupon code.
-#: includes/class-llms-order-generator.php:554
-#: includes/class.llms.ajax.handler.php:1246
+#: includes/class-llms-order-generator.php:557
+#: includes/class.llms.ajax.handler.php:1252
 #: includes/functions/llms.functions.order.php:432
 #, php-format
 msgid "Coupon code \"%s\" not found."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:591
+#: includes/class-llms-order-generator.php:594
 #: includes/functions/llms.functions.order.php:449
 msgid "No payment method selected."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:620
-#: includes/class-llms-order-generator.php:628
+#: includes/class-llms-order-generator.php:623
+#: includes/class-llms-order-generator.php:631
 #: includes/controllers/class-llms-controller-checkout.php:105
 #: includes/controllers/class-llms-controller-checkout.php:111
 #: includes/shortcodes/class.llms.shortcode.checkout.php:310
 msgid "Could not locate an order to confirm."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:649
+#: includes/class-llms-order-generator.php:652
 msgid "Missing access plan ID."
 msgstr ""
 
-#: includes/class-llms-order-generator.php:654
+#: includes/class-llms-order-generator.php:657
 msgid "Access plan not found."
 msgstr ""
 
 #. Translators: %s = The title of the site's LifterLMS Terms and Conditions page.
-#: includes/class-llms-order-generator.php:681
+#: includes/class-llms-order-generator.php:684
 #, php-format
 msgid "You must agree to the %s."
 msgstr ""
 
 #. Translators: %s = The title of the course or membership.
-#: includes/class-llms-order-generator.php:712
+#: includes/class-llms-order-generator.php:719
 #, php-format
 msgid "You already have access to %s."
 msgstr ""
@@ -8347,7 +8354,7 @@ msgstr ""
 #: includes/class.llms.ajax.handler.php:57
 #: includes/class.llms.ajax.handler.php:83
 #: includes/class.llms.ajax.handler.php:110
-#: includes/class.llms.ajax.handler.php:1180
+#: includes/class.llms.ajax.handler.php:1186
 msgid "Missing required parameters"
 msgstr ""
 
@@ -8359,153 +8366,157 @@ msgstr ""
 msgid "Missing required permissions to perform this action."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:169
+#: includes/class.llms.ajax.handler.php:170
 msgid "There was a problem deleting your access plan, please try again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:408
+#: includes/class.llms.ajax.handler.php:409
 msgid "Missing required parameters."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:414
+#: includes/class.llms.ajax.handler.php:415
 msgid "There was an error removing the course, please try again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:444
+#: includes/class.llms.ajax.handler.php:445
 msgid "Invalid lesson."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:448
+#: includes/class.llms.ajax.handler.php:449
 msgid "This quiz does not belong to the specified lesson."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:453
+#: includes/class.llms.ajax.handler.php:454
+msgid "This quiz is not available."
+msgstr ""
+
+#: includes/class.llms.ajax.handler.php:459
 msgid "This quiz is not associated with a valid course."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:457
+#: includes/class.llms.ajax.handler.php:463
 msgid "You must be enrolled in this course to take this quiz."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:507
-#: includes/class.llms.ajax.handler.php:611
-#: includes/class.llms.ajax.handler.php:698
-#: includes/class.llms.ajax.handler.php:764
-#: includes/class.llms.ajax.handler.php:876
+#: includes/class.llms.ajax.handler.php:513
+#: includes/class.llms.ajax.handler.php:617
+#: includes/class.llms.ajax.handler.php:704
+#: includes/class.llms.ajax.handler.php:770
+#: includes/class.llms.ajax.handler.php:882
 #: includes/class.llms.template.loader.php:433
 msgid "You must be logged in to take quizzes."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:526
-#: includes/class.llms.ajax.handler.php:804
+#: includes/class.llms.ajax.handler.php:532
+#: includes/class.llms.ajax.handler.php:810
 msgid "You've reached the maximum number of attempts for this quiz."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:536
+#: includes/class.llms.ajax.handler.php:542
 msgid "You must spend the required minimum time on the lesson before taking the quiz."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:550
+#: includes/class.llms.ajax.handler.php:556
 msgid "There was an error starting the quiz. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:569
+#: includes/class.llms.ajax.handler.php:575
 msgid "Unable to start quiz because the quiz does not contain any questions."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:616
+#: includes/class.llms.ajax.handler.php:622
 msgid "Attempt key is required."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:623
-#: includes/class.llms.ajax.handler.php:888
+#: includes/class.llms.ajax.handler.php:629
+#: includes/class.llms.ajax.handler.php:894
 msgid "The requested attempt could not be found."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:634
+#: includes/class.llms.ajax.handler.php:640
 msgid "No quiz found."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:644
+#: includes/class.llms.ajax.handler.php:650
 msgid "There was an error resuming the quiz. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:656
+#: includes/class.llms.ajax.handler.php:662
 msgid "Unable to resume quiz because the quiz does not contain any questions."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:705
-#: includes/class.llms.ajax.handler.php:771
-#: includes/class.llms.ajax.handler.php:881
+#: includes/class.llms.ajax.handler.php:711
+#: includes/class.llms.ajax.handler.php:777
+#: includes/class.llms.ajax.handler.php:887
 msgid "Missing required parameters. Could not proceed."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:717
+#: includes/class.llms.ajax.handler.php:723
 msgid "There was an error retrieving the question. Please return to the lesson and try again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:729
+#: includes/class.llms.ajax.handler.php:735
 msgid "Cannot find the requested question id. Please return to the lesson and try again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:783
+#: includes/class.llms.ajax.handler.php:789
 msgid "There was an error recording your answer. Please return to the lesson and begin again."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1184
+#: includes/class.llms.ajax.handler.php:1190
 msgid "Invalid status"
 msgstr ""
 
 #. Translators: %s = action add|remove|delete.
-#: includes/class.llms.ajax.handler.php:1206
+#: includes/class.llms.ajax.handler.php:1212
 #, php-format
 msgid "Action \"%1$s\" failed. Please try again"
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1233
+#: includes/class.llms.ajax.handler.php:1239
 msgid "Please enter a coupon code."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1237
+#: includes/class.llms.ajax.handler.php:1243
 msgid "Please enter a plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1397
+#: includes/class.llms.ajax.handler.php:1403
 msgid "Invalid access plan ID."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1401
+#: includes/class.llms.ajax.handler.php:1407
 msgid "Access plan does not belong to this product."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1449
+#: includes/class.llms.ajax.handler.php:1455
 msgid "Missing tracking data."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1475
-#: includes/class.llms.ajax.handler.php:1563
+#: includes/class.llms.ajax.handler.php:1481
+#: includes/class.llms.ajax.handler.php:1569
 msgid "Session token is required."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1480
-#: includes/class.llms.ajax.handler.php:1568
+#: includes/class.llms.ajax.handler.php:1486
+#: includes/class.llms.ajax.handler.php:1574
 msgid "Invalid session token."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1485
+#: includes/class.llms.ajax.handler.php:1491
 msgid "You must be logged in."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1489
-#: includes/class.llms.ajax.handler.php:1573
+#: includes/class.llms.ajax.handler.php:1495
+#: includes/class.llms.ajax.handler.php:1579
 msgid "Invalid session."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1495
+#: includes/class.llms.ajax.handler.php:1501
 msgid "This session has been replaced. Please reload the page to continue tracking time."
 msgstr ""
 
-#: includes/class.llms.ajax.handler.php:1514
+#: includes/class.llms.ajax.handler.php:1520
 msgid "Rate limit exceeded."
 msgstr ""
 
@@ -10878,7 +10889,7 @@ msgstr ""
 msgid "Voucher code \"%s\" is no longer valid."
 msgstr ""
 
-#: includes/class.llms.voucher.php:332
+#: includes/class.llms.voucher.php:341
 msgid "You have already redeemed this voucher."
 msgstr ""
 
@@ -10890,29 +10901,29 @@ msgstr ""
 msgid "Your session has expired. Please review your information and submit the form again."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:328
+#: includes/controllers/class-llms-controller-checkout.php:336
 msgid "The selected payment method is not available."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:617
+#: includes/controllers/class-llms-controller-checkout.php:625
 msgid "Missing order information."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:622
+#: includes/controllers/class-llms-controller-checkout.php:630
 msgid "Invalid order."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:627
+#: includes/controllers/class-llms-controller-checkout.php:635
 msgid "Missing gateway information."
 msgstr ""
 
-#: includes/controllers/class-llms-controller-checkout.php:639
+#: includes/controllers/class-llms-controller-checkout.php:647
 #: libraries/lifterlms-helper/includes/class-llms-helper-upgrader.php:126
 msgid "Invalid action."
 msgstr ""
 
 #. Translators: %1$s = old payment gateway ID; %2$s = new payment gateway ID.
-#: includes/controllers/class-llms-controller-checkout.php:694
+#: includes/controllers/class-llms-controller-checkout.php:702
 #, php-format
 msgid "Payment source updated by customer. Payment gateway changed from \"%1$s\" to \"%2$s\"."
 msgstr ""
@@ -10995,61 +11006,61 @@ msgstr ""
 msgid "The lesson %s is now marked as incomplete."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:394
+#: includes/controllers/class.llms.controller.orders.php:444
 msgid "Student unenrolled at the end of access period due to subscription cancellation."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:401
+#: includes/controllers/class.llms.controller.orders.php:451
 msgid "Student unenrolled due to automatic access plan expiration"
 msgstr ""
 
 #. Translators: %d = The deleted user's ID.
-#: includes/controllers/class.llms.controller.orders.php:506
+#: includes/controllers/class.llms.controller.orders.php:556
 #, php-format
 msgid "Recurring charge skipped. The user (#%d) no longer exists."
 msgstr ""
 
 #. Translators: %s = error message encountered while loading the gateway.
-#: includes/controllers/class.llms.controller.orders.php:539
+#: includes/controllers/class.llms.controller.orders.php:589
 #, php-format
 msgid "Recurring charge was not processed due to an error encountered while loading the payment gateway: %s."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:568
+#: includes/controllers/class.llms.controller.orders.php:618
 msgid "Recurring charge skipped because recurring payments are disabled for the payment gateway."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:586
+#: includes/controllers/class.llms.controller.orders.php:636
 msgid "Recurring charge skipped because recurring payments are disabled in staging mode."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:612
+#: includes/controllers/class.llms.controller.orders.php:662
 msgid "Recurring charge aborted because the purchased product does not exist anymore."
 msgstr ""
 
 #. translators: %1$s: Old Status, %2$s: New status.
-#: includes/controllers/class.llms.controller.orders.php:761
+#: includes/controllers/class.llms.controller.orders.php:811
 #, php-format
 msgid "Order status changed from %1$s to %2$s"
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:818
+#: includes/controllers/class.llms.controller.orders.php:868
 msgid "The selected payment gateway is not currently enabled."
 msgstr ""
 
 #. Translators: %s = The gateway display name.
-#: includes/controllers/class.llms.controller.orders.php:823
+#: includes/controllers/class.llms.controller.orders.php:873
 #, php-format
 msgid "%s does not support recurring payments and cannot process this transaction."
 msgstr ""
 
 #. Translators: %s = The gateway display name.
-#: includes/controllers/class.llms.controller.orders.php:828
+#: includes/controllers/class.llms.controller.orders.php:878
 #, php-format
 msgid "%s does not support single payments and cannot process this transaction."
 msgstr ""
 
-#: includes/controllers/class.llms.controller.orders.php:833
+#: includes/controllers/class.llms.controller.orders.php:883
 msgid "An invalid payment method was selected."
 msgstr ""
 
@@ -11323,7 +11334,7 @@ msgstr ""
 
 #: includes/forms/controllers/class.llms.controller.account.php:198
 #: includes/forms/controllers/class.llms.controller.registration.php:112
-#: includes/functions/llms.functions.order.php:479
+#: includes/functions/llms.functions.order.php:481
 msgid "An unknown error occurred when attempting to create an account, please try again."
 msgstr ""
 
@@ -11695,7 +11706,7 @@ msgid "Missing customer information."
 msgstr ""
 
 #. Translators: %2$s = The product type (course/membership); %1$s = product permalink.
-#: includes/functions/llms.functions.order.php:500
+#: includes/functions/llms.functions.order.php:505
 #: includes/shortcodes/class.llms.shortcode.checkout.php:82
 #, php-format
 msgid "You already have access to this %2$s! Visit your dashboard <a href=\"%1$s\">here.</a>"
@@ -12313,17 +12324,18 @@ msgctxt "Remaining coupon uses"
 msgid "Unlimited"
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:286
+#: includes/models/model.llms.coupon.php:255
+#: includes/models/model.llms.coupon.php:334
 msgid "This coupon has reached its usage limit and can no longer be used."
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:290
+#: includes/models/model.llms.coupon.php:338
 #, php-format
 msgid "This coupon expired on %s and can no longer be used."
 msgstr ""
 
-#: includes/models/model.llms.coupon.php:294
-#: includes/models/model.llms.coupon.php:298
+#: includes/models/model.llms.coupon.php:342
+#: includes/models/model.llms.coupon.php:346
 #, php-format
 msgid "This coupon cannot be used to purchase \"%s\"."
 msgstr ""
@@ -12432,12 +12444,12 @@ msgstr ""
 msgid "Awaiting review"
 msgstr ""
 
-#: includes/models/model.llms.student.php:714
+#: includes/models/model.llms.student.php:724
 msgctxt "Grade to display when no quizzes taken or available"
 msgid "N/A"
 msgstr ""
 
-#: includes/models/model.llms.student.php:815
+#: includes/models/model.llms.student.php:825
 msgctxt "overall grade when no quizzes"
 msgid "N/A"
 msgstr ""
@@ -26028,12 +26040,12 @@ msgstr ""
 msgid "Retrieve access plans for a specific list of one or more posts. Accepts a course/membership id or comma separated list of course/membership ids."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:584
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:585
 msgid "Sorry, you are not allowed to manage access plans for the requested product."
 msgstr ""
 
 #. Translators: %1$d = access plans limit per product, %2$s access plan post type plural name, %3$s product post type singular name.
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:954
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-access-plans-controller.php:994
 #, php-format
 msgid "Only %1$d %2$s allowed per %3$s"
 msgstr ""
@@ -26835,7 +26847,7 @@ msgstr ""
 
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:73
 #: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:99
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:700
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:706
 msgid "Unique identifier for the quiz attempt."
 msgstr ""
 
@@ -26877,99 +26889,99 @@ msgstr ""
 msgid "The following questions are not part of this quiz attempt: %s."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:706
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:712
 msgid "The WP_User ID of the student."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:712
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:718
 msgid "The WP_Post ID of the quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:718
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:724
 msgid "The WP_Post ID of the lesson."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:724
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:730
 msgid "Date the attempt was started. Format: Y-m-d H:i:s."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:730
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:736
 msgid "Date the attempt was last modified. Format: Y-m-d H:i:s."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:736
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:742
 msgid "Date the attempt was completed. Format: Y-m-d H:i:s."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:742
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:748
 msgid "The status of the quiz attempt. Attempts with the pending status require manual grading. Pass/fail is determined against the quiz passing grade in effect when the attempt was graded; later changes to the passing grade do not re-evaluate stored attempts."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:749
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:755
 msgid "The attempt number for the student on this quiz."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:755
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:761
 msgid "The grade of the quiz attempt."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:761
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:767
 msgid "Whether the quiz attempt can be resumed."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:767
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:773
 msgid "The attempt's answered questions, including raw and rendered answers, grading status, remarks, and file data for upload-type answers."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:775
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:781
 msgid "The WP_Post ID of the question."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:779
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:785
 msgid "The question title (the question itself)."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:783
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:789
 msgid "The type of the question."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:787
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:793
 msgid "The number of points available for the question."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:791
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:797
 msgid "The number of points earned. Null when not yet graded."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:795
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:801
 msgid "Whether the answer was graded as correct."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:799
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:805
 msgid "The grading status of the question. waiting indicates the answer requires manual grading."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:804
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:810
 msgid "Whether the question answer can be graded manually."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:808
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:814
 msgid "Grader remarks (HTML) displayed to the student."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:812
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:818
 msgid "The raw answer data. Choice IDs for choice questions, submitted text for text questions, or an attachment ID for upload questions."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:816
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:822
 msgid "The answer rendered as HTML."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:820
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:826
 msgid "File data for answers which resolve to uploaded attachments (e.g. upload-type questions). Use the download_url to retrieve the submitted file."
 msgstr ""
 
-#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:833
+#: libraries/lifterlms-rest/includes/server/class-llms-rest-quiz-attempts-controller.php:839
 msgid "URL to download the file. For protected uploads this is a temporary signed URL which expires; fetch it promptly and do not store it."
 msgstr ""
 
@@ -28415,7 +28427,7 @@ msgstr ""
 #: assets/js/llms-admin-certificate-editor.js:31
 #: assets/js/llms-components.js:19
 #: assets/js/llms-spinner.js:1
-#: assets/js/llms.js:2711
+#: assets/js/llms.js:2752
 #: libraries/lifterlms-blocks/assets/js/llms-blocks.js:7
 msgid "Loading…"
 msgstr ""
